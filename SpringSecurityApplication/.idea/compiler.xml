@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="InternetShop" />
+        <module name="SpringSecurityApplication" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="InternetShop" target="1.8" />
+      <module name="SpringSecurityApplication" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
