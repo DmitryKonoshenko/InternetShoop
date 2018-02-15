@@ -43,6 +43,8 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public List<Category> list() {
-        return null;
+
+       //TODO
+        return categories;
     }
 }

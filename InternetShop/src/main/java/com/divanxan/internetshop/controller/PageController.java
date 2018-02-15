@@ -31,7 +31,7 @@ public class PageController {
         mv.addObject("title", "");
 
         //вставка листа категория
-        mv.addObject("categories123", categoryDao.list());
+        mv.addObject("categories", categoryDao.list());
 
         mv.addObject("userClickHome", true);
         return mv;
