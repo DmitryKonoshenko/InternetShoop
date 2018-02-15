@@ -1,1 +1,4 @@
+com\divanxan\internetshop\daoimpl\CategoryDaoImpl.class
 com\divanxan\internetshop\controller\PageController.class
+com\divanxan\internetshop\dao\CategoryDao.class
+com\divanxan\internetshop\dto\Category.class

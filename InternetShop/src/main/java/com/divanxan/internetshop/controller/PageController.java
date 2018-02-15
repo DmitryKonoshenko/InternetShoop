@@ -25,7 +25,7 @@ public class PageController {
      * Функция возврата на домашнюю страницу
      * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Home
      */
-    @RequestMapping(value = {"/","home", "index"})
+    @RequestMapping(value = {"/","home"})
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "");

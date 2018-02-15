@@ -15,6 +15,7 @@
         <javaee.version>8.0</javaee.version>
         <spring.version>5.0.3.RELEASE</spring.version>
         <spring.security.version>5.0.1.RELEASE</spring.security.version>
+        <tomcat.version>9.0.4</tomcat.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -62,6 +63,14 @@
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.2</version>
+        </dependency>
+
+        <!-- Tomcat -->
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat</artifactId>
+            <version>${tomcat.version}</version>
+            <type>pom</type>
         </dependency>
     </dependencies>
     <build>
