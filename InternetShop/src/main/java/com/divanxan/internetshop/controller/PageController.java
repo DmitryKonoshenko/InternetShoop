@@ -1,5 +1,8 @@
 package com.divanxan.internetshop.controller;
 
+import com.divanxan.internetshop.dao.CategoryDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +18,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PageController {
 
+    @Autowired
+    private CategoryDao categoryDao;
+
     /**
      * Функция возврата на домашнюю страницу
      * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Home
@@ -22,7 +28,11 @@ public class PageController {
     @RequestMapping(value = {"/","home", "index"})
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView("page");
-        mv.addObject("tittle", "");
+        mv.addObject("title", "");
+
+        //вставка листа категория
+        mv.addObject("categories123", categoryDao.list());
+
         mv.addObject("userClickHome", true);
         return mv;
     }
@@ -34,7 +44,7 @@ public class PageController {
     @RequestMapping(value = {"/about"})
     public ModelAndView about(){
         ModelAndView mv = new ModelAndView("page");
-        mv.addObject("tittle", "О нас");
+        mv.addObject("title", "О нас");
         mv.addObject("userClickAbout", true);
         return mv;
     }
@@ -46,7 +56,7 @@ public class PageController {
     @RequestMapping(value = {"/contact"})
     public ModelAndView contact(){
         ModelAndView mv = new ModelAndView("page");
-        mv.addObject("tittle", "Наши контакты");
+        mv.addObject("title", "Наши контакты");
         mv.addObject("userClickContact", true);
         return mv;
     }

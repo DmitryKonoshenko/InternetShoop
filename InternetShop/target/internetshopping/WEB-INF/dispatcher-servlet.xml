@@ -12,7 +12,7 @@
 
 ">
 
-    <context:component-scan base-package="com.divanxan.internetshop.controller"/>
+    <context:component-scan base-package="com.divanxan.internetshop"/>
 
 
     <bean id="viewResolver"

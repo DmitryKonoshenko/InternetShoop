@@ -9,17 +9,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li id="nav-item active">
                     <a class="nav-link" href="${contextRoot}/home">На главную<span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li id="about">
                     <a class="nav-link" href="${contextRoot}/about">О магазине</a>
                 </li>
-                <li class="nav-item">
+                <li id="listProdact">
                     <a class="nav-link" href="${contextRoot}/listProducts">Наши продукты</a>
                 </li>
-                <li class="nav-item">
+                <li id="contact">
                     <a class="nav-link" href="${contextRoot}/contact">Наши контакты</a>
                 </li>
             </ul>
