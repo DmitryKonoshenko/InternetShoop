@@ -1,19 +1,61 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Divanxan
-  Date: 14.02.2018
-  Time: 15:36
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var ="contextRoot" value="${pageContext.request.contextPath}"/>
+<%@ page language="java" contentType="text/html; UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<html>
+<spring:url var="css" value="/resources/css" />
+<spring:url var="js" value="/resources/js" />
+<spring:url var="images" value="/resources/images" />
+
+<c:set var="contextRoot" value="${pageContext.request.contextPath}" />
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Internet Shop</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Электроник ${title}</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="${css}/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="${css}/shop-homepage.css" rel="stylesheet">
+
 </head>
+
 <body>
-    ${contextRoot}says -${greeting}
+
+<!-- Navigation -->
+<%@include file="./shared/navbar.jsp" %>
+
+<!-- Page Content -->
+<!--Loading the home container-->
+
+<c:if test="${userClickHome == true}">
+<%@include file="home.jsp"%>
+</c:if>
+<!--Loading about-->
+<c:if test="${userClickAbout == true}">
+	<%@include file="about.jsp"%>
+</c:if>
+<!--Loading contact-->
+<c:if test="${userClickContact == true}">
+	<%@include file="contact.jsp"%>
+</c:if>
+
+
+<!-- Footer -->
+<%@include file="./shared/footer.jsp"%>
+
+<!-- Bootstrap core JavaScript -->
+<script src="${js}/jquery.min.js"></script>
+<script src="${js}/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>
