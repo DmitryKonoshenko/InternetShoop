@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; UTF-8"
+<%@ page contentType="text/html; UTF-8"
          pageEncoding="UTF-8"%>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -10,14 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li id="nav-item active">
-                    <a class="nav-link" href="${contextRoot}/home">На главную<span class="sr-only">(current)</span>
-                    </a>
+                    <a class="nav-link" href="${contextRoot}/home">На главную</a>
                 </li>
                 <li id="about">
                     <a class="nav-link" href="${contextRoot}/about">О магазине</a>
                 </li>
-                <li id="listProdact">
-                    <a class="nav-link" href="${contextRoot}/listProducts">Наши продукты</a>
+                <li id="listProduct">
+                    <a class="nav-link" href="${contextRoot}/show/all/products">Наши продукты</a>
                 </li>
                 <li id="contact">
                     <a class="nav-link" href="${contextRoot}/contact">Наши контакты</a>

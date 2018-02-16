@@ -1,24 +1,12 @@
-<%@ page language="java" contentType="text/html; UTF-8"
-         pageEncoding="UTF-8" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-
-<spring:url var="css" value="/resources/css"/>
-<spring:url var="js" value="/resources/js"/>
-<spring:url var="images" value="/resources/images"/>
->
-<c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
+<%@ page contentType="text/html; UTF-8"
+         pageEncoding="UTF-8"%>
 <div class="container">
 
     <div class="row">
 
         <div class="col-lg-3">
             <h1 class="my-4">Электроник</h1>
-            <div class="list-group">
-                <c:forEach items="${categories}" var="category">
-                    <a href="#" class="list-group-item">${category.name}</a>
-                </c:forEach>
-            </div>
+           <%@include file="./shared/sidebar.jsp"%>
         </div>
         <!-- /.col-lg-3 -->
 

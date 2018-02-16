@@ -1,15 +1,15 @@
 package com.divanxan.internetshop.controller;
 
 import com.divanxan.internetshop.dao.CategoryDao;
+import com.divanxan.internetshop.dto.Category;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * Контроллер навигации по веб сайту.
+ * Controller for {@link com.divanxan.internetshop.dto.Category}'s pages.
  *
  * @autor Dmitry Konoshenko
  * @version 1.0
@@ -18,8 +18,12 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PageController {
 
+    private final CategoryDao categoryDao;
+
     @Autowired
-    private CategoryDao categoryDao;
+    public PageController(CategoryDao categoryDao) {
+        this.categoryDao = categoryDao;
+    }
 
     /**
      * Функция возврата на домашнюю страницу
@@ -28,10 +32,11 @@ public class PageController {
     @RequestMapping(value = {"/","home"})
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView("page");
-        mv.addObject("title", "");
+        mv.addObject("title", "На главную");
 
         //вставка листа категория
         mv.addObject("categories", categoryDao.list());
+
 
         mv.addObject("userClickHome", true);
         return mv;
@@ -60,6 +65,44 @@ public class PageController {
         mv.addObject("userClickContact", true);
         return mv;
     }
+
+    /**
+     * Функция для загрузки всех товаров
+     * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Contact
+     */
+    @RequestMapping(value = {"/show/all/products"})
+    public ModelAndView showAllProducts(){
+        ModelAndView mv = new ModelAndView("page");
+        mv.addObject("title", "Наши продукты");
+
+        //вставка листа категория
+        mv.addObject("categories", categoryDao.list());
+
+        mv.addObject("userClickAllProducts", true);
+        return mv;
+    }
+
+    /**
+     * Функция для загрузки всех товаров в категории
+     * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Contact
+     */
+    @RequestMapping(value = {"/show/category/{id}/products"})
+    public ModelAndView showCategoryProducts(@PathVariable("id") int id){
+        ModelAndView mv = new ModelAndView("page");
+
+        Category category = categoryDao.get(id);
+
+        mv.addObject("title", category.getName());
+
+        //вставка листа категория
+        mv.addObject("categories", categoryDao.list());
+        //вставка самой категории
+        mv.addObject("category", category);
+
+        mv.addObject("userClickCategoryProducts", true);
+        return mv;
+    }
+
 
 //
 //    @RequestMapping(value = "/test")

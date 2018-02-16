@@ -2,47 +2,77 @@ package com.divanxan.internetshop.daoimpl;
 
 import com.divanxan.internetshop.dao.CategoryDao;
 import com.divanxan.internetshop.dto.Category;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+import sun.awt.geom.AreaOp;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Repository("categoryDao")
+@Transactional
 public class CategoryDaoImpl implements CategoryDao {
 
-    private static List<Category> categories =  new ArrayList<>();
+    @Autowired
+    private SessionFactory sessionFactory;
 
-    static{
-        Category category1 = new Category();
+    private static List<Category> categories = new ArrayList<>();
 
-        category1.setId(1);
-        category1.setName("Телевизоры");
-        category1.setDescription("This is tc set");
-        category1.setImageURL("CAT_1.png");
+    @Override
+    public boolean add(Category category) {
+        try{
+            //добавление категорию в таблицу БД
+            sessionFactory.getCurrentSession().persist(category);
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
 
-        categories.add(category1);
+    @Override
+    public boolean update(Category category) {
+        return updateCode(category);
+    }
 
-        Category category2 = new Category();
+    @Override
+    public boolean delete(Category category) {
 
-        category2.setId(2);
-        category2.setName("Фены");
-        category2.setDescription("This is mobile");
-        category2.setImageURL("CAT_2.png");
+        category.setActive(false);
 
-        categories.add(category2);
+        return updateCode(category);
+    }
 
-        Category category3 = new Category();
-
-        category3.setId(3);
-        category3.setName("Пылесосы");
-        category3.setDescription("This is pili");
-        category3.setImageURL("CAT_3.png");
-
-        categories.add(category3);
+    private boolean updateCode(Category category) {
+        try{
+            //изменение категории в таблице БД
+            sessionFactory.getCurrentSession().update(category);
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
     }
 
     @Override
     public List<Category> list() {
-        return categories;
+
+        String selecteActiveCategory = "FROM Category WHERE active = :active";
+
+        Query query = sessionFactory.getCurrentSession().createQuery(selecteActiveCategory);
+
+        query.setParameter("active", true);
+
+        return query.getResultList();
+    }
+
+    @Override
+    public Category get(int id) {
+        return sessionFactory.getCurrentSession().get(Category.class, id);
     }
 }
