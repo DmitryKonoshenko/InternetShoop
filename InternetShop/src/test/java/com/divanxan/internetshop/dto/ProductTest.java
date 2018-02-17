@@ -77,7 +77,7 @@ public class ProductTest {
     @Test
     public void testgetLatestActiveProducts(){
         assertEquals("Something went wrong while fetching the list of products!",
-                2,productDao.getLatestActiveProducts(1)
+                9,productDao.getLatestActiveProducts(10)
                         .size());
     }
 
