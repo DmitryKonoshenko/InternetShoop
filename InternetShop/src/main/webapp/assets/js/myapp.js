@@ -10,6 +10,7 @@ $(function () {
             $('#listProduct').addClass('active');
             break;
         default:
+            if(menu == "На главную") break;
             $('#home').addClass('active');
             $('#a_'+menu).addClass('active');
             break

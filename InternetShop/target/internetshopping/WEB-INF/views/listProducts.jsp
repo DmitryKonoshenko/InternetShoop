@@ -25,9 +25,8 @@
                     <c:if test="${userClickAllProducts == true}">
                     <ol class="breadcrumb">
 
-                        <li><a href="${contextRoot}/home">Home</a></li>
-                        <li class="active"><a> / </a></li>
-                        <li class="active"><a>Наши продукты</a></li>
+                        <li><a href="${contextRoot}/home">На главную </a></li>
+                        <li class="active"><a>/ Наши продукты </a></li>
 
                     </ol>
                     </c:if>
@@ -39,11 +38,11 @@
 
                         <ol class="breadcrumb">
 
-                            <li><a href="${contextRoot}/home">Home</a></li>
-                            <li class="active"><a> / </a></li>
-                            <li class="active"><a>Категория</a></li>
-                            <li class="active"><a> / </a></li>
-                            <li class="active">${category.name}</li>
+                            <li><a href="${contextRoot}/home">На главную </a></li>
+
+                            <li class="active"><a>/ Категория: </a></li>
+
+                            <li class="active"> ${category.name}</li>
 
                         </ol>
                     </c:if>
