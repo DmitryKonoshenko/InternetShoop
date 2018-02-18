@@ -6,6 +6,7 @@
 <spring:url var="css" value="/resources/css"/>
 <spring:url var="js" value="/resources/js"/>
 <spring:url var="images" value="/resources/images"/>
+<spring:url var="ion" value="/resources/ionic"/>
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
@@ -21,14 +22,29 @@
     <title>Электроник ${title}</title>
 
     <script>
-        window.menu = '${title}'
+        window.menu = '${title}';
+
+        window.contextRoot='${contextRoot}';
     </script>
 
     <!-- Bootstrap core CSS -->
-    <link href="${css}/bootstrap.min.css" rel="stylesheet">
+    <link href="${css}/bootstrap.css" rel="stylesheet">
+    <!-- Ionic -->
+    <link href="${css}/open-iconic-bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="${css}/bootstrap-grid.css" rel="stylesheet">
+    <link href="${css}/shop-homepage.css" rel="stylesheet">
+
+
+    <!-- Bootstrap DataTables -->
+    <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${css}/datatables.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${css}/shop-homepage.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="${css}/myapp.css" rel="stylesheet">
 
 </head>
 
@@ -43,7 +59,7 @@
     <div class="content">
         <!--Loading the home container-->
         <c:if test="${userClickHome == true}">
-            <%@include file="home.jsp"%>
+            <%@include file="home.jsp" %>
         </c:if>
         <!--Loading about-->
         <c:if test="${userClickAbout == true}">
@@ -53,19 +69,39 @@
         <c:if test="${userClickContact == true}">
             <%@include file="contact.jsp" %>
         </c:if>
-        <!--Loading contact-->
+        <!--Loading many product-->
         <c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
             <%@include file="listProducts.jsp" %>
         </c:if>
+        <!--Loading one product-->
+         <c:if test="${userClickShowProduct == true}">
+            <%@include file="singleProduct.jsp" %>
+        </c:if>
+
     </div>
 
     <!-- Footer -->
-
     <%@include file="./shared/footer.jsp" %>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="${js}/jquery.min.js"></script>
-    <script src="${js}/bootstrap.bundle.min.js"></script>
+    <!-- JQuery -->
+    <script src="${js}/jquery.js"></script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="${js}/bootstrap.min.js"></script>
+    <script src="${js}/bootstrap.bundle.js"></script>
+
+    <!-- DataTable Plugin -->
+    <script src="${js}/jquery.dataTables.js"></script>
+    <%--<script src="${js}/bootstrap.bundle.min.js"></script>--%>
+    <script src="${js}/bootstrap.js"></script>
+
+    <!-- DataTable Bootstrap Script -->
+    <script src="${js}/dataTables.bootstrap.js"></script>
+    <script src="${js}/datatables.js"></script>
+
+    <!-- DataTable Bootstrap Script -->
+    <%--<script src="${js}/bootbox.min.js"></script>--%>
 
     <!-- Self coded javascript -->
     <script src="${js}/myapp.js"></script>

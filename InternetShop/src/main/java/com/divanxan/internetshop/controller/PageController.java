@@ -1,7 +1,11 @@
 package com.divanxan.internetshop.controller;
 
 import com.divanxan.internetshop.dao.CategoryDao;
+import com.divanxan.internetshop.dao.ProductDao;
 import com.divanxan.internetshop.dto.Category;
+import com.divanxan.internetshop.dto.Product;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,7 +22,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PageController {
 
+    private static final Logger logger = LoggerFactory.getLogger(PageController.class);
+
+    @Autowired
     private final CategoryDao categoryDao;
+
+    @Autowired
+    private ProductDao productDao;
 
     @Autowired
     public PageController(CategoryDao categoryDao) {
@@ -33,6 +43,9 @@ public class PageController {
     public ModelAndView index(){
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "На главную");
+
+        logger.info("Inside PageController index method - INFO");
+        logger.debug("Inside PageController index method - DEBUG");
 
         //вставка листа категория
         mv.addObject("categories", categoryDao.list());
@@ -124,4 +137,28 @@ public class PageController {
 //        mv.addObject("greeting", greeting);
 //        return mv;
 //    }
+
+// просмотр одного товара
+    @RequestMapping(value = "/show/{id}/product")
+    public ModelAndView showSingleProduct(@PathVariable int id){
+
+        ModelAndView mv = new ModelAndView("page");
+
+        Product product = productDao.get(id);
+
+
+        //update the view count
+        product.setViews(product.getViews()+1);
+        productDao.update(product);
+        //done
+
+        mv.addObject("title", product.getName());
+        mv.addObject("product", product);
+
+        mv.addObject("userClickShowProduct", true);
+
+        return mv;
+    }
+
+
 }

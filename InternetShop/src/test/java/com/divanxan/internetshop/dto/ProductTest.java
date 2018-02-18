@@ -67,11 +67,11 @@ public class ProductTest {
     @Test
     public void testListProductsByCategory(){
         assertEquals("Something went wrong while fetching the list of products!",
-                4,productDao.listActiveProductsByCategory(3).size());
+                3,productDao.listActiveProductsByCategory(3).size());
         assertEquals("Something went wrong while fetching the list of products!",
                 3,productDao.listActiveProductsByCategory(2).size());
         assertEquals("Something went wrong while fetching the list of products!",
-                2,productDao.listActiveProductsByCategory(1).size());
+                3,productDao.listActiveProductsByCategory(1).size());
     }
 
     @Test

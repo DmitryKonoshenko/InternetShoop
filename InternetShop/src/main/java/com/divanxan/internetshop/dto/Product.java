@@ -1,5 +1,6 @@
 package com.divanxan.internetshop.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.javafx.beans.IDProperty;
 import org.springframework.stereotype.Component;
 
@@ -16,6 +17,8 @@ public class Product {
     private String code;
     private String name;
     private String brand;
+
+    @JsonIgnore
     private String description;
 
     @Column(name = "unit_price")
@@ -25,12 +28,15 @@ public class Product {
     private int quantity;
 
     @Column(name = "is_active")
+    @JsonIgnore
     private boolean active;
 
     @Column(name = "category_id")
+    @JsonIgnore
     private int categoryId;
 
     @Column(name = "supplier_id")
+    @JsonIgnore
     private int supplierId;
     private int purchases;
     private int views;
