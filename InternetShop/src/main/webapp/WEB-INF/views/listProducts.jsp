@@ -1,21 +1,12 @@
 <%@ page contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
 <div class="container">
     <div class="row">
 
-        <!-- Display sidebar-->
-        <!--TODO Разобраться почему не получается сделать инклюд-->
         <div class="col-lg-3">
             <h1 class="my-4">Электроник</h1>
-            <div class="list-group">
-                <c:forEach items="${categories}" var="category">
-                    <a href="${contextRoot}/show/category/${category.id}/products" class="list-group-item"
-                       id="a_${category.name}">${category.name}</a>
-                </c:forEach>
-            </div>
+            <%--<%@include file="./shared/sidebar.jsp"%>--%>
+            <jsp:include page="./shared/sidebar.jsp"/>
         </div>
 
         <!-- Display actual products-->

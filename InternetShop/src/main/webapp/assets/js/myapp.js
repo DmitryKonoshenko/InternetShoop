@@ -27,27 +27,27 @@ $(function () {
         // console.log('Inside the table!');
 
         var jsonUrl = '';
-        if(window.categoryId == ''){
+        if (window.categoryId == '') {
             jsonUrl = window.contextRoot + '/json/data/all/products';
         }
-        else{
-            jsonUrl = window.contextRoot + '/json/data/category/'+window.categoryId+'/products';
+        else {
+            jsonUrl = window.contextRoot + '/json/data/category/' + window.categoryId + '/products';
         }
 
         $table.DataTable({
-            lengthMenu :[[3, 5, 10, -1],
+            lengthMenu: [[3, 5, 10, -1],
                 ['3', '5', '10', 'Все']],
-            pageLength :5,
+            pageLength: 5,
 
-            ajax : {
-                url : jsonUrl,
-                dataSrc : ''
+            ajax: {
+                url: jsonUrl,
+                dataSrc: ''
             },
-            columns : [
+            columns: [
                 {
-                  data: 'code',
-                    mRender: function(data, type, row){
-                      return '<img src="'+window.contextRoot+'/resources/images/'+data+'.jpg" class="dataTableImg"/>';
+                    data: 'code',
+                    mRender: function (data, type, row) {
+                        return '<img src="' + window.contextRoot + '/resources/images/' + data + '.jpg" class="dataTableImg"/>';
                     }
                 },
                 {
@@ -59,39 +59,45 @@ $(function () {
                 {
                     data: 'unitPrice',
                     mRender: function (data, type, row) {
-                        return '&#8381; '+data
+                        return '&#8381; ' + data
                     }
                 },
                 {
                     data: 'quantity',
                     mRender: function (data, type, row) {
-                        if(data<1){
+                        if (data < 1) {
                             return '<span style="color:red">Отсутсвует на складе!</span>';
                         }
                         return data;
                     }
                 },
                 {
-                    data:'id',
+                    data: 'id',
                     bSortable: false,
-                    mRender : function (data, type, row){
+                    mRender: function (data, type, row) {
                         var str = '';
-                        str += '<a href="'+window.contextRoot+'/show/'+data+'/product" class="btn btn-primary"><span class="oi oi-eye"></span></a>';
+                        str += '<a href="' + window.contextRoot + '/show/' + data + '/product" class="btn btn-primary"><span class="oi oi-eye"></span></a>';
 
                         return str;
                     }
-                 },
+                },
                 {
-                    data:'id',
+                    data: 'id',
                     bSortable: false,
-                    mRender : function (data, type, row){
+                    mRender: function (data, type, row) {
                         var str = '';
 
-                        if(row.quantity < 1){
-                                str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="oi oi-cart"></span></a>';
+                        if (row.quantity < 1) {
+                            str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="oi oi-cart"></span></a>';
+                            str += '<button href="javascript:void(){' +
+                                'console.log("QQQ"' +
+                                '}"' +
+                                ' class="btn btn-success"><span class="oi oi-cart"></span></button>';
+
+
                         }
-                        else{
-                            str += '<a href="'+window.contextRoot+'/cart/add/'+data+'/product" class="btn btn-success"><span class="oi oi-cart"></span></a>';
+                        else {
+                            str += '<a href="' + window.contextRoot + '/cart/add/' + data + '/product" class="btn btn-success"><span class="oi oi-cart"></span></a>';
                         }
                         return str;
                     }
