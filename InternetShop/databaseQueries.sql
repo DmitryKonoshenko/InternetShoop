@@ -98,6 +98,6 @@ VALUES ('PRDQWE123FEN', 'D212E', 'BaByliss',
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
 VALUES ('PRDRTY123FEN', '554.13', 'Valera',
         'Компактный фен Valera Swiss Bebe 554.13 создан специально для деликатного ухода за детскими волосами и телом.'
-  , 1270, 5, TRUE, 3, 4);
+  , 1270, 0, TRUE, 3, 4);
 
 

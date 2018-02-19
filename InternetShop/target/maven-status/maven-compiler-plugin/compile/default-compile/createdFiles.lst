@@ -1,5 +1,6 @@
 com\divanxan\internetshop\daoimpl\CategoryDaoImpl.class
 com\divanxan\internetshop\controller\JsonDataController.class
+com\divanxan\internetshop\exception\ProductNotFoundException.class
 com\divanxan\internetshop\dao\ProductDao.class
 com\divanxan\internetshop\controller\PageController.class
 com\divanxan\internetshop\config\HibernateConfig.class
@@ -7,3 +8,4 @@ com\divanxan\internetshop\daoimpl\ProductDaoImpl.class
 com\divanxan\internetshop\dto\Product.class
 com\divanxan\internetshop\dto\Category.class
 com\divanxan\internetshop\dao\CategoryDao.class
+com\divanxan\internetshop\exception\GlobalDefaultExceptionHandler.class
