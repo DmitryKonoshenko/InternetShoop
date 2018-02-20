@@ -9,8 +9,11 @@ $(function () {
         case 'Наши продукты':
             $('#listProduct').addClass('active');
             break;
+        case 'Manage Products':
+            $('#manageProduct').addClass('active');
+            break;
         default:
-            if (menu == "На главную") break;
+            if (menu === "На главную") break;
             $('#home').addClass('active');
             $('#a_' + menu).addClass('active');
             break
@@ -21,13 +24,14 @@ $(function () {
 
 //from page.jsp <table id="productListTable" class="table table-striped table-borderd">
 
-    var $table = $('#productListTable');
+
+    const $table = $('#productListTable');
 // выполнить только в случае наличия этой таблицы
     if ($table.length) {
         // console.log('Inside the table!');
 
         var jsonUrl = '';
-        if (window.categoryId == '') {
+        if (window.categoryId === '') {
             jsonUrl = window.contextRoot + '/json/data/all/products';
         }
         else {
@@ -76,7 +80,7 @@ $(function () {
                     bSortable: false,
                     mRender: function (data, type, row) {
                         var str = '';
-                        str += '<a href="' + window.contextRoot + '/show/' + data + '/product" class="btn btn-primary"><span class="oi oi-eye"></span></a>';
+                        str += '<a href="' + window.contextRoot + '/show/' + data + '/product" class="btn btn-primary"><span class="oi oi-eye"/></a>';
 
                         return str;
                     }
@@ -88,12 +92,8 @@ $(function () {
                         var str = '';
 
                         if (row.quantity < 1) {
-                            str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="oi oi-cart"></span></a>';
-                            str += '<button href="javascript:void(){' +
-                                'console.log("QQQ"' +
-                                '}"' +
-                                ' class="btn btn-success"><span class="oi oi-cart"></span></button>';
-
+                            str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="oi oi-cart"/></a>';
+                            str += '<button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary"><span class="oi oi-heart"/></button>';
 
                         }
                         else {
@@ -107,8 +107,23 @@ $(function () {
         });
     }
 
+//убрать сообщение после 3-х секунд
+    var $alert = $('.alert');
+
+    if($alert.lang){
+        setTimeout( function () {
+            $alert.fadeOut('slow');
+        }, 3000)
+    }
 
 });
+
+function buttonClickt(row) {
+
+    document.getElementById('b1').disabled = true;
+}
+
+
 
 
 //code for footer
@@ -123,5 +138,7 @@ $(document).ready(function () {
         $('.content').css('min-height', (docHeight - contentHeight + 600) + 'px');
     }
 });
+
+
 
 

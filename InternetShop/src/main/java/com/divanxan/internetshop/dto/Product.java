@@ -14,17 +14,22 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(name = "code")
     private String code;
+    @Column(name = "name")
     private String name;
+    @Column(name = "brand")
     private String brand;
 
+    @Column(name = "description")
     @JsonIgnore
     private String description;
 
     @Column(name = "unit_price")
-    @Min(value = 1, message="Please select at least one value!")
+    @Min(value = 1, message = "Please select at least one value!")
     private double unitPrice;
 
+    @Column(name = "quantity")
     private int quantity;
 
     @Column(name = "is_active")
@@ -38,12 +43,16 @@ public class Product {
     @Column(name = "supplier_id")
     @JsonIgnore
     private int supplierId;
+    @Column(name = "purchases")
     private int purchases;
+    @Column(name = "views")
     private int views;
+//    @Column(name = "vishes")
+//    private int vishes;
 
     //default cinstructor
-    public Product(){
-        this.code = "PRD"+UUID.randomUUID().toString().substring(26).toUpperCase();
+    public Product() {
+        this.code = "PRD" + UUID.randomUUID().toString().substring(26).toUpperCase();
     }
 
 
@@ -91,6 +100,7 @@ public class Product {
     public double getUnitPrice() {
         return unitPrice;
     }
+
     public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
@@ -141,5 +151,24 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", brand='" + brand + '\'' +
+                ", description='" + description + '\'' +
+                ", unitPrice=" + unitPrice +
+                ", quantity=" + quantity +
+                ", active=" + active +
+                ", categoryId=" + categoryId +
+                ", supplierId=" + supplierId +
+                ", purchases=" + purchases +
+                ", views=" + views +
+                '}';
     }
 }

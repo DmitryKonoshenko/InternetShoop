@@ -17,7 +17,7 @@
         <spring.security.version>5.0.1.RELEASE</spring.security.version>
         <tomcat.version>9.0.4</tomcat.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mysql-connector.version>6.0.6</mysql-connector.version>
+        <mysql-connector.version>5.1.39</mysql-connector.version>
         <hibernate.version>5.2.13.Final</hibernate.version>
         <junit.version>4.12</junit.version>
         <jdbs.version>2.2.0</jdbs.version>
@@ -153,6 +153,7 @@
         </dependency>
 
     </dependencies>
+
     <build>
         <!-- Updated for the latest version of JAVA -->
         <plugins>
@@ -164,10 +165,23 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <!-- Flyway -->
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>5.0.7</version>
+                <configuration>
+                    <user>root</user>
+                    <password>root</password>
+                    <driver>com.mysql.cj.jdbc.Driver</driver>
+                    <url>jdbc:mysql://localhost:3306/ishop</url>
+                </configuration>
+
+            </plugin>
+
         </plugins>
 
         <finalName>internetshopping</finalName>
     </build>
-
-
 </project>

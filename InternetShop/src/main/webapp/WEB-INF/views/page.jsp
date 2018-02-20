@@ -18,6 +18,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
     <title>Электроник ${title}</title>
 
@@ -74,8 +77,12 @@
             <%@include file="listProducts.jsp" %>
         </c:if>
         <!--Loading one product-->
-         <c:if test="${userClickShowProduct == true}">
+        <c:if test="${userClickShowProduct == true}">
             <%@include file="singleProduct.jsp" %>
+        </c:if>
+        <!--Loading redactor-->
+        <c:if test="${userClickManageProducts == true}">
+            <%@include file="manageProduct.jsp" %>
         </c:if>
 
     </div>

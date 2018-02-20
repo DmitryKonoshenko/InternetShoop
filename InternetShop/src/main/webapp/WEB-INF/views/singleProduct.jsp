@@ -1,7 +1,6 @@
-<jsp:useBean id="product" scope="request" type="com.divanxan.internetshop.dto.Product"/>
+<%--<jsp:useBean id="product" scope="request" type="com.divanxan.internetshop.dto.Product"/>--%>
 <%@ page contentType="text/html; UTF-8"
          pageEncoding="UTF-8"%>
-
 <div class="container">
 
     <div class="row">
@@ -11,8 +10,8 @@
             <oi class ="breadcrumb">
 
                 <li><a href="${contextRoot}/home">На главную</a></li>
-                <li><a href="${contextRoot}/show/all/products">-> Наши товары</a></li>
-                <li class="active">-> ${product.name}</li>
+                <li><a href="${contextRoot}/show/all/products">-> Наши товары:</a></li>
+                <li class="active">${product.name}</li>
 
             </oi>
 
@@ -52,8 +51,12 @@
 
             <c:choose>
                 <c:when test="${product.quantity<1}">
-                    <a href="javasript:void(0)" class="btn btn-success disabled"><strike>
-                        <span class="oi oi-cart">Добавить в корзину</span></strike></a>
+                    <a href="javascript:void(0)" class="btn btn-success disabled">
+                        <span class="oi oi-cart">Добавить в корзину</span></a>
+                    <%--TODO доделать заглушку для инкремента желаемого товара--%>
+                    <button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary"><span class="oi oi-heart">
+                        Кликните тут и мы закажем данный товар
+                    </span></button>
                 </c:when>
                 <c:otherwise>
 
