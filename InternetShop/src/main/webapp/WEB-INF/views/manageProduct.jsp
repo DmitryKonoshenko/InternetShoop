@@ -76,11 +76,12 @@
                                           class="form-field1122"/>
                             </div>
                         </div>
-                                <!-- File for image upload-->
+                        <!-- File for image upload-->
                         <div class="form-group">
                             <label class="form-title1122" for="file">Загрузите изображение товара</label>
                             <div class="col-md-8">
                                 <sf:input type="file" path="file" id="file" class="form-field1122"/>
+                                <sf:errors path="file" cssClass="help-block" element="em"/>
                             </div>
                         </div>
 
@@ -97,7 +98,8 @@
 
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-8">
-                                <input type="submit" name="submit" id="submit" value="Сохранить" class="submit-button1122"/>
+                                <input type="submit" name="submit" id="submit" value="Сохранить"
+                                       class="submit-button1122"/>
                                 <!-- Hidden fields for products -->
                                 <sf:hidden path="id"/>
                                 <sf:hidden path="code"/>
@@ -115,6 +117,45 @@
 
             </div>
 
+        </div>
+    </div>
+    <div class="row">
+
+
+
+        <div class="form-container1122">
+            <div class="form-title1122g">
+                <h3>Avalible Products</h3>
+            </div>
+            <div style="overflow:auto">
+                <table id="adminProductsTable" class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>&#160</th>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Active</th>
+                        <th>Edit</th>
+                    </tr>
+                    </thead>
+                    <%-- см myapp.js  adminProductsTable--%>
+                    <tfoot>
+                    <tr>
+                        <th>Id</th>
+                        <th>&#160</th>
+                        <th>Name</th>
+                        <th>Brand</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Active</th>
+                        <th>Edit</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
     </div>
 </div>
