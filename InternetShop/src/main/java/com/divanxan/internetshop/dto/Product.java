@@ -1,11 +1,12 @@
 package com.divanxan.internetshop.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.sun.javafx.beans.IDProperty;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
 @Component
@@ -16,17 +17,23 @@ public class Product {
     private int id;
     @Column(name = "code")
     private String code;
+
+
     @Column(name = "name")
+    @NotBlank(message ="Добавьте название товара!")
     private String name;
+
     @Column(name = "brand")
+    @NotBlank(message ="Добавьте название бренда!")
     private String brand;
 
     @Column(name = "description")
     @JsonIgnore
+    @NotBlank(message = "Введите значение для описания товара!")
     private String description;
 
     @Column(name = "unit_price")
-    @Min(value = 1, message = "Please select at least one value!")
+    @Min(value = 1, message = "Выбирите хотя бы 1 значение!")
     private double unitPrice;
 
     @Column(name = "quantity")
@@ -43,12 +50,27 @@ public class Product {
     @Column(name = "supplier_id")
     @JsonIgnore
     private int supplierId;
+
     @Column(name = "purchases")
     private int purchases;
+
     @Column(name = "views")
     private int views;
+
 //    @Column(name = "vishes")
 //    private int vishes;
+
+
+    @Transient
+    private MultipartFile file;
+
+    public MultipartFile getFile() {
+        return file;
+    }
+
+    public void setFile(MultipartFile file) {
+        this.file = file;
+    }
 
     //default cinstructor
     public Product() {
