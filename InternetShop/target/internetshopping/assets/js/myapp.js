@@ -220,7 +220,7 @@ $(function () {
                     mRender: function (data, type, row) {
                         var str = '';
 
-                        str += '<a href="'+window.contextRoot+'/manage/' + data + '/product" class="btn btn-warning">';
+                        str += '<a href="' + window.contextRoot + '/manage/' + data + '/product" class="btn btn-warning">';
                         str += '<span class="oi oi-wrench"></span></a>';
 
                         return str;
@@ -257,12 +257,11 @@ $(function () {
 
                                 });
                             }
-                            else
-                                {
-                                    checkbox.prop('checked', !checked)
-                                }
+                            else {
+                                checkbox.prop('checked', !checked)
                             }
-                        });
+                        }
+                    });
                 });
 
             }
@@ -271,6 +270,52 @@ $(function () {
     }
 
 //---------------------
+
+    // jQuery Validation Code
+
+
+
+
+    // validating the product form element
+
+
+    $categoryForm = $('#categoryForm');
+
+    if($categoryForm.length) {
+
+        $categoryForm.validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 3
+                    },
+                    description: {
+                        required: true,
+                        minlength: 3
+                    }
+                },
+                messages: {
+                    name: {
+                        required: 'Please enter product name!',
+                        minlength: 'Please enter atleast five characters'
+                    },
+                    description: {
+                        required: 'Please enter product name!',
+                        minlength: 'Please enter atleast five characters'
+                    }
+                },
+                errorElement : "em",
+                errorPlacement : function(error, element) {
+                    errorPlacement(error, element);
+                }
+            }
+
+        );
+
+    }
+
+    //----------------
+
 });
 
 function buttonClickt(row) {

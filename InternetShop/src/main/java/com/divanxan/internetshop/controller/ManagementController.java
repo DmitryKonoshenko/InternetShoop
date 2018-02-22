@@ -55,6 +55,9 @@ public class ManagementController {
             if (operation.equals("product")) {
                 mv.addObject("message", "Товар успешно добавлен");
             }
+            else if(operation.equals("category")){
+                mv.addObject("message", "Категория успешно добавлена");
+            }
         }
         logger.info(mv.toString());
         return mv;
@@ -135,6 +138,36 @@ public class ManagementController {
         return (isActive)? "Товар успешно деактивирован":"Товар успешно активирован";
     }
 
+    @RequestMapping(value = "/category", method = RequestMethod.POST)
+    public String handleCategorySubmission(@Valid @ModelAttribute Category category, BindingResult result
+            , Model model, HttpServletRequest request){
+
+
+        // проверка на ошибки
+        if (result.hasErrors()) {
+
+            model.addAttribute("userClickManageProducts", true);
+            model.addAttribute("title", "Product Management");
+            model.addAttribute("message", "Ошибка валидации для добавления категории!");
+
+            return "page";// если тут заюзать redirect:, то ошибки не будут выведены
+        }
+
+
+        logger.info(category.toString());
+
+        if(category.getId()==0) {
+            // создание нового товара
+            categoryDao.add(category);
+        }
+        else {
+            // модификация товара
+            categoryDao.update(category);
+        }
+
+        //переходим в контроллер showManageProducts
+        return "redirect:/manage/product/?operation=category";
+    }
 
     @ModelAttribute("categories")
     public List<Category> getCategories() {
@@ -142,5 +175,14 @@ public class ManagementController {
         return categoryDao.list();
 
     }
+
+    @ModelAttribute("category")
+    public Category getCategory(){
+        //берем новую категорию из manageProducts.jsp -> <sf:form modelAttribute="category" action="${contextRoot}/manage/category" method="POST"
+        //                             class="form-horizontal">
+        // и отправляем кго в handleCategorySubmission
+        return new Category();
+    }
+
 
 }

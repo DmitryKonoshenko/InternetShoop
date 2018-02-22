@@ -1,6 +1,7 @@
 package com.divanxan.internetshop.dto;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 
 /**
@@ -18,9 +19,11 @@ public class Category {
     private int id;
 
     @Column(name = "name")
+    @NotBlank(message ="Добавьте категории!")
     private String name;
 
     @Column(name = "description")
+    @NotBlank(message ="Добавьте описание!")
     private String description;
 
     @Column(name = "image_url")

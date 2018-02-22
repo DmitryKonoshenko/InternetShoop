@@ -93,8 +93,17 @@
                                            itemLabel="name"
                                            itemValue="id"
                                 />
+                                <c:if test="${product.id ==0}">
+                                    <div class="text-right">
+                                        <br/>
+                                        <button type="button" data-toggle="modal" data-target="#myCategoryModal"
+                                                class="submit-button1122">Добавьте категорию
+                                        </button>
+                                    </div>
+                                </c:if>
                             </div>
                         </div>
+
 
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-8">
@@ -120,7 +129,6 @@
         </div>
     </div>
     <div class="row">
-
 
 
         <div class="form-container1122">
@@ -158,6 +166,55 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal form -->
+    <div class="modal fade" id="myCategoryModal" role="dialog" tabindex="-1">
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title"> Добавьте новую категорию</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Category Form -->
+                    <sf:form id="categoryForm" modelAttribute="category" action="${contextRoot}/manage/category" method="POST"
+                             cssClass="form-horizontal">
+
+
+                        <div class="form-group">
+                            <label for="category_name" class="control-label col-md-4">Название категории</label>
+                            <div class="col-md-8">
+                                <sf:input type="text" path="name" id="category_name" cssClass="form-control"/>
+                                <sf:errors path="name" cssClass="help-block" element="em"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category_description" class="control-label col-md-4">Описание категории</label>
+                            <div class="col-md-8">
+                                <sf:textarea cols="" rows="5" path="description" id="category_description"
+                                             cssClass="form-control"/>
+                                <sf:errors path="description" cssClass="help-block" element="em"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-8">
+                                <input type="submit" value="Добавить катеорию" class="btn btn-primary"/>
+                            </div>
+                        </div>
+
+                    </sf:form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 </div>
 
 <%--<form class="form-container1122">--%>
