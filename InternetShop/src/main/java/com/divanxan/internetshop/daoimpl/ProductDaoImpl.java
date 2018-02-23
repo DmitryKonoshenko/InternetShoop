@@ -77,6 +77,32 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
+    public boolean setActiv(Product product) {
+        try {
+
+            product.setActive(true);
+            return this.update(product);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
+    public boolean deleteForTest(Product product) {
+        try {
+
+            sessionFactory.getCurrentSession().delete(product);
+            return true;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    @Override
     public List<Product> listActiveProducts() {
         String selectActiveProducts = "FROM Product WHERE active = :active";
         return sessionFactory.getCurrentSession()

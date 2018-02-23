@@ -26,37 +26,41 @@ public class ProductTest {
         productDao = (ProductDao)context.getBean("productDao");
     }
 
-//	@Test
-//	public void testCRUDProduct() {
-//		product = new Product();
-//
-//		product.setName("PHD 2247Ti");
-//		product.setBrand("Polaris");
-//		product.setDescription("Элегантный и стильный Polaris PHD 2247Ti с тремя температурными режимами, двумя мощностями обдува и функцией «Холодный воздух» сделает ваши волосы послушными, ровными и шелковистыми.");
-//		product.setUnitPrice(1310);
-//		product.setActive(true);
-//		product.setQuantity(5);
-//		product.setCategoryId(3);
-//		product.setSupplierId(4);
-//
-//		assertEquals("Something went wrong while inserting a new product!",
-//				true,productDao.add(product));
-//
-//
-//
-//		product = productDao.get(2);
-//		product.setName("32LJ519U");
-//		assertEquals("Something went wrong while updating the existing record!",
-//				true,productDao.update(product));
-//
-//		assertEquals("Something went wrong while deleting the existing record!",
-//				true,productDao.delete(product));
-//
-//
-//		assertEquals("Something went wrong while fetching the list of products!",
-//				10,productDao.list().size());
-//
-//	}
+	@Test
+	public void testCRUDProduct() {
+		product = new Product();
+
+		product.setName("PHD 2247Ti");
+		product.setBrand("Polaris");
+		product.setDescription("Элегантный и стильный Polaris PHD 2247Ti с тремя температурными режимами, двумя мощностями обдува и функцией «Холодный воздух» сделает ваши волосы послушными, ровными и шелковистыми.");
+		product.setUnitPrice(1310);
+		product.setActive(true);
+		product.setQuantity(5);
+		product.setCategoryId(3);
+		product.setSupplierId(4);
+
+		assertEquals("Something went wrong while inserting a new product!",
+				true,productDao.add(product));
+
+        assertEquals("Something went wrong while deleting the existing record!",
+                true,productDao.deleteForTest(product));
+
+
+		product = productDao.get(2);
+		product.setName("32LJ519U");
+		assertEquals("Something went wrong while updating the existing record!",
+				true,productDao.update(product));
+
+		assertEquals("Something went wrong while deleting the existing record!",
+				true,productDao.delete(product));
+
+
+		assertEquals("Something went wrong while fetching the list of products!",
+				9,productDao.list().size());
+
+        assertEquals("Something went wrong while deleting the existing record!",
+                true,productDao.setActiv(product));
+	}
 
     @Test
     public void testListActiveProducts(){
@@ -75,7 +79,7 @@ public class ProductTest {
     }
 
     @Test
-    public void testgetLatestActiveProducts(){
+    public void testGetLatestActiveProducts(){
         assertEquals("Something went wrong while fetching the list of products!",
                 9,productDao.getLatestActiveProducts(10)
                         .size());

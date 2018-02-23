@@ -20,7 +20,7 @@ public class HibernateConfig {
 
     private final static String DATABASE_URL = "jdbc:mysql://localhost:3306/ishop?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     private final static String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
-    private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQLDialect";
+    private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQL5Dialect";
     private final static String DATABASE_USERNAME = "root";
     private final static String DATABASE_PASSWORD = "root";
 
@@ -56,6 +56,8 @@ public class HibernateConfig {
         properties.put("hibernate.dialect", DATABASE_DIALECT);
         properties.put("hibernate.show_sql", "true");
         properties.put("hibernate.format_sql", "true");
+
+        properties.put("hibernate.hbm2ddl.auto", "update");
 
         return  properties;
     }

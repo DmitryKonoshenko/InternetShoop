@@ -4,17 +4,17 @@ INSERT INTO category (name, description, image_url, is_active)
 VALUES ('Пылесосы', 'Описание для пылесосов', 'CAT_2.png', TRUE);
 INSERT INTO category (name, description, image_url, is_active) VALUES ('Фены', 'Описание для фенов', 'CAT_3.png', TRUE);
 
-INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES ('Иван', 'Мохов', 'ADMIN', TRUE, 'admin', 'mox@gmail.com', '+79626662489');
+INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number, cart_id)
+VALUES ('Иван', 'Мохов', 'ADMIN', TRUE, 'admin', 'mox@gmail.com', '+79626662489', null);
 
-INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES ('Николай', 'Трыков', 'SUPPLIER', TRUE, '12345', 'trik@gmail.com', '+79521112233');
+INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number, cart_id)
+VALUES ('Николай', 'Трыков', 'SUPPLIER', TRUE, '12345', 'trik@gmail.com', '+79521112233', null);
 
-INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES ('Андрей', 'Новов', 'SUPPLIER', TRUE, '12345', 'novand@gmail.com', '+9015547488');
+INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number, cart_id)
+VALUES ('Андрей', 'Новов', 'SUPPLIER', TRUE, '12345', 'novand@gmail.com', '+9015547488', null);
 
-INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES ('Роман', 'Дьяченко', 'SUPPLIER', TRUE, '12345', 'romanbanan@gmail.com', '+79045513399');
+INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number, cart_id)
+VALUES ('Роман', 'Дьяченко', 'SUPPLIER', TRUE, '12345', 'romanbanan@gmail.com', '+79045513399', null);
 
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
 VALUES ('PRDABC123TVS', '19LES76T2', 'Erisson',

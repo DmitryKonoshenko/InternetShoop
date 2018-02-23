@@ -11,4 +11,6 @@ public interface CategoryDao {
     boolean add(Category category);
     boolean update(Category category);
     boolean delete(Category category);
+    boolean setActive(Category category);
+    boolean deleteForTest(Category category);
 }

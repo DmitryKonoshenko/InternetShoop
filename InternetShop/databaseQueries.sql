@@ -101,3 +101,18 @@ VALUES ('PRDRTY123FEN', '554.13', 'Valera',
   , 1270, 0, TRUE, 3, 4);
 
 
+CREATE TABLE `address` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `address_line_one` varchar(100) DEFAULT NULL,
+  `address_line_two` varchar(100) DEFAULT NULL,
+  `city` varchar(20) DEFAULT NULL,
+  `state` varchar(20) DEFAULT NULL,
+  `country` varchar(20) DEFAULT NULL,
+  `is_billing` tinyint(4) DEFAULT NULL,
+  `is_shipping` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_address_user_id_idx` (`user_id`),
+  CONSTRAINT `fk_address_user_id` FOREIGN KEY (`user_id`) REFERENCES `user_detail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
+

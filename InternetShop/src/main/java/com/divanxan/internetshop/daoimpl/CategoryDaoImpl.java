@@ -46,6 +46,26 @@ public class CategoryDaoImpl implements CategoryDao {
         return updateCode(category);
     }
 
+    @Override
+    public boolean setActive(Category category) {
+        category.setActive(true);
+
+        return updateCode(category);
+    }
+
+    @Override
+    public boolean deleteForTest(Category category) {
+        try{
+            //добавление категорию в таблицу БД
+            sessionFactory.getCurrentSession().delete(category);
+            return true;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     private boolean updateCode(Category category) {
         try{
             //изменение категории в таблице БД
