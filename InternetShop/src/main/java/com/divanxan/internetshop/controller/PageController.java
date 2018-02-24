@@ -162,5 +162,13 @@ public class PageController {
         return mv;
     }
 
+// такой же запрос для нашено flow id
+//    @RequestMapping(value = {"/register"})
+//    public ModelAndView register(){
+//        ModelAndView mv = new ModelAndView("page");
+//        mv.addObject("title", "О нас");
+//        return mv;
+//    }
+
 
 }

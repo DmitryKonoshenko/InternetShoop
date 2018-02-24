@@ -1,9 +1,12 @@
 package com.divanxan.internetshop.dto;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Cart {
+public class Cart implements Serializable {
+
+    private static final long serialVersionUID = 666666666L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

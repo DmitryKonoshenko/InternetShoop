@@ -1,36 +1,56 @@
 package com.divanxan.internetshop.dto;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "user_detail")
-public class User {
+public class User implements Serializable{
+
+    private static final long serialVersionUID = 777777777L;
 
     @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
     @Column(name = "first_name")
+    @NotBlank(message = "Введите имя!")
     private String firstName;
 
     @Column(name = "last_name")
+    @NotBlank(message = "Введите фамилию!")
     private String lastName;
 
     @Column(name = "email")
+    @NotBlank(message = "Введите почту")
     private String email;
 
     @Column(name = "contact_number")
+    @NotBlank(message = "Введите телефон")
     private String contactNumber;
 
     @Column(name = "role")
     private String role;
 
     @Column(name = "password")
+    @NotBlank(message = "Введите пароль")
     private String password;
 
     @Column(name = "enabled")
     private boolean enabled = true;
 
+// поле для проверки пароля
+    @Transient
+    private String confirmPassword;
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
 
     //------------------
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)

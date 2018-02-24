@@ -18,7 +18,7 @@ CREATE TABLE `ishop`.`user_detail` (
   `password`       VARCHAR(50)      DEFAULT NULL,
   `email`          VARCHAR(100)     DEFAULT NULL,
   `contact_number` VARCHAR(15)      DEFAULT NULL,
-  `cart_id` int(11) DEFAULT NULL,
+
   PRIMARY KEY (`id`)
 )
   ENGINE = InnoDB
@@ -49,10 +49,10 @@ CREATE TABLE `ishop`.`address` (
   `user_id` int(11) DEFAULT NULL,
   `address_line_one` varchar(100) DEFAULT NULL,
   `address_line_two` varchar(100) DEFAULT NULL,
-  `city` varchar(20) DEFAULT NULL,
-  `state` varchar(20) DEFAULT NULL,
-  `country` varchar(20) DEFAULT NULL,
-  `postal_code` varchar(10) DEFAULT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  `state` varchar(50) DEFAULT NULL,
+  `country` varchar(50) DEFAULT NULL,
+  `postal_code` varchar(50) DEFAULT NULL,
   `is_billing` tinyint(1) DEFAULT NULL,
   `is_shipping` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`),

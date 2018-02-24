@@ -10,106 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d920735-65df-4dfd-9a8b-65d5b664f90b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/InternetShop_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/InternetShop_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10a4f371-d730-4e7f-8454-5f61f450665d.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/10a4f371-d730-4e7f-8454-5f61f450665d.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/InternetShop.iml" afterPath="$PROJECT_DIR$/InternetShop.iml" />
-      <change beforePath="$PROJECT_DIR$/databaseQueries.sql" afterPath="$PROJECT_DIR$/databaseQueries.sql" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CategoryDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CategoryDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/ProductDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/ProductDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CategoryDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CategoryDaoImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/ProductDaoImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Address.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Address.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__insert_init_data.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__insert_init_data.sql" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CategoryTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CategoryTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/ProductTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/ProductTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp" />
       <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V0__create_tables.sql" afterPath="$PROJECT_DIR$/target/classes/db/migration/V0__create_tables.sql" />
       <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__insert_init_data.sql" afterPath="$PROJECT_DIR$/target/classes/db/migration/V1__insert_init_data.sql" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/META-INF/MANIFEST.MF" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/db/migration/V0__create_tables.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/db/migration/V1__insert_init_data.sql" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/logback.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/dispatcher-servlet.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/about.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/contact.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/error.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/home.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/listProducts.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/manageProduct.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/page.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/shared/footer.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/shared/navbar.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/shared/sidebar.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/singleProduct.jsp" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/web.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/bootstrap-grid.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/bootstrap-grid.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/bootstrap-reboot.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/bootstrap-reboot.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/bootstrap.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/dataTables.bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/datatables.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/datatables.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/myapp.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/open-iconic-bootstrap.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/css/shop-homepage.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/fonts/open-iconic.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/fonts/open-iconic.otf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/fonts/open-iconic.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/fonts/open-iconic.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/fonts/open-iconic.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRD8881144DBD.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRD97CAC06E63.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDA48EA11276.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDABC123FEN.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDABC123PIL.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDABC123TVS.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDD45DA789AE.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDDF1FB37912.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDQWE123FEN.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDQWE123PIL.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDQWE123TVS.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDRTY123FEN.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDRTY123PIL.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/images/PRDRTY123TVS.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/bootbox.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/bootstrap.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/bootstrap.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/bootstrap.bundle.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/bootstrap.bundle.min.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/bootstrap.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/bootstrap.min.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/dataTables.bootstrap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/datatables.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/datatables.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/jquery.dataTables.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/jquery.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/jquery.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/jquery.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/jquery.slim.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/jquery.slim.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/jquery.slim.min.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/jquery.validate.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/jquery.validate.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/myapp.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/assets/js/npm.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.divanxan.internetshop.dto.CategoryTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.divanxan.internetshop.dto.CategoryTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.divanxan.internetshop.dto.ProductTest.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.divanxan.internetshop.dto.ProductTest.xml" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.divanxan.internetshop.dto.CategoryTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.divanxan.internetshop.dto.CategoryTest.txt" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.divanxan.internetshop.dto.ProductTest.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/com.divanxan.internetshop.dto.ProductTest.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -157,180 +71,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java">
+      <file leaf-file-name="signup-success.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-success.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-884">
-              <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-              <folding>
-                <element signature="e#829#830#0" expanded="true" />
-                <element signature="e#867#868#0" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
-                <element signature="e#951#952#0" expanded="true" />
-                <element signature="e#976#977#0" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1037#1038#0" expanded="true" />
-                <element signature="e#1073#1074#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1155#1156#0" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1232#1233#0" expanded="true" />
-                <element signature="e#1263#1264#0" expanded="true" />
-                <element signature="e#1311#1312#0" expanded="true" />
-                <element signature="e#1351#1352#0" expanded="true" />
-                <element signature="e#1383#1384#0" expanded="true" />
-                <element signature="e#1411#1412#0" expanded="true" />
-                <element signature="e#1453#1454#0" expanded="true" />
-                <element signature="e#1487#1488#0" expanded="true" />
-                <element signature="e#1527#1528#0" expanded="true" />
-                <element signature="e#1563#1564#0" expanded="true" />
-                <element signature="e#1621#1622#0" expanded="true" />
-                <element signature="e#1671#1672#0" expanded="true" />
-                <element signature="e#1702#1703#0" expanded="true" />
-                <element signature="e#1729#1730#0" expanded="true" />
-                <element signature="e#1769#1770#0" expanded="true" />
-                <element signature="e#1801#1802#0" expanded="true" />
-                <element signature="e#1836#1837#0" expanded="true" />
-                <element signature="e#1867#1868#0" expanded="true" />
-                <element signature="e#1915#1916#0" expanded="true" />
-                <element signature="e#1955#1956#0" expanded="true" />
-                <element signature="e#1989#1990#0" expanded="true" />
-                <element signature="e#2019#2020#0" expanded="true" />
-                <element signature="e#2066#2067#0" expanded="true" />
-                <element signature="e#2104#2105#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="74" lean-forward="false" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="signup-flow.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-flow.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+            <state relative-caret-position="-88">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatcher-servlet.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <file leaf-file-name="signup-confirm.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-confirm.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+            <state relative-caret-position="207">
+              <caret line="62" column="99" lean-forward="false" selection-start-line="62" selection-start-column="99" selection-end-line="62" selection-end-column="99" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/ProductDaoImpl.java">
+      <file leaf-file-name="signup-billing.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-billing.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+            <state relative-caret-position="272">
+              <caret line="85" column="41" lean-forward="false" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java">
+      <file leaf-file-name="manageProduct.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="99" column="3" lean-forward="false" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/ProductDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/UserTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="203" column="34" lean-forward="false" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Address.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Address.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding>
-                <element signature="e#293#294#0" expanded="true" />
-                <element signature="e#320#321#0" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#390#391#0" expanded="true" />
-                <element signature="e#944#945#0" expanded="true" />
-                <element signature="e#969#970#0" expanded="true" />
-                <element signature="e#1002#1003#0" expanded="true" />
-                <element signature="e#1030#1031#0" expanded="true" />
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1168#1169#0" expanded="true" />
-                <element signature="e#1220#1221#0" expanded="true" />
-                <element signature="e#1261#1262#0" expanded="true" />
-                <element signature="e#1298#1299#0" expanded="true" />
-                <element signature="e#1358#1359#0" expanded="true" />
-                <element signature="e#1410#1411#0" expanded="true" />
-                <element signature="e#1441#1442#0" expanded="true" />
-                <element signature="e#1468#1469#0" expanded="true" />
-                <element signature="e#1508#1509#0" expanded="true" />
-                <element signature="e#1540#1541#0" expanded="true" />
-                <element signature="e#1572#1573#0" expanded="true" />
-                <element signature="e#1600#1601#0" expanded="true" />
-                <element signature="e#1642#1643#0" expanded="true" />
-                <element signature="e#1676#1677#0" expanded="true" />
-                <element signature="e#1710#1711#0" expanded="true" />
-                <element signature="e#1740#1741#0" expanded="true" />
-                <element signature="e#1786#1787#0" expanded="true" />
-                <element signature="e#1824#1825#0" expanded="true" />
-                <element signature="e#1861#1862#0" expanded="true" />
-                <element signature="e#1894#1895#0" expanded="true" />
-                <element signature="e#1946#1947#0" expanded="true" />
-                <element signature="e#1990#1991#0" expanded="true" />
-                <element signature="e#2025#2026#0" expanded="true" />
-                <element signature="e#2056#2057#0" expanded="true" />
-                <element signature="e#2105#2106#0" expanded="true" />
-                <element signature="e#2145#2146#0" expanded="true" />
-                <element signature="e#2179#2180#0" expanded="true" />
-                <element signature="e#2209#2210#0" expanded="true" />
-                <element signature="e#2256#2257#0" expanded="true" />
-                <element signature="e#2294#2295#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HibernateConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="59" column="56" lean-forward="false" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
+            <state relative-caret-position="1751">
+              <caret line="115" column="58" lean-forward="true" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -343,8 +128,8 @@
       <list>
         <option value="Jsp File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -399,24 +184,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contact.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/myapp.js" />
-        <option value="/Java Fragment (listProducts.jsp:1258).java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/about.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/sidebar.jsp" />
-        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/daoimpl/ProductDaoImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/assets/js/datatables.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/dataTables.bootstrap.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/exception/ProductNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/listProducts.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleProduct.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProducts.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagmentController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db.migration/init/V0_0_00__create_tables.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/db.migration/init/V0_0_01__insert_init_data.sql" />
@@ -426,11 +199,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/assets/css/myapp.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/JsonDataController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/js/myapp.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/ProductDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/ProductDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/ProductTest.java" />
@@ -438,18 +208,33 @@
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CategoryDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CategoryTest.java" />
         <option value="$PROJECT_DIR$/databaseQueries.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1__insert_init_data.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Address.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/AddressTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1__insert_init_data.sql" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-footer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/RegisterModel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Address.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-flow.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-success.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-personal.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-billing.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-confirm.jsp" />
       </list>
     </option>
   </component>
@@ -494,10 +279,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="-1288" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -508,7 +293,7 @@
       <showMembers />
       <showModules />
       <showLibraryContents />
-      <hideEmptyPackages />
+      <hideEmptyPackages ProjectPane="true" />
       <abbreviatePackageNames />
       <autoscrollToSource />
       <autoscrollFromSource />
@@ -517,6 +302,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -548,25 +336,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="divanxan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="divanxan" type="462c0819:PsiDirectoryNode" />
               <item name="internetshop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -575,19 +344,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="divanxan" type="462c0819:PsiDirectoryNode" />
-              <item name="internetshop" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="divanxan" type="462c0819:PsiDirectoryNode" />
               <item name="internetshop" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -597,8 +353,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="divanxan" type="462c0819:PsiDirectoryNode" />
               <item name="internetshop" type="462c0819:PsiDirectoryNode" />
               <item name="daoimpl" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -608,8 +362,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="divanxan" type="462c0819:PsiDirectoryNode" />
               <item name="internetshop" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -618,6 +370,15 @@
               <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="internetshop" type="462c0819:PsiDirectoryNode" />
+              <item name="handler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -626,15 +387,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="db" type="462c0819:PsiDirectoryNode" />
               <item name="migration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -650,15 +402,80 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="flows" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="flows" type="462c0819:PsiDirectoryNode" />
+              <item name="register" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="flows" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -680,21 +497,22 @@
       <recent name="com.divanxan.internetshop.dto" />
       <recent name="com.divanxan.internetshop.daoimpl" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\js" />
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources" />
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources\db.migration" />
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\css" />
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\WEB-INF\views" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\WEB-INF\views\flows\register" />
       <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources\db\migration" />
       <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\images" />
       <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\css" />
       <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\js" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\css" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\js" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources\db.migration" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\WEB-INF\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -709,7 +527,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UserTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -769,31 +587,6 @@
       <option name="MAIN_CLASS_NAME" value="com.divanxan.internetshop.dto.ProductTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="ProductTest.testListProductsByCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.divanxan.internetshop.dto.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="InternetShop" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.divanxan.internetshop.dto" />
-      <option name="MAIN_CLASS_NAME" value="com.divanxan.internetshop.dto.ProductTest" />
-      <option name="METHOD_NAME" value="testListProductsByCategory" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -983,6 +776,45 @@
         </option>
       </method>
     </configuration>
+    <configuration name="signup-billing.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/WEB-INF/views/flows/register/signup-billing.jsp" />
+      <deployment>
+        <artifact name="InternetShop:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="signup-billing_jsp_InternetShop" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="InternetShop:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -993,17 +825,17 @@
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 9" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.CategoryTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.ProductTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ProductTest.testListProductsByCategory" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.UserTest.testAdd" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.UserTest.testAdd" />
+      <item index="5" class="java.lang.String" itemvalue="Tomcat Server.signup-billing.jsp" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.UserTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest.testAdd" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CategoryTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ProductTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ProductTest.testListProductsByCategory" />
+        <item index="0" class="java.lang.String" itemvalue="Tomcat Server.signup-billing.jsp" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.UserTest.testAdd" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CategoryTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ProductTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1047,6 +879,7 @@
       <workItem from="1519239640494" duration="12458000" />
       <workItem from="1519287899589" duration="6957000" />
       <workItem from="1519375045214" duration="22552000" />
+      <workItem from="1519458849046" duration="21331000" />
     </task>
     <task id="LOCAL-00001" summary="Подключил бутстрап, но почему-то теги html не работают.">
       <created>1518679945858</created>
@@ -1091,7 +924,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210841000" />
+    <option name="totallyTimeSpent" value="232172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1102,11 +935,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-1288" y="-8" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36104512" sideWeight="0.5186084" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36104512" sideWeight="0.5218447" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1125,7 +958,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32779098" sideWeight="0.4894822" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36104512" sideWeight="0.48139158" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3446712" sideWeight="0.47815534" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1147,7 +980,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36104512" sideWeight="0.51537216" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36104512" sideWeight="0.5218447" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1167,16 +1000,16 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36104512" sideWeight="0.48462784" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32779098" sideWeight="0.4894822" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36104512" sideWeight="0.47815534" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27265373" sideWeight="0.49295774" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27265373" sideWeight="0.49295774" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="518" y="279" width="244" height="425" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31691298" sideWeight="0.5070422" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.49676377" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
@@ -1228,7 +1061,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java</url>
-          <line>146</line>
+          <line>149</line>
           <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
@@ -1270,92 +1103,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/view/InternalResourceView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/view/AbstractView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/filter/CharacterEncodingFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/bind/annotation/RequestParam.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flyway_migrate.cmd" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.migration/init/V0_0_00__create_tables.sql" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/META-INF/spring-form.tld">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="608" column="75" lean-forward="false" selection-start-line="608" selection-start-column="19" selection-end-line="608" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.migration/init/V0_0_01__insert_init_data.sql" />
-    <entry file="das://table:/ad457807/10a4f371-d730-4e7f-8454-5f61f450665d/ishop.product">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db.migration/V0_0_00__create_tables.sql" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/util/FileUploadUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/listProducts.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1278">
-          <caret line="7" column="60" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/bootbox.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="62" lean-forward="true" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/myapp.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="214" column="1" lean-forward="true" selection-start-line="214" selection-start-column="1" selection-end-line="214" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleProduct.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -1376,14 +1123,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="26" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="92" column="19" lean-forward="true" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1417,71 +1156,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="424" column="0" lean-forward="false" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
-          <folding>
-            <marker date="1518417817719" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1518417817719" expanded="false" signature="155:2025" ph="..." />
-            <marker date="1518417817719" expanded="false" signature="5135:5146" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="5183:5189" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="5265:5356" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="5436:5509" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="5589:5662" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="5762:5855" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="5931:6000" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="6092:6177" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="6246:6257" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="6304:6310" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="6368:6379" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="6408:6414" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="6478:6891" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="6960:7571" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="7637:8292" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="8357:9000" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="9067:10162" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="10229:11324" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="11401:12648" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="12727:13484" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="13549:14614" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="14681:15348" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="15410:15542" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="15615:15626" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="15656:15662" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="15737:15849" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="15946:16289" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="16394:17737" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="17826:17907" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="18013:20216" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="20323:23482" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="23594:23832" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="24053:25319" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="25396:25665" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="25566:25658" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="25769:26835" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="26907:27184" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="27250:27606" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="27714:28348" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="28459:28967" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="29056:29716" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="29898:31241" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="31361:32851" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="32952:33061" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="33226:33651" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="33829:33975" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="34082:35216" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="35286:35482" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="35495:35880" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1489,82 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="484" column="0" lean-forward="false" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
-          <folding>
-            <marker date="1518417817719" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1518417817719" expanded="false" signature="155:2711" ph="..." />
-            <marker date="1518417817719" expanded="true" signature="3938:4349" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="4424:4895" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="4967:4978" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="5019:5025" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="5080:5091" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="5120:5126" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="5182:5193" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="5226:5232" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="5271:5282" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="5307:5313" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="5371:5382" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="5409:5415" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="5463:5474" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="5496:5502" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="5550:5561" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="5588:5594" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="5629:5729" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="5812:5879" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="5939:5950" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="5984:5990" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="6088:6453" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="6534:6609" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="6668:6679" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="6716:6722" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="6779:6790" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="6825:6831" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="6911:6984" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="7060:7129" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="7201:7266" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="7345:7607" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="7676:8679" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="8745:10174" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="10254:10734" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="10837:12030" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="12131:13172" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="13278:13362" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="13455:13462" ph="{}" />
-            <marker date="1518417817719" expanded="true" signature="13537:14819" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="14965:16040" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="16092:16103" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="16157:16163" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="16244:16255" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="16289:16295" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="16363:16370" ph="{}" />
-            <marker date="1518417817719" expanded="true" signature="16398:16729" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="16795:16899" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="16958:16965" ph="{}" />
-            <marker date="1518417817719" expanded="true" signature="16993:17324" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="17448:17722" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="17850:17905" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="18034:18089" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="18217:18272" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="18403:18458" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="18584:19208" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="18897:19200" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="18960:19190" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="19332:19591" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="19728:21636" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="21727:21795" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="21989:22157" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="22309:22750" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="22908:23251" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="23405:23894" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="23981:24121" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="24316:25374" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="24362:24373" ph="{}" />
-            <marker date="1518417817719" expanded="true" signature="24457:24967" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="25077:25368" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="25471:25673" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="25514:25525" ph="{}" />
-            <marker date="1518417817719" expanded="false" signature="25594:25609" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="25657:25667" ph=" }" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1594,19 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <marker date="1518417817719" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1518417817719" expanded="false" signature="166:563" ph="..." />
-            <marker date="1518417817719" expanded="false" signature="759:770" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="783:789" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="826:837" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="856:862" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="889:900" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="918:924" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="976:1081" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="1295:1381" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="1620:1705" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1614,74 +1203,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="484" column="0" lean-forward="false" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
-          <folding>
-            <marker date="1518417817719" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1518417817719" expanded="false" signature="177:5071" ph="..." />
-            <marker date="1518417817719" expanded="true" signature="7493:7581" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="7658:7822" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="7867:8378" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="8488:8553" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="8644:8655" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="8691:8697" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="8801:9071" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="9157:9258" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="9372:9672" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="9768:9889" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="10005:10074" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="10170:10224" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="10334:10615" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="10705:10809" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="10912:10979" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="11059:11070" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="11104:11110" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="11210:11285" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="11373:11432" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="11497:11508" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="11538:11544" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="11636:11765" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="11863:11994" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="12092:12159" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="12234:12245" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="12279:12285" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="12350:12361" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="12394:12400" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="12454:12465" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="12500:12506" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="12598:12845" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="12949:13220" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="13300:13438" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="13503:13514" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="13543:13549" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="13637:13718" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="13806:13873" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="13979:14082" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="14154:14219" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="14313:14384" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="14442:14591" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="14661:14672" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="14696:14702" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="14741:15522" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="15569:18168" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="18248:20494" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="20584:21708" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="21792:23465" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="23534:23545" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="23557:23563" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="23711:24705" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="24806:24817" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="24828:24834" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="24930:25743" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="25910:28661" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="28765:28837" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="28945:30300" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="29525:29932" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="30422:30808" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="30910:32109" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="31377:31771" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="32197:32662" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="32791:32898" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="33064:33981" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1689,38 +1210,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <marker date="1518417817719" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1518417817719" expanded="false" signature="177:1388" ph="..." />
-            <marker date="1518417817719" expanded="false" signature="1736:1747" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="1770:1776" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="1847:1858" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="1879:1885" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="2001:2064" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="2205:3295" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="3381:3970" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="4042:4053" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="4087:4093" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="4195:4513" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="4585:4755" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="4838:6528" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="5017:5341" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="5462:5642" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="5687:5965" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="6012:6027" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="6060:6070" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="6163:6327" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="6414:6522" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="6616:8127" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="6803:7488" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="6829:7176" ph="{...}" />
-            <marker date="1518417817719" expanded="false" signature="7527:7542" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="7598:7608" ph=" }" />
-            <marker date="1518417817719" expanded="false" signature="7689:7704" ph=" { " />
-            <marker date="1518417817719" expanded="false" signature="7727:7737" ph=" }" />
-            <marker date="1518417817719" expanded="true" signature="7824:7926" ph="{...}" />
-            <marker date="1518417817719" expanded="true" signature="8019:8121" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1728,36 +1217,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <marker date="1518417818062" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1518417818062" expanded="false" signature="162:753" ph="..." />
-            <marker date="1518417818062" expanded="false" signature="1161:1172" ph=" { " />
-            <marker date="1518417818062" expanded="false" signature="1193:1199" ph=" }" />
-            <marker date="1518417818062" expanded="false" signature="1262:1273" ph=" { " />
-            <marker date="1518417818062" expanded="false" signature="1293:1299" ph=" }" />
-            <marker date="1518417818062" expanded="true" signature="1421:1477" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="1556:1615" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="1725:1784" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="1878:1949" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="2113:2718" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="2878:4227" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="4306:4483" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="4603:5061" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="5126:6283" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="6368:6964" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="7047:7618" ph="{...}" />
-            <marker date="1518417818062" expanded="true" signature="7678:8011" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1765,7 +1224,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1773,23 +1231,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="116" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__insert_init_data.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1798,23 +1239,6 @@
         <state relative-caret-position="388">
           <caret line="52" column="36" lean-forward="false" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding>
-            <element signature="e#284#285#0" expanded="false" />
-            <element signature="e#311#312#0" expanded="false" />
-            <element signature="e#349#350#0" expanded="false" />
-            <element signature="e#381#382#0" expanded="false" />
-            <element signature="e#604#605#0" expanded="false" />
-            <element signature="e#632#633#0" expanded="false" />
-            <element signature="e#754#755#0" expanded="false" />
-            <element signature="e#798#799#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1830,7 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-85">
           <caret line="61" column="41" lean-forward="false" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1838,70 +1261,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="122" column="5" lean-forward="false" selection-start-line="111" selection-start-column="4" selection-end-line="122" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-884">
-          <caret line="38" column="27" lean-forward="false" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
-          <folding>
-            <element signature="e#829#830#0" expanded="true" />
-            <element signature="e#867#868#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1155#1156#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1232#1233#0" expanded="true" />
-            <element signature="e#1263#1264#0" expanded="true" />
-            <element signature="e#1311#1312#0" expanded="true" />
-            <element signature="e#1351#1352#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1411#1412#0" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-            <element signature="e#1527#1528#0" expanded="true" />
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1621#1622#0" expanded="true" />
-            <element signature="e#1671#1672#0" expanded="true" />
-            <element signature="e#1702#1703#0" expanded="true" />
-            <element signature="e#1729#1730#0" expanded="true" />
-            <element signature="e#1769#1770#0" expanded="true" />
-            <element signature="e#1801#1802#0" expanded="true" />
-            <element signature="e#1836#1837#0" expanded="true" />
-            <element signature="e#1867#1868#0" expanded="true" />
-            <element signature="e#1915#1916#0" expanded="true" />
-            <element signature="e#1955#1956#0" expanded="true" />
-            <element signature="e#1989#1990#0" expanded="true" />
-            <element signature="e#2019#2020#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-            <element signature="e#2104#2105#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/AddressTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="59" column="56" lean-forward="false" selection-start-line="59" selection-start-column="56" selection-end-line="59" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/AddressTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/ProductDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1920,10 +1283,150 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/UserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
+        <state relative-caret-position="3349">
           <caret line="203" column="34" lean-forward="false" selection-start-line="203" selection-start-column="34" selection-end-line="203" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="59" column="9" lean-forward="false" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__insert_init_data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/myapp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/bootstrap1122.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="2" selection-end-line="170" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1450">
+          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-navbar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="33" column="55" lean-forward="false" selection-start-line="33" selection-start-column="55" selection-end-line="33" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="61" column="29" lean-forward="true" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/webflow/spring-binding/2.4.7.RELEASE/spring-binding-2.4.7.RELEASE.jar!/org/springframework/binding/message/MessageContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/RegisterModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#393#394#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#605#606#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1931,80 +1434,114 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Address.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="36" column="41" lean-forward="false" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
           <folding>
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#320#321#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1168#1169#0" expanded="true" />
-            <element signature="e#1220#1221#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1298#1299#0" expanded="true" />
-            <element signature="e#1358#1359#0" expanded="true" />
-            <element signature="e#1410#1411#0" expanded="true" />
-            <element signature="e#1441#1442#0" expanded="true" />
-            <element signature="e#1468#1469#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1600#1601#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1676#1677#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1786#1787#0" expanded="true" />
-            <element signature="e#1824#1825#0" expanded="true" />
-            <element signature="e#1861#1862#0" expanded="true" />
-            <element signature="e#1894#1895#0" expanded="true" />
-            <element signature="e#1946#1947#0" expanded="true" />
-            <element signature="e#1990#1991#0" expanded="true" />
-            <element signature="e#2025#2026#0" expanded="true" />
-            <element signature="e#2056#2057#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-            <element signature="e#2145#2146#0" expanded="true" />
-            <element signature="e#2179#2180#0" expanded="true" />
-            <element signature="e#2209#2210#0" expanded="true" />
-            <element signature="e#2256#2257#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2041#2042#0" expanded="true" />
+            <element signature="e#2074#2075#0" expanded="true" />
+            <element signature="e#2126#2127#0" expanded="true" />
+            <element signature="e#2170#2171#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="99" column="3" lean-forward="false" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
-          <folding />
+        <state relative-caret-position="238">
+          <caret line="44" column="34" lean-forward="false" selection-start-line="44" selection-start-column="34" selection-end-line="44" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1155#1156#0" expanded="true" />
+            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="204">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="97" column="34" lean-forward="false" selection-start-line="97" selection-start-column="34" selection-end-line="97" selection-end-column="34" />
+        <state relative-caret-position="171">
+          <caret line="44" column="16" lean-forward="false" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        <state relative-caret-position="320">
+          <caret line="78" column="42" lean-forward="true" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1102">
+          <caret line="34" column="18" lean-forward="true" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="115" column="58" lean-forward="true" selection-start-line="115" selection-start-column="58" selection-end-line="115" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-billing.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="85" column="41" lean-forward="false" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-success.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="74" lean-forward="false" selection-start-line="14" selection-start-column="74" selection-end-line="14" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-flow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-personal.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="95" column="98" lean-forward="false" selection-start-line="95" selection-start-column="81" selection-end-line="95" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-confirm.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="62" column="99" lean-forward="false" selection-start-line="62" selection-start-column="99" selection-end-line="62" selection-end-column="99" />
           <folding />
         </state>
       </provider>

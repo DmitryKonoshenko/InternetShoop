@@ -58,6 +58,9 @@ public class ManagementController {
             else if(operation.equals("category")){
                 mv.addObject("message", "Категория успешно добавлена");
             }
+            else if(operation.equals("notcategory")){
+                mv.addObject("message", "Категория НЕ ДОБАВЛЕНА!!!");
+            }
         }
         logger.info(mv.toString());
         return mv;
@@ -150,7 +153,7 @@ public class ManagementController {
             model.addAttribute("title", "Product Management");
             model.addAttribute("message", "Ошибка валидации для добавления категории!");
 
-            return "page";// если тут заюзать redirect:, то ошибки не будут выведены
+            return "redirect:/manage/product/?operation=notcategory";// если тут заюзать redirect:, то ошибки не будут выведены
         }
 
 

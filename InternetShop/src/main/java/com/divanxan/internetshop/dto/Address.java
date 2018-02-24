@@ -1,47 +1,41 @@
 package com.divanxan.internetshop.dto;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 @Entity
-public class Address {
+public class Address implements Serializable {
+
+    private static final long serialVersionUID = 888888888L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
-    //---------
-
-    @ManyToOne
-    private User user;
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-    //---------
-
-
     @Column(name = "address_line_one")
+    @NotBlank(message = "Введите адрес")
     private String addressLineOne;
 
     @Column(name = "address_line_two")
     private String addressLineTwo;
 
     @Column(name = "city")
+    @NotBlank(message = "Введите город")
     private String city;
 
     @Column(name = "state")
+    @NotBlank(message = "Введите область")
     private String state;
 
     @Column(name = "country")
+    @NotBlank(message = "Введите страну")
     private String country;
 
     @Column(name = "postal_code")
-    private String postalСode;
+    @NotBlank(message = "Введите почтовый индекс")
+    private String postalCode;
 
     @Column(name = "is_shipping")
     private boolean shipping;
@@ -97,12 +91,12 @@ public class Address {
         this.country = country;
     }
 
-    public String getPostalСode() {
-        return postalСode;
+    public String getPostalCode() {
+        return postalCode;
     }
 
-    public void setPostalСode(String postalСode) {
-        this.postalСode = postalСode;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
     public boolean isShipping() {
@@ -125,16 +119,25 @@ public class Address {
     public String toString() {
         return "Address{" +
                 "id=" + id +
-                ", user=" + user +
                 ", addressLineOne='" + addressLineOne + '\'' +
                 ", addressLineTwo='" + addressLineTwo + '\'' +
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", country='" + country + '\'' +
-                ", postalСode='" + postalСode + '\'' +
+                ", postalCode='" + postalCode + '\'' +
                 ", shipping=" + shipping +
                 ", billing=" + billing +
+                ", userId=" + userId +
                 '}';
+    }
+
+    @Column(name = "user_id")
+    private int userId;
+    public int getUserId() {
+        return userId;
+    }
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 }
 
