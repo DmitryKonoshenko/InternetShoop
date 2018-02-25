@@ -16,12 +16,9 @@ public interface UserDao {
 
     // добавление адреса
     boolean addAddress(Address address);
-    // тут много запросов
-    Address getBillingAddress(User user);
-    List<Address> listShippingAddressess(User user);
-    // альтернатива
-//    Address getBillingAddress(int userId);
-//    List<Address> listShippingAddressess(int userId);
+
+    Address getBillingAddress(int userId);
+    List<Address> listShippingAddressess(int userId);
 
     boolean updateCart(Cart cart);
 }

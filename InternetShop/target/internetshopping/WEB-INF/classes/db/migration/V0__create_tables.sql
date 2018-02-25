@@ -56,7 +56,7 @@ CREATE TABLE `ishop`.`address` (
   `is_billing` tinyint(1) DEFAULT NULL,
   `is_shipping` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `fk_address_user_id` FOREIGN KEY (`user_id`) REFERENCES `user_detail` (`id`)
+  CONSTRAINT `fk_address_user_id` FOREIGN KEY (`user_id`) REFERENCES `user_detail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `ishop`.`cart` (

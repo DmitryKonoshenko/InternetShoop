@@ -279,7 +279,7 @@ $(function () {
     // validating the product form element
 
 
-    $categoryForm = $('#categoryForm');
+  var  $categoryForm = $('#categoryForm');
 
     if($categoryForm.length) {
 
@@ -315,6 +315,45 @@ $(function () {
     }
 
     //----------------
+    var $loginForm = $('#loginForm');
+
+    if($loginForm.length) {
+
+        $loginForm.validate({
+                rules: {
+                    username: {
+                        required: true,
+                        email: true
+
+                    },
+                    password: {
+                        required: true
+                    }
+                },
+                messages: {
+                    username: {
+                        required: 'Пожалуйста, введите имя пользователя!',
+                        email: 'Пожалуйста введите правильный адрес электронной почты!'
+                    },
+                    password: {
+                        required: 'Пожалуйста, введите пароль!'
+                    }
+                },
+                errorElement : "em",
+                errorPlacement : function(error, element) {
+                    // Add the 'help-block' class to the error element
+                    error.addClass("help-block");
+
+                    // add the error label after the input element
+                    error.insertAfter(element);
+                }
+            }
+
+        );
+
+    }
+
+    //------------------
 
 });
 

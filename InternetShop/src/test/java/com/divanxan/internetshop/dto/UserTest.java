@@ -172,35 +172,65 @@ public class UserTest {
     */
 
 
-/*
-@Test
-    public void testAddAddress(){
-     user = userDao.getByEmail("branovdp@gidrokor.ru");
-
-     address = new Address();
-     address.setAddressLineOne("Проспект обуховской обороны д 223 литера А");
-     address.setAddressLineTwo("рядом с магазином Пятерочка");
-     address.setCity("Москва");
-     address.setState("Московская область");
-     address.setCountry("Россия");
-     address.setPostalСode("19855500");
-     // set shipping to true
-     address.setShipping(true);
-
-     address.setUser(user);
-
-     assertEquals("Failed to add shipping address!", true, userDao.addAddress(address));
- }
- */
-
     @Test
-    public void testListGetAddresses() {
+    public void crudTestForUserAndAddress() {
+
+        user = new User();
+        user.setFirstName("Баранов");
+        user.setLastName("Дмитрий");
+        user.setEmail("branovdp@gidrokor.ru");
+        user.setContactNumber("+79551326411");
+        user.setRole("USER");
+        user.setPassword("123456");
+
+        // add the user
+        assertEquals("Failed to add the user!", true, userDao.addUser(user));
+
+        address = new Address();
+        address.setAddressLineOne("Проспект обуховской обороны д 223 литера А");
+        address.setAddressLineTwo("рядом с магазином Пятерочка");
+        address.setCity("Москва");
+        address.setState("Московская область");
+        address.setCountry("Россия");
+        address.setPostalCode("19855500");
+        // set shipping to true
+        address.setShipping(true);
+
+        address.setUserId(user.getId());
+
+        assertEquals("Failed to add shipping address!", true, userDao.addAddress(address));
+
+        address = new Address();
+        address.setAddressLineOne("Проспект ветеранов д.394 кв556");
+        address.setAddressLineTwo("рядом с аптекой Ромашка");
+        address.setCity("Санкт-Петербург");
+        address.setState("Ленинградская обасть");
+        address.setCountry("Россия");
+        address.setPostalCode("19855500");
+        address.setBilling(true);
+
+        address.setUserId(user.getId());
+
+        assertEquals("Failed to add address!", true, userDao.addAddress(address));
+
+        user = null;
+
         user = userDao.getByEmail("branovdp@gidrokor.ru");
 
-        assertEquals("Failed to fetch the list of addewss and size does not mutch!"
-                ,2, userDao.listShippingAddressess(user).size());
+        assertEquals("Failed to fetch the list of address and size does not mutch!"
+                , 1, userDao.listShippingAddressess(user.getId()).size());
 
-        assertEquals("Failed to fetch the list of addewss and size does not mutch!"
-                ,"Санкт-Петербург", userDao.getBillingAddress(user).getCity());
+        String str = userDao.getBillingAddress(user.getId()).getCity();
+
+        assertEquals("Failed to fetch the list of address and size does not mutch!"
+                , "Санкт-Петербург", userDao.getBillingAddress(user.getId()).getCity());
+
+    }
+
+
+    @AfterClass
+    public static void reinit() {
+        User user = userDao.getByEmail("branovdp@gidrokor.ru");
+        userDao.delleteForTestUser(user);
     }
 }

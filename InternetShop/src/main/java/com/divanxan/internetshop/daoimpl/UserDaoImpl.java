@@ -68,12 +68,12 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public Address getBillingAddress(User user) {
-        String selectQuerry = "FROM Address WHERE user =:user AND billing =:billing";
+    public Address getBillingAddress(int userId) {
+        String selectQuerry = "FROM Address WHERE userId =:userId AND billing =:billing";
         try {
             return sessionFactory.getCurrentSession()
                     .createQuery(selectQuerry, Address.class)
-                    .setParameter("user", user)
+                    .setParameter("userId", userId)
                     .setParameter("billing", true)
                     .getSingleResult();
         } catch (Exception e) {
@@ -83,12 +83,12 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
-    public List<Address> listShippingAddressess(User user) {
-        String selectQuerry = "FROM Address WHERE user =:user AND shipping =:shipping";
+    public List<Address> listShippingAddressess(int userId) {
+        String selectQuerry = "FROM Address WHERE userId =:userId AND shipping =:shipping";
         try {
             return sessionFactory.getCurrentSession()
                     .createQuery(selectQuerry, Address.class)
-                    .setParameter("user", user)
+                    .setParameter("userId", userId)
                     .setParameter("shipping", true)
                     .getResultList();
         } catch (Exception e) {

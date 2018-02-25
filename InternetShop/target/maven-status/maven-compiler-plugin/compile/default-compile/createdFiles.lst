@@ -1,9 +1,11 @@
 com\divanxan\internetshop\daoimpl\CategoryDaoImpl.class
+com\divanxan\internetshop\handler\RegisterHandler.class
 com\divanxan\internetshop\dao\UserDao.class
 com\divanxan\internetshop\dao\ProductDao.class
 com\divanxan\internetshop\daoimpl\UserDaoImpl.class
 com\divanxan\internetshop\config\HibernateConfig.class
 com\divanxan\internetshop\dto\Product.class
+com\divanxan\internetshop\model\RegisterModel.class
 com\divanxan\internetshop\util\FileUploadUtility.class
 com\divanxan\internetshop\controller\JsonDataController.class
 com\divanxan\internetshop\validator\ProductValidator.class

@@ -1,0 +1,51 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/security
+		http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Добавим возможность найти наш бин  -->
+    <context:component-scan base-package="com.divanxan.internetshop"/>
+
+    <!-- Загрузка статических ресурсов  -->
+    <http pattern="/resources/**" security="none"/>
+
+    <!-- Добавим минимальную настройку для http с  сайта с доками  пп 6.2.2  -->
+    <!-- https://docs.spring.io/spring-security/site/docs/5.0.2.RELEASE/reference/htmlsingle/#ns-getting-started -->
+    <http pattern="/favicon.ico" security="none"/>
+    <http>
+        <!-- Фиксим warning анонимуса. ВАЖНО это строка должна идти первой  -->
+        <intercept-url pattern="/login" access="permitAll"/>
+        <!-- Разница между ROLE и AUTORITY: ROLE должно совпадать с названием роли и иметь префикс ROLE_USER,
+        AUTORITY: полностью совпадает с названием   -->
+        <intercept-url pattern="/**" access="hasAuthority('USER')"/>
+        <!-- название страницы логирования
+         и параметр для ввода логине - мыло пароль - пароль (по дефолту, но можно поменять)
+         -->
+        <form-login login-page="/login"/>
+        <logout/>
+    </http>
+    <!-- Добавим настройку аутентификации с того же сайта пп 6.2.2  -->
+    <authentication-manager>
+        <authentication-provider>
+            <!-- Добавим авторизацию с помощью БД
+            dataSource - из конфигурации хибирнета
+            -->
+            <jdbc-user-service data-source-ref="dataSource"
+                               users-by-username-query="SELECT email, password, enabled FROM user_detail WHERE email = ?"
+                               authorities-by-username-query="SELECT email, role FROM user_detail WHERE email = ?"
+            />
+            <!--
+            <user-service>
+                <user name="divanxan" password="123456" authorities="USER, ADMIN" />
+            </user-service>
+            -->
+        </authentication-provider>
+    </authentication-manager>
+
+</beans:beans>

@@ -16,6 +16,10 @@ VALUES ('Андрей', 'Новов', 'SUPPLIER', TRUE, '12345', 'novand@gmail.c
 INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
 VALUES ('Роман', 'Дьяченко', 'SUPPLIER', TRUE, '12345', 'romanbanan@gmail.com', '+79045513399');
 
+INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
+VALUES ('Иван', 'Коновалов', 'USER', TRUE, '12345', 'ivan@gmail.com', '+79065513399');
+
+
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
 VALUES ('PRDABC123TVS', '19LES76T2', 'Erisson',
         'Телевизор Erisson 19LES76T2 черного цвета идеально подойдет для вашей кухни или небольшого помещения.'

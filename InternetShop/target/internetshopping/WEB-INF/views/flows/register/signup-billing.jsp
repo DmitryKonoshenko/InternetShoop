@@ -10,7 +10,7 @@
             <div class="panel panel-primary">
 
                 <div class="form-title1122">
-                    <h4>Sign Up - Address</h4>
+                    <h4>Регистрация - Адрес</h4>
                 </div>
 
                 <div class="panel-body">
