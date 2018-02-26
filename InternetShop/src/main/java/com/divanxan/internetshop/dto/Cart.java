@@ -1,8 +1,15 @@
 package com.divanxan.internetshop.dto;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
+//сделаем корзину сессионной и инжектним ее в RegisterHandler
+
+@Component
+@Scope("session")
 @Entity
 public class Cart implements Serializable {
 

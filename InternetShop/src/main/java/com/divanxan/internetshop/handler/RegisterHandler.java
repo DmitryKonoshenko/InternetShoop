@@ -8,13 +8,22 @@ import com.divanxan.internetshop.model.RegisterModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.binding.message.MessageBuilder;
 import org.springframework.binding.message.MessageContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("session")
 public class RegisterHandler {
 
     @Autowired
     private UserDao userDao;
+
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
+
+    @Autowired
+    Cart cart;
 
     public RegisterModel init() {
         return new RegisterModel();
@@ -35,10 +44,14 @@ public class RegisterHandler {
         User user = model.getUser();
         // создаем корзину для пользователя
         if (user.getRole().equals("USER")) {
-            Cart cart = new Cart();
             cart.setUser(user);
             user.setCart(cart);
         }
+
+        // кодируем пароль
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+
+
         //добавляем пользователя
         userDao.addUser(user);
 

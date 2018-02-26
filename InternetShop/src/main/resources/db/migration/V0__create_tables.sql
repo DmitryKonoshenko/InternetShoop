@@ -15,7 +15,7 @@ CREATE TABLE `ishop`.`user_detail` (
   `last_name`      VARCHAR(50)      DEFAULT NULL,
   `role`           VARCHAR(50)      DEFAULT NULL,
   `enabled`        TINYINT(1)       DEFAULT NULL,
-  `password`       VARCHAR(50)      DEFAULT NULL,
+  `password`       VARCHAR(100)      DEFAULT NULL,
   `email`          VARCHAR(100)     DEFAULT NULL,
   `contact_number` VARCHAR(15)      DEFAULT NULL,
 

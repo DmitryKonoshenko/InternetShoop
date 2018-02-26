@@ -10,9 +10,11 @@
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-
     <!-- Добавим возможность найти наш бин  -->
     <context:component-scan base-package="com.divanxan.internetshop"/>
+    <!-- Добавим бин для кодирования пароля  -->
+    <beans:bean id="passwordEncoder"
+                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 
     <!-- Загрузка статических ресурсов  -->
     <http pattern="/resources/**" security="none"/>
@@ -27,7 +29,7 @@
         тут корзина доступна юзеру, а редактирование товаров - админу
         -->
         <intercept-url pattern="/manage/**" access="hasAuthority('ADMIN')"/>
-        <intercept-url pattern="/cart/**" access="hasAuthority('USER')"/>
+        <intercept-url pattern="/cart/**" access="permitAll"/>
         <!-- Фиксим warning анонимуса. ВАЖНО это строка должна идти первой  -->
         <intercept-url pattern="/login" access="permitAll"/>
         <intercept-url pattern="/**" access="permitAll()"/>
@@ -46,6 +48,8 @@
     <!-- Добавим настройку аутентификации с того же сайта пп 6.2.2  -->
     <authentication-manager>
         <authentication-provider>
+            <!-- Добавим настройки кодирования-->
+            <password-encoder ref="passwordEncoder"/>
             <!-- Добавим авторизацию с помощью БД
             dataSource - из конфигурации хибирнета
             -->

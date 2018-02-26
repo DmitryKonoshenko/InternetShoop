@@ -5,19 +5,19 @@ VALUES ('Пылесосы', 'Описание для пылесосов', 'CAT_2
 INSERT INTO category (name, description, image_url, is_active) VALUES ('Фены', 'Описание для фенов', 'CAT_3.png', TRUE);
 
 INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES ('Иван', 'Мохов', 'ADMIN', TRUE, 'admin', 'mox@gmail.com', '+79626662489');
+VALUES ('Иван', 'Мохов', 'ADMIN', TRUE, '$2a$10$vphtCLZ2NhrJl8yZvLsTo.E9Tzgikoi/uZJanusfgYb8FElQR3By.', 'mox@gmail.com', '+79626662489');
 
 INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES ('Николай', 'Трыков', 'SUPPLIER', TRUE, '12345', 'trik@gmail.com', '+79521112233');
+VALUES ('Николай', 'Трыков', 'SUPPLIER', TRUE, '$2a$10$Pzq3NKLbwmVsXVmJ7QjAhesAsu9tGbE5P37R6dnvsH7XbiyispGJS', 'trik@gmail.com', '+79521112233');
 
 INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES ('Андрей', 'Новов', 'SUPPLIER', TRUE, '12345', 'novand@gmail.com', '+9015547488');
+VALUES ('Андрей', 'Новов', 'SUPPLIER', TRUE, '$2a$10$Pzq3NKLbwmVsXVmJ7QjAhesAsu9tGbE5P37R6dnvsH7XbiyispGJS', 'novand@gmail.com', '+9015547488');
 
 INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES ('Роман', 'Дьяченко', 'SUPPLIER', TRUE, '12345', 'romanbanan@gmail.com', '+79045513399');
+VALUES ('Роман', 'Дьяченко', 'SUPPLIER', TRUE, '$2a$10$Pzq3NKLbwmVsXVmJ7QjAhesAsu9tGbE5P37R6dnvsH7XbiyispGJS', 'romanbanan@gmail.com', '+79045513399');
 
 INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, contact_number)
-VALUES ('Иван', 'Коновалов', 'USER', TRUE, '12345', 'ivan@gmail.com', '+79065513399');
+VALUES ('Иван', 'Коновалов', 'USER', TRUE, '$2a$10$Pzq3NKLbwmVsXVmJ7QjAhesAsu9tGbE5P37R6dnvsH7XbiyispGJS', 'ivan@gmail.com', '+79065513399');
 
 
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)

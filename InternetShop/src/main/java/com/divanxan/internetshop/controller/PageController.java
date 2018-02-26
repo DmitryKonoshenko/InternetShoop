@@ -2,6 +2,7 @@ package com.divanxan.internetshop.controller;
 
 import com.divanxan.internetshop.dao.CategoryDao;
 import com.divanxan.internetshop.dao.ProductDao;
+import com.divanxan.internetshop.dto.Cart;
 import com.divanxan.internetshop.dto.Category;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.exception.ProductNotFoundException;
@@ -9,16 +10,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * Controller for {@link com.divanxan.internetshop.dto.Category}'s pages.
  *
- * @autor Dmitry Konoshenko
  * @version 1.0
+ * @autor Dmitry Konoshenko
  * @since version 1.0
  */
 @Controller
@@ -39,15 +40,17 @@ public class PageController {
 
     /**
      * Функция возврата на домашнюю страницу
+     *
      * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Home
      */
-    @RequestMapping(value = {"/","home"})
-    public ModelAndView index(){
+    @RequestMapping(value = {"/", "home"})
+    public ModelAndView index() {
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "На главную");
 
         logger.info("Inside PageController index method - INFO");
         logger.debug("Inside PageController index method - DEBUG");
+
 
         //вставка листа категория
         mv.addObject("categories", categoryDao.list());
@@ -59,10 +62,11 @@ public class PageController {
 
     /**
      * Функция перехода на страницу "О нас"
+     *
      * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку About
      */
     @RequestMapping(value = {"/about"})
-    public ModelAndView about(){
+    public ModelAndView about() {
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "О нас");
         mv.addObject("userClickAbout", true);
@@ -71,10 +75,11 @@ public class PageController {
 
     /**
      * Функция перехода на страницу "Контакты"
+     *
      * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Contact
      */
     @RequestMapping(value = {"/contact"})
-    public ModelAndView contact(){
+    public ModelAndView contact() {
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "Наши контакты");
         mv.addObject("userClickContact", true);
@@ -83,10 +88,11 @@ public class PageController {
 
     /**
      * Функция для загрузки всех товаров
+     *
      * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Contact
      */
     @RequestMapping(value = {"/show/all/products"})
-    public ModelAndView showAllProducts(){
+    public ModelAndView showAllProducts() {
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "Наши продукты");
 
@@ -99,10 +105,11 @@ public class PageController {
 
     /**
      * Функция для загрузки всех товаров в категории
+     *
      * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Contact
      */
     @RequestMapping(value = {"/show/category/{id}/products"})
-    public ModelAndView showCategoryProducts(@PathVariable("id") int id){
+    public ModelAndView showCategoryProducts(@PathVariable("id") int id) {
         ModelAndView mv = new ModelAndView("page");
 
         Category category = categoryDao.get(id);
@@ -140,18 +147,18 @@ public class PageController {
 //        return mv;
 //    }
 
-// просмотр одного товара
+    // просмотр одного товара
     @RequestMapping(value = "/show/{id}/product")
-    public ModelAndView showSingleProduct(@PathVariable int id) throws ProductNotFoundException{
+    public ModelAndView showSingleProduct(@PathVariable int id) throws ProductNotFoundException {
 
         ModelAndView mv = new ModelAndView("page");
 
         Product product = productDao.get(id);
 
-        if(product == null) throw new ProductNotFoundException();
+        if (product == null) throw new ProductNotFoundException();
 
         //update the view count
-        product.setViews(product.getViews()+1);
+        product.setViews(product.getViews() + 1);
         productDao.update(product);
         //done
 
@@ -174,10 +181,10 @@ public class PageController {
 
     //Login
     @RequestMapping(value = {"/login"})
-    public ModelAndView login(@RequestParam(name = "error", required = false)String error){
+    public ModelAndView login(@RequestParam(name = "error", required = false) String error) {
         ModelAndView mv = new ModelAndView("login");
 
-        if(error!=null){
+        if (error != null) {
             mv.addObject("message", "Неправильный логин и пароль");
         }
 
@@ -187,8 +194,8 @@ public class PageController {
 
 
     // страница ошибки доступа, как в spring-security.xml
-        @RequestMapping(value = {"/access-denied"})
-    public ModelAndView accessDenied(){
+    @RequestMapping(value = {"/access-denied"})
+    public ModelAndView accessDenied() {
         ModelAndView mv = new ModelAndView("error");
         mv.addObject("title", "403 - Access Denied");
         mv.addObject("errorTitle", "Вы не можете тут находится!");

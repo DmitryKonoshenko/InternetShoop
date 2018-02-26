@@ -14,7 +14,7 @@
     <properties>
         <javaee.version>8.0</javaee.version>
         <spring.version>5.0.3.RELEASE</spring.version>
-        <spring.security.version>4.2.2.RELEASE</spring.security.version>
+        <spring.security.version>5.0.2.RELEASE</spring.security.version>
         <tomcat.version>9.0.4</tomcat.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mysql-connector.version>5.1.39</mysql-connector.version>
