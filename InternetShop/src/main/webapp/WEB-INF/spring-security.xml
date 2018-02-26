@@ -9,6 +9,8 @@
 		http://www.springframework.org/schema/context
 		http://www.springframework.org/schema/context/spring-context.xsd">
 
+
+
     <!-- Добавим возможность найти наш бин  -->
     <context:component-scan base-package="com.divanxan.internetshop"/>
 
@@ -19,16 +21,27 @@
     <!-- https://docs.spring.io/spring-security/site/docs/5.0.2.RELEASE/reference/htmlsingle/#ns-getting-started -->
     <http pattern="/favicon.ico" security="none"/>
     <http>
+        <!--
+        Разница между ROLE и AUTORITY: ROLE должно совпадать с названием роли и иметь префикс ROLE_USER,
+        AUTORITY: полностью совпадает с названием
+        тут корзина доступна юзеру, а редактирование товаров - админу
+        -->
+        <intercept-url pattern="/manage/**" access="hasAuthority('ADMIN')"/>
+        <intercept-url pattern="/cart/**" access="hasAuthority('USER')"/>
         <!-- Фиксим warning анонимуса. ВАЖНО это строка должна идти первой  -->
         <intercept-url pattern="/login" access="permitAll"/>
-        <!-- Разница между ROLE и AUTORITY: ROLE должно совпадать с названием роли и иметь префикс ROLE_USER,
-        AUTORITY: полностью совпадает с названием   -->
-        <intercept-url pattern="/**" access="hasAuthority('USER')"/>
+        <intercept-url pattern="/**" access="permitAll()"/>
         <!-- название страницы логирования
          и параметр для ввода логине - мыло пароль - пароль (по дефолту, но можно поменять)
          -->
         <form-login login-page="/login"/>
+        <!-- Страница, которая выводится при ошибке доступа  -->
+        <access-denied-handler error-page="/access-denied"/>
         <logout/>
+        <!--
+        можно отключить проверку токена так, но это глупо
+        <csrf disabled="true"/>
+        -->
     </http>
     <!-- Добавим настройку аутентификации с того же сайта пп 6.2.2  -->
     <authentication-manager>

@@ -22,6 +22,11 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
+    <!-- Метатеги для корректной работы ajax (добавляем токены)-->
+    <meta name="_csrf" content="${_csrf.token}">
+    <meta name="_csrf_header" content="${_csrf.headerName}">
+
+
     <title>Электроник ${title}</title>
 
     <script>

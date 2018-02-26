@@ -1,3 +1,4 @@
+<%--@elvariable id="_csrf" type="org.springframework.web.bind.MissingServletRequestParameterException"--%>
 <%@ page contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -69,7 +70,17 @@
     <!-- Page Content -->
     <div class="content">
 
+        <!-- Если ввели не правильные занчения логина или пароля -->
+        <c:if test="${not empty message}">
+            <div class="row">
+                <div class="alert alert-danger">
+                    ${message}
+                </div>
+            </div>
+        </c:if>
+
         <div class="form-container1122">
+
             <div class="panel panel-primary">
 
                 <div class="form-title1122">
@@ -98,6 +109,7 @@
                         <div class="form-group">
                             <div class="form-title1122">
                                 <input type="submit" value="Login" class="submit-button1122">
+                                <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
                             </div>
                         </div>
 

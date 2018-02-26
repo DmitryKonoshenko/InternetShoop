@@ -19,6 +19,17 @@ $(function () {
             break
     }
 
+// для работы с csrf токенами
+    var token =$('meta[name="_csrf"]').attr('content');
+    var header =$('meta[name="_csrf_header"]').attr('content');
+
+    if(token.length >0 && header.length >0){
+        //назначить токени хедер для ajax запроса
+       $(document).ajaxSend(function (e, xhr, options) {
+           xhr.setRequestHeader(header, token);
+       })
+    }
+
 
 //code for jquery dataTable
 

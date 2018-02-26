@@ -7,14 +7,13 @@
         <c:if test="${not empty message}">
             <div class="col-xs-12">
 
-                <div class="alert alert-success alert-dismissible">
+                    <div class="alert alert-danger">
 
-                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
 
-                        ${message}
+                            ${message}
 
-                </div>
-
+                    </div>
             </div>
         </c:if>
 
