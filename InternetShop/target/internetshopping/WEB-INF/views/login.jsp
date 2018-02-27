@@ -31,23 +31,23 @@
         window.contextRoot = '${contextRoot}';
     </script>
 
-    <!-- Bootstrap core CSS -->
+    <%-- Bootstrap core CSS --%>
     <link href="${css}/bootstrap.css" rel="stylesheet">
-    <!-- Ionic -->
+    <%-- Ionic --%>
     <link href="${css}/open-iconic-bootstrap.css" rel="stylesheet">
-    <!-- Bootstrap core CSS -->
+    <%-- Bootstrap core CSS --%>
     <link href="${css}/bootstrap-grid.css" rel="stylesheet">
     <link href="${css}/shop-homepage.css" rel="stylesheet">
 
 
-    <!-- Bootstrap DataTables -->
+    <%-- Bootstrap DataTables --%>
     <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
     <link href="${css}/datatables.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${css}/shop-homepage.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <%-- Custom CSS --%>
     <link href="${css}/myapp.css" rel="stylesheet">
 
 </head>
@@ -56,7 +56,7 @@
 
 <div class="wrapper">
 
-    <!-- Navigation -->
+    <%-- Navigation --%>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -67,14 +67,22 @@
         </div>
     </nav>
 
-    <!-- Page Content -->
+    <%-- Page Content --%>
     <div class="content">
 
-        <!-- Если ввели не правильные занчения логина или пароля -->
+        <%-- Если ввели не правильные занчения логина или пароля --%>
         <c:if test="${not empty message}">
             <div class="row">
                 <div class="alert alert-danger">
                     ${message}
+                </div>
+            </div>
+        </c:if>
+            <%-- Если вы вышли с аккаунта - будет выведено --%>
+        <c:if test="${not empty logout}">
+            <div class="row">
+                <div class="alert alert-success">
+                        ${logout}
                 </div>
             </div>
         </c:if>
@@ -125,28 +133,28 @@
 
     </div>
 
-    <!-- Footer -->
+    <%-- Footer --%>
     <%@include file="./shared/footer.jsp" %>
 
-    <!-- jQuery -->
+    <%-- jQuery --%>
     <script src="${js}/jquery.js"></script>
 
     <script src="${js}/jquery.validate.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
+    <%-- Bootstrap Core JavaScript --%>
     <script src="${js}/bootstrap.min.js"></script>
     <script src="${js}/bootstrap.bundle.js"></script>
 
-    <!-- DataTable Plugin -->
+    <%-- DataTable Plugin --%>
     <script src="${js}/jquery.dataTables.js"></script>
     <%--<script src="${js}/bootstrap.bundle.min.js"></script>--%>
     <script src="${js}/bootstrap.js"></script>
 
 
-    <!-- DataTable Bootstrap Script -->
+    <%-- DataTable Bootstrap Script --%>
     <%--<script src="${js}/bootbox.min.js"></script>--%>
 
-    <!-- Self coded javascript -->
+    <%-- Self coded javascript --%>
     <script src="${js}/myapp.js" charset="utf-8"></script>
 
 </div>

@@ -53,6 +53,7 @@
 
     <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
         <property name="flowRegistry" ref="flowRegistry"/>
+        <!-- -1 тут чтобы приоритет данной записи был выше, чем у контроллера -->
         <property name="order" value="-1" />
     </bean>
 

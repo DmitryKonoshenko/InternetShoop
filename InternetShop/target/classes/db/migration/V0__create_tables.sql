@@ -68,3 +68,15 @@ CREATE TABLE `ishop`.`cart` (
   CONSTRAINT `fk_cart_user_detail` FOREIGN KEY (`user_id`) REFERENCES `user_detail` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+CREATE TABLE `ishop`.cart_line (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `cart_id` int DEFAULT NULL,
+  `total` DECIMAL(10,2) DEFAULT '0.00',
+  `product_id` int(11) DEFAULT NULL,
+  `product_count` int(11) DEFAULT NULL,
+  `buying_price` DECIMAL(10,2) DEFAULT '0.00',
+  `is_available` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT fk_cartline_cart_id FOREIGN KEY (`cart_id`) REFERENCES cart (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT fk_cartline_product_id FOREIGN KEY (`product_id`) REFERENCES product (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;;

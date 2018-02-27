@@ -58,3 +58,6 @@ INSERT INTO product (code, name, brand, description, unit_price, quantity, is_ac
 VALUES ('PRDRTY123FEN', '554.13', 'Valera',
         'Компактный фен Valera Swiss Bebe 554.13 создан специально для деликатного ухода за детскими волосами и телом.'
   , 1270, 0, TRUE, 3, 4);
+
+INSERT INTO cart (user_id, grand_total, cart_lines)
+VALUES (5, 0, 0);

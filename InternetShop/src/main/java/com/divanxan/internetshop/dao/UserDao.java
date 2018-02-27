@@ -20,5 +20,4 @@ public interface UserDao {
     Address getBillingAddress(int userId);
     List<Address> listShippingAddressess(int userId);
 
-    boolean updateCart(Cart cart);
 }

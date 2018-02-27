@@ -12,6 +12,9 @@ $(function () {
         case 'Manage Products':
             $('#manageProduct').addClass('active');
             break;
+        case 'User Cart':
+            $('#userCart').addClass('active');
+            break;
         default:
             if (menu === "На главную") break;
             $('#home').addClass('active');
@@ -20,14 +23,14 @@ $(function () {
     }
 
 // для работы с csrf токенами
-    var token =$('meta[name="_csrf"]').attr('content');
-    var header =$('meta[name="_csrf_header"]').attr('content');
+    var token = $('meta[name="_csrf"]').attr('content');
+    var header = $('meta[name="_csrf_header"]').attr('content');
 
-    if(token.length >0 && header.length >0){
+    if (token.length > 0 && header.length > 0) {
         //назначить токени хедер для ajax запроса
-       $(document).ajaxSend(function (e, xhr, options) {
-           xhr.setRequestHeader(header, token);
-       })
+        $(document).ajaxSend(function (e, xhr, options) {
+            xhr.setRequestHeader(header, token);
+        })
     }
 
 
@@ -103,12 +106,22 @@ $(function () {
                         var str = '';
 
                         if (row.quantity < 1) {
-                            str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="oi oi-cart"/></a>';
-                            str += '<button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary"><span class="oi oi-heart"/></button>';
-
+                            if (userRole == 'ADMIN') {
+                                str += '<a href="' + window.contextRoot + '/manage/' + data + '/product" class="btn btn-warning"><span class="oi oi-wrench"></span></a>';
+                            }
+                            else {
+                                str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="oi oi-cart"/></a>';
+                                str += '<button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary"><span class="oi oi-heart"/></button>';
+                            }
                         }
                         else {
-                            str += '<a href="' + window.contextRoot + '/cart/add/' + data + '/product" class="btn btn-success"><span class="oi oi-cart"></span></a>';
+                            // если пользователь админ - то он увидит кнопку настройки продукта
+                            if (userRole == 'ADMIN') {
+                                str += '<a href="' + window.contextRoot + '/manage/' + data + '/product" class="btn btn-warning"><span class="oi oi-wrench"></span></a>';
+                            }
+                            else {
+                                str += '<a href="' + window.contextRoot + '/cart/add/' + data + '/product" class="btn btn-success"><span class="oi oi-cart"></span></a>';
+                            }
                         }
                         return str;
                     }
@@ -285,14 +298,12 @@ $(function () {
     // jQuery Validation Code
 
 
-
-
     // validating the product form element
 
 
-  var  $categoryForm = $('#categoryForm');
+    var $categoryForm = $('#categoryForm');
 
-    if($categoryForm.length) {
+    if ($categoryForm.length) {
 
         $categoryForm.validate({
                 rules: {
@@ -315,12 +326,11 @@ $(function () {
                         minlength: 'Please enter atleast five characters'
                     }
                 },
-                errorElement : "em",
-                errorPlacement : function(error, element) {
+                errorElement: "em",
+                errorPlacement: function (error, element) {
                     errorPlacement(error, element);
                 }
             }
-
         );
 
     }
@@ -328,7 +338,7 @@ $(function () {
     //----------------
     var $loginForm = $('#loginForm');
 
-    if($loginForm.length) {
+    if ($loginForm.length) {
 
         $loginForm.validate({
                 rules: {
@@ -350,8 +360,8 @@ $(function () {
                         required: 'Пожалуйста, введите пароль!'
                     }
                 },
-                errorElement : "em",
-                errorPlacement : function(error, element) {
+                errorElement: "em",
+                errorPlacement: function (error, element) {
                     // Add the 'help-block' class to the error element
                     error.addClass("help-block");
 
@@ -359,7 +369,6 @@ $(function () {
                     error.insertAfter(element);
                 }
             }
-
         );
 
     }

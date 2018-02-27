@@ -23,6 +23,7 @@
     <!-- https://docs.spring.io/spring-security/site/docs/5.0.2.RELEASE/reference/htmlsingle/#ns-getting-started -->
     <http pattern="/favicon.ico" security="none"/>
     <http>
+
         <!--
         Разница между ROLE и AUTORITY: ROLE должно совпадать с названием роли и иметь префикс ROLE_USER,
         AUTORITY: полностью совпадает с названием
@@ -30,26 +31,38 @@
         -->
         <intercept-url pattern="/manage/**" access="hasAuthority('ADMIN')"/>
         <intercept-url pattern="/cart/**" access="permitAll"/>
+
         <!-- Фиксим warning анонимуса. ВАЖНО это строка должна идти первой  -->
         <intercept-url pattern="/login" access="permitAll"/>
         <intercept-url pattern="/**" access="permitAll()"/>
+
         <!-- название страницы логирования
          и параметр для ввода логине - мыло пароль - пароль (по дефолту, но можно поменять)
          -->
         <form-login login-page="/login"/>
+
         <!-- Страница, которая выводится при ошибке доступа  -->
         <access-denied-handler error-page="/access-denied"/>
-        <logout/>
+
+        <!-- Данный логаут не подходит нам из-за шифрования и использования  см:
+         https://docs.spring.io/spring-security/site/docs/5.0.2.RELEASE/reference/htmlsingle/#csrf-logout
+         теперь выход управляется контроллером PageController
+         -->
+        <!--<logout/>-->
+
         <!--
         можно отключить проверку токена так, но это глупо
         <csrf disabled="true"/>
         -->
     </http>
+
     <!-- Добавим настройку аутентификации с того же сайта пп 6.2.2  -->
     <authentication-manager>
         <authentication-provider>
+
             <!-- Добавим настройки кодирования-->
             <password-encoder ref="passwordEncoder"/>
+
             <!-- Добавим авторизацию с помощью БД
             dataSource - из конфигурации хибирнета
             -->
@@ -57,7 +70,8 @@
                                users-by-username-query="SELECT email, password, enabled FROM user_detail WHERE email = ?"
                                authorities-by-username-query="SELECT email, role FROM user_detail WHERE email = ?"
             />
-            <!--
+
+            <!-- теперь это не нужно
             <user-service>
                 <user name="divanxan" password="123456" authorities="USER, ADMIN" />
             </user-service>

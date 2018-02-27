@@ -8,9 +8,7 @@ import java.io.Serializable;
 
 //сделаем корзину сессионной и инжектним ее в RegisterHandler
 
-@Component
-@Scope("session")
-@Entity
+@Entity(name = "cart")
 public class Cart implements Serializable {
 
     private static final long serialVersionUID = 666666666L;

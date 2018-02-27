@@ -4,7 +4,10 @@ import com.divanxan.internetshop.dao.UserDao;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.*;
 
@@ -13,7 +16,6 @@ public class UserTest {
     private static AnnotationConfigApplicationContext context;
     private static UserDao userDao;
     private User user = null;
-    private Cart cart = null;
     private Address address = null;
 
     @BeforeClass

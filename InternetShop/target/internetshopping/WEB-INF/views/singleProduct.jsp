@@ -48,24 +48,31 @@
                     </c:otherwise>
                 </c:choose>
 
-
+<security:authorize access="hasAuthority('USER')">
             <c:choose>
                 <c:when test="${product.quantity<1}">
                     <a href="javascript:void(0)" class="btn btn-success disabled">
                         <span class="oi oi-cart">Добавить в корзину</span></a>
                     <%--TODO доделать заглушку для инкремента желаемого товара--%>
-                    <button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary"><span class="oi oi-heart">
+                    <button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary">
+                        <span class="oi oi-heart">
                         Кликните тут и мы закажем данный товар
                     </span></button>
                 </c:when>
                 <c:otherwise>
+                    <%--@elvariable id="product" type="com.divanxan.internetshop.dto.Product"--%>
 
-                    <a href="${contextRoot}/cart/add/product" class="btn btn-success">
+                    <a href="${contextRoot}/cart/add/${product.id}/product" class="btn btn-success">
                         <span class="oi oi-cart">Добавить в корзину</span></a>
 
                 </c:otherwise>
             </c:choose>
-
+</security:authorize>
+<security:authorize access="hasAuthority('ADMIN')">
+    <%--@elvariable id="product" type="com.divanxan.internetshop.dto.Product"--%>
+    <a href="${contextRoot}/manage/${product.id}/product" class="btn btn-warning">
+        <span class="oi oi-wrench">Редактировать</span></a>
+</security:authorize>
 
             <a href="${contextRoot}/show/all/products" class="btn btn-primary">Вернуться</a>
         </div>

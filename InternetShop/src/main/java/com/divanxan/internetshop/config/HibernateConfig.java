@@ -19,7 +19,7 @@ import java.util.Properties;
 @EnableTransactionManagement
 public class HibernateConfig {
 
-    private final static String DATABASE_URL = "jdbc:mysql://localhost:3306/ishop?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    private final static String DATABASE_URL = "jdbc:mysql://localhost:3306/ishop?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
     private final static String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
     private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQL5Dialect";
     private final static String DATABASE_USERNAME = "root";

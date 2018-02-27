@@ -22,8 +22,7 @@ public class RegisterHandler {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    @Autowired
-    Cart cart;
+
 
     public RegisterModel init() {
         return new RegisterModel();
@@ -44,6 +43,7 @@ public class RegisterHandler {
         User user = model.getUser();
         // создаем корзину для пользователя
         if (user.getRole().equals("USER")) {
+            Cart cart = new Cart();
             cart.setUser(user);
             user.setCart(cart);
         }

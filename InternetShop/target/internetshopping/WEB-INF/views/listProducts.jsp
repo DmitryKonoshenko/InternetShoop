@@ -57,41 +57,47 @@
 
                 <div class="col-xs-12">
 
+                    <div class="container-fluid">
 
-                    <table id="productListTable" class="table table-striped table-border">
+                        <div class="table-responsive">
+                            <table id="productListTable" class="table table-striped table-border">
 
-                        <thead>
+                                <thead>
 
-                        <tr>
+                                <tr>
 
-                            <th></th>
-                            <th>Название</th>
-                            <th>Производитель</th>
-                            <th>Цена</th>
-                            <th>Количество</th>
-                            <th></th>
-                            <th></th>
+                                    <th></th>
+                                    <th>Название</th>
+                                    <th>Производитель</th>
+                                    <th>Цена</th>
+                                    <th>Количество</th>
+                                    <th></th>
+                                    <th></th>
 
-                        </tr>
+                                </tr>
 
-                        </thead>
+                                </thead>
 
-                        <tfoot>
+                                <tfoot>
 
-                        <tr>
+                                <tr>
 
-                            <th></th>
-                            <th>Название</th>
-                            <th>Производитель</th>
-                            <th>Цена</th>
-                            <th>Количество</th>
-                            <th></th>
-                            <th></th>
+                                    <th></th>
+                                    <th>Название</th>
+                                    <th>Производитель</th>
+                                    <th>Цена</th>
+                                    <th>Количество</th>
+                                    <th></th>
+                                    <th></th>
 
-                        </tr>
+                                </tr>
 
-                        </tfoot>
-                    </table>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                    </div>
+
 
                 </div>
             </div>

@@ -1,3 +1,4 @@
 com\divanxan\internetshop\dto\CategoryTest.class
-com\divanxan\internetshop\dto\ProductTest.class
 com\divanxan\internetshop\dto\UserTest.class
+com\divanxan\internetshop\dto\CartLineTest.class
+com\divanxan\internetshop\dto\ProductTest.class

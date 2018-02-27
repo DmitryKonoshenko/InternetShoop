@@ -2,18 +2,24 @@ package com.divanxan.internetshop.controller;
 
 import com.divanxan.internetshop.dao.CategoryDao;
 import com.divanxan.internetshop.dao.ProductDao;
-import com.divanxan.internetshop.dto.Cart;
 import com.divanxan.internetshop.dto.Category;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.exception.ProductNotFoundException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpSession;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 
 /**
  * Controller for {@link com.divanxan.internetshop.dto.Category}'s pages.
@@ -181,11 +187,15 @@ public class PageController {
 
     //Login
     @RequestMapping(value = {"/login"})
-    public ModelAndView login(@RequestParam(name = "error", required = false) String error) {
+    public ModelAndView login(@RequestParam(name = "error", required = false) String error,
+                              @RequestParam(name = "logout", required = false) String logout) {
         ModelAndView mv = new ModelAndView("login");
 
         if (error != null) {
             mv.addObject("message", "Неправильный логин и пароль");
+        }
+        if (logout != null) {
+            mv.addObject("logout", "Пользователь успешно вышел из магазина!");
         }
 
         mv.addObject("title", "login");
@@ -199,9 +209,24 @@ public class PageController {
         ModelAndView mv = new ModelAndView("error");
         mv.addObject("title", "403 - Access Denied");
         mv.addObject("errorTitle", "Вы не можете тут находится!");
-        mv.addObject("errorDescription", "У вас нет прав администратора, чтобы видеть содержимое данной страницы!");
+        mv.addObject("errorDescription"
+                , "У вас нет прав администратора, чтобы видеть содержимое данной страницы!");
         return mv;
     }
 
+
+    //для logout
+    @RequestMapping(value = "/perform-logout")
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
+
+
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        //удалим аутентификацию из SecurityContext. Он делает session.invalidate(); и SecurityContextHolder.clearContext();
+        if (authentication != null) {
+            new SecurityContextLogoutHandler().logout(request, response, authentication);
+        }
+        return "redirect:/login?logout";
+    }
 
 }
