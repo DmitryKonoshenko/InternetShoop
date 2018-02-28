@@ -335,7 +335,7 @@ $(function () {
 
     }
 
-    //----------------
+    // валидация при вводе логина и ппароля----------------
     var $loginForm = $('#loginForm');
 
     if ($loginForm.length) {
@@ -373,10 +373,50 @@ $(function () {
 
     }
 
+    // обработка нажатия кнопки обновить в корзине------------------
+    $('button[name="refreshCart"]').click(function () {
+        //получим id строки корзины
+        var cartLineId = $(this).attr('value');
+        var countElement = $('#count_'+cartLineId);
+        var originalCount = countElement.attr('value');
+        var currentCount = countElement.val();
+
+        // работает только когда занчение поменялось
+        if(currentCount !== originalCount){
+          /*  console.log("current count: " + currentCount);
+           console.log("current count: " + originalCount); */
+            if(currentCount < 1 || currentCount > 5) {
+
+                countElement.val(originalCount);
+                bootbox.alert({
+                    message: 'Количество должно быть не меньше 1 и не более 5!',
+                    size: 'medium',
+                    title: 'Ошибка'
+                });
+            }
+            else {
+                // use the window.location.href property to send the request to the server
+                var updateUrl = window.contextRoot + '/cart/' + cartLineId + '/update?count=' + currentCount;
+                // передадим значение в контроллер
+                window.location.href = updateUrl;
+            }
+
+        }
+
+    });
+
+
+
     //------------------
 
 });
 
+// обработка нажатия кнопки обновить поставить лайкос отсутствующему товару------------------
+$('button[name="likeProduct"]').click(function () {
+    var productId = $(this).attr('value');
+    document.getElementById('b1').disabled = true;
+
+});
 function buttonClickt(row) {
 
     document.getElementById('b1').disabled = true;

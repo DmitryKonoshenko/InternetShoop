@@ -54,7 +54,7 @@
                     <a href="javascript:void(0)" class="btn btn-success disabled">
                         <span class="oi oi-cart">Добавить в корзину</span></a>
                     <%--TODO доделать заглушку для инкремента желаемого товара--%>
-                    <button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary">
+                    <button type="button" name="likeProduct" value="${product.id}" onclick="buttonClickt()" id="b1" class="btn btn-primary">
                         <span class="oi oi-heart">
                         Кликните тут и мы закажем данный товар
                     </span></button>

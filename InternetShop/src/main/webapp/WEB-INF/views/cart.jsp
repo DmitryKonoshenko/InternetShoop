@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="container">
 
     <c:choose>
@@ -38,14 +39,16 @@
                                 </div>
                             </div>
                         </td>
-                        <td data-th="Price">&#8381; ${cartLine.total}</td>
+                        <td data-th="Price">&#8381; ${cartLine.buyingPrice}</td>
                         <td data-th="Quantity">
-                            <input type="number" class="form-control text-center" value="${cartLine.productCount}">
+                            <%-- Тут задаем максимальное значение и минимальное тоже и id --%>
+                            <input type="number" id="count_${cartLine.id}" min="1" max="5" class="form-control text-center" value="${cartLine.productCount}">
                         </td>
                         <td data-th="Subtotal" class="text-center">&#8381; ${cartLine.total}</td>
                         <td class="actions" data-th="">
-                            <button class="btn btn-info btn-sm"><span class="oi oi-reload"></span></button>
-                            <button class="btn btn-danger btn-sm"><span class="oi oi-trash"></span></button>
+                                <%-- Тут изменим кнопку обновления type="button"  name="refreshCart" value="${cartLine.id}"--%>
+                            <button type="button" name="refreshCart" value="${cartLine.id}" class="btn btn-info btn-sm"><span class="oi oi-reload"></span></button>
+                            <a href="${contextRoot}/cart/${cartLine.id}/delete" class="btn btn-danger btn-sm"><span class="oi oi-trash"></span></a>
                         </td>
                     </tr>
 

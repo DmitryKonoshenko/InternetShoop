@@ -1,16 +1,24 @@
 package com.divanxan.internetshop.handler;
 
+import com.divanxan.internetshop.dao.CartLineDao;
 import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Address;
 import com.divanxan.internetshop.dto.Cart;
+import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.model.RegisterModel;
+import com.divanxan.internetshop.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.binding.message.MessageBuilder;
 import org.springframework.binding.message.MessageContext;
 import org.springframework.context.annotation.Scope;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Component
 @Scope("session")
@@ -20,8 +28,13 @@ public class RegisterHandler {
     private UserDao userDao;
 
     @Autowired
+    private CartLineDao cartLineDao;
+
+    @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
+    @Autowired
+    private HttpSession session;
 
 
     public RegisterModel init() {
@@ -43,7 +56,8 @@ public class RegisterHandler {
         User user = model.getUser();
         // создаем корзину для пользователя
         if (user.getRole().equals("USER")) {
-            Cart cart = new Cart();
+
+            Cart cart = ((UserModel)(session.getAttribute("userModel"))).getCart();
             cart.setUser(user);
             user.setCart(cart);
         }
@@ -62,6 +76,16 @@ public class RegisterHandler {
         //добавляем адрес
         userDao.addAddress(billing);
 
+        //если аноним добавил покупки в корзину
+        List<CartLine> list = (List<CartLine>) session.getAttribute("AnonymousCartLines");
+        if(list!=null&&list.size()>0){
+           User user1 = userDao.getByEmail(user.getEmail());
+            Cart cart = user1.getCart();
+            for (CartLine line: list) {
+                line.setCartId(cart.getId());
+                cartLineDao.add(line);
+            }
+        }
 
         return transitionValue;
     }

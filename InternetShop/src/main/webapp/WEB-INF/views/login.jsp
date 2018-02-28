@@ -109,7 +109,7 @@
                         <div class="form-group">
                             <label class="form-title1122" for="password">Password: </label>
                             <div class="col-md-8">
-                                <input type="text" name="password" id="password" class="form-control"/>
+                                <input type="password" name="password" id="password" class="form-control"/>
                             </div>
                         </div>
 
@@ -125,7 +125,7 @@
                 </div>
                 <div class="panel-footer">
                     <div class="text-right">
-                        New User - <a href="${contextRoot}/register">Register Here</a>
+                        Новый пользователь? - <a href="${contextRoot}/register">регистрация тут!</a>
                     </div>
                 </div>
             </div>
