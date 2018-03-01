@@ -1,0 +1,1887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="InternetShop:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp" description="&lt;c:set var=&quot;contextRoot&quot; value=&quot;${pageContext.requ..." line="11" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6d920735-65df-4dfd-9a8b-65d5b664f90b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/artifacts/InternetShop_war.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/artifacts/InternetShop_war_exploded.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/checkstyle-idea.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/compiler.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/dataSources.local.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/dataSources.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/dataSources/10a4f371-d730-4e7f-8454-5f61f450665d.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/dictionaries/Divanxan.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/encodings.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__javax_javaee_api_8_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__javax_mail_javax_mail_api_1_6_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_39.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__opensymphony_ognl_2_6_11.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_2_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_5_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_13_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_7_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_security_spring_security_acl_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_security_spring_security_taglibs_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_aop_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_beans_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_context_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_core_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_expression_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_orm_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_test_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_tx_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_web_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_3_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_webflow_spring_binding_2_4_7_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_webflow_spring_js_2_4_7_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_webflow_spring_js_resources_2_4_7_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/libraries/Maven__org_springframework_webflow_spring_webflow_2_4_7_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/sqldialects.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/InternetShop.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/databaseQueries.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/pom.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/controller/CartController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/controller/GlobalController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/controller/JsonDataController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/controller/ManagementController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/controller/PageController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dao/CartLineDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dao/CategoryDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dao/ProductDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dao/UserDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/daoimpl/CategoryDaoImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/daoimpl/ProductDaoImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dto/Address.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dto/Cart.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dto/CartLine.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dto/Category.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dto/Product.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/dto/User.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/exception/ProductNotFoundException.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/model/RegisterModel.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/model/UserModel.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/service/CartService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/util/FileUploadUtility.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/java/com/divanxan/internetshop/validator/ProductValidator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/resources/db/migration/V0__create_tables.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/resources/db/migration/V1__insert_init_data.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/resources/logback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/spring-security.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/about.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/cart.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/contact.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/error.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/flows/register/signup-billing.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/flows/register/signup-confirm.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/flows/register/signup-flow.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/flows/register/signup-personal.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/flows/register/signup-success.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/flows/shared/flows-footer.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/flows/shared/flows-header.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/flows/shared/flows-navbar.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/home.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/listProducts.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/login.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/manageProduct.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/page.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/shared/footer.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/shared/navbar.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/shared/sidebar.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/views/singleProduct.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/WEB-INF/web.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/bootstrap-grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/bootstrap-reboot.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/bootstrap-reboot.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/dataTables.bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/datatables.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/datatables.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/myapp.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/open-iconic-bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/css/shop-homepage.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/fonts/open-iconic.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/fonts/open-iconic.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/fonts/open-iconic.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/fonts/open-iconic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/fonts/open-iconic.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRD8881144DBD.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDA48EA11276.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDABC123FEN.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDABC123PIL.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDABC123TVS.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDDF1FB37912.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDQWE123FEN.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDQWE123PIL.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDQWE123TVS.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDRTY123FEN.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDRTY123PIL.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDRTY123TVS.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/bootbox.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/bootstrap.bundle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/bootstrap.bundle.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/bootstrap.bundle.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/bootstrap.bundle.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/bootstrap.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/bootstrap.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/dataTables.bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/datatables.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/datatables.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/jquery.dataTables.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/jquery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/jquery.min.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/jquery.slim.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/jquery.slim.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/jquery.slim.min.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/jquery.validate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/jquery.validate.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/myapp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/js/npm.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/test/java/com/divanxan/internetshop/dto/CartLineTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/test/java/com/divanxan/internetshop/dto/CategoryTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/test/java/com/divanxan/internetshop/dto/ProductTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/src/test/java/com/divanxan/internetshop/dto/UserTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/classes/db/migration/V0__create_tables.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/classes/db/migration/V1__insert_init_data.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/classes/logback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/META-INF/MANIFEST.MF" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/classes/db/migration/V0__create_tables.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/classes/db/migration/V1__insert_init_data.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/classes/logback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/dispatcher-servlet.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/spring-security.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/about.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/cart.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/contact.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/error.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/flows/register/signup-billing.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/flows/register/signup-confirm.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/flows/register/signup-flow.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/flows/register/signup-personal.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/flows/register/signup-success.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/flows/shared/flows-footer.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/flows/shared/flows-header.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/flows/shared/flows-navbar.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/home.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/listProducts.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/login.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/manageProduct.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/page.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/shared/footer.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/shared/navbar.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/shared/sidebar.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/views/singleProduct.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/WEB-INF/web.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/bootstrap-grid.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/bootstrap-grid.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/bootstrap-reboot.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/bootstrap-reboot.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/dataTables.bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/datatables.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/datatables.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/myapp.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/open-iconic-bootstrap.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/css/shop-homepage.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/fonts/open-iconic.eot" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/fonts/open-iconic.otf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/fonts/open-iconic.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/fonts/open-iconic.ttf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/fonts/open-iconic.woff" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRD8881144DBD.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDA48EA11276.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDABC123FEN.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDABC123PIL.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDABC123TVS.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDDF1FB37912.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDQWE123FEN.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDQWE123PIL.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDQWE123TVS.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDRTY123FEN.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDRTY123PIL.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/images/PRDRTY123TVS.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/bootbox.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/bootstrap.bundle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/bootstrap.bundle.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/bootstrap.bundle.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/bootstrap.bundle.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/bootstrap.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/bootstrap.min.js.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/dataTables.bootstrap.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/datatables.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/datatables.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/jquery.dataTables.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/jquery.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/jquery.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/jquery.min.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/jquery.slim.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/jquery.slim.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/jquery.slim.min.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/jquery.validate.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/jquery.validate.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/myapp.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/internetshopping/assets/js/npm.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/surefire-reports/TEST-com.divanxan.internetshop.dto.CartLineTest.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/surefire-reports/TEST-com.divanxan.internetshop.dto.CategoryTest.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/surefire-reports/TEST-com.divanxan.internetshop.dto.ProductTest.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/surefire-reports/TEST-com.divanxan.internetshop.dto.UserTest.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/surefire-reports/com.divanxan.internetshop.dto.CartLineTest.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/surefire-reports/com.divanxan.internetshop.dto.CategoryTest.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/surefire-reports/com.divanxan.internetshop.dto.ProductTest.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/InternetShop/target/surefire-reports/com.divanxan.internetshop.dto.UserTest.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/artifacts/SpringSecurityApplication_war.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/artifacts/SpringSecurityApplication_war_exploded.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/compiler.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/dataSources.local.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/dataSources.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/dataSources/2b678d53-ba0e-444f-b327-ad5c879a1063.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/encodings.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__commons_pool_commons_pool_1_5_4.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_aspectj_aspectjrt_1_8_6.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_4_0_5_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_hibernate_hibernate_core_4_3_11_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_hibernate_hibernate_entitymanager_4_3_11_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_1_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_javassist_javassist_3_18_1_GA.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_jboss_jandex_1_1_0_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_jboss_logging_jboss_logging_annotations_1_2_0_Beta1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_0_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_12.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_12.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_10_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_1_8_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_0_2_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_aop_4_2_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_beans_4_2_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_context_4_2_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_core_4_2_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_expression_4_2_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_9_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_orm_4_0_9_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_tx_4_0_9_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_web_4_2_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_0_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/sqldialects.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/SpringSecurityApplication.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/pom.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/controller/UserController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/dao/RoleDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/dao/UserDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/model/Role.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/model/User.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/service/SecurityService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/service/SecurityServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/service/UserDetailsServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/service/UserService.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/service/UserServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/java/com/dicanxan/springsecurityapp/validator/UserValidator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/resources/database.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/resources/database.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/resources/logback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/resources/validation.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/WEB-INF/appconfig-data.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/WEB-INF/appconfig-mvc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/WEB-INF/appconfig-root.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/WEB-INF/appconfig-security.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/WEB-INF/views/admin.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/WEB-INF/views/login.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/WEB-INF/views/registration.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/WEB-INF/views/welcome.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/WEB-INF/web.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/resources/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/resources/css/common.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/src/main/webapp/resources/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/appconfig-data.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/appconfig-mvc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/appconfig-root.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/appconfig-security.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/classes/database.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/classes/database.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/classes/logback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/classes/validation.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/views/admin.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/views/login.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/views/registration.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/views/welcome.jsp" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/resources/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/resources/css/common.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/SpringSecurityApp-1.0-SNAPSHOT/resources/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/classes/database.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/classes/database.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/classes/logback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/classes/validation.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SpringSecurityApplication/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/compiler.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/dataSources.local.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/dataSources.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/dataSources/392ec4a5-0694-4ca7-b31d-079ed59e8f8d.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_9_rc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_12_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/sqldialects.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/app2.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/pom.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/src/main/java/CFapp.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/src/main/java/Main.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/src/main/resources/CFapp.hbm.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/src/main/resources/db/migration/V1__app2.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/src/main/resources/db/migration/V2__app2.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/src/main/resources/hibernate.cfg.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/target/classes/CFapp.hbm.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/target/classes/db/migration/V1__app2.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/target/classes/db/migration/V2__app2.sql" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/testForHibirnate/target/classes/hibernate.cfg.xml" afterPath="" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CheckStyle-IDEA-workspace">
+    <option name="configuration">
+      <map>
+        <entry key="last-active-plugin-version" value="5.18.1" />
+      </map>
+    </option>
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/InternetShop$Tomcat_9.coverage" NAME="Tomcat 9 Coverage Results" MODIFIED="1519815106073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ishop@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ishop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ishop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ishop: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ishop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ishop: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="cart_line: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1989">
+              <caret line="128" column="5" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductValidator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/validator/ProductValidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUploadUtility.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/util/FileUploadUtility.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="28" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HibernateConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/RegisterModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegisterHandler.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="714">
+              <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/UserModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobalController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="26" column="3" lean-forward="false" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>manage</find>
+      <find>manageProduct</find>
+      <find>manageProducts</find>
+      <find>/manage</find>
+      <find>maven-install-plugin</find>
+      <find>com.mysql.cj.jdbc.Driver</find>
+      <find>com.mysql.jdbc.Driver</find>
+      <find>javax</find>
+      <find>Выберете файл</find>
+      <find>Добавьте название товара!</find>
+      <find>cart_id</find>
+      <find>security</find>
+      <find>spring.security.version</find>
+      <find>5.0.2.R</find>
+      <find>categoryForm</find>
+      <find>@Be</find>
+      <find>HttpSession</find>
+      <find>globalController</find>
+      <find>AnnotationConfigApplicationContext</find>
+      <find>ApplicationContext</find>
+      <find>myapp.css</find>
+      <find>FROM CartLine WHERE cartId =:cartId</find>
+      <find>not empty message</find>
+      <find>deleteCartLine</find>
+      <find>session.ge</find>
+      <find>saveAll</find>
+      <find>RegisterModel</find>
+      <find>email</find>
+      <find>getUserModel</find>
+      <find>userModel</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\images</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CategoryDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CategoryDaoImpl.java" />
+        <option value="$PROJECT_DIR$/databaseQueries.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/AddressTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-header.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-footer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Address.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-success.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-personal.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-confirm.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-billing.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-flow.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1__insert_init_data.sql" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/listProducts.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/CartLine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CartLineDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CartLineTest1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/UserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CategoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/ProductTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CartLineTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/css/myapp.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleProduct.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/assets/js/myapp.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/util/FileUploadUtility.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/validator/ProductValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/UserModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/RegisterModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="internetshop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="internetshop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="internetshop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="internetshop" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="flyway" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Internationalization</id>
+          </State>
+          <State>
+            <id>Internationalization issues</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages ProjectPane="true" />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="internetshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="extract.method.default.visibility" value="private" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.divanxan.internetshop.dto" />
+      <recent name="com.divanxan.internetshop.daoimpl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\WEB-INF\views\flows\register" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources\db\migration" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\images" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\css" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\js" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\css" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\js" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources\db.migration" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\WEB-INF\views" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration name="CartLineTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="net.kzn.shoppingbackend.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="InternetShop" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.divanxan.internetshop.dto" />
+      <option name="MAIN_CLASS_NAME" value="net.kzn.shoppingbackend.test.CartLineTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="CartLineTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.divanxan.internetshop.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="InternetShop" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.divanxan.internetshop.dto" />
+      <option name="MAIN_CLASS_NAME" value="com.divanxan.internetshop.dto.CartLineTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="CategoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.divanxan.internetshop.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="InternetShop" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.divanxan.internetshop.dto" />
+      <option name="MAIN_CLASS_NAME" value="com.divanxan.internetshop.dto.CategoryTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ProductTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.divanxan.internetshop.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="InternetShop" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.divanxan.internetshop.dto" />
+      <option name="MAIN_CLASS_NAME" value="com.divanxan.internetshop.dto.ProductTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="UserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.divanxan.internetshop.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="InternetShop" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.divanxan.internetshop.dto" />
+      <option name="MAIN_CLASS_NAME" value="com.divanxan.internetshop.dto.UserTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="Tomcat 9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <deployment>
+        <artifact name="InternetShop:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_InternetShop" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52334" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="InternetShop:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list size="6">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 9" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.UserTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ProductTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CategoryTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CartLineTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.CartLineTest (1)" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CartLineTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CategoryTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ProductTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CartLineTest (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SpringGeneralSettings">
+    <option name="allowAutoConfigurationMode" value="true" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d920735-65df-4dfd-9a8b-65d5b664f90b" name="Default" comment="" />
+      <created>1518606236442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518606236442</updated>
+      <workItem from="1518606242246" duration="2696000" />
+      <workItem from="1518612073482" duration="3013000" />
+      <workItem from="1518615214401" duration="3000" />
+      <workItem from="1518669109422" duration="377000" />
+      <workItem from="1518669575719" duration="10839000" />
+      <workItem from="1518681067396" duration="11840000" />
+      <workItem from="1518696038773" duration="587000" />
+      <workItem from="1518698204063" duration="4913000" />
+      <workItem from="1518717736941" duration="2044000" />
+      <workItem from="1518769856865" duration="28725000" />
+      <workItem from="1518883514326" duration="7030000" />
+      <workItem from="1518897379308" duration="5832000" />
+      <workItem from="1518904956921" duration="280000" />
+      <workItem from="1518942287030" duration="32309000" />
+      <workItem from="1519027818507" duration="8549000" />
+      <workItem from="1519038219048" duration="392000" />
+      <workItem from="1519049014925" duration="1323000" />
+      <workItem from="1519069857631" duration="5276000" />
+      <workItem from="1519075358047" duration="2767000" />
+      <workItem from="1519116494953" duration="18685000" />
+      <workItem from="1519140208329" duration="12255000" />
+      <workItem from="1519164835844" duration="1322000" />
+      <workItem from="1519166199221" duration="1673000" />
+      <workItem from="1519200978115" duration="6144000" />
+      <workItem from="1519239640494" duration="12458000" />
+      <workItem from="1519287899589" duration="6957000" />
+      <workItem from="1519375045214" duration="22552000" />
+      <workItem from="1519458849046" duration="21331000" />
+      <workItem from="1519551227585" duration="14848000" />
+      <workItem from="1519630471665" duration="7740000" />
+      <workItem from="1519665893154" duration="7117000" />
+      <workItem from="1519712345015" duration="37625000" />
+      <workItem from="1519798559116" duration="19333000" />
+      <workItem from="1519825444638" duration="386000" />
+      <workItem from="1519844096994" duration="1005000" />
+      <workItem from="1519885048804" duration="140000" />
+      <workItem from="1519886341077" duration="182000" />
+    </task>
+    <task id="LOCAL-00001" summary="Подключил бутстрап, но почему-то теги html не работают.">
+      <created>1518679945858</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1518679945858</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="CartLineTest - 2018.02.27 at 17h 54m 33s.xml">
+      <configuration name="CartLineTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartLineTest - 2018.02.27 at 18h 35m 32s.xml">
+      <configuration name="CartLineTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartLineTest - 2018.02.27 at 19h 58m 15s.xml">
+      <configuration name="CartLineTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CartLineTest - 2018.02.27 at 19h 58m 38s.xml">
+      <configuration name="CartLineTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CategoryTest - 2018.02.27 at 18h 14m 35s.xml">
+      <configuration name="CategoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductTest - 2018.02.27 at 18h 03m 13s.xml">
+      <configuration name="ProductTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProductTest - 2018.02.27 at 18h 14m 28s.xml">
+      <configuration name="ProductTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest - 2018.02.27 at 18h 02m 21s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest - 2018.02.27 at 18h 03m 06s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UserTest - 2018.02.27 at 18h 14m 19s.xml">
+      <configuration name="UserTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="320548000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35985747" sideWeight="0.52831715" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267776" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32119742" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32922825" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48185942" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3208191" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.4894822" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34300342" sideWeight="0.47168285" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2524272" sideWeight="0.51086956" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27831715" sideWeight="0.48913044" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="518" y="279" width="244" height="425" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31691298" sideWeight="0.5070422" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276644" sideWeight="0.48381877" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.49676377" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35985747" sideWeight="0.5250809" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32686085" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32119742" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32922825" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48218527" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32185274" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32779098" sideWeight="0.48381877" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32779098" sideWeight="0.4894822" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35985747" sideWeight="0.47491908" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2524272" sideWeight="0.51086956" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26213592" sideWeight="0.48913044" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="518" y="279" width="244" height="425" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31691298" sideWeight="0.5070422" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.49676377" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="Подключил бутстрап, но почему-то теги html не работают." />
+    <option name="LAST_COMMIT_MESSAGE" value="Подключил бутстрап, но почему-то теги html не работают." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/util/FileUploadUtility.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java</url>
+          <line>149</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/UserTest.java</url>
+          <line>234</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java</url>
+          <line>99</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CategoryTest.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/ProductTest.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/UserTest.java</url>
+          <line>179</line>
+          <properties />
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="88" />
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="this.request" custom="javax.servlet.http.HttpServletRequest" />
+        <watch expression="out" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CategoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/ProductTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CartLineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="559">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/css/myapp.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="277" column="0" lean-forward="false" selection-start-line="277" selection-start-column="0" selection-end-line="277" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/listProducts.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-223">
+          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-693">
+          <caret line="153" column="32" lean-forward="false" selection-start-line="153" selection-start-column="32" selection-end-line="153" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CategoryDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="89" column="37" lean-forward="false" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CategoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/CartLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="27" column="30" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/myapp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1120">
+          <caret line="415" column="42" lean-forward="true" selection-start-line="415" selection-start-column="42" selection-end-line="415" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="127" column="96" lean-forward="false" selection-start-line="127" selection-start-column="96" selection-end-line="127" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="50" column="78" lean-forward="false" selection-start-line="50" selection-start-column="78" selection-end-line="50" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/header/HeaderWriterFilter.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/csrf/CsrfFilter.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/savedrequest/RequestCacheAwareFilter.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/servletapi/SecurityContextHolderAwareRequestFilter.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/authentication/AnonymousAuthenticationFilter.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/session/SessionManagementFilter.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/access/ExceptionTranslationFilter.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/FilterChainProxy.class" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.3.RELEASE/spring-aop-5.0.3.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="424" column="0" lean-forward="false" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="484" column="0" lean-forward="false" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.0.3.RELEASE/spring-expression-5.0.3.RELEASE.jar!/org/springframework/expression/spel/support/ReflectiveMethodExecutor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="66" column="51" lean-forward="false" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="97" column="5" lean-forward="false" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="3" lean-forward="false" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/RegisterModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1989">
+          <caret line="128" column="5" lean-forward="false" selection-start-line="128" selection-start-column="5" selection-end-line="128" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/util/FileUploadUtility.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="28" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/validator/ProductValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>InternetShop:war exploded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring (InternetShop)|Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mysql-connector-java-5.1.45-bin</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Hibernate|InternetShop</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: junit:junit:4.12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
