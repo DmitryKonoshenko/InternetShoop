@@ -2,6 +2,7 @@ package com.divanxan.internetshop.dao;
 
 import com.divanxan.internetshop.dto.Address;
 import com.divanxan.internetshop.dto.Cart;
+import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.dto.User;
 
 import java.util.List;
@@ -9,6 +10,8 @@ import java.util.List;
 public interface UserDao {
 
     boolean addUser(User user);
+
+    boolean update(User user);
 
     boolean delleteForTestUser(User user);
 

@@ -30,6 +30,17 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    public boolean update(User user) {
+        try {
+            sessionFactory.getCurrentSession().update(user);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
     public boolean delleteForTestUser(User user) {
         try {
             sessionFactory.getCurrentSession().delete(user);

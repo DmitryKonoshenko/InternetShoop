@@ -80,14 +80,14 @@
 
 
                     <div class="form-group">
-                        <label class="form-title1122">Выберете цель регитрации</label>
+                        <label class="form-title1122">Выберете цель регистрации</label>
                         <div class="col-md-8">
                             <label class="radio-inline">
                                 <sf:radiobutton path="role" value="USER" checked="checked"/>Покупатель
                             </label>
-                            <label class="radio-inline">
-                                <sf:radiobutton path="role" value="SUPPLIER"/>Поставщик
-                            </label>
+                            <%--<label class="radio-inline">--%>
+                                <%--<sf:radiobutton path="role" value="SUPPLIER"/>Поставщик--%>
+                            <%--</label>--%>
                         </div>
                     </div>
 

@@ -2,6 +2,7 @@ package com.divanxan.internetshop.dto;
 
 import static org.junit.Assert.assertEquals;
 
+import com.divanxan.internetshop.controller.CartController;
 import com.divanxan.internetshop.dao.CartLineDao;
 import com.divanxan.internetshop.dao.ProductDao;
 import com.divanxan.internetshop.dao.UserDao;
@@ -12,7 +13,9 @@ import com.divanxan.internetshop.dto.User;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import static org.mockito.Mockito.*;
 
+import javax.servlet.http.HttpSession;
 
 
 public class CartLineTest {
@@ -32,6 +35,8 @@ public class CartLineTest {
 
     @BeforeClass
     public static void init() {
+		HttpSession session = mock(HttpSession.class);
+		CartController cartController = mock(CartController.class);
         context = new AnnotationConfigApplicationContext();
         context.scan("com.divanxan.internetshop");
         context.refresh();

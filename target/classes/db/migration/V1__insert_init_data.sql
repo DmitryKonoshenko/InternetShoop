@@ -61,3 +61,6 @@ VALUES ('PRDRTY123FEN', '554.13', 'Valera',
 
 INSERT INTO cart (user_id, grand_total, cart_lines)
 VALUES (5, 0, 0);
+
+INSERT INTO address (user_id, address_line_one, address_line_two, city, state, country, postal_code, is_billing, is_shipping)
+VALUES (5, 'ул. Петра-водкна', 'д45, кв 33', 'Пушкин', 'Ленинградская-область', 'Россия', 188300, true, false);

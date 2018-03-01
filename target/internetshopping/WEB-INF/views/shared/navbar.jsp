@@ -56,6 +56,12 @@
                                     </a>
                                 </li>
                                 <li role="separator" class="dropdown-divider"></li>
+                                <li>
+                                    <a href="${contextRoot}/userr/show">
+                                    Личный кабинет
+                                    </a>
+                                </li>
+                                <li role="separator" class="dropdown-divider"></li>
                             </security:authorize>
                             <li>
                                     <%-- Изменил /logout на /perform-logout из-за CSRF--%>

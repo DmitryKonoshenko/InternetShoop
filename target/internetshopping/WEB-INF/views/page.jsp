@@ -92,6 +92,18 @@
         <c:if test="${userClickShowCart == true}">
             <%@include file="cart.jsp" %>
         </c:if>
+        <c:if test="${userClickShowUser == true}">
+            <%@include file="userPage.jsp" %>
+        </c:if>
+        <c:if test="${userClickShowUserName == true}">
+            <%@include file="userPageName.jsp" %>
+        </c:if>
+        <c:if test="${userClickNewName == true}">
+            <%@include file="newName.jsp" %>
+        </c:if>
+        <%--<c:if test="${userClickShowUserAddress == true}">--%>
+            <%--<%@include file="userPageAddress" %>--%>
+        <%--</c:if>--%>
 
     </div>
 
