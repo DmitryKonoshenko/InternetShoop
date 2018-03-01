@@ -7,6 +7,19 @@
 <%-- Page Content --%>
 <div class="content">
 
+    <c:if test="${not empty message}">
+        <div class="col-xs-12">
+
+            <div class="alert alert-info">
+
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+                    ${message}
+
+            </div>
+        </div>
+    </c:if>
+
     <div class="row">
 
         <div class="form-container1122">
@@ -28,8 +41,8 @@
                 </div>
 
                 <div class="panel-footer">
-                    <a href="${contextRoot}/userr/userName" class="submit-button1122">Изменить</a>
-                    <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
+                    <a href="${contextRoot}/user/userName" class="submit-button1122">Изменить</a>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                 </div>
 
             </div>
@@ -61,13 +74,27 @@
                 </div>
 
             </div>
-            <div class="text-right">
 
-                <a href="${contextRoot}/home" class="submit-button1122">Подтвердить</a>
 
+        </div>
+
+        <div class="form-container1122">
+
+            <div class="panel panel-primary">
+
+                <div class="panel-heading">
+                    <h4>Изменить пароль</h4>
+                </div>
+
+                <div class="panel-footer">
+                    <a href="${contextRoot}/user/userPassword" class="submit-button1122">Изменить</a>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                </div>
 
             </div>
-
+            <div class="text-right">
+                <a href="${contextRoot}/home" class="submit-button1122">Вернуться</a>
+            </div>
         </div>
 
     </div>

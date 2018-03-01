@@ -57,7 +57,7 @@
                                 </li>
                                 <li role="separator" class="dropdown-divider"></li>
                                 <li>
-                                    <a href="${contextRoot}/userr/show">
+                                    <a href="${contextRoot}/user/show">
                                     Личный кабинет
                                     </a>
                                 </li>

@@ -13,50 +13,38 @@
             <div class="panel panel-primary">
 
                 <div class="form-title1122">
-                    <h4>Изменение персональных данных</h4>
+                    <h4>Изменение пароля</h4>
                 </div>
 
                 <div class="panel-body">
-                    <div class="form-title1122">
-                        <h2>Введите новые значение в те поля, которые требуют изменения</h2>
-                    </div>
                     <%--@elvariable id="user" type="com.divanxan.internetshop.dto.User"--%>
                     <form id="userForm" modelAttribute="user" action="${contextRoot}/user/show" method="POST"
                           cssClass="form-horizontal">
                         <%--<form class="form-horizontal" action="${contextRoot}/user/newName" method="POST">--%>
 
                         <div class="form-group">
-                            <label class="form-title1122">Имя</label>
+                            <label class="form-title1122">Введите новый пароль</label>
                             <div class="col-md-8">
-                                <input type="text" name="firstName" class="form-control"
-                                       placeholder="Иван"/>
+                                <input type="text" name="password1" class="form-control"
+                                       placeholder="******"/>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-title1122">Фамилия</label>
+                            <label class="form-title1122">Введите новый пароль еще раз</label>
                             <div class="col-md-8">
-                                <input type="text" name="lastName" class="form-control"
-                                       placeholder="Пупкин"/>
+                                <input type="text" name="password2" class="form-control"
+                                       placeholder="******"/>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-title1122">Email</label>
+                            <label class="form-title1122">Введите текущий пароль</label>
                             <div class="col-md-8">
-                                <input type="text" name="email" class="form-control"
-                                       placeholder="abc@zyx.com"/>
+                                <input type="text" name="password3" class="form-control"
+                                       placeholder="******"/>
                             </div>
                         </div>
-
-                        <div class="form-group">
-                            <label class="form-title1122">Телефон</label>
-                            <div class="col-md-8">
-                                <input type="text" name="contactNumber" class="form-control"
-                                       placeholder="XXXXXXXXXX" maxlength="12"/>
-                            </div>
-                        </div>
-
 
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-8">

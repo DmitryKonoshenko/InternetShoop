@@ -1,3 +1,4 @@
+<%--@elvariable id="_csrf" type="org.springframework.web.server.session.HeaderWebSessionIdResolver"--%>
 <%@ page contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -22,11 +23,10 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
-    <!-- Метатеги для корректной работы ajax (добавляем токены)-->
+    <%-- Метатеги для корректной работы ajax (добавляем токены)--%>
     <meta name="_csrf" content="${_csrf.token}">
     <meta name="_csrf_header" content="${_csrf.headerName}">
-
-
+    
     <title>Электроник ${title}</title>
 
     <script>
@@ -98,8 +98,8 @@
         <c:if test="${userClickShowUserName == true}">
             <%@include file="userPageName.jsp" %>
         </c:if>
-        <c:if test="${userClickNewName == true}">
-            <%@include file="newName.jsp" %>
+        <c:if test="${userClickShowUserPassword == true}">
+            <%@include file="userChangePassword.jsp" %>
         </c:if>
         <%--<c:if test="${userClickShowUserAddress == true}">--%>
             <%--<%@include file="userPageAddress" %>--%>
