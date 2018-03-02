@@ -30,6 +30,8 @@ public class GlobalController {
     @ModelAttribute("userModel")
     public UserModel getUserModel() {
         UserModel userModel = ((UserModel) session.getAttribute("userModel"));
+        boolean isUserModelExist =(userModel == null);
+
         if (userModel == null || userModel.getEmail()==null) {
             //добавим покупателя
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -57,7 +59,7 @@ public class GlobalController {
                 session.setAttribute("userModel", userModel);
                 return userModel;
             }
-            else{
+            else if(isUserModelExist){
                 // если юзер аноним, то создаем корзину
                 userModel = new UserModel();
                 Cart cart = new Cart();

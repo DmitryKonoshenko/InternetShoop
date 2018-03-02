@@ -79,4 +79,35 @@ CREATE TABLE `ishop`.cart_line (
   PRIMARY KEY (`id`),
   CONSTRAINT fk_cartline_cart_id FOREIGN KEY (`cart_id`) REFERENCES cart (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT fk_cartline_product_id FOREIGN KEY (`product_id`) REFERENCES product (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;;
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `ishop`.`order_detail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `order_total` decimal(10,2) DEFAULT NULL,
+  `order_count` int(11) DEFAULT NULL,
+  `shipping_id` int(11) DEFAULT NULL,
+  `billing_id` int(11) DEFAULT NULL,
+  `order_date` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_order_detail_user_id` (`user_id`),
+  KEY `fk_order_detail_shipping_id` (`shipping_id`),
+  KEY `fk_order_detail_billing_id` (`billing_id`),
+  CONSTRAINT `fk_order_detail_billing_id` FOREIGN KEY (`billing_id`) REFERENCES `address` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_order_detail_shipping_id` FOREIGN KEY (`shipping_id`) REFERENCES `address` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_order_detail_user_id` FOREIGN KEY (`user_id`) REFERENCES `user_detail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `ishop`.`order_item` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) DEFAULT NULL,
+  `total` decimal(10,2) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `product_count` int(11) DEFAULT NULL,
+  `buying_price` decimal(10,2) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_order_item_product_id` (`product_id`),
+  KEY `fk_order_item_order_id` (`order_id`),
+  CONSTRAINT `fk_order_item_order_id` FOREIGN KEY (`order_id`) REFERENCES `order_detail` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_order_item_product_id` FOREIGN KEY (`product_id`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

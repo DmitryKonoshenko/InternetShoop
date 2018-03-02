@@ -69,7 +69,7 @@
 
                 <div class="panel-footer">
 
-                    <a href="${flowExecutionUrl}&_eventId_billing" class="submit-button1122">Изменить</a>
+                    <a href="${contextRoot}/user/userAddress" class="submit-button1122">Изменить</a>
 
                 </div>
 

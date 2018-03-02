@@ -20,6 +20,8 @@ public interface UserDao {
     // добавление адреса
     boolean addAddress(Address address);
 
+    boolean updateAddress(Address address);
+
     Address getBillingAddress(int userId);
     List<Address> listShippingAddressess(int userId);
 

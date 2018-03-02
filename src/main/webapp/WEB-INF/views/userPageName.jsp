@@ -18,7 +18,7 @@
 
                 <div class="panel-body">
                     <div class="form-title1122">
-                        <h2>Введите новые значение в те поля, которые требуют изменения</h2>
+                        <h6>Введите новые значение в те поля, которые требуют изменения</h6>
                     </div>
                     <%--@elvariable id="user" type="com.divanxan.internetshop.dto.User"--%>
                     <form id="userForm" modelAttribute="user" action="${contextRoot}/user/show" method="POST"

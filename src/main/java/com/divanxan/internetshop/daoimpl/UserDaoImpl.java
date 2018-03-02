@@ -79,6 +79,17 @@ public class UserDaoImpl implements UserDao {
     }
 
     @Override
+    public boolean updateAddress(Address address) {
+        try {
+            sessionFactory.getCurrentSession().update(address);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
     public Address getBillingAddress(int userId) {
         String selectQuerry = "FROM Address WHERE userId =:userId AND billing =:billing";
         try {

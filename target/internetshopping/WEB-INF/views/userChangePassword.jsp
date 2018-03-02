@@ -25,7 +25,7 @@
                         <div class="form-group">
                             <label class="form-title1122">Введите новый пароль</label>
                             <div class="col-md-8">
-                                <input type="text" name="password1" class="form-control"
+                                <input type="password" name="password1" class="form-control"
                                        placeholder="******"/>
                             </div>
                         </div>
@@ -33,7 +33,7 @@
                         <div class="form-group">
                             <label class="form-title1122">Введите новый пароль еще раз</label>
                             <div class="col-md-8">
-                                <input type="text" name="password2" class="form-control"
+                                <input type="password" name="password2" class="form-control"
                                        placeholder="******"/>
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                         <div class="form-group">
                             <label class="form-title1122">Введите текущий пароль</label>
                             <div class="col-md-8">
-                                <input type="text" name="password3" class="form-control"
+                                <input type="password" name="password3" class="form-control"
                                        placeholder="******"/>
                             </div>
                         </div>

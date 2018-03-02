@@ -101,9 +101,9 @@
         <c:if test="${userClickShowUserPassword == true}">
             <%@include file="userChangePassword.jsp" %>
         </c:if>
-        <%--<c:if test="${userClickShowUserAddress == true}">--%>
-            <%--<%@include file="userPageAddress" %>--%>
-        <%--</c:if>--%>
+        <c:if test="${userClickShowUserAddress == true}">
+            <%@include file="userPageAddress" %>
+        </c:if>
 
     </div>
 

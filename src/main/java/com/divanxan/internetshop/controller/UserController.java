@@ -2,6 +2,7 @@ package com.divanxan.internetshop.controller;
 
 
 import com.divanxan.internetshop.dao.UserDao;
+import com.divanxan.internetshop.dto.Address;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.model.UserModel;
@@ -57,13 +58,16 @@ public class UserController {
 
         if (operation != null) {
             if (operation.equals("user")) {
-                mv.addObject("message", "Персональные данные успешно изменены");
+                mv.addObject("message", "Персональные данные успешно изменены!");
             }
-            if (operation.equals("nouser")) {
-                mv.addObject("message", "Персональные данные НЕ ИЗМЕНЕНЫ. Введите все поля");
+            if (operation.equals("noUser")) {
+                mv.addObject("message", "Персональные данные НЕ ИЗМЕНЕНЫ. Введите нужные поля!");
             }
-            if (operation.equals("nopassword")) {
-                mv.addObject("message", "Пароль НЕ ИЗМЕНЕН. Введите все поля");
+            if (operation.equals("noPassword")) {
+                mv.addObject("message", "Пароль НЕ ИЗМЕНЕН. Введите все поля!");
+            }
+            if (operation.equals("noAddress")) {
+                mv.addObject("message", "Адрес НЕ ИЗМЕНЕН. Введите нужные поля!");
             }
         }
         return mv;
@@ -96,50 +100,81 @@ public class UserController {
         String password2 = map.get("password2");
         String password3 = map.get("password3");
 
+        String addressLineOne = map.get("addressLineOne");
+        String addressLineTwo = map.get("addressLineTwo");
+        String city = map.get("city");
+        String state = map.get("region");
+        String country = map.get("country");
+        String postalCode = map.get("postalCode");
+
+
         String emailOfUser = ((UserModel) session.getAttribute("userModel")).getEmail();
         User user = userDao.getByEmail(emailOfUser);
+        Address address = userDao.getBillingAddress(user.getId());
 
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
 
-        password3 = passwordEncoder.encode(password3);
+        // boolean whatIf = BCrypt.checkpw(password3, user.getPassword());
 
+        if (addressLineOne != null) {
+            if (addressLineOne.equals("") && addressLineTwo.equals("") && city.equals("")
+                    && state.equals("") && country.equals("") && postalCode.equals("")) {
+                model.addAttribute("userClickShowUserName", true);
+                model.addAttribute("title", "User Data");
+                model.addAttribute("message", "Ошибка валидации для изменения данных!");
 
+                return "redirect:/user/show?operation=noAddress";
+            }
+
+        }
         if (firstName != null) {
-            if (firstName.equals("") && lastName.equals("") && email.equals("") && contactNumber.equals("")){
+            if (firstName.equals("") && lastName.equals("") && email.equals("") && contactNumber.equals("")) {
 
                 model.addAttribute("userClickShowUserName", true);
                 model.addAttribute("title", "User Data");
                 model.addAttribute("message", "Ошибка валидации для изменения данных!");
 
-                return "redirect:/user/show?operation=nouser";
+                return "redirect:/user/show?operation=noUser";
             }
         }
-        if(password1!=null){
-            if(password2.equals("") || password3.equals("") || !password1.equals(password2) || !BCrypt.checkpw(password3, user.getPassword()))
-            {
+        if (password1 != null) {
+            if (password2.equals("") || password3.equals("") || !password1.equals(password2) || !BCrypt.checkpw(password3, user.getPassword())) {
                 model.addAttribute("userClickShowUserName", true);
                 model.addAttribute("title", "User Data");
                 model.addAttribute("message", "Ошибка валидации для изменения данных!");
 
-                return "redirect:/user/show?operation=nopassword";
+                return "redirect:/user/show?operation=noPassword";
             }
         }
 
 
         if (firstName != null && !firstName.equals("")) user.setFirstName(firstName);
-        if (lastName!=null && !lastName.equals("")) user.setLastName(lastName);
-        if (email!=null &&!email.equals("")) user.setEmail(email);
-        if (contactNumber!=null && !contactNumber.equals("")) user.setContactNumber(contactNumber);
-        if (password1!=null && !password1.equals("")) user.setPassword(passwordEncoder.encode(password1));
+        if (lastName != null && !lastName.equals("")) user.setLastName(lastName);
+        if (email != null && !email.equals("")) user.setEmail(email);
+        if (contactNumber != null && !contactNumber.equals("")) user.setContactNumber(contactNumber);
 
-        userDao.update(user);
-        UserModel userModel = ((UserModel) session.getAttribute("userModel"));
+        if (password1 != null && !password1.equals("")) user.setPassword(passwordEncoder.encode(password1));
 
-        userModel.setEmail(user.getEmail());
-        userModel.setFullName(user.getFirstName() + " " + user.getLastName());
+        if (addressLineOne != null && !addressLineOne.equals("")) address.setAddressLineOne(addressLineOne);
+        if (addressLineTwo != null && !addressLineTwo.equals("")) address.setAddressLineTwo(addressLineTwo);
+        if (city != null && !city.equals("")) address.setCity(city);
+        if (state != null && !state.equals("")) address.setState(state);
+        if (country != null && !country.equals("")) address.setCountry(country);
+        if (postalCode != null && !postalCode.equals("")) address.setPostalCode(postalCode);
 
-        session.setAttribute("userModel", userModel);
+        if (firstName != null || password1 != null) {
+            userDao.update(user);
+            UserModel userModel = ((UserModel) session.getAttribute("userModel"));
+            userModel.setEmail(user.getEmail());
+            userModel.setFullName(user.getFirstName() + " " + user.getLastName());
+
+            session.setAttribute("userModel", userModel);
+        }
+
+        if (addressLineOne != null) {
+            userDao.updateAddress(address);
+        }
 
         return "redirect:/user/show?operation=user";
 
@@ -153,11 +188,17 @@ public class UserController {
         mv.addObject("title", "User Password");
         mv.addObject("userClickShowUserPassword", true);
 
-        User user = new User();
-        String email = ((UserModel) session.getAttribute("userModel")).getEmail();
-        user.setId(userDao.getByEmail(email).getId());
-        mv.addObject("user", user);
+        return mv;
+    }
+
+    @RequestMapping(value = "/userAddress", method = RequestMethod.GET)
+    public ModelAndView changeAddress() {
+
+        ModelAndView mv = new ModelAndView("page");
+        mv.addObject("title", "User Address");
+        mv.addObject("userClickShowUserAddress", true);
 
         return mv;
     }
+
 }
