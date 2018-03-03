@@ -10,18 +10,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d920735-65df-4dfd-9a8b-65d5b664f90b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/10a4f371-d730-4e7f-8454-5f61f450665d.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/10a4f371-d730-4e7f-8454-5f61f450665d.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/UserController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CartLineDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CartLineDao.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Category.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Category.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Product.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPage.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageAddress" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageAddress" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageName.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageName.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/controller/UserController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/controller/CartController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/controller/UserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/dao/CartLineDao.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/dao/CartLineDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/dao/UserDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/daoimpl/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/daoimpl/UserDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/dto/Category.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/dto/Category.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/dto/Product.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/dto/Product.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/service/CartService.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/service/CartService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V0__create_tables.sql" afterPath="$PROJECT_DIR$/target/classes/db/migration/V0__create_tables.sql" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/controller/CartController.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/controller/CartController.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/controller/UserController.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/controller/UserController.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/dao/CartLineDao.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/dao/CartLineDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/dao/UserDao.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/dao/UserDao.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/daoimpl/UserDaoImpl.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/daoimpl/UserDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/dto/Category.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/dto/Category.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/dto/Product.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/dto/Product.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/service/CartService.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/service/CartService.class" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/db/migration/V0__create_tables.sql" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/db/migration/V0__create_tables.sql" />
+      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/cart.jsp" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/cart.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -72,11 +99,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="593">
-              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="339">
+              <caret line="131" column="52" lean-forward="false" selection-start-line="131" selection-start-column="52" selection-end-line="131" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,41 +111,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InvocableHandlerMethod.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <file leaf-file-name="page.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="104" column="36" lean-forward="false" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderItem.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/OrderItem.java">
+      <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            <state relative-caret-position="305">
+              <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlobalController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java">
+      <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
+            <state relative-caret-position="539">
+              <caret line="138" column="51" lean-forward="false" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="51" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/UserModel.java">
+      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="149">
+              <caret line="87" column="59" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userPageName.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageName.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="38" column="61" lean-forward="false" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -131,22 +170,14 @@
       <list>
         <option value="Interface" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="jsf" />
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Выберете файл</find>
-      <find>Добавьте название товара!</find>
-      <find>cart_id</find>
-      <find>security</find>
-      <find>spring.security.version</find>
-      <find>5.0.2.R</find>
-      <find>categoryForm</find>
-      <find>@Be</find>
       <find>HttpSession</find>
       <find>globalController</find>
       <find>AnnotationConfigApplicationContext</find>
@@ -169,6 +200,14 @@
       <find>registerForm</find>
       <find>validateUser</find>
       <find>saveAll</find>
+      <find>NoHandlerFoundException</find>
+      <find>ProductNotFoundException</find>
+      <find>cart/validate</find>
+      <find>/error.jsp</find>
+      <find>pay</find>
+      <find>success</find>
+      <find>receipt</find>
+      <find>saveAddressSelection</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -188,33 +227,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-success.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-confirm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-billing.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-flow.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/listProducts.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/CartLine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CartLineDao.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CartLineTest1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/config/HibernateConfig.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/UserTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CategoryTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/ProductTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/css/myapp.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleProduct.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/util/FileUploadUtility.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/UserModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/RegisterModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/validator/ProductValidator.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1__insert_init_data.sql" />
@@ -225,20 +244,40 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-personal.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newName.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/assets/js/myapp.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userChangePassword.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageAddress" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageName.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/OrderDetail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/exception/UserAccessException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CartLineDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/cart/checkout/order-address.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/cart/checkout/order-confirm.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/cart/checkout/order-payment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/error.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/CheckoutHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/cart/checkout/checkout-flow.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/orderPayment.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/CheckoutModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderPayment.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPage.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/OrderDetail.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java" />
       </list>
     </option>
   </component>
@@ -323,10 +362,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -394,15 +429,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="internetshop" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="internetshop" type="462c0819:PsiDirectoryNode" />
               <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -422,6 +448,24 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="internetshop" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="internetshop" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="internetshop" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
@@ -460,23 +504,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -492,27 +519,41 @@
               <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="flows" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="flows" type="462c0819:PsiDirectoryNode" />
+              <item name="cart" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="InternetShop" type="b2602c69:ProjectViewProjectNode" />
               <item name="InternetShop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -520,7 +561,7 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/online-shopping-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -535,21 +576,21 @@
       <recent name="com.divanxan.internetshop.daoimpl" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Repozitori\GitHub\InternetShop\src\main\webapp\WEB-INF\views\flows\shared" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\src\main\webapp\WEB-INF\views\flows" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\src\main\java\com\divanxan\internetshop\handler" />
+      <recent name="C:\Repozitori\GitHub\InternetShop\src\main\java\com\divanxan\internetshop\model" />
       <recent name="C:\Repozitori\GitHub\InternetShop\src\main\java\com\divanxan\internetshop\dto" />
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\css" />
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\js" />
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources" />
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources\db.migration" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Repozitori\GitHub\InternetShop\src\main\webapp\WEB-INF\views" />
       <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\WEB-INF\views\flows\register" />
       <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\resources\db\migration" />
       <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\images" />
       <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\css" />
-      <recent name="C:\Repozitori\GitHub\InternetShop\InternetShop\src\main\webapp\assets\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -917,6 +958,8 @@
       <workItem from="1519886341077" duration="18563000" />
       <workItem from="1519933669339" duration="12669000" />
       <workItem from="1519981400348" duration="7900000" />
+      <workItem from="1520061998092" duration="10328000" />
+      <workItem from="1520083738796" duration="20985000" />
     </task>
     <task id="LOCAL-00001" summary="Подключил бутстрап, но почему-то теги html не работают.">
       <created>1518679945858</created>
@@ -961,7 +1004,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359498000" />
+    <option name="totallyTimeSpent" value="390811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -978,31 +1021,32 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35985747" sideWeight="0.52831715" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32897863" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267776" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32605177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32119742" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32119742" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32922825" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32922825" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4406176" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4263658" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3208191" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34204274" sideWeight="0.48381877" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34204274" sideWeight="0.47168285" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.4894822" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2524272" sideWeight="0.51086956" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28478965" sideWeight="0.48913044" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="518" y="279" width="244" height="425" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31691298" sideWeight="0.5070422" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2961165" sideWeight="0.48574823" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="518" y="279" width="244" height="425" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28478965" sideWeight="0.51425177" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32779098" sideWeight="0.49676377" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hibernate Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1010,9 +1054,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928804" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32779098" sideWeight="0.49676377" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1153,36 +1196,72 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/UserController.java</url>
-          <line>151</line>
+          <line>171</line>
           <properties />
           <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/UserController.java</url>
-          <line>140</line>
+          <line>160</line>
           <properties />
           <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/UserController.java</url>
-          <line>114</line>
+          <line>134</line>
           <properties />
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java</url>
+          <line>111</line>
           <properties />
-          <option name="timeStamp" value="111" />
+          <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java</url>
-          <line>34</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/CheckoutHandler.java</url>
+          <line>193</line>
           <properties />
-          <option name="timeStamp" value="112" />
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/OrderController.java</url>
+          <line>128</line>
+          <properties />
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/OrderController.java</url>
+          <line>141</line>
+          <properties />
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderPayment.jsp</url>
+          <line>88</line>
+          <properties />
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderPayment.jsp</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/UserController.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java</url>
+          <line>134</line>
+          <properties />
+          <option name="timeStamp" value="142" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="113" />
+      <option name="time" value="143" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1196,49 +1275,203 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/exception/ProductNotFoundException.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/webflow/spring-webflow/2.4.7.RELEASE/spring-webflow-2.4.7.RELEASE.jar!/org/springframework/webflow/engine/ActionState.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="148">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <marker date="1519410744874" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1519410744874" expanded="false" signature="158:579" ph="..." />
+            <marker date="1519410744874" expanded="true" signature="768:800" ph="{...}" />
+            <marker date="1519410744874" expanded="false" signature="839:850" ph=" { " />
+            <marker date="1519410744874" expanded="false" signature="873:879" ph=" }" />
+            <marker date="1519410744874" expanded="true" signature="986:1275" ph="{...}" />
+            <marker date="1519410744874" expanded="true" signature="1365:3594" ph="{...}" />
+            <marker date="1519410744874" expanded="true" signature="3655:3756" ph="{...}" />
+            <marker date="1519410744874" expanded="true" signature="3863:4141" ph="{...}" />
+            <marker date="1519410744874" expanded="true" signature="3960:4135" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/exception/GlobalDefaultExceptionHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="319">
+          <caret line="64" column="40" lean-forward="true" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.0.3.RELEASE/spring-expression-5.0.3.RELEASE.jar!/org/springframework/expression/spel/support/ReflectiveMethodExecutor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.0.3.RELEASE/spring-expression-5.0.3.RELEASE.jar!/org/springframework/expression/spel/ast/MethodReference.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.0.3.RELEASE/spring-expression-5.0.3.RELEASE.jar!/org/springframework/expression/spel/standard/SpelExpression.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/webflow/spring-binding/2.4.7.RELEASE/spring-binding-2.4.7.RELEASE.jar!/org/springframework/binding/expression/spel/SpringELExpression.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/webflow/spring-webflow/2.4.7.RELEASE/spring-webflow-2.4.7.RELEASE.jar!/org/springframework/webflow/action/AbstractAction.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/webflow/spring-webflow/2.4.7.RELEASE/spring-webflow-2.4.7.RELEASE.jar!/org/springframework/webflow/action/EvaluateAction.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.0.3.RELEASE/spring-expression-5.0.3.RELEASE.jar!/org/springframework/expression/spel/ast/SpelNodeImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-expression/5.0.3.RELEASE/spring-expression-5.0.3.RELEASE.jar!/org/springframework/expression/spel/ast/CompoundExpression.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-flow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="42" column="17" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="42" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/myapp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2074">
+          <caret line="124" column="25" lean-forward="true" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
+          <folding>
+            <marker date="1519938335500" expanded="true" signature="2706:2715" ph="..." />
+            <marker date="1519938335500" expanded="true" signature="7296:7305" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3247">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/cart/checkout/order-address.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="44" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="128" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/navbar.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="59" column="64" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/newName.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/listProducts.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1209">
+        <state relative-caret-position="-663">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/singleProduct.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Cart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-529">
-          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="48" />
+        <state relative-caret-position="119">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="42" column="49" lean-forward="false" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+        <state relative-caret-position="323">
+          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <marker date="1520090519063" expanded="true" signature="3189:3253" ph="SELECT email... user_detail" />
+            <marker date="1520090519063" expanded="true" signature="3317:3368" ph="SELECT email... user_detail" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/header/HeaderWriterFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/access/ExceptionTranslationFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="484" column="0" lean-forward="false" selection-start-line="484" selection-start-column="0" selection-end-line="484" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1247,157 +1480,205 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/header/HeaderWriterFilter.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="175">
+          <caret line="424" column="0" lean-forward="false" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/filter/OncePerRequestFilter.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/access/ExceptionTranslationFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/context/SecurityContextPersistenceFilter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.0.2.RELEASE/spring-security-web-5.0.2.RELEASE.jar!/org/springframework/security/web/FilterChainProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/assets/js/myapp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="373" column="5" lean-forward="true" selection-start-line="373" selection-start-column="5" selection-end-line="373" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="192">
+          <caret line="569" column="0" lean-forward="false" selection-start-line="569" selection-start-column="0" selection-end-line="569" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2959">
+        <state relative-caret-position="-429">
           <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/RegisterModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/listProducts.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="-1209">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/JsonDataController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/cart/checkout/checkout-flow.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        <state relative-caret-position="969">
+          <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/cart/checkout/order-payment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-personal.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="79" column="0" lean-forward="true" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        <state relative-caret-position="-1003">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/register/signup-flow.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/CheckoutHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
+        <state relative-caret-position="1326">
+          <caret line="101" column="35" lean-forward="true" selection-start-line="100" selection-start-column="8" selection-end-line="101" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/flows/shared/flows-navbar.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1161">
+        <state relative-caret-position="-330">
           <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="119" column="110" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/validator/ProductValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="96" column="58" lean-forward="true" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="58" />
+        <state relative-caret-position="-1445">
+          <caret line="38" column="66" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        <state relative-caret-position="272">
+          <caret line="40" column="38" lean-forward="false" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageName.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="38" column="61" lean-forward="false" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="124" column="34" lean-forward="true" selection-start-line="124" selection-start-column="34" selection-end-line="124" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/CheckoutModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="19" column="31" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="31" />
           <folding>
-            <marker date="1519901487146" expanded="true" signature="3114:3178" ph="SELECT email... user_detail" />
-            <marker date="1519901487146" expanded="true" signature="3242:3293" ph="SELECT email... user_detail" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#509#510#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#587#588#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/manageProduct.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderPayment.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="74" lean-forward="false" selection-start-line="27" selection-start-column="74" selection-end-line="27" selection-end-column="74" />
+        <state relative-caret-position="204">
+          <caret line="12" column="47" lean-forward="false" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="72" column="62" lean-forward="true" selection-start-line="72" selection-start-column="51" selection-end-line="72" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="87" column="59" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="138" column="51" lean-forward="false" selection-start-line="138" selection-start-column="51" selection-end-line="138" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1405,185 +1686,26 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="103" column="46" lean-forward="false" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userChangePassword.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="692">
-          <caret line="67" column="6" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="67" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="75" column="18" lean-forward="false" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageName.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="86" column="32" lean-forward="false" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="24" />
+          <caret line="104" column="36" lean-forward="false" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userPageAddress">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="80" column="20" lean-forward="true" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/OrderDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/c12a4bcc/10a4f371-d730-4e7f-8454-5f61f450665d/ishop.order_detail">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/c12a4bcc/10a4f371-d730-4e7f-8454-5f61f450665d/ishop.order_item">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/c12a4bcc/10a4f371-d730-4e7f-8454-5f61f450665d/ishop.user_detail">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V0__create_tables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="112" column="37" lean-forward="false" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/OrderItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="569" column="0" lean-forward="false" selection-start-line="569" selection-start-column="0" selection-end-line="569" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="424" column="0" lean-forward="false" selection-start-line="424" selection-start-column="0" selection-end-line="424" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.3.RELEASE/spring-webmvc-5.0.3.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="490" column="0" lean-forward="false" selection-start-line="490" selection-start-column="0" selection-end-line="490" selection-end-column="0" />
+        <state relative-caret-position="391">
+          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="339">
+          <caret line="131" column="52" lean-forward="false" selection-start-line="131" selection-start-column="52" selection-end-line="131" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/model/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.3.RELEASE/spring-web-5.0.3.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/GlobalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="32" column="54" lean-forward="false" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>

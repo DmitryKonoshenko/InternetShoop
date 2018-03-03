@@ -2,6 +2,7 @@ package com.divanxan.internetshop.dao;
 
 import com.divanxan.internetshop.dto.Cart;
 import com.divanxan.internetshop.dto.CartLine;
+import com.divanxan.internetshop.dto.OrderDetail;
 
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface CartLineDao {
     public CartLine getByCartAndProduct(int cartId, int productId);
 
     boolean updateCart(Cart cart);
+
+    boolean addOrderDetail(OrderDetail orderDetail);
 }

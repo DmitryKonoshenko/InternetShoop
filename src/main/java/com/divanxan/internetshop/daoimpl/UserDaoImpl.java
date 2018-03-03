@@ -62,7 +62,7 @@ public class UserDaoImpl implements UserDao {
                     .setParameter("email", email)
                     .getSingleResult();
         } catch (Exception e) {
-            e.printStackTrace();
+           // e.printStackTrace();
             return null;
         }
     }
@@ -75,6 +75,17 @@ public class UserDaoImpl implements UserDao {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    @Override
+    public Address getAddress(int addressId) {
+        try {
+            return sessionFactory.getCurrentSession().get(Address.class, addressId);
+        }
+        catch(Exception ex) {
+            System.out.println(ex.getMessage());
+            return null;
         }
     }
 
@@ -112,6 +123,20 @@ public class UserDaoImpl implements UserDao {
                     .createQuery(selectQuerry, Address.class)
                     .setParameter("userId", userId)
                     .setParameter("shipping", true)
+                    .getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public List<Address> listAddressess(int userId) {
+        String selectQuerry = "FROM Address WHERE userId =:userId";
+        try {
+            return sessionFactory.getCurrentSession()
+                    .createQuery(selectQuerry, Address.class)
+                    .setParameter("userId", userId)
                     .getResultList();
         } catch (Exception e) {
             e.printStackTrace();

@@ -3,25 +3,23 @@ package com.divanxan.internetshop.controller;
 
 import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Address;
-import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.dto.User;
+import com.divanxan.internetshop.exception.ProductNotFoundException;
+import com.divanxan.internetshop.exception.UserAccessException;
 import com.divanxan.internetshop.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
+import java.util.List;
 import java.util.Map;
 
 
@@ -43,7 +41,7 @@ public class UserController {
     private HttpSession session;
 
     @RequestMapping("/show")
-    public ModelAndView showUser(@RequestParam(name = "operation", required = false) String operation) {
+    public ModelAndView showUser(@RequestParam(name = "operation", required = false) String operation) throws UserAccessException {
 
         ModelAndView mv = new ModelAndView("page");
 
@@ -53,9 +51,17 @@ public class UserController {
         String email = ((UserModel) session.getAttribute("userModel")).getEmail();
         User user = userDao.getByEmail(email);
 
-        mv.addObject("userData", user);
-        mv.addObject("userAddress", userDao.getBillingAddress(user.getId()));
+        List<Address> addresses = userDao.listAddressess(user.getId());
 
+        mv.addObject("userData", user);
+
+        mv.addObject("addresses", addresses);
+        try {
+            mv.addObject("userAddress", userDao.getBillingAddress(user.getId()));
+        }
+        catch (Exception e){
+            throw new UserAccessException();
+        }
         if (operation != null) {
             if (operation.equals("user")) {
                 mv.addObject("message", "Персональные данные успешно изменены!");
@@ -74,7 +80,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/userName", method = RequestMethod.GET)
-    public ModelAndView changeUser() {
+    public ModelAndView changeUser() throws UserAccessException {
 
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "User Data");
@@ -82,7 +88,12 @@ public class UserController {
 
         User user = new User();
         String email = ((UserModel) session.getAttribute("userModel")).getEmail();
+        try {
         user.setId(userDao.getByEmail(email).getId());
+        }
+        catch (Exception e){
+            throw new UserAccessException();
+        }
         mv.addObject("user", user);
 
         return mv;
@@ -110,7 +121,16 @@ public class UserController {
 
         String emailOfUser = ((UserModel) session.getAttribute("userModel")).getEmail();
         User user = userDao.getByEmail(emailOfUser);
-        Address address = userDao.getBillingAddress(user.getId());
+        int adressId = (int) session.getAttribute("addressId");
+
+        List<Address> addresses = userDao.listAddressess(user.getId());
+
+
+        Address address = null;
+
+        for (Address adr: addresses) {
+            if(adr.getId()==adressId) address = adr;
+        }
 
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
@@ -182,7 +202,13 @@ public class UserController {
 
 
     @RequestMapping(value = "/userPassword", method = RequestMethod.GET)
-    public ModelAndView changePassword() {
+    public ModelAndView changePassword() throws UserAccessException {
+
+        String email = ((UserModel) session.getAttribute("userModel")).getEmail();
+
+        if(email==null){
+            throw new UserAccessException();
+        }
 
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "User Password");
@@ -191,12 +217,20 @@ public class UserController {
         return mv;
     }
 
-    @RequestMapping(value = "/userAddress", method = RequestMethod.GET)
-    public ModelAndView changeAddress() {
+    @RequestMapping(value = "/{userAddressId}/userAddress", method = RequestMethod.GET)
+    public ModelAndView changeAddress(@PathVariable int userAddressId) throws UserAccessException {
+
+        String email = ((UserModel) session.getAttribute("userModel")).getEmail();
+
+        if(email==null){
+            throw new UserAccessException();
+        }
 
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "User Address");
         mv.addObject("userClickShowUserAddress", true);
+
+        session.setAttribute("addressId", userAddressId);
 
         return mv;
     }

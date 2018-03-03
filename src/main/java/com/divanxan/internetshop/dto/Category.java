@@ -2,6 +2,7 @@ package com.divanxan.internetshop.dto;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 
 /**
@@ -12,7 +13,7 @@ import javax.validation.constraints.NotBlank;
  * @since version 1.0
  */
 @Entity
-public class Category {
+public class Category implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

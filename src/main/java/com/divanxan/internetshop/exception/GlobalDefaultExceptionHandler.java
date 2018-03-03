@@ -54,4 +54,16 @@ public class GlobalDefaultExceptionHandler {
 
         return  mv;
     }
+
+    @ExceptionHandler(UserAccessException.class)
+    public ModelAndView handlerUserAccessException(){
+
+        ModelAndView mv = new ModelAndView("error");
+
+        mv.addObject("errorTitle", "Данная страница не оступна!");
+        mv.addObject("errorDescription", "Данная страница не оступна!");
+        mv.addObject("title", "Access denied");
+
+        return  mv;
+    }
 }

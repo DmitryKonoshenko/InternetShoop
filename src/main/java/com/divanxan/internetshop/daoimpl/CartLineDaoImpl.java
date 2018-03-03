@@ -3,6 +3,7 @@ package com.divanxan.internetshop.daoimpl;
 import com.divanxan.internetshop.dao.CartLineDao;
 import com.divanxan.internetshop.dto.Cart;
 import com.divanxan.internetshop.dto.CartLine;
+import com.divanxan.internetshop.dto.OrderDetail;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -102,6 +103,17 @@ public class CartLineDaoImpl implements CartLineDao {
             return true;
         } catch (Exception e) {
             e.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public boolean addOrderDetail(OrderDetail orderDetail) {
+        try {
+            sessionFactory.getCurrentSession().persist(orderDetail);
+            return true;
+        }
+        catch(Exception ex) {
             return false;
         }
     }

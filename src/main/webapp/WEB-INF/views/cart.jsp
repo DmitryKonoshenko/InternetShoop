@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="availableCount" value="${userModel.cart.cartLines}" />
 <div class="container">
 
     <c:choose>
@@ -21,6 +22,9 @@
                 <tbody>
 
                 <c:forEach items="${cartLines}" var="cartLine">
+                    <c:if test="${cartLine.available == false}">
+                        <c:set var="availableCount" value="${availableCount - 1}"/>
+                    </c:if>
 
                     <tr>
                         <td data-th="Product">
@@ -46,8 +50,10 @@
                         </td>
                         <td data-th="Subtotal" class="text-center">&#8381; ${cartLine.total}</td>
                         <td class="actions" data-th="">
+                            <c:if test="${cartLine.available == true}">
                                 <%-- Тут изменим кнопку обновления type="button"  name="refreshCart" value="${cartLine.id}"--%>
                             <button type="button" name="refreshCart" value="${cartLine.id}" class="btn btn-info btn-sm"><span class="oi oi-reload"></span></button>
+                            </c:if>
                             <a href="${contextRoot}/cart/${cartLine.id}/delete" class="btn btn-danger btn-sm"><span class="oi oi-trash"></span></a>
                         </td>
                     </tr>
@@ -63,8 +69,19 @@
                     <td><a href="${contextRoot}/show/all/products" class="btn btn-warning"><span class="oi oi--left"></span> Продолжить покупки</a></td>
                     <td colspan="2" class="hidden-xs"></td>
                     <td class="hidden-xs text-center"><strong>Всего &#8381; ${userModel.cart.grandTotal}</strong></td>
-                    <td><a href="#" class="btn btn-success btn-block">Оформить покупку <span class="oi oi-right"></span></a>
+
+                    <c:choose>
+                    <c:when test="${availableCount != 0}">
+                    <td><a href="${contextRoot}/order/show" class="btn btn-success btn-block">Оформить покупку <span class="oi oi-right"></span></a>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     </td>
+                        </c:when>
+                        <c:otherwise>
+                    <td><a href="javascript:void(0)" class="btn btn-success btn-block disabled">Оформить покупку <span class="oi oi-right"></span></a>
+                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                    </td>
+                    </c:otherwise>
+                    </c:choose>
                 </tr>
                 </tfoot>
             </table>

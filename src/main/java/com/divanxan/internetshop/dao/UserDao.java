@@ -19,10 +19,12 @@ public interface UserDao {
 
     // добавление адреса
     boolean addAddress(Address address);
+    Address getAddress(int addressId);
 
     boolean updateAddress(Address address);
 
     Address getBillingAddress(int userId);
     List<Address> listShippingAddressess(int userId);
+    List<Address> listAddressess(int userId);
 
 }

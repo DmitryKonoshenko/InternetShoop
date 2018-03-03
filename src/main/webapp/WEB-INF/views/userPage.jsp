@@ -49,7 +49,8 @@
 
 
         </div>
-
+        <%--@elvariable id="addresses" type="java.util.List"--%>
+        <c:forEach items="${addresses}" var="userAddress">
         <div class="form-container1122">
 
             <div class="panel panel-primary">
@@ -69,7 +70,7 @@
 
                 <div class="panel-footer">
 
-                    <a href="${contextRoot}/user/userAddress" class="submit-button1122">Изменить</a>
+                    <a href="${contextRoot}/user/${userAddress.id}/userAddress" class="submit-button1122">Изменить</a>
 
                 </div>
 
@@ -77,6 +78,7 @@
 
 
         </div>
+        </c:forEach>
 
         <div class="form-container1122">
 
