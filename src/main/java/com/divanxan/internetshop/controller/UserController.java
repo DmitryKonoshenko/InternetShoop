@@ -3,6 +3,7 @@ package com.divanxan.internetshop.controller;
 
 import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Address;
+import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.exception.ProductNotFoundException;
 import com.divanxan.internetshop.exception.UserAccessException;
@@ -53,9 +54,12 @@ public class UserController {
 
         List<Address> addresses = userDao.listAddressess(user.getId());
 
+        List<OrderDetail> orderDetails = userDao.listOrders(user.getId());
+
         mv.addObject("userData", user);
 
         mv.addObject("addresses", addresses);
+        mv.addObject("orderDetails", orderDetails);
         try {
             mv.addObject("userAddress", userDao.getBillingAddress(user.getId()));
         }

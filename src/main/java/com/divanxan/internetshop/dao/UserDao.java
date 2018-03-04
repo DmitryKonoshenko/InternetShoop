@@ -1,9 +1,6 @@
 package com.divanxan.internetshop.dao;
 
-import com.divanxan.internetshop.dto.Address;
-import com.divanxan.internetshop.dto.Cart;
-import com.divanxan.internetshop.dto.Product;
-import com.divanxan.internetshop.dto.User;
+import com.divanxan.internetshop.dto.*;
 
 import java.util.List;
 
@@ -26,5 +23,7 @@ public interface UserDao {
     Address getBillingAddress(int userId);
     List<Address> listShippingAddressess(int userId);
     List<Address> listAddressess(int userId);
+    List<OrderDetail> listOrders(int userId);
+    List<OrderDetail> listAllOrders();
 
 }

@@ -24,9 +24,12 @@
                     <a class="nav-link" href="${contextRoot}/contact">Контакты</a>
                 </li>
                 <security:authorize access="hasAuthority('ADMIN')">
-                <li id="manageProduct">
-                    <a class="nav-link" href="${contextRoot}/manage/product">Редактировать</a>
-                </li>
+                    <li id="manageProduct">
+                        <a class="nav-link" href="${contextRoot}/manage/product">Редактировать</a>
+                    </li>
+                    <li id="manageProduct">
+                        <a class="nav-link" href="${contextRoot}/manage/orders">Заказы</a>
+                    </li>
                 </security:authorize>
                 <security:authorize access="isAnonymous()">
                     <li id="register">
@@ -58,7 +61,7 @@
                                 <li role="separator" class="dropdown-divider"></li>
                                 <li>
                                     <a href="${contextRoot}/user/show">
-                                    Личный кабинет
+                                        Личный кабинет
                                     </a>
                                 </li>
                                 <li role="separator" class="dropdown-divider"></li>
@@ -76,5 +79,5 @@
 </nav>
 <%-- Данно еполе нам необходимо для добавления нужных кнопок для редактирования продуктов --%>
 <script>
-    window.userRole='${userModel.role}'
+    window.userRole = '${userModel.role}'
 </script>

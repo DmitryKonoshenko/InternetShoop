@@ -99,6 +99,57 @@
             </div>
         </div>
 
+        <%--@elvariable id="orderDetails" type="java.util.List"--%>
+        <c:forEach items="${orderDetails}" var="orderDetail">
+            <div class="form-container1122">
+
+                <div class="panel panel-primary">
+
+                    <div class="panel-heading">
+                        <h4>История заказов</h4>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="text-center">
+                            <h4>Номер заказа: ${orderDetail.id}</h4>
+                            <h4>Дата заказа:${orderDetail.orderDate}</h4>
+                            <h4>Оплата заказа:
+                                <c:if test="${orderDetail.isPay()}">Картой</c:if>
+                                <c:if test="${not orderDetail.isPay()}">Наличными</c:if>
+                            </h4>
+                            <h4>доставка заказа:
+                                <c:if test="${orderDetail.isDelivery()}">Курьером</c:if>
+                                <c:if test="${not orderDetail.isDelivery()}">Самовывоз</c:if>
+                            </h4>
+                            <table class="table table-condensed">
+                                <thead>
+                                <tr>
+                                    <td><strong>Товар</strong></td>
+                                    <td class="text-center"><strong>Цена</strong></td>
+                                    <td class="text-center"><strong>Количество</strong></td>
+                                    <td class="text-right"><strong>Общая цена</strong></td>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                <c:forEach items="${orderDetail.orderItems}" var="orderItem">
+                                    <tr>
+                                        <td>${orderItem.product.name}</td>
+                                        <td class="text-center">&#8381; ${orderItem.buyingPrice}</td>
+                                        <td class="text-center">${orderItem.productCount}</td>
+                                        <td class="text-right">&#8381; ${orderItem.total}</td>
+                                    </tr>
+                                </c:forEach>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </c:forEach>
+
+
+
     </div>
 
 </div>

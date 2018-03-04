@@ -1,8 +1,11 @@
 package com.divanxan.internetshop.controller;
 
+import com.divanxan.internetshop.dao.CartLineDao;
 import com.divanxan.internetshop.dao.CategoryDao;
 import com.divanxan.internetshop.dao.ProductDao;
+import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Category;
+import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.util.FileUploadUtility;
 import com.divanxan.internetshop.validator.ProductValidator;
@@ -19,6 +22,7 @@ import javax.faces.annotation.RequestMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/manage")
@@ -30,10 +34,16 @@ public class ManagementController {
 
     private final ProductDao productDao;
 
+    private final UserDao userDao;
+
+    private final CartLineDao cartLineDao;
+
     @Autowired
-    public ManagementController(CategoryDao categoryDao, ProductDao productDao) {
+    public ManagementController(CategoryDao categoryDao, ProductDao productDao, UserDao userDao, CartLineDao cartLineDao) {
         this.categoryDao = categoryDao;
         this.productDao = productDao;
+        this.userDao = userDao;
+        this.cartLineDao = cartLineDao;
     }
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)
@@ -54,11 +64,9 @@ public class ManagementController {
         if (operation != null) {
             if (operation.equals("product")) {
                 mv.addObject("message", "Товар успешно добавлен");
-            }
-            else if(operation.equals("category")){
+            } else if (operation.equals("category")) {
                 mv.addObject("message", "Категория успешно добавлена");
-            }
-            else if(operation.equals("notcategory")){
+            } else if (operation.equals("notcategory")) {
                 mv.addObject("message", "Категория НЕ ДОБАВЛЕНА!!!");
             }
         }
@@ -86,11 +94,10 @@ public class ManagementController {
     public String handleProductsSubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult result
             , Model model, HttpServletRequest request) {
 
-        if(mProduct.getId()==0){
-          new ProductValidator().validate(mProduct, result);
-        }
-        else {
-            if(!mProduct.getFile().getOriginalFilename().equals("")){
+        if (mProduct.getId() == 0) {
+            new ProductValidator().validate(mProduct, result);
+        } else {
+            if (!mProduct.getFile().getOriginalFilename().equals("")) {
                 new ProductValidator().validate(mProduct, result);
             }
         }
@@ -109,11 +116,10 @@ public class ManagementController {
 
         logger.info(mProduct.toString());
 
-        if(mProduct.getId()==0) {
+        if (mProduct.getId() == 0) {
             // создание нового товара
             productDao.add(mProduct);
-        }
-        else {
+        } else {
             // модификация товара
             productDao.update(mProduct);
         }
@@ -138,12 +144,12 @@ public class ManagementController {
 
         productDao.update(product);
 
-        return (isActive)? "Товар успешно деактивирован":"Товар успешно активирован";
+        return (isActive) ? "Товар успешно деактивирован" : "Товар успешно активирован";
     }
 
     @RequestMapping(value = "/category", method = RequestMethod.POST)
     public String handleCategorySubmission(@Valid @ModelAttribute Category category, BindingResult result
-            , Model model, HttpServletRequest request){
+            , Model model, HttpServletRequest request) {
 
 
         // проверка на ошибки
@@ -159,11 +165,10 @@ public class ManagementController {
 
         logger.info(category.toString());
 
-        if(category.getId()==0) {
+        if (category.getId() == 0) {
             // создание нового товара
             categoryDao.add(category);
-        }
-        else {
+        } else {
             // модификация товара
             categoryDao.update(category);
         }
@@ -180,12 +185,83 @@ public class ManagementController {
     }
 
     @ModelAttribute("category")
-    public Category getCategory(){
+    public Category getCategory() {
         //берем новую категорию из manageProducts.jsp -> <sf:form modelAttribute="category" action="${contextRoot}/manage/category" method="POST"
         //                             class="form-horizontal">
         // и отправляем кго в handleCategorySubmission
         return new Category();
+
+
     }
 
+    @RequestMapping("/orders")
+    public ModelAndView showOrderDetail(@RequestParam(name = "operation", required = false) String operation) {
+
+        ModelAndView mv = new ModelAndView("page");
+        mv.addObject("userClickManageOrders", true);
+        mv.addObject("title", "Order Management");
+        List<OrderDetail> list = userDao.listAllOrders();
+        mv.addObject("orderDetails", list);
+
+        if (operation != null) {
+            if (operation.equals("orderDetail")) {
+                mv.addObject("message", "Заказ изменен");
+            }
+        }
+
+        return mv;
+    }
+
+
+    @RequestMapping("/{id}/orderChange")
+    public ModelAndView showEditOrder(@PathVariable int id) {
+
+        OrderDetail orderDetail = null;
+        List<OrderDetail> list = userDao.listAllOrders();
+
+        for (OrderDetail detail : list) {
+            if (detail.getId() == id) {
+                orderDetail = detail;
+                break;
+            }
+        }
+
+
+        ModelAndView mv = new ModelAndView("page");
+        mv.addObject("userClickManageOrdersId", true);
+        mv.addObject("title", "Order Management");
+        mv.addObject("orderDetail", orderDetail);
+
+
+        return mv;
+    }
+
+    @RequestMapping(value = "/orders", method = RequestMethod.POST)
+    public String showOrderDetail(@RequestParam Map<String, String> map) {
+
+        String delivered = map.get("delivered");
+        String shipped = map.get("shipped");
+
+        int orderId = Integer.parseInt(map.get("orderId"));
+
+        OrderDetail orderDetail = null;
+        List<OrderDetail> list = userDao.listAllOrders();
+
+        for (OrderDetail detail : list) {
+            if (detail.getId() == orderId) {
+                orderDetail = detail;
+                break;
+            }
+        }
+
+        if(delivered.equals("yes")) orderDetail.setIsDelivery(true);
+
+        if(shipped.equals("yess")) orderDetail.setShippedOrder(true);
+
+        cartLineDao.updateOrderDetail(orderDetail);
+
+
+        return "redirect:/manage/orders?operation=orderDetail";
+    }
 
 }

@@ -132,7 +132,7 @@
 
         <div class="form-container1122">
             <div class="form-title1122g">
-                <h3>Avalible Products</h3>
+                <h3>Товары</h3>
             </div>
                 <div class="container-fluid">
                     <div class="table-responsive">

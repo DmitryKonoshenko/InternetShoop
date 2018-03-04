@@ -117,4 +117,15 @@ public class CartLineDaoImpl implements CartLineDao {
             return false;
         }
     }
+
+    @Override
+    public boolean updateOrderDetail(OrderDetail orderDetail) {
+        try {
+            sessionFactory.getCurrentSession().update(orderDetail);
+            return true;
+        }
+        catch(Exception ex) {
+            return false;
+        }
+    }
 }

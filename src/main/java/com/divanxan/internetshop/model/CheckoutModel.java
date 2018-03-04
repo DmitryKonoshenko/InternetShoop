@@ -17,16 +17,8 @@ public class CheckoutModel implements Serializable {
 	private Cart cart;
 	private List<CartLine> cartLines;
 	private OrderDetail orderDetail;
-	private boolean isPayByCArt;
 	private double checkoutTotal;
 
-	public boolean isPayByCArt() {
-		return isPayByCArt;
-	}
-
-	public void setPayByCArt(boolean payByCArt) {
-		isPayByCArt = payByCArt;
-	}
 
 	public OrderDetail getOrderDetail() {
 		return orderDetail;
