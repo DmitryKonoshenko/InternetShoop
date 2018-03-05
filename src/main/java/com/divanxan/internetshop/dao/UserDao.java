@@ -25,5 +25,6 @@ public interface UserDao {
     List<Address> listAddressess(int userId);
     List<OrderDetail> listOrders(int userId);
     List<OrderDetail> listAllOrders();
+    List<OrderDetail> listThisMonthOrders();
 
 }

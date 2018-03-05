@@ -260,7 +260,6 @@ public class ManagementController {
 
         cartLineDao.updateOrderDetail(orderDetail);
 
-
         return "redirect:/manage/orders?operation=orderDetail";
     }
 

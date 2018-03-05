@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Repository("userDao")
@@ -63,7 +65,7 @@ public class UserDaoImpl implements UserDao {
                     .setParameter("email", email)
                     .getSingleResult();
         } catch (Exception e) {
-           // e.printStackTrace();
+            // e.printStackTrace();
             return null;
         }
     }
@@ -83,8 +85,7 @@ public class UserDaoImpl implements UserDao {
     public Address getAddress(int addressId) {
         try {
             return sessionFactory.getCurrentSession().get(Address.class, addressId);
-        }
-        catch(Exception ex) {
+        } catch (Exception ex) {
             System.out.println(ex.getMessage());
             return null;
         }
@@ -170,6 +171,28 @@ public class UserDaoImpl implements UserDao {
             e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public List<OrderDetail> listThisMonthOrders() {
+//TODO переделать получение месяца
+        List<OrderDetail> orderDetails=null;
+        String selectQuery = "FROM OrderDetail";
+        try {
+            orderDetails= sessionFactory.getCurrentSession()
+                    .createQuery(selectQuery, OrderDetail.class)
+                    .getResultList();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        Date date= new Date();
+        List<OrderDetail> orderDetailsMonth= new ArrayList<>();
+        for (OrderDetail detail: orderDetails) {
+            if(detail.getOrderDate().getMonth()==date.getMonth())  orderDetailsMonth.add(detail);
+        }
+        return orderDetailsMonth;
     }
 
 }
