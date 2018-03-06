@@ -1,16 +1,12 @@
 package com.divanxan.internetshop.controller;
 
 
-import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Address;
 import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.User;
-import com.divanxan.internetshop.exception.ProductNotFoundException;
 import com.divanxan.internetshop.exception.UserAccessException;
-import com.divanxan.internetshop.model.UserModel;
+import com.divanxan.internetshop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -35,11 +30,12 @@ import java.util.Map;
 @RequestMapping("/user")
 public class UserController {
 
-    @Autowired
-    private UserDao userDao;
+    private final UserService userService;
 
     @Autowired
-    private HttpSession session;
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @RequestMapping("/show")
     public ModelAndView showUser(@RequestParam(name = "operation", required = false) String operation) throws UserAccessException {
@@ -49,19 +45,18 @@ public class UserController {
         mv.addObject("title", "User Data");
         mv.addObject("userClickShowUser", true);
 
-        String email = ((UserModel) session.getAttribute("userModel")).getEmail();
-        User user = userDao.getByEmail(email);
+        User user = userService.getUser();
 
-        List<Address> addresses = userDao.listAddressess(user.getId());
+        List<Address> addresses = userService.getAddresses(user.getId());
 
-        List<OrderDetail> orderDetails = userDao.listOrders(user.getId());
+        List<OrderDetail> orderDetails = userService.getOrders(user.getId());
 
         mv.addObject("userData", user);
 
         mv.addObject("addresses", addresses);
         mv.addObject("orderDetails", orderDetails);
         try {
-            mv.addObject("userAddress", userDao.getBillingAddress(user.getId()));
+            mv.addObject("userAddress", userService.getBillingAddress(user.getId()));
         }
         catch (Exception e){
             throw new UserAccessException();
@@ -91,9 +86,8 @@ public class UserController {
         mv.addObject("userClickShowUserName", true);
 
         User user = new User();
-        String email = ((UserModel) session.getAttribute("userModel")).getEmail();
         try {
-        user.setId(userDao.getByEmail(email).getId());
+        user.setId(userService.getUser().getId());
         }
         catch (Exception e){
             throw new UserAccessException();
@@ -106,101 +100,7 @@ public class UserController {
     @RequestMapping(value = "/show", method = RequestMethod.POST)
     public String submit(@RequestParam Map<String, String> map, Model model) {
 
-        String firstName = map.get("firstName");
-        String lastName = map.get("lastName");
-        String email = map.get("email");
-        String contactNumber = map.get("contactNumber");
-
-        String password1 = map.get("password1");
-        String password2 = map.get("password2");
-        String password3 = map.get("password3");
-
-        String addressLineOne = map.get("addressLineOne");
-        String addressLineTwo = map.get("addressLineTwo");
-        String city = map.get("city");
-        String state = map.get("region");
-        String country = map.get("country");
-        String postalCode = map.get("postalCode");
-
-
-        String emailOfUser = ((UserModel) session.getAttribute("userModel")).getEmail();
-        User user = userDao.getByEmail(emailOfUser);
-        int adressId = (int) session.getAttribute("addressId");
-
-        List<Address> addresses = userDao.listAddressess(user.getId());
-
-
-        Address address = null;
-
-        for (Address adr: addresses) {
-            if(adr.getId()==adressId) address = adr;
-        }
-
-        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
-
-        // boolean whatIf = BCrypt.checkpw(password3, user.getPassword());
-
-        if (addressLineOne != null) {
-            if (addressLineOne.equals("") && addressLineTwo.equals("") && city.equals("")
-                    && state.equals("") && country.equals("") && postalCode.equals("")) {
-                model.addAttribute("userClickShowUserName", true);
-                model.addAttribute("title", "User Data");
-                model.addAttribute("message", "Ошибка валидации для изменения данных!");
-
-                return "redirect:/user/show?operation=noAddress";
-            }
-
-        }
-        if (firstName != null) {
-            if (firstName.equals("") && lastName.equals("") && email.equals("") && contactNumber.equals("")) {
-
-                model.addAttribute("userClickShowUserName", true);
-                model.addAttribute("title", "User Data");
-                model.addAttribute("message", "Ошибка валидации для изменения данных!");
-
-                return "redirect:/user/show?operation=noUser";
-            }
-        }
-        if (password1 != null) {
-            if (password2.equals("") || password3.equals("") || !password1.equals(password2) || !BCrypt.checkpw(password3, user.getPassword())) {
-                model.addAttribute("userClickShowUserName", true);
-                model.addAttribute("title", "User Data");
-                model.addAttribute("message", "Ошибка валидации для изменения данных!");
-
-                return "redirect:/user/show?operation=noPassword";
-            }
-        }
-
-
-        if (firstName != null && !firstName.equals("")) user.setFirstName(firstName);
-        if (lastName != null && !lastName.equals("")) user.setLastName(lastName);
-        if (email != null && !email.equals("")) user.setEmail(email);
-        if (contactNumber != null && !contactNumber.equals("")) user.setContactNumber(contactNumber);
-
-        if (password1 != null && !password1.equals("")) user.setPassword(passwordEncoder.encode(password1));
-
-        if (addressLineOne != null && !addressLineOne.equals("")) address.setAddressLineOne(addressLineOne);
-        if (addressLineTwo != null && !addressLineTwo.equals("")) address.setAddressLineTwo(addressLineTwo);
-        if (city != null && !city.equals("")) address.setCity(city);
-        if (state != null && !state.equals("")) address.setState(state);
-        if (country != null && !country.equals("")) address.setCountry(country);
-        if (postalCode != null && !postalCode.equals("")) address.setPostalCode(postalCode);
-
-        if (firstName != null || password1 != null) {
-            userDao.update(user);
-            UserModel userModel = ((UserModel) session.getAttribute("userModel"));
-            userModel.setEmail(user.getEmail());
-            userModel.setFullName(user.getFirstName() + " " + user.getLastName());
-
-            session.setAttribute("userModel", userModel);
-        }
-
-        if (addressLineOne != null) {
-            userDao.updateAddress(address);
-        }
-
-        return "redirect:/user/show?operation=user";
+        return userService.ValidateUserInformation(map,model);
 
     }
 
@@ -208,7 +108,7 @@ public class UserController {
     @RequestMapping(value = "/userPassword", method = RequestMethod.GET)
     public ModelAndView changePassword() throws UserAccessException {
 
-        String email = ((UserModel) session.getAttribute("userModel")).getEmail();
+        String email = userService.getEmail();
 
         if(email==null){
             throw new UserAccessException();
@@ -224,7 +124,7 @@ public class UserController {
     @RequestMapping(value = "/{userAddressId}/userAddress", method = RequestMethod.GET)
     public ModelAndView changeAddress(@PathVariable int userAddressId) throws UserAccessException {
 
-        String email = ((UserModel) session.getAttribute("userModel")).getEmail();
+        String email = userService.getEmail();
 
         if(email==null){
             throw new UserAccessException();
@@ -234,7 +134,7 @@ public class UserController {
         mv.addObject("title", "User Address");
         mv.addObject("userClickShowUserAddress", true);
 
-        session.setAttribute("addressId", userAddressId);
+        userService.setAddressId(userAddressId);
 
         return mv;
     }

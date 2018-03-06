@@ -12,8 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.binding.message.MessageBuilder;
 import org.springframework.binding.message.MessageContext;
 import org.springframework.context.annotation.Scope;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
 
@@ -32,17 +30,21 @@ import java.util.List;
 @Scope("session")
 public class RegisterHandler {
 
-    @Autowired
-    private UserDao userDao;
+    private final UserDao userDao;
+
+    private final CartLineDao cartLineDao;
+
+    private final BCryptPasswordEncoder passwordEncoder;
+
+    private final HttpSession session;
 
     @Autowired
-    private CartLineDao cartLineDao;
-
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
-
-    @Autowired
-    private HttpSession session;
+    public RegisterHandler(UserDao userDao, CartLineDao cartLineDao, BCryptPasswordEncoder passwordEncoder, HttpSession session) {
+        this.userDao = userDao;
+        this.cartLineDao = cartLineDao;
+        this.passwordEncoder = passwordEncoder;
+        this.session = session;
+    }
 
     /**
      * Данный метод возвращает регистрационную модель.

@@ -2,8 +2,6 @@ package com.divanxan.internetshop.controller;
 
 
 import com.divanxan.internetshop.dao.ProductDao;
-import com.divanxan.internetshop.dao.UserDao;
-import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,11 +15,12 @@ import java.util.List;
 @RequestMapping("/json/data")
 public class JsonDataController {
 
-    @Autowired
-    private ProductDao productDao;
+    private final ProductDao productDao;
 
     @Autowired
-    private UserDao userDao;
+    public JsonDataController(ProductDao productDao) {
+        this.productDao = productDao;
+    }
 
     @RequestMapping("/all/products")
     @ResponseBody

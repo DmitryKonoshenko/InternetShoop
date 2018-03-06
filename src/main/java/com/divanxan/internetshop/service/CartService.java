@@ -24,14 +24,18 @@ import java.util.List;
 @Service("cartService")
 public class CartService {
 
-    @Autowired
-    private CartLineDao cartLineDao;
+    private final CartLineDao cartLineDao;
+
+    private final HttpSession session;
+
+    private final ProductDao productDao;
 
     @Autowired
-    private HttpSession session;
-
-    @Autowired
-    private ProductDao productDao;
+    public CartService(CartLineDao cartLineDao, HttpSession session, ProductDao productDao) {
+        this.cartLineDao = cartLineDao;
+        this.session = session;
+        this.productDao = productDao;
+    }
 
     /**
      * Данный метод служит для получения или создания корзины пользователя.
@@ -40,7 +44,7 @@ public class CartService {
      */
     // возвращает корзину зарегестрированого покупателя
     private Cart getCart() {
-        Cart cart = null;
+        Cart cart;
         try {
             cart = ((UserModel) session.getAttribute("userModel")).getCart();
         } catch (Exception e) {
@@ -82,7 +86,7 @@ public class CartService {
     // обновим количество товара в корзине (используется в методе updateCart в CartController)
     public String updateCartLine(int cartLineId, int count) {
         Cart cart = this.getCart();
-        CartLine cartLine = null;
+        CartLine cartLine;
         // если пользователь зарегестирован
         if (cart.getUser() != null) {
             // получим строку корзины
@@ -227,7 +231,7 @@ public class CartService {
         double grandTotal = 0.0;
         int lineCount = 0;
         String response = "result=success";
-        boolean changed = false;
+        boolean changed;
         Product product = null;
         for(CartLine cartLine : cartLines) {
             product = cartLine.getProduct();

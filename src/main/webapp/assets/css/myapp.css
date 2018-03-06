@@ -275,3 +275,8 @@ input:checked + .slider:before {
 .unavailable{
 color:red;
 }
+
+.slide-image {
+    width: 800px;
+    height:  500px;
+}

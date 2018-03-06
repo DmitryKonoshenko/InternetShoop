@@ -1,12 +1,9 @@
 package com.divanxan.internetshop.controller;
 
-import com.divanxan.internetshop.dao.CartLineDao;
-import com.divanxan.internetshop.dao.CategoryDao;
-import com.divanxan.internetshop.dao.ProductDao;
-import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Category;
 import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.Product;
+import com.divanxan.internetshop.service.ManagerService;
 import com.divanxan.internetshop.util.FileUploadUtility;
 import com.divanxan.internetshop.validator.ProductValidator;
 import org.slf4j.Logger;
@@ -18,7 +15,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.faces.annotation.RequestMap;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
@@ -30,20 +26,11 @@ public class ManagementController {
 
     private static final Logger logger = LoggerFactory.getLogger(ManagementController.class);
 
-    private final CategoryDao categoryDao;
-
-    private final ProductDao productDao;
-
-    private final UserDao userDao;
-
-    private final CartLineDao cartLineDao;
+    private final ManagerService managerService;
 
     @Autowired
-    public ManagementController(CategoryDao categoryDao, ProductDao productDao, UserDao userDao, CartLineDao cartLineDao) {
-        this.categoryDao = categoryDao;
-        this.productDao = productDao;
-        this.userDao = userDao;
-        this.cartLineDao = cartLineDao;
+    public ManagementController(ManagerService managerService) {
+        this.managerService = managerService;
     }
 
     @RequestMapping(value = "/product", method = RequestMethod.GET)
@@ -62,12 +49,16 @@ public class ManagementController {
         mv.addObject("product", nProduct);
 
         if (operation != null) {
-            if (operation.equals("product")) {
-                mv.addObject("message", "Товар успешно добавлен");
-            } else if (operation.equals("category")) {
-                mv.addObject("message", "Категория успешно добавлена");
-            } else if (operation.equals("notcategory")) {
-                mv.addObject("message", "Категория НЕ ДОБАВЛЕНА!!!");
+            switch (operation) {
+                case "product":
+                    mv.addObject("message", "Товар успешно добавлен");
+                    break;
+                case "category":
+                    mv.addObject("message", "Категория успешно добавлена");
+                    break;
+                case "notcategory":
+                    mv.addObject("message", "Категория НЕ ДОБАВЛЕНА!!!");
+                    break;
             }
         }
         logger.info(mv.toString());
@@ -83,7 +74,7 @@ public class ManagementController {
         mv.addObject("title", "Product Management");
         mv.addObject("userClickManageProducts", true);
 
-        Product nProduct = productDao.get(id);
+        Product nProduct = managerService.getProductById(id);
 
         mv.addObject("product", nProduct);
         return mv;
@@ -118,10 +109,10 @@ public class ManagementController {
 
         if (mProduct.getId() == 0) {
             // создание нового товара
-            productDao.add(mProduct);
+            managerService.addProduct(mProduct);
         } else {
             // модификация товара
-            productDao.update(mProduct);
+            managerService.updateProduct(mProduct);
         }
 
         if (!mProduct.getFile().getOriginalFilename().equals("")) {
@@ -136,20 +127,20 @@ public class ManagementController {
     @ResponseBody
     public String handleProductActivation(@PathVariable int id) {
 
-        Product product = productDao.get(id);
+        Product product = managerService.getProductById(id);
         boolean isActive = product.isActive();
 
         // активация или деактивация товара
         product.setActive(!product.isActive());
 
-        productDao.update(product);
+        managerService.updateProduct(product);
 
         return (isActive) ? "Товар успешно деактивирован" : "Товар успешно активирован";
     }
 
     @RequestMapping(value = "/category", method = RequestMethod.POST)
     public String handleCategorySubmission(@Valid @ModelAttribute Category category, BindingResult result
-            , Model model, HttpServletRequest request) {
+            , Model model) {
 
 
         // проверка на ошибки
@@ -167,10 +158,10 @@ public class ManagementController {
 
         if (category.getId() == 0) {
             // создание нового товара
-            categoryDao.add(category);
+            managerService.addCategory(category);
         } else {
             // модификация товара
-            categoryDao.update(category);
+            managerService.updateCategory(category);
         }
 
         //переходим в контроллер showManageProducts
@@ -180,7 +171,7 @@ public class ManagementController {
     @ModelAttribute("categories")
     public List<Category> getCategories() {
 
-        return categoryDao.list();
+        return managerService.getListCategory();
 
     }
 
@@ -200,7 +191,8 @@ public class ManagementController {
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("userClickManageOrders", true);
         mv.addObject("title", "Order Management");
-        List<OrderDetail> list = userDao.listAllOrders();
+        List<OrderDetail> list = managerService.getListAllOrders();
+
         mv.addObject("orderDetails", list);
 
         if (operation != null) {
@@ -217,7 +209,7 @@ public class ManagementController {
     public ModelAndView showEditOrder(@PathVariable int id) {
 
         OrderDetail orderDetail = null;
-        List<OrderDetail> list = userDao.listAllOrders();
+        List<OrderDetail> list = managerService.getListAllOrders();
 
         for (OrderDetail detail : list) {
             if (detail.getId() == id) {
@@ -230,7 +222,9 @@ public class ManagementController {
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("userClickManageOrdersId", true);
         mv.addObject("title", "Order Management");
-        mv.addObject("orderDetail", orderDetail);
+        if (orderDetail != null) {
+            mv.addObject("orderDetail", orderDetail);
+        }
 
 
         return mv;
@@ -245,7 +239,7 @@ public class ManagementController {
         int orderId = Integer.parseInt(map.get("orderId"));
 
         OrderDetail orderDetail = null;
-        List<OrderDetail> list = userDao.listAllOrders();
+        List<OrderDetail> list = managerService.getListAllOrders();
 
         for (OrderDetail detail : list) {
             if (detail.getId() == orderId) {
@@ -254,11 +248,16 @@ public class ManagementController {
             }
         }
 
-        if(delivered.equals("yes")) orderDetail.setIsDelivery(true);
+        if(delivered.equals("yes")) if (orderDetail != null) {
+            orderDetail.setIsDelivery(true);
+        }
 
-        if(shipped.equals("yess")) orderDetail.setShippedOrder(true);
+        if(shipped.equals("yess")) if (orderDetail != null) {
+            orderDetail.setShippedOrder(true);
+        }
 
-        cartLineDao.updateOrderDetail(orderDetail);
+        managerService.updateOrderDetail(orderDetail);
+
 
         return "redirect:/manage/orders?operation=orderDetail";
     }

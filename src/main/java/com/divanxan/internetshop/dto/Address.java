@@ -133,6 +133,7 @@ public class Address implements Serializable {
 
     @Column(name = "user_id")
     private int userId;
+
     public int getUserId() {
         return userId;
     }

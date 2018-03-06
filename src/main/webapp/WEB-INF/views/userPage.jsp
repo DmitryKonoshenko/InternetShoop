@@ -118,8 +118,8 @@
                                 <c:if test="${not orderDetail.isPay()}">Наличными</c:if>
                             </h4>
                             <h4>доставка заказа:
-                                <c:if test="${orderDetail.isDelivery()}">Курьером</c:if>
-                                <c:if test="${not orderDetail.isDelivery()}">Самовывоз</c:if>
+                                <c:if test="${orderDetail.getIsDelivery()}">Курьером</c:if>
+                                <c:if test="${not orderDetail.getIsDelivery()}">Самовывоз</c:if>
                             </h4>
                             <table class="table table-condensed">
                                 <thead>

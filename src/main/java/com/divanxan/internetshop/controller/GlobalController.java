@@ -3,7 +3,6 @@ package com.divanxan.internetshop.controller;
 
 import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Cart;
-import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 
 //данный контроллер будет участвовать в каждом запросе. Существует для отображения информации о юзере. использует UserModel
@@ -21,11 +19,15 @@ import java.util.List;
 @ControllerAdvice
 public class GlobalController {
 
-    @Autowired
-    private UserDao userDao;
+    private final UserDao userDao;
+
+    private final HttpSession session;
 
     @Autowired
-    private HttpSession session;
+    public GlobalController(UserDao userDao, HttpSession session) {
+        this.userDao = userDao;
+        this.session = session;
+    }
 
     @ModelAttribute("userModel")
     public UserModel getUserModel() {
@@ -64,10 +66,8 @@ public class GlobalController {
                 userModel = new UserModel();
                 Cart cart = new Cart();
                 userModel.setCart(cart);
-                List<CartLine> cartLines = null;
                 //добавляем модель покупателя в сессию
                 session.setAttribute("userModel", userModel);
-                session.setAttribute("AnonymousCartLines", cartLines);
                 return userModel;
             }
         }

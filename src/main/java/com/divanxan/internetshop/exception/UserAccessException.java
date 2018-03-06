@@ -11,7 +11,7 @@ public class UserAccessException extends Exception implements Serializable {
         this("Данная страница не оступна!");
     }
 
-    public UserAccessException(String message){
+    private UserAccessException(String message){
         this.message = System.currentTimeMillis() + ": " + message;
     }
 

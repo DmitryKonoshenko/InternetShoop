@@ -33,15 +33,14 @@ public class PageController {
 
     private static final Logger logger = LoggerFactory.getLogger(PageController.class);
 
-    @Autowired
     private final CategoryDao categoryDao;
 
-    @Autowired
-    private ProductDao productDao;
+    private final ProductDao productDao;
 
     @Autowired
-    public PageController(CategoryDao categoryDao) {
+    public PageController(CategoryDao categoryDao, ProductDao productDao) {
         this.categoryDao = categoryDao;
+        this.productDao = productDao;
     }
 
     /**

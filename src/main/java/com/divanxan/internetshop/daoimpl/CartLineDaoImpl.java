@@ -15,8 +15,13 @@ import java.util.List;
 @Transactional
 public class CartLineDaoImpl implements CartLineDao {
 
+    private final SessionFactory sessionFactory;
+
+
     @Autowired
-    private SessionFactory sessionFactory;
+    public CartLineDaoImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
 
     @Override
@@ -108,24 +113,12 @@ public class CartLineDaoImpl implements CartLineDao {
     }
 
     @Override
-    public boolean addOrderDetail(OrderDetail orderDetail) {
-        try {
+    public void addOrderDetail(OrderDetail orderDetail) {
             sessionFactory.getCurrentSession().persist(orderDetail);
-            return true;
-        }
-        catch(Exception ex) {
-            return false;
-        }
     }
 
     @Override
-    public boolean updateOrderDetail(OrderDetail orderDetail) {
-        try {
+    public void updateOrderDetail(OrderDetail orderDetail) {
             sessionFactory.getCurrentSession().update(orderDetail);
-            return true;
-        }
-        catch(Exception ex) {
-            return false;
-        }
     }
 }

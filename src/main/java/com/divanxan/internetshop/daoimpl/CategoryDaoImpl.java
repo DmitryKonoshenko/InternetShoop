@@ -2,6 +2,7 @@ package com.divanxan.internetshop.daoimpl;
 
 import com.divanxan.internetshop.dao.CategoryDao;
 import com.divanxan.internetshop.dto.Category;
+import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +16,20 @@ import java.util.List;
 @Transactional
 public class CategoryDaoImpl implements CategoryDao {
 
-    @Autowired
-    private SessionFactory sessionFactory;
+    private final SessionFactory sessionFactory;
 
-    private static List<Category> categories = new ArrayList<>();
+    @Autowired
+    public CategoryDaoImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     @Override
     public boolean add(Category category) {
-        try{
+        try {
             //добавление категорию в таблицу БД
             sessionFactory.getCurrentSession().persist(category);
             return true;
-        }
-        catch (Exception e){
+        } catch (HibernateException e) {
             e.printStackTrace();
             return false;
         }

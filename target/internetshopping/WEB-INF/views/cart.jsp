@@ -69,7 +69,7 @@
                     <td><a href="${contextRoot}/show/all/products" class="btn btn-warning"><span class="oi oi--left"></span> Продолжить покупки</a></td>
                     <td colspan="2" class="hidden-xs"></td>
                     <td class="hidden-xs text-center"><strong>Всего &#8381; ${userModel.cart.grandTotal}</strong></td>
-
+                    <security:authorize access="isAuthenticated()">
                     <c:choose>
                     <c:when test="${availableCount != 0}">
                     <td><a href="${contextRoot}/order/show" class="btn btn-success btn-block">Оформить покупку <span class="oi oi-right"></span></a>
@@ -82,6 +82,12 @@
                     </td>
                     </c:otherwise>
                     </c:choose>
+                    </security:authorize>
+                    <security:authorize access="isAnonymous()">
+                        <td><a href="${contextRoot}/login" class="btn btn-success btn-block">Войти<span class="oi oi-right"></span></a>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        </td>
+                    </security:authorize>
                 </tr>
                 </tfoot>
             </table>

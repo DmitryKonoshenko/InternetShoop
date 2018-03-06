@@ -1,8 +1,5 @@
 package com.divanxan.internetshop.dto;
 
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
-
 import javax.persistence.*;
 import java.io.Serializable;
 

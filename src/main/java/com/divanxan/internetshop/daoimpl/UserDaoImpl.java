@@ -2,7 +2,6 @@ package com.divanxan.internetshop.daoimpl;
 
 import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Address;
-import com.divanxan.internetshop.dto.Cart;
 import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.User;
 import org.hibernate.SessionFactory;
@@ -10,16 +9,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Repository("userDao")
 @Transactional
 public class UserDaoImpl implements UserDao {
 
+    private final SessionFactory sessionFactory;
+
     @Autowired
-    private SessionFactory sessionFactory;
+    public UserDaoImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     @Override
     public boolean addUser(User user) {
@@ -176,23 +177,24 @@ public class UserDaoImpl implements UserDao {
     @Override
     public List<OrderDetail> listThisMonthOrders() {
 //TODO переделать получение месяца
-        List<OrderDetail> orderDetails=null;
-        String selectQuery = "FROM OrderDetail";
-        try {
-            orderDetails= sessionFactory.getCurrentSession()
-                    .createQuery(selectQuery, OrderDetail.class)
-                    .getResultList();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
-
-        Date date= new Date();
-        List<OrderDetail> orderDetailsMonth= new ArrayList<>();
-        for (OrderDetail detail: orderDetails) {
-            if(detail.getOrderDate().getMonth()==date.getMonth())  orderDetailsMonth.add(detail);
-        }
-        return orderDetailsMonth;
+//        List<OrderDetail> orderDetails=null;
+//        String selectQuery = "FROM OrderDetail";
+//        try {
+//            orderDetails= sessionFactory.getCurrentSession()
+//                    .createQuery(selectQuery, OrderDetail.class)
+//                    .getResultList();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            return null;
+//        }
+//
+//        Date date= new Date();
+//        List<OrderDetail> orderDetailsMonth= new ArrayList<>();
+//        for (OrderDetail detail: orderDetails) {
+//            if(detail.getOrderDate().getMonth()==date.getMonth())  orderDetailsMonth.add(detail);
+//        }
+//        return orderDetailsMonth;
+        return null;
     }
 
 }

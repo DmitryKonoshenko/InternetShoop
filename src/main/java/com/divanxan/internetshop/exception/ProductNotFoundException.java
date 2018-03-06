@@ -12,7 +12,7 @@ public class ProductNotFoundException extends Exception implements Serializable{
         this("Данный товар недоступен");
     }
 
-    public ProductNotFoundException(String message){
+    private ProductNotFoundException(String message){
         this.message = System.currentTimeMillis() + ": " + message;
     }
 
