@@ -14,6 +14,8 @@ public interface UserDao {
 
     User getByEmail(String email);
 
+    User getById(int id);
+
     // добавление адреса
     boolean addAddress(Address address);
     Address getAddress(int addressId);
@@ -26,5 +28,9 @@ public interface UserDao {
     List<OrderDetail> listOrders(int userId);
     List<OrderDetail> listAllOrders();
     List<OrderDetail> listThisMonthOrders();
+
+    List<Product> getTopProducts();
+
+    List<OrderDetail> listThisWeekOrders();
 
 }

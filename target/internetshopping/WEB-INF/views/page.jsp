@@ -110,6 +110,9 @@
         <c:if test="${userClickShowUserAddress == true}">
             <%@include file="userPageAddress" %>
         </c:if>
+        <c:if test="${userClickStatistic == true}">
+            <%@include file="Statistic.jsp" %>
+        </c:if>
 
     </div>
 

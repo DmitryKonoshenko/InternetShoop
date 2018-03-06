@@ -59,7 +59,7 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="${contextRoot}/home">Магазин элетроники Электроник</a>
+                <a class="navbar-brand" href="${contextRoot}/home">Магазин элетроники Электроник!</a>
             </div>
         </div>
     </nav>
@@ -103,14 +103,16 @@
                     <div class="row">
                         <div class="col-xs-6">
                             <address>
-                                <strong>Payment Method:</strong><br>
-                                Card Payment <br>
+                                <strong>Метод оплаты:</strong><br>
+                                <c:if test="${orderDetail.isPay()}">Картой</c:if>
+                                <c:if test="${not orderDetail.isPay()}">Наличными</c:if>
+                                <br>
                                 ${orderDetail.user.email}
                             </address>
                         </div>
                         <div class="col-xs-6 text-right">
                             <address>
-                                <strong>Order Date:</strong><br>
+                                <strong>Дата заказа:</strong><br>
                                 ${orderDetail.orderDate}<br><br>
                             </address>
                         </div>
@@ -153,7 +155,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="${contextRoot}/show/all/products" class="btn btn-lg btn-warning">Continue Shopping</a>
+                <a href="${contextRoot}/show/all/products" class="btn btn-lg btn-warning">Продолжить покупки</a>
             </div>
         </div>
 

@@ -3,13 +3,16 @@ package com.divanxan.internetshop.daoimpl;
 import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Address;
 import com.divanxan.internetshop.dto.OrderDetail;
+import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.dto.User;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 @Repository("userDao")
 @Transactional
@@ -69,6 +72,15 @@ public class UserDaoImpl implements UserDao {
             // e.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public User getById(int id) {
+        String selectQuery = "FROM User WHERE id =:id";
+        return sessionFactory.getCurrentSession()
+                .createQuery(selectQuery, User.class)
+                .setParameter("id", id)
+                .getSingleResult();
     }
 
     @Override
@@ -176,25 +188,46 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public List<OrderDetail> listThisMonthOrders() {
-//TODO переделать получение месяца
-//        List<OrderDetail> orderDetails=null;
-//        String selectQuery = "FROM OrderDetail";
-//        try {
-//            orderDetails= sessionFactory.getCurrentSession()
-//                    .createQuery(selectQuery, OrderDetail.class)
-//                    .getResultList();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return null;
-//        }
-//
-//        Date date= new Date();
-//        List<OrderDetail> orderDetailsMonth= new ArrayList<>();
-//        for (OrderDetail detail: orderDetails) {
-//            if(detail.getOrderDate().getMonth()==date.getMonth())  orderDetailsMonth.add(detail);
-//        }
-//        return orderDetailsMonth;
-        return null;
+        String selectQuery = "FROM OrderDetail WHERE orderDate BETWEEN :date1 AND :date2";
+
+        Calendar date1 = Calendar.getInstance();   // this takes current date
+        date1.set(Calendar.DAY_OF_MONTH, 1);
+        Calendar date2 = (Calendar) date1.clone();
+        date2.add(Calendar.MONTH, 1);
+
+            return sessionFactory.getCurrentSession()
+                    .createQuery(selectQuery, OrderDetail.class)
+                    .setParameter("date1", date1.getTime())
+                    .setParameter("date2", date2.getTime())
+                    .getResultList();
+
+    }
+
+    @Override
+    public List<Product> getTopProducts() {
+        String selectQuery = "FROM Product ORDER BY purchases desc ";
+
+            List<Product> list = sessionFactory.getCurrentSession()
+                    .createQuery(selectQuery, Product.class)
+                    .setMaxResults(10)
+                    .getResultList();
+            return  list;
+    }
+
+    @Override
+    public List<OrderDetail> listThisWeekOrders() {
+        String selectQuery = "FROM OrderDetail WHERE orderDate BETWEEN :date1 AND :date2";
+
+        Calendar date1 = Calendar.getInstance();   // this takes current date
+        date1.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+        Calendar date2 = (Calendar) date1.clone();
+        date2.add(Calendar.DAY_OF_WEEK, 7);
+
+        return sessionFactory.getCurrentSession()
+                .createQuery(selectQuery, OrderDetail.class)
+                .setParameter("date1", date1.getTime())
+                .setParameter("date2", date2.getTime())
+                .getResultList();
     }
 
 }

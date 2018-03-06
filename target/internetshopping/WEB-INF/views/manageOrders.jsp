@@ -16,7 +16,11 @@
         </div>
     </c:if>
     <div class="row">
-
+        <div class="form-container1122">
+            <div class="panel panel-primary">
+                <a href="${contextRoot}/manage/statistic" class="submit-button1122">Просмотр статистики</a>
+            </div>
+        </div>
 
         <%--@elvariable id="orderDetails" type="java.util.List"--%>
         <c:forEach items="${orderDetails}" var="orderDetail">

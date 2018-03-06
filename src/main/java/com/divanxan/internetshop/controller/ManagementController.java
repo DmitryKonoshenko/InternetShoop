@@ -3,6 +3,7 @@ package com.divanxan.internetshop.controller;
 import com.divanxan.internetshop.dto.Category;
 import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.Product;
+import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.service.ManagerService;
 import com.divanxan.internetshop.util.FileUploadUtility;
 import com.divanxan.internetshop.validator.ProductValidator;
@@ -248,18 +249,43 @@ public class ManagementController {
             }
         }
 
-        if(delivered.equals("yes")) if (orderDetail != null) {
+        if (delivered.equals("yes")) if (orderDetail != null) {
             orderDetail.setIsDelivery(true);
         }
 
-        if(shipped.equals("yess")) if (orderDetail != null) {
+        if (shipped.equals("yess")) if (orderDetail != null) {
             orderDetail.setShippedOrder(true);
         }
 
         managerService.updateOrderDetail(orderDetail);
 
-
         return "redirect:/manage/orders?operation=orderDetail";
+    }
+
+    @RequestMapping("/statistic")
+    public ModelAndView showStatistic() {
+        ModelAndView mv = new ModelAndView("page");
+        mv.addObject("userClickStatistic", true);
+
+        List<Product> pList = managerService.getTopProducts();
+
+        Map<User, Double> userList = managerService.getTopUsers();
+
+        double cashByMonth = 0;
+
+        for (Map.Entry<User, Double> entry : userList.entrySet()) {
+            cashByMonth += entry.getValue();
+        }
+
+        double cashByWeek = managerService.getCashByWeek();
+
+        mv.addObject("cashByMonth", cashByMonth);
+        mv.addObject("cashByWeek", cashByWeek);
+        mv.addObject("listProducts", pList);
+        mv.addObject("listUsers", userList);
+
+        return mv;
+
     }
 
 }
