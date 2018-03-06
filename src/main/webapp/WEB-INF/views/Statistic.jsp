@@ -36,7 +36,7 @@
         <div class="panel panel-primary">
 
             <div class="panel-heading">
-                <h4>Топ 10 заказов</h4>
+                <h4>Топ 10 продуктов</h4>
             </div>
 
 

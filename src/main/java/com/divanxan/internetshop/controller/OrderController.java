@@ -61,10 +61,15 @@ public class OrderController {
 
 
     @RequestMapping(value = "/payment", method = RequestMethod.GET)
-    public ModelAndView showPayment(){
+    public ModelAndView showPayment(@RequestParam(name = "operation", required = false) String operation){
 
         ModelAndView mv = new ModelAndView("orderPayment");
         mv.addObject("title", "Оплата");
+        if(operation!=null){
+            if (operation.equals("noCart")) {
+                mv.addObject("message", "Введите данные карты!");
+            }
+        }
 
         return mv;
     }

@@ -126,7 +126,7 @@ public class ManagementController {
 
     @RequestMapping(value = "/product/{id}/activation", method = RequestMethod.POST)
     @ResponseBody
-    public String handleProductActivation(@PathVariable int id) {
+    public void handleProductActivation(@PathVariable int id) {
 
         Product product = managerService.getProductById(id);
         boolean isActive = product.isActive();
@@ -136,7 +136,7 @@ public class ManagementController {
 
         managerService.updateProduct(product);
 
-        return (isActive) ? "Товар успешно деактивирован" : "Товар успешно активирован";
+      //  if(isActive == true) ? "Товар успешно деактивирован" : "Товар успешно активирован";
     }
 
     @RequestMapping(value = "/category", method = RequestMethod.POST)

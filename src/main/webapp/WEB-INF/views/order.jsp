@@ -3,7 +3,7 @@
 <%@include file="../views/flows/shared/flows-header.jsp" %>
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 
-<%@include file="../views/flows/shared/flows-header.jsp" %>
+<%@include file="../views/shared/flows-header.jsp" %>
 <div class="container">
 
     <div class="row">

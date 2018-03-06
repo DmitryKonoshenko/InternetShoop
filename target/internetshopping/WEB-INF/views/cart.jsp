@@ -22,10 +22,10 @@
                 <tbody>
 
                 <c:forEach items="${cartLines}" var="cartLine">
-                    <c:if test="${cartLine.available == false}">
-                        <c:set var="availableCount" value="${availableCount - 1}"/>
+                    <c:if test="${cartLine.available == true}">
+                    <c:if test="${cartLine.productCount == 0}">
+                        <c:set var="availableCount" value="${0}"/>
                     </c:if>
-
                     <tr>
                         <td data-th="Product">
                             <div class="row">
@@ -57,7 +57,7 @@
                             <a href="${contextRoot}/cart/${cartLine.id}/delete" class="btn btn-danger btn-sm"><span class="oi oi-trash"></span></a>
                         </td>
                     </tr>
-
+                    </c:if>
                 </c:forEach>
 
                 </tbody>

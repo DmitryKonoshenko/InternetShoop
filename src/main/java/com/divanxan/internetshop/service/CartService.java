@@ -75,6 +75,15 @@ public class CartService {
         } else {
             cartLines = this.getCartLinesList();
         }
+
+        if (cartLines != null) {
+            for (CartLine cartLine : cartLines) {
+                int count = cartLine.getProductCount();
+                int productCount = productDao.get(cartLine.getProduct().getId()).getQuantity();
+                if (count > productCount) cartLine.setProductCount(productCount);
+            }
+        }
+
         return cartLines;
     }
 
@@ -206,6 +215,9 @@ public class CartService {
                 //если пользователь - Аноним
                 List<CartLine> cartLines = this.getCartLines();
                 if (cartLines != null) {
+                    //TODO может все рухнет из-за этого
+                    CartLine last = cartLines.get(cartLines.size() - 1);
+                    cartLine.setId(last.getId() + 1);
                     cartLines.add(cartLine);
                 } else {
                     cartLines = new ArrayList<>();
@@ -227,30 +239,32 @@ public class CartService {
 
     public String validateCartLine() {
         Cart cart = this.getCart();
-        List<CartLine> cartLines = cartLineDao.list(cart.getId());
+        String email = ((UserModel) session.getAttribute("userModel")).getEmail();
+        //TODO
+        List<CartLine> cartLines = this.getCartLines();
         double grandTotal = 0.0;
         int lineCount = 0;
         String response = "result=success";
         boolean changed;
         Product product = null;
-        for(CartLine cartLine : cartLines) {
+        for (CartLine cartLine : cartLines) {
             product = cartLine.getProduct();
             changed = false;
             // check if the product is active or not
             // if it is not active make the availability of cartLine as false
-            if((!product.isActive() && product.getQuantity() == 0) && cartLine.isAvailable()) {
+            if ((!product.isActive() && product.getQuantity() == 0) && cartLine.isAvailable()) {
                 cartLine.setAvailable(false);
                 changed = true;
             }
             // check if the cartLine is not available
             // check whether the product is active and has at least one quantity available
-            if((product.isActive() && product.getQuantity() > 0) && !(cartLine.isAvailable())) {
+            if ((product.isActive() && product.getQuantity() > 0) && !(cartLine.isAvailable())) {
                 cartLine.setAvailable(true);
                 changed = true;
             }
 
             // check if the buying price of product has been changed
-            if(cartLine.getBuyingPrice() != product.getUnitPrice()) {
+            if (cartLine.getBuyingPrice() != product.getUnitPrice()) {
                 // set the buying price to the new price
                 cartLine.setBuyingPrice(product.getUnitPrice());
                 // calculate and set the new total
@@ -259,7 +273,7 @@ public class CartService {
             }
 
             // check if that much quantity of product is available or not
-            if(cartLine.getProductCount() > product.getQuantity()) {
+            if (cartLine.getProductCount() > product.getQuantity()) {
                 cartLine.setProductCount(product.getQuantity());
                 cartLine.setTotal(cartLine.getProductCount() * product.getUnitPrice());
                 changed = true;
@@ -267,7 +281,7 @@ public class CartService {
             }
 
             // changes has happened
-            if(changed) {
+            if (changed) {
                 //update the cartLine
                 cartLineDao.update(cartLine);
                 // set the result as modified

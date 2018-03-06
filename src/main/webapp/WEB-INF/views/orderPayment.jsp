@@ -1,7 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
-<%@include file="../views/flows/shared/flows-header.jsp" %>
+<%@include file="../views/shared/flows-header.jsp" %>
 <div class="container">
 
     <c:if test="${not empty message}">

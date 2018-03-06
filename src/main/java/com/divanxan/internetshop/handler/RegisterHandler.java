@@ -101,6 +101,7 @@ public class RegisterHandler {
             User user1 = userDao.getByEmail(user.getEmail());
             Cart cart = user1.getCart();
             for (CartLine line : list) {
+                line.setId(0);
                 line.setCartId(cart.getId());
                 cartLineDao.add(line);
             }
