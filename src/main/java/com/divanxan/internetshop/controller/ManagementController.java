@@ -269,13 +269,9 @@ public class ManagementController {
 
         List<Product> pList = managerService.getTopProducts();
 
-        Map<User, Double> userList = managerService.getTopUsers();
+        Map<Double, User> userList = managerService.getTopUsers();
 
-        double cashByMonth = 0;
-
-        for (Map.Entry<User, Double> entry : userList.entrySet()) {
-            cashByMonth += entry.getValue();
-        }
+        double cashByMonth = managerService.getCashByMonth();
 
         double cashByWeek = managerService.getCashByWeek();
 

@@ -47,6 +47,7 @@
                     <td><strong>Бренд</strong></td>
                     <td class="text-center"><strong>Цена</strong></td>
                     <td class="text-center"><strong>Количество раз куплено</strong></td>
+                    <td class="text-center"><strong>Просмотров</strong></td>
                 </tr>
                 </thead>
                 <tbody>
@@ -57,6 +58,7 @@
                         <td>${product.brand}</td>
                         <td class="text-center">&#8381; ${product.unitPrice}</td>
                         <td class="text-center">${product.purchases}</td>
+                        <td class="text-center">${product.views}</td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -87,9 +89,9 @@
                 <%--@elvariable id="listUsers" type="java.util.Map"--%>
                 <c:forEach items="${listUsers}" var="user">
                     <tr>
-                        <td>${user.key.firstName} ${user.key.lastName}</td>
-                        <td>${user.key.contactNumber}</td>
-                        <td class="text-center">&#8381; ${user.value}</td>
+                        <td>${user.value.firstName} ${user.value.lastName}</td>
+                        <td>${user.value.contactNumber}</td>
+                        <td class="text-center">&#8381; ${user.key}</td>
                     </tr>
                 </c:forEach>
                 </tbody>

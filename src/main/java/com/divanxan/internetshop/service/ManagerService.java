@@ -34,7 +34,7 @@ public class ManagerService {
     }
 
     public Product getProductById(int id) {
-     return productDao.get(id);
+        return productDao.get(id);
     }
 
     public void addProduct(@Valid Product mProduct) {
@@ -54,11 +54,11 @@ public class ManagerService {
     }
 
     public List<Category> getListCategory() {
-       return categoryDao.list();
+        return categoryDao.list();
     }
 
     public List<OrderDetail> getListAllOrders() {
-      return userDao.listAllOrders();
+        return userDao.listAllOrders();
     }
 
     public void updateOrderDetail(OrderDetail orderDetail) {
@@ -66,40 +66,55 @@ public class ManagerService {
     }
 
     public List<Product> getTopProducts() {
-       return userDao.getTopProducts();
+        return userDao.getTopProducts();
     }
 
-    public Map<User, Double> getTopUsers() {
+    public Map<Double, User> getTopUsers() {
 
-        List<OrderDetail> orders =  userDao.listThisMonthOrders();
-       Map<Integer, Double> map = new TreeMap<Integer, Double>();
-        for (OrderDetail order:orders) {
+        List<OrderDetail> orders = userDao.listThisMonthOrders();
+        Map<Integer, Double> map = new HashMap<Integer, Double>();
+        for (OrderDetail order : orders) {
             int id = order.getUser().getId();
-            if(!map.containsKey(id)) {
-                map.put(id,order.getOrderTotal());
-            }
-            else{
-                map.put(id, map.get(id)+order.getOrderTotal());
+            if (!map.containsKey(id)) {
+                map.put(id, order.getOrderTotal());
+            } else {
+                map.put(id, map.get(id) + order.getOrderTotal());
             }
         }
 
-        Map<User, Double> userList = new HashMap();
-        int count =1;
-        for(Map.Entry<Integer,Double> entry : map.entrySet()) {
+        Map<Double, User> userListSort = new TreeMap<>(Collections.reverseOrder());
+
+        for (Map.Entry<Integer, Double> entry : map.entrySet()) {
             Integer key = entry.getKey();
             Double value = entry.getValue();
-            userList.put(userDao.getById(key),value);
-            count++;
-            if(count ==11) break;
+            userListSort.put(value, userDao.getById(key));
         }
+
+        Map<Double, User> userList = new TreeMap<>(Collections.reverseOrder());
+        int i =0;
+        for(Map.Entry<Double, User> entry : userListSort.entrySet()) {
+            userList.put(entry.getKey(), entry.getValue());
+            ++i;
+            if(i==10) break;
+        }
+
         return userList;
     }
 
     public double getCashByWeek() {
-        List<OrderDetail> orders =  userDao.listThisWeekOrders();
-        double cash =0;
-        for (OrderDetail order:orders) {
-            cash+= order.getOrderTotal();
+        List<OrderDetail> orders = userDao.listThisWeekOrders();
+        double cash = 0;
+        for (OrderDetail order : orders) {
+            cash += order.getOrderTotal();
+        }
+        return cash;
+    }
+
+    public double getCashByMonth() {
+        List<OrderDetail> orders = userDao.listThisMonthOrders();
+        double cash = 0;
+        for (OrderDetail order : orders) {
+            cash += order.getOrderTotal();
         }
         return cash;
     }
