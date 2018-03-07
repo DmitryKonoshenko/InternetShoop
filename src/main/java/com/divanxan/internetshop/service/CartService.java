@@ -193,7 +193,17 @@ public class CartService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+        if (cartLine == null) {
+            List<CartLine> list = this.getCartLines();
+            if(list!=null && list.size()>0){
+                for (CartLine line: list) {
+                    if(line.getProduct().getId() == productId) {
+                        cartLine=line;
+                        break;
+                    }
+                }
+            }
+        }
         if (cartLine == null) {
             //добавим новую позицию
             cartLine = new CartLine();

@@ -10,54 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d920735-65df-4dfd-9a8b-65d5b664f90b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDABC123PIL.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/InternetShop/src/main/webapp/assets/images/PRDABC123TVS.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/config/HibernateConfig.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/controller/CartController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/controller/GlobalController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/controller/JsonDataController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/controller/ManagementController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/controller/OrderController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/controller/PageController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/controller/UserController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dao/CartLineDao.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dao/CategoryDao.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dao/ProductDao.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dao/UserDao.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/daoimpl/CartLineDaoImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/daoimpl/CategoryDaoImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/daoimpl/ProductDaoImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/daoimpl/UserDaoImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dto/Address.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dto/Cart.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dto/CartLine.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dto/Category.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dto/OrderDetail.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dto/OrderItem.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dto/Product.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/dto/User.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/exception/GlobalDefaultExceptionHandler.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/exception/ProductNotFoundException.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/exception/UserAccessException.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/handler/RegisterHandler.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/model/CheckoutModel.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/model/RegisterModel.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/model/UserModel.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/service/CartService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/service/ManagerService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/service/OrderService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/service/UserService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/util/FileUploadUtility.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/internetshop/validator/ProductValidator.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/ManagerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/ManagerService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Statistic.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Statistic.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/controller/ManagementController.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/controller/ManagementController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/service/ManagerService.class" afterPath="$PROJECT_DIR$/target/classes/com/divanxan/internetshop/service/ManagerService.class" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/controller/ManagementController.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/controller/ManagementController.class" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/service/ManagerService.class" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/classes/com/divanxan/internetshop/service/ManagerService.class" />
-      <change beforePath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/Statistic.jsp" afterPath="$PROJECT_DIR$/target/internetshopping/WEB-INF/views/Statistic.jsp" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -118,8 +72,48 @@
       <file leaf-file-name="ManagementController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="276" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
+            <state relative-caret-position="147">
+              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartLineDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CartLineDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartLineDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-679">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="206" column="0" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="75" column="45" lean-forward="true" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -148,31 +142,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="cart.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="799">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dto/Category.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
               <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1071">
-              <caret line="63" column="4" lean-forward="false" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="orderPayment.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderPayment.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -296,8 +280,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/flows-navbar.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderPayment.jsp" />
@@ -306,6 +288,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Statistic.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/ManagerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" />
       </list>
     </option>
   </component>
@@ -349,7 +333,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1694" />
     <option name="y" value="28" />
     <option name="width" value="1296" />
@@ -982,7 +966,7 @@
       <workItem from="1520315942602" duration="15657000" />
       <workItem from="1520335604921" duration="19526000" />
       <workItem from="1520361440745" duration="8828000" />
-      <workItem from="1520409939886" duration="924000" />
+      <workItem from="1520409939886" duration="2456000" />
     </task>
     <task id="LOCAL-00001" summary="Подключил бутстрап, но почему-то теги html не работают.">
       <created>1518679945858</created>
@@ -1027,7 +1011,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="460680000" />
+    <option name="totallyTimeSpent" value="462212000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1038,7 +1022,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1694" y="28" width="1296" height="1000" extended-state="0" />
+    <frame x="-1288" y="-8" width="1296" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1053,19 +1037,19 @@
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32922825" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44655582" sideWeight="0.49676377" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44557822" sideWeight="0.49676377" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3208191" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3446712" sideWeight="0.47006473" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34679335" sideWeight="0.4684466" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33106577" sideWeight="0.4684466" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265306" sideWeight="0.4894822" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935154" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32764506" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2524272" sideWeight="0.51086956" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31957927" sideWeight="0.48574823" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31957927" sideWeight="0.48574823" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="518" y="279" width="244" height="425" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28478965" sideWeight="0.51425177" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1231,21 +1215,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java</url>
-          <line>240</line>
+          <line>250</line>
           <properties />
           <option name="timeStamp" value="187" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java</url>
-          <line>70</line>
-          <properties />
-          <option name="timeStamp" value="191" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java</url>
-          <line>130</line>
-          <properties />
-          <option name="timeStamp" value="192" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java</url>
@@ -1258,12 +1230,6 @@
           <line>147</line>
           <properties />
           <option name="timeStamp" value="195" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java</url>
-          <line>183</line>
-          <properties />
-          <option name="timeStamp" value="196" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java</url>
@@ -1295,7 +1261,7 @@
           <option name="timeStamp" value="193" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="201" />
+      <option name="time" value="204" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1309,13 +1275,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_111/src.zip!/java/util/Calendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="312" column="22" lean-forward="false" selection-start-line="312" selection-start-column="22" selection-end-line="312" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_111/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1598">
@@ -1443,6 +1402,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1497,20 +1457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CartLineDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/handler/RegisterHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -1530,29 +1476,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="29" column="46" lean-forward="true" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1668,14 +1591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Statistic.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="93" column="66" lean-forward="false" selection-start-line="93" selection-start-column="66" selection-end-line="93" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/ManagerService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="417">
@@ -1687,10 +1602,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CategoryDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/CartLineDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/CartLineDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-679">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="75" column="45" lean-forward="true" selection-start-line="75" selection-start-column="45" selection-end-line="75" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Statistic.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="93" column="66" lean-forward="false" selection-start-line="93" selection-start-column="66" selection-end-line="93" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="206" column="0" lean-forward="false" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/ManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="276" column="0" lean-forward="false" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
+        <state relative-caret-position="147">
+          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
           <folding />
         </state>
       </provider>
