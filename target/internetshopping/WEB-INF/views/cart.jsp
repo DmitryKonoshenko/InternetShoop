@@ -3,7 +3,18 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="availableCount" value="${userModel.cart.cartLines}" />
 <div class="container">
+    <c:if test="${not empty message}">
+        <div class="col-xs-12">
 
+            <div class="alert alert-info">
+
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+                    ${message}
+
+            </div>
+        </div>
+    </c:if>
     <c:choose>
 
         <%--@elvariable id="cartLines" type="java.util.List"--%>
@@ -70,7 +81,7 @@
                     <security:authorize access="isAuthenticated()">
                     <c:choose>
                     <c:when test="${availableCount != 0}">
-                    <td><a href="${contextRoot}/order/show" class="btn btn-success btn-block">Оформить покупку <span class="oi oi-right"></span></a>
+                    <td><a href="${contextRoot}/cart/checkProducts" class="btn btn-success btn-block">Оформить покупку <span class="oi oi-right"></span></a>
                         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                     </td>
                         </c:when>
@@ -83,6 +94,9 @@
                     </security:authorize>
                     <security:authorize access="isAnonymous()">
                         <td><a href="${contextRoot}/login" class="btn btn-success btn-block">Войти<span class="oi oi-right"></span></a>
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                        </td>
+                        <td><a href="${contextRoot}/register" class="btn btn-success btn-block">Зарегестироваться<span class="oi oi-right"></span></a>
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
                         </td>
                     </security:authorize>

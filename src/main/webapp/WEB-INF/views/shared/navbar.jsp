@@ -51,13 +51,6 @@
                         </a>
                         <ul class="dropdown-menu">
                             <security:authorize access="hasAuthority('USER')">
-                                <li>
-                                    <a href="${contextRoot}/cart/show">
-                                    <span class="oi oi-cart">
-                                        <span class="badge">${userModel.cart.cartLines}</span>
-                                        - &#8381; ${userModel.cart.grandTotal}
-                                    </a>
-                                </li>
                                 <li role="separator" class="dropdown-divider"></li>
                                 <li>
                                     <a href="${contextRoot}/user/show">
@@ -73,6 +66,16 @@
                         </ul>
                     </li>
                 </security:authorize>
+                <security:authorize access="hasAuthority('USER') or isAnonymous()">
+                    <li id="cart">
+                        <a href="${contextRoot}/cart/show" class="nav-link">
+                                    <span class="oi oi-cart">
+                                        <span class="badge">${userModel.cart.cartLines}</span>
+                                        - &#8381; ${userModel.cart.grandTotal}
+                        </a>
+                    </li>
+                </security:authorize>
+
             </ul>
         </div>
     </div>

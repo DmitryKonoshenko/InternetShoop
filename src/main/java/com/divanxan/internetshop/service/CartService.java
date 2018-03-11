@@ -87,9 +87,12 @@ public class CartService {
         return cartLines;
     }
 
+
     /**
      * Данный метод служит обновления колличества продукта одного вида в корзине.
      *
+     * @param cartLineId
+     * @param count
      * @return String
      */
     // обновим количество товара в корзине (используется в методе updateCart в CartController)
@@ -137,9 +140,10 @@ public class CartService {
 
     }
 
-    /**
+     /**
      * Данный метод служит для удаления продукта из корзины.
      *
+     * @param cartLineId
      * @return String
      */
     // удалим товар из корзины (используется в методе deleteCart в CartController)
@@ -307,5 +311,70 @@ public class CartService {
         cartLineDao.updateCart(cart);
 
         return response;
+    }
+
+    /**
+     * Данный метод обьединяет сессионную корзину с пользовательской в базе данных
+     *
+     * @param cart1
+     */
+    public void mergeCart(Cart cart1) {
+
+        List<CartLine> cartLines1 =this.getCartLinesList();
+
+        List<CartLine> cartLines2 =cartLineDao.listAvailable(cart1.getId());
+
+        boolean isChanged = false;
+
+        if(cartLines2.size()>0) {
+            boolean isOneProduct = false;
+            for (int i = 0; i < cartLines1.size(); i++) {
+                for (int j = 0; j < cartLines2.size(); j++) {
+                    if (cartLines1.get(i).getProduct().getId() == cartLines2.get(j).getProduct().getId()) {
+                        isOneProduct = true;
+                        break;
+                    }
+                }
+                if (!isOneProduct) {
+                    CartLine cartLine = cartLines1.get(i);
+                    cartLine.setId(0);
+                    cartLine.setCartId(cart1.getId());
+                    cart1.setCartLines(cart1.getCartLines()+1);
+                    cart1.setGrandTotal(cart1.getGrandTotal()+ cartLine.getTotal());
+                    cartLineDao.add(cartLine);
+                    isChanged = true;
+                }
+                isOneProduct = false;
+            }
+        }
+        else if(cartLines1.size()>0){
+            for (CartLine cartLine:cartLines1) {
+                cartLine.setId(0);
+                cartLine.setCartId(cart1.getId());
+                cart1.setCartLines(cart1.getCartLines()+1);
+                cart1.setGrandTotal(cart1.getGrandTotal()+ cartLine.getTotal());
+                cartLineDao.add(cartLine);
+            }
+            isChanged = true;
+        }
+        if(isChanged) cartLineDao.updateCart(cart1);
+    }
+
+    public String checkProducts() {
+        Cart cart = this.getCart();
+        List<CartLine> cartLines = cartLineDao.listAvailable(cart.getId());
+        for (CartLine cartLine: cartLines) {
+            if(cartLine.getProductCount()==0 || cartLine.getProductCount()>cartLine.getProduct().getQuantity()) {
+                int countBefore  = cartLine.getProductCount();
+                cartLine.setProductCount(cartLine.getProduct().getQuantity());
+                int countAfter  = cartLine.getProductCount();
+                int rezult = countBefore - countAfter;
+                cartLine.setTotal(cartLine.getProduct().getUnitPrice()*cartLine.getProductCount());
+                cart.setGrandTotal(cart.getGrandTotal()-rezult*cartLine.getProduct().getUnitPrice());
+                cartLineDao.update(cartLine);
+                return "false";
+            }
+        }
+        return "true";
     }
 }

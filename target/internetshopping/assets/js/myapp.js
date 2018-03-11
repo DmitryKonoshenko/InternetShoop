@@ -15,6 +15,9 @@ $(function () {
         case 'User Cart':
             $('#userCart').addClass('active');
             break;
+        case 'Корзина':
+            $('#cart').addClass('active');
+            break;
         default:
             if (menu === "На главную") break;
             $('#home').addClass('active');
@@ -79,7 +82,7 @@ $(function () {
                 {
                     data: 'unitPrice',
                     mRender: function (data, type, row) {
-                        return '&#8381; ' + data
+                        return /*'&#8381; ' + */data
                     }
                 },
                 {
@@ -219,7 +222,7 @@ $(function () {
                 {
                     data: 'unitPrice',
                     mRender: function (data, type, row) {
-                        return '&#8381; ' + data
+                        return /*'&#8381; ' + */ data
                     }
                 },
                 {

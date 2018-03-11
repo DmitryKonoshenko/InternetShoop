@@ -26,17 +26,8 @@ public class CartController {
         if(result!=null){
 
             switch (result){
-                case "added":
-                    mv.addObject("message","CartLine has been added successfully!");
-                    break;
-                case "updated":
-                    mv.addObject("message","CartLine has been updated successfully!");
-                    break;
-                case "deleted":
-                    mv.addObject("message","CartLine has been deleted!");
-                    break;
-                case "error":
-                    mv.addObject("message","Something went wrong!");
+                case "false":
+                    mv.addObject("message","Данное количество товара не доступно");
                     break;
             }
 
@@ -89,4 +80,15 @@ public class CartController {
         }
     }
 
+
+    @RequestMapping("/checkProducts")
+    public String checkProduct() {
+        String response = cartService.checkProducts();
+        if(response.equals("true")) {
+            return "redirect:/order/show";
+        }
+        else {
+            return "redirect:/cart/show?"+response;
+        }
+    }
 }

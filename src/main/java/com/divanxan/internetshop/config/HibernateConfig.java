@@ -1,52 +1,59 @@
 package com.divanxan.internetshop.config;
 
 import org.apache.commons.dbcp2.BasicDataSource;
-import org.hibernate.Hibernate;
 import org.hibernate.SessionFactory;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.core.env.Environment;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
-import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
+@PropertySource("classpath:db.properties")
 @ComponentScan(basePackages = {"com.divanxan.internetshop.dto"})
 @EnableTransactionManagement
 public class HibernateConfig {
 
-    private final static String DATABASE_URL = "jdbc:mysql://localhost:3306/ishop?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false";
-    private final static String DATABASE_DRIVER = "com.mysql.jdbc.Driver";
-    private final static String DATABASE_DIALECT = "org.hibernate.dialect.MySQL5Dialect";
-    private final static String DATABASE_USERNAME = "root";
-    private final static String DATABASE_PASSWORD = "root";
+    @Autowired
+    private Environment env;
 
-// имя бина используется в spring-security.xml
+    // имя бина используется в spring-security.xml
     @Bean("dataSource")
     public DataSource getDataSource() {
         BasicDataSource dataSource = new BasicDataSource();
 
         //Вносим информацию о соединении с БД
-        dataSource.setDriverClassName(DATABASE_DRIVER);
-        dataSource.setUrl(DATABASE_URL);
-        dataSource.setUsername(DATABASE_USERNAME);
-        dataSource.setPassword(DATABASE_PASSWORD);
+        dataSource.setDriverClassName(env.getProperty("mysql.driver"));
+        dataSource.setUrl(env.getProperty("mysql.jdbcUrl"));
+        dataSource.setUsername(env.getProperty("mysql.username"));
+        dataSource.setPassword(env.getProperty("mysql.password"));
 
         return dataSource;
     }
 
+
     @Bean
     public SessionFactory getSessionFactory(DataSource dataSource) {
+
         LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 
         builder.addProperties(getHibernateProperties());
         builder.scanPackages("com.divanxan.internetshop.dto");
 
-        return builder.buildSessionFactory();
+        SessionFactory sessionFactory =  builder.buildSessionFactory();
+
+        return sessionFactory;
     }
 
     //Все настройки хибернета будут возвращены в этом методе
@@ -54,18 +61,18 @@ public class HibernateConfig {
 
         Properties properties = new Properties();
 
-        properties.put("hibernate.dialect", DATABASE_DIALECT);
-        properties.put("hibernate.show_sql", "true");
-        properties.put("hibernate.format_sql", "true");
+        properties.put("hibernate.dialect", env.getProperty("mysql.dialect"));
+        properties.put("hibernate.show_sql", env.getProperty("hiber.show.sql"));
+        properties.put("hibernate.format_sql", env.getProperty("hiber.format.sql"));
 
-        //properties.put("hibernate.hbm2ddl.auto", "create");
+//        properties.put("hibernate.hbm2ddl.auto", env.getProperty("hiber.hbm2ddl"));
 
-        return  properties;
+        return properties;
     }
 
     //TransactionManager bean
     @Bean
-    public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory){
+    public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
         HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);
         return transactionManager;
     }

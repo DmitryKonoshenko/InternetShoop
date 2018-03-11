@@ -3,8 +3,10 @@ package com.divanxan.internetshop.controller;
 
 import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.Cart;
+import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.model.UserModel;
+import com.divanxan.internetshop.service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -21,12 +23,15 @@ public class GlobalController {
 
     private final UserDao userDao;
 
+    private final CartService cartService;
+
     private final HttpSession session;
 
     @Autowired
-    public GlobalController(UserDao userDao, HttpSession session) {
+    public GlobalController(UserDao userDao, HttpSession session, CartService cartService) {
         this.userDao = userDao;
         this.session = session;
+        this.cartService = cartService;
     }
 
     @ModelAttribute("userModel")
@@ -39,9 +44,11 @@ public class GlobalController {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
             User user = userDao.getByEmail(authentication.getName());
-
+            Cart sessionCart = null;
+                  if(userModel!=null) sessionCart = userModel.getCart();
             if(user!=null){
                 //создаем модель покупателя для отображения покупателя на странице
+
                 userModel = new UserModel();
 
                 userModel.setId(user.getId());
@@ -49,8 +56,14 @@ public class GlobalController {
                 userModel.setRole(user.getRole());
                 userModel.setFullName(user.getFirstName() + " " + user.getLastName());
 
-                //если что, то надо убрать ето
-                userModel.setCart(user.getCart());
+                // тут мерджим сессионную корзину с той что в БД
+                Cart userCart = user.getCart();
+                if(sessionCart.getCartLines()>0){
+                   cartService.mergeCart(userCart);
+                }
+
+
+                userModel.setCart(userCart);
           // TODO если что - посмотри тут. с корзиной надо разобраться
                 if(userModel.getRole().equals("USER")){
                     //добавляем корзину только в случае если юзер - покупатель
