@@ -3,6 +3,20 @@ package com.divanxan.internetshop.dto;
 import javax.persistence.*;
 import java.io.Serializable;
 
+@NamedQueries({
+        @NamedQuery(
+                name = "getByCartAndProduct",
+                query = "FROM cart_line Where cartId=:cartId AND product.id=:productId"
+        ),
+        @NamedQuery(
+                name = "listAvailable",
+                query = "FROM cart_line Where cartId=:cartId AND available=:available"
+        ),
+        @NamedQuery(
+                name = "listCartLine",
+                query = "FROM cart_line where cartId=:cartId"
+        )
+})
 @Entity(name = "cart_line")
 public class CartLine implements Serializable {
 

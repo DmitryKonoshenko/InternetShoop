@@ -12,6 +12,11 @@ import java.io.Serializable;
  * @version 1.0
  * @since version 1.0
  */
+@NamedQueries({
+        @NamedQuery(
+                name = "listCategory",
+                query = "FROM Category WHERE active = :active"
+        )})
 @Entity
 public class Category implements Serializable {
 

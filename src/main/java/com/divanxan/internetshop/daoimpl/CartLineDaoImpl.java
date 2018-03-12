@@ -5,6 +5,7 @@ import com.divanxan.internetshop.dto.Cart;
 import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.OrderDetail;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -67,38 +68,50 @@ public class CartLineDaoImpl implements CartLineDao {
 
     @Override
     public List<CartLine> list(int cartId) {
+        Query query = sessionFactory.getCurrentSession()
+                .getNamedQuery("listCartLine")
+                .setParameter("cartId", cartId);
+        return query.getResultList();
         //String query = "FROM CartLine WHERE cartId =:cartId";
-        String query = "FROM cart_line where cartId=:cartId";
-        return sessionFactory.getCurrentSession()
-                .createQuery(query, CartLine.class)
-                .setParameter("cartId",cartId)
-                .getResultList();
+//        String query = "FROM cart_line where cartId=:cartId";
+//        return sessionFactory.getCurrentSession()
+//                .createQuery(query, CartLine.class)
+//                .setParameter("cartId",cartId)
+//                .getResultList();
     }
 
     @Override
     public List<CartLine> listAvailable(int cartId) {
-        String query = "FROM cart_line Where cartId =:cartId AND available =:available";
-        return sessionFactory.getCurrentSession()
-                .createQuery(query, CartLine.class)
-                .setParameter("cartId",cartId)
-                .setParameter("available",true)
-                .getResultList();
+        Query query = sessionFactory.getCurrentSession()
+                .getNamedQuery("listAvailable")
+                .setParameter("cartId", cartId)
+                .setParameter("available",true);
+        return query.getResultList();
+//        String query = "FROM cart_line Where cartId =:cartId AND available =:available";
+//        return sessionFactory.getCurrentSession()
+//                .createQuery(query, CartLine.class)
+//                .setParameter("cartId",cartId)
+//                .setParameter("available",true)
+//                .getResultList();
     }
 
     @Override
     public CartLine getByCartAndProduct(int cartId, int productId) {
-        String query = "FROM cart_line Where cartId =:cartId AND product.id =: productId";
-        try {
-            return sessionFactory.getCurrentSession()
-                    .createQuery(query, CartLine.class)
-                    .setParameter("cartId", cartId)
-                    .setParameter("productId", productId)
-                    .getSingleResult();
-        }
-        catch (Exception e){
-            //e.printStackTrace();
-            return null;
-        }
+        Query query = sessionFactory.getCurrentSession().getNamedQuery("getByCartAndProduct");
+        CartLine cartLine = (CartLine) query.getSingleResult();
+        return cartLine;
+//        String query = "FROM cart_line Where cartId =:cartId AND product.id =: productId";
+//        try {
+//            return sessionFactory.getCurrentSession()
+//                    .createQuery(query, CartLine.class)
+//                    .setParameter("cartId", cartId)
+//                    .setParameter("productId", productId)
+//                    .getSingleResult();
+//        }
+//        catch (Exception e){
+//            //e.printStackTrace();
+//            return null;
+//        }
     }
 
     @Override

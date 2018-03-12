@@ -10,6 +10,24 @@ import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.UUID;
 
+@NamedQueries({
+        @NamedQuery(
+                name = "listActiveProduct",
+                query = "FROM Product WHERE active=:active"
+        ),
+        @NamedQuery(
+                name = "listActiveProductsByCategory",
+                query = "FROM Product WHERE active=:active AND categoryId=:categoryId"
+        ),
+        @NamedQuery(
+                name = "getLatestActiveProducts",
+                query = "FROM Product WHERE active=:active ORDER BY id"
+        ),
+        @NamedQuery(
+                name = "getTopProducts",
+                query = "FROM Product ORDER BY purchases desc"
+        )
+})
 @Component
 @Entity
 public class Product implements Serializable {

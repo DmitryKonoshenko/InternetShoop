@@ -3,6 +3,7 @@ package com.divanxan.internetshop.daoimpl;
 import com.divanxan.internetshop.dao.ProductDao;
 import com.divanxan.internetshop.dto.Product;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -105,29 +106,45 @@ public class ProductDaoImpl implements ProductDao {
 
     @Override
     public List<Product> listActiveProducts() {
-        String selectActiveProducts = "FROM Product WHERE active = :active";
-        return sessionFactory.getCurrentSession()
-                .createQuery(selectActiveProducts, Product.class)
-                .setParameter("active", true).getResultList();
+        Query query = sessionFactory.getCurrentSession()
+                .getNamedQuery("listActiveProduct")
+                .setParameter("active",true);
+        return query.getResultList();
+
+//        String selectActiveProducts = "FROM Product WHERE active = :active";
+//        return sessionFactory.getCurrentSession()
+//                .createQuery(selectActiveProducts, Product.class)
+//                .setParameter("active", true).getResultList();
     }
 
     @Override
     public List<Product> listActiveProductsByCategory(int categoryId) {
-        String selectActiveProducts = "FROM Product WHERE active = :active AND categoryId = :categoryId";
-        return sessionFactory.getCurrentSession()
-                .createQuery(selectActiveProducts, Product.class)
-                .setParameter("active", true)
-                .setParameter("categoryId", categoryId)
-                .getResultList();
+        Query query = sessionFactory.getCurrentSession()
+                .getNamedQuery("listActiveProductsByCategory")
+                .setParameter("active",true)
+                .setParameter("categoryId",categoryId);
+        return query.getResultList();
+//        String selectActiveProducts = "FROM Product WHERE active = :active AND categoryId = :categoryId";
+//        return sessionFactory.getCurrentSession()
+//                .createQuery(selectActiveProducts, Product.class)
+//                .setParameter("active", true)
+//                .setParameter("categoryId", categoryId)
+//                .getResultList();
     }
 
     @Override
     public List<Product> getLatestActiveProducts(int count) {
-        return sessionFactory.getCurrentSession()
-                .createQuery("FROM Product WHERE active = :active ORDER BY id", Product.class)
-                .setParameter("active", true)
+        Query query = sessionFactory.getCurrentSession()
+                .getNamedQuery("getLatestActiveProducts")
+                .setParameter("active",true)
                 .setFirstResult(0)
-                .setMaxResults(count)
-                .getResultList();
+                .setMaxResults(count);
+        return query.getResultList();
+//        return sessionFactory.getCurrentSession()
+//                .createQuery("FROM Product WHERE active = :active ORDER BY id", Product.class)
+//                .setParameter("active", true)
+//                .setFirstResult(0)
+//                .setMaxResults(count)
+//                .getResultList();
     }
 }

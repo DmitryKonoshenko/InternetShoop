@@ -4,6 +4,20 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
+@NamedQueries({
+        @NamedQuery(
+                name = "getBillingAddress",
+                query = "FROM Address WHERE userId=:userId AND billing=:billing"
+        ),
+        @NamedQuery(
+                name = "listShippingAddresses",
+                query = "FROM Address WHERE userId=:userId AND shipping=:shipping"
+        ),
+        @NamedQuery(
+                name = "listAddresses",
+                query = "FROM Address WHERE userId=:userId"
+        )
+})
 @Entity
 public class Address implements Serializable {
 

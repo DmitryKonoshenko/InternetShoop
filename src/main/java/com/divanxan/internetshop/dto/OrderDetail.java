@@ -6,7 +6,20 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-
+@NamedQueries({
+        @NamedQuery(
+                name = "listOrders",
+                query = "FROM OrderDetail WHERE user.id=:userId"
+        ),
+        @NamedQuery(
+                name = "listAllOrders",
+                query = "FROM OrderDetail"
+        ),
+        @NamedQuery(
+                name = "listDateOrders",
+                query = "FROM OrderDetail WHERE orderDate BETWEEN :date1 AND :date2"
+        )
+})
 @Entity
 @Table(name = "order_detail")
 public class OrderDetail implements Serializable {

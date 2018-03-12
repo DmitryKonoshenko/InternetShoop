@@ -60,8 +60,8 @@ public class GlobalDefaultExceptionHandler {
 
         ModelAndView mv = new ModelAndView("error");
 
-        mv.addObject("errorTitle", "Данная страница не оступна!");
-        mv.addObject("errorDescription", "Данная страница не оступна!");
+        mv.addObject("errorTitle", "Данная страница не доступна!");
+        mv.addObject("errorDescription", "Данная страница не доступна!");
         mv.addObject("title", "Access denied");
 
         return  mv;

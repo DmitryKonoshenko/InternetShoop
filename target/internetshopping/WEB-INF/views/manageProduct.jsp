@@ -141,12 +141,12 @@
                             <tr>
                                 <th>Id</th>
                                 <th>&#160</th>
-                                <th>Name</th>
-                                <th>Brand</th>
-                                <th>Quantity</th>
-                                <th>Unit Price</th>
-                                <th>Active</th>
-                                <th>Edit</th>
+                                <th>Название</th>
+                                <th>Производитель</th>
+                                <th>Количество</th>
+                                <th><h10>&#8381;/</h10>Цена</th>
+                                <th>Активность</th>
+                                <th>Редактировать</th>
                             </tr>
                             </thead>
                             <%-- см myapp.js  adminProductsTable--%>
@@ -154,12 +154,12 @@
                             <tr>
                                 <th>Id</th>
                                 <th>&#160</th>
-                                <th>Name</th>
-                                <th>Brand</th>
-                                <th>Quantity</th>
-                                <th>Unit Price</th>
-                                <th>Active</th>
-                                <th>Edit</th>
+                                <th>Название</th>
+                                <th>Производитель</th>
+                                <th>Количество</th>
+                                <th>&#8381; Цена</th>
+                                <th>Активность</th>
+                                <th>Редактировать</th>
                             </tr>
                             </tfoot>
                         </table>

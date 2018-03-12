@@ -23,7 +23,7 @@ public interface UserDao {
     boolean updateAddress(Address address);
 
     Address getBillingAddress(int userId);
-    List<Address> listShippingAddressess(int userId);
+    List listShippingAddressess(int userId);
     List<Address> listAddressess(int userId);
     List<OrderDetail> listOrders(int userId);
     List<OrderDetail> listAllOrders();

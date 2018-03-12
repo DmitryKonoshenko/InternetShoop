@@ -167,13 +167,25 @@ public class CartService {
             }
         } else {
             List<CartLine> list = this.getCartLines();
-            CartLine cartLine = list.get(cartLineId);
+            CartLine cartLine = null;
+            for (CartLine line: list) {
+                if(line.getId() == cartLineId){
+                    cartLine=line;
+                    break;
+                }
+            }
             if (cartLine == null) {
                 return "result=error";
             } else {
                 cart.setGrandTotal(cart.getGrandTotal() - cartLine.getTotal());
                 cart.setCartLines(cart.getCartLines() - 1);
-                list.remove(cartLineId);
+                int i = 0;
+                for (; i <list.size() ; i++) {
+                    if(list.get(i).getId()==cartLineId){
+                        break;
+                    }
+                }
+                list.remove(i);
                 session.setAttribute("AnonymousCartLines", list);
                 return "result=deleted";
             }
@@ -230,8 +242,11 @@ public class CartService {
                 List<CartLine> cartLines = this.getCartLines();
                 if (cartLines != null) {
                     //TODO может все рухнет из-за этого
-                    CartLine last = cartLines.get(cartLines.size() - 1);
+                    CartLine last = null;
+                    if(cartLines.size()>0){
+                        last = cartLines.get(cartLines.size() - 1);
                     cartLine.setId(last.getId() + 1);
+                    }
                     cartLines.add(cartLine);
                 } else {
                     cartLines = new ArrayList<>();

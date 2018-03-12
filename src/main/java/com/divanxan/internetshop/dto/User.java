@@ -4,6 +4,16 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
+@NamedQueries({
+        @NamedQuery(
+                name = "userGetByEmail",
+                query = "FROM User WHERE email=:email"
+        ),
+        @NamedQuery(
+                name = "userGetById",
+                query = "FROM User WHERE id=:id"
+        )
+})
 @Entity
 @Table(name = "user_detail")
 public class User implements Serializable{
