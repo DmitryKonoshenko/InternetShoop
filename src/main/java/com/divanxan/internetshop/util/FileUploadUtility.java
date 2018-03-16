@@ -18,7 +18,7 @@ import java.io.IOException;
  */
 public class FileUploadUtility {
 
-    private static final String ABS_PATH = "C:\\Repozitori\\GitHub\\InternetShop\\InternetShop\\src\\main\\webapp\\assets\\images\\";
+    private static final String ABS_PATH = "C:\\Repozitori\\GitHub\\InternetShop\\src\\main\\webapp\\assets\\images\\";
     private static String REAL_PATH = "";
 
     private static final Logger logger = LoggerFactory.getLogger(FileUploadUtility.class);

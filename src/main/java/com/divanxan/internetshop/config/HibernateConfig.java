@@ -21,7 +21,7 @@ import java.util.Properties;
 
 @Configuration
 @PropertySource("classpath:db.properties")
-@ComponentScan(basePackages = {"com.divanxan.internetshop.dto"})
+@ComponentScan(basePackages = {"com.divanxan.internetshop"})
 @EnableTransactionManagement
 public class HibernateConfig {
 
@@ -49,7 +49,7 @@ public class HibernateConfig {
         LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 
         builder.addProperties(getHibernateProperties());
-        builder.scanPackages("com.divanxan.internetshop.dto");
+        builder.scanPackages("com.divanxan.internetshop");
 
         SessionFactory sessionFactory =  builder.buildSessionFactory();
 

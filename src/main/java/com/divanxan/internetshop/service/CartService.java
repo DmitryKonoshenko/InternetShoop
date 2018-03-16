@@ -24,18 +24,14 @@ import java.util.List;
 @Service("cartService")
 public class CartService {
 
-    private final CartLineDao cartLineDao;
-
-    private final HttpSession session;
-
-    private final ProductDao productDao;
-
     @Autowired
-    public CartService(CartLineDao cartLineDao, HttpSession session, ProductDao productDao) {
-        this.cartLineDao = cartLineDao;
-        this.session = session;
-        this.productDao = productDao;
-    }
+    private CartLineDao cartLineDao;
+    @Autowired
+    private  HttpSession session;
+    @Autowired
+    private  ProductDao productDao;
+
+
 
     /**
      * Данный метод служит для получения или создания корзины пользователя.
