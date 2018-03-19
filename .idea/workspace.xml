@@ -9,12 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/page.jsp" description="&lt;c:set var=&quot;contextRoot&quot; value=&quot;${pageContext.requ..." line="12" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d920735-65df-4dfd-9a8b-65d5b664f90b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/JsonDataController.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/JsonDataController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/ProductDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/ProductDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/ProductDaoImpl.java" />
-    </list>
+    <list default="true" id="6d920735-65df-4dfd-9a8b-65d5b664f90b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,17 +66,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3978">
-              <caret line="234" column="55" lean-forward="true" selection-start-line="234" selection-start-column="55" selection-end-line="234" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonDataController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JsonDataController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/JsonDataController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="282">
@@ -91,6 +76,16 @@
                 <element signature="e#1300#1301#0" expanded="true" />
                 <element signature="e#1350#1351#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -294,10 +289,10 @@
         <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/dto/CartLineTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/service/CartService.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/divanxan/internetshop/service/CartServiceTest.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/dao/ProductDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/daoimpl/ProductDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/JsonDataController.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -341,7 +336,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
@@ -914,7 +909,7 @@
       <workItem from="1521188851144" duration="213000" />
       <workItem from="1521190275956" duration="157000" />
       <workItem from="1521208376495" duration="2360000" />
-      <workItem from="1521450778154" duration="1021000" />
+      <workItem from="1521450778154" duration="1639000" />
     </task>
     <task id="LOCAL-00001" summary="Подключил бутстрап, но почему-то теги html не работают.">
       <created>1518679945858</created>
@@ -966,7 +961,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="510991000" />
+    <option name="totallyTimeSpent" value="511609000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -977,7 +972,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="7" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1489,14 +1484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/divanxan/internetshop/controller/PageController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -1611,6 +1598,14 @@
             <element signature="e#1300#1301#0" expanded="true" />
             <element signature="e#1350#1351#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
