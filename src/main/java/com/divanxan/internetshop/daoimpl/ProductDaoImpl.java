@@ -147,4 +147,20 @@ public class ProductDaoImpl implements ProductDao {
 //                .setMaxResults(count)
 //                .getResultList();
     }
+
+    @Override
+    public List<Product> getTopProducts() {
+        Query query = sessionFactory.getCurrentSession()
+                .getNamedQuery("getTopProducts")
+                .setMaxResults(10);
+        return query.getResultList();
+
+//        String selectQuery = "FROM Product ORDER BY purchases desc ";
+//
+//        List<Product> list = sessionFactory.getCurrentSession()
+//                .createQuery(selectQuery, Product.class)
+//                .setMaxResults(10)
+//                .getResultList();
+//        return list;
+    }
 }

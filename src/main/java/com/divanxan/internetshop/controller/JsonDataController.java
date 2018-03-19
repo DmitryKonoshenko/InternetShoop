@@ -45,4 +45,10 @@ public class JsonDataController {
         return productDao.listActiveProductsByCategory(id);
     }
 
+    @RequestMapping("/top")
+    @ResponseBody
+    public List<Product> getProductsTop(){
+        return productDao.getTopProducts();
+    }
+
 }
