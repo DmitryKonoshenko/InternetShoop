@@ -1,0 +1,8 @@
+$ docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin rabbitmq:3-management
+доступен по: http://192.168.99.100:8080
+
+
+
+$ docker run --name mysqlDb -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=mysql -p 3306:3306 -d mysql --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+доступен в workbench на 192.168.99.100:3306
