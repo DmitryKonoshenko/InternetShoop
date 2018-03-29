@@ -51,13 +51,12 @@ public class OrderService {
         this.changeInTop = changeInTop;
     }
 
-    public User getUser(){
+    public User getUser() {
         String email = ((UserModel) session.getAttribute("userModel")).getEmail();
         return userDao.getByEmail(email);
     }
 
-    private List<CartLine> getListAvailableCartLines(int cartId)
-    {
+    private List<CartLine> getListAvailableCartLines(int cartId) {
         return cartLineDao.listAvailable(cartId);
     }
 
@@ -90,7 +89,7 @@ public class OrderService {
             // найдем все адреса пользователя
             addresses = userDao.listShippingAddressess(checkoutModel.getUser().getId());
 
-            if(addresses.size() == 0) {
+            if (addresses.size() == 0) {
                 addresses = new ArrayList<>();
             }
 
@@ -122,7 +121,7 @@ public class OrderService {
 
         //session.setAttribute("checkoutModel", checkoutModel);
 
-        if(shipping!=null){
+        if (shipping != null) {
             shipping.setUserId(checkoutModel.getUser().getId());
             shipping.setShipping(true);
             userDao.addAddress(shipping);
@@ -136,15 +135,15 @@ public class OrderService {
 
     public String saveOrder(Map<String, String> map) {
 
-        String isPayByCArt= map.get("isPayByCArt");
-        String cardNumber= map.get("cardNumber");
-        String expityMonth= map.get("expityMonth");
-        String expityYear= map.get("expityYear");
-        String cvCode= map.get("cvCode");
+        String isPayByCArt = map.get("isPayByCArt");
+        String cardNumber = map.get("cardNumber");
+        String expityMonth = map.get("expityMonth");
+        String expityYear = map.get("expityYear");
+        String cvCode = map.get("cvCode");
 
         //сделаем гард кондишн для оплаты
-        if(isPayByCArt.equals("cart") &&(cardNumber.equals("")||expityMonth.equals("")
-                ||expityYear.equals("")||cvCode.equals(""))){
+        if (isPayByCArt.equals("cart") && (cardNumber.equals("") || expityMonth.equals("")
+                || expityYear.equals("") || cvCode.equals(""))) {
             return "redirect:/order/payment?operation=noCart";
         }
 
@@ -160,12 +159,11 @@ public class OrderService {
         orderDetail.setShipping(checkoutModel.getShipping());
 
 
-
         String delivery = map.get("delivery");
-        if(isPayByCArt.equals("cart")) {
+        if (isPayByCArt.equals("cart")) {
             orderDetail.setPay(true);
         }
-        if(delivery.equals("byMail")){
+        if (delivery.equals("byMail")) {
             orderDetail.setDelivery(true);
         }
 
@@ -180,7 +178,7 @@ public class OrderService {
         int orderCount = 0;
         Product product = null;
 
-        for(CartLine cartLine : cartLines) {
+        for (CartLine cartLine : cartLines) {
 
             orderItem = new OrderItem();
 
@@ -192,7 +190,7 @@ public class OrderService {
             orderItem.setOrderDetail(orderDetail);
             orderDetail.getOrderItems().add(orderItem);
 
-            orderTotal =  orderTotal.add(orderItem.getTotal());
+            orderTotal = orderTotal.add(orderItem.getTotal());
             orderCount++;
 
             // обновим информацию о продукте
@@ -232,18 +230,18 @@ public class OrderService {
         return "redirect:/order/ordered";
     }
 
-    public void ListCompare(){
+    public void ListCompare() {
         List<Product> products1 = productDao.getTopProducts();
-        List<Product> products2= changeInTop.getProductList();
+        List<Product> products2 = changeInTop.getProductList();
 
         boolean equalsList = true;
-        for (int i = 0; i <products1.size() ; i++) {
-            if(!products1.get(i).equals(products2.get(i))){
+        for (int i = 0; i < products1.size(); i++) {
+            if (!products1.get(i).equals(products2.get(i))) {
                 equalsList = false;
                 break;
             }
         }
-        if(!equalsList){
+        if (!equalsList) {
             changeInTop.setProductList(products1);
             try {
                 ConnectionFactory factory = new ConnectionFactory();

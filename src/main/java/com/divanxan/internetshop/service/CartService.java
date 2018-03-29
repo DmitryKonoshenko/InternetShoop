@@ -295,7 +295,7 @@ public class CartService {
             }
 
             // check if the buying price of product has been changed
-            if (cartLine.getBuyingPrice() != product.getUnitPrice()) {
+            if (!cartLine.getBuyingPrice().equals(product.getUnitPrice())) {
                 // set the buying price to the new price
                 cartLine.setBuyingPrice(product.getUnitPrice());
                 // calculate and set the new total
