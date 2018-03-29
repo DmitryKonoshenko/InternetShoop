@@ -2,6 +2,7 @@ package com.divanxan.internetshop.dto;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 @NamedQueries({
         @NamedQuery(
@@ -36,10 +37,10 @@ public class CartLine implements Serializable {
     private int productCount;
 
     @Column(name = "total")
-    private double total;
+    private BigDecimal total;
 
     @Column(name = "buying_price")
-    private double buyingPrice;
+    private BigDecimal buyingPrice;
 
     @Column(name = "is_available")
     private boolean available =true;
@@ -76,19 +77,19 @@ public class CartLine implements Serializable {
         this.productCount = productCount;
     }
 
-    public double getTotal() {
+    public BigDecimal getTotal() {
         return total;
     }
 
-    public void setTotal(double total) {
+    public void setTotal(BigDecimal total) {
         this.total = total;
     }
 
-    public double getBuyingPrice() {
+    public BigDecimal getBuyingPrice() {
         return buyingPrice;
     }
 
-    public void setBuyingPrice(double buyingPrice) {
+    public void setBuyingPrice(BigDecimal buyingPrice) {
         this.buyingPrice = buyingPrice;
     }
 

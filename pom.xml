@@ -213,12 +213,12 @@
         </dependency>
 
         <!-- Чиним тесты -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>4.3.14.RELEASE</version>
-            <scope>test</scope>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-test</artifactId>-->
+            <!--<version>${spring.version}</version>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-test -->
         <dependency>
@@ -228,6 +228,11 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.1.2</version>
+        </dependency>
 
     </dependencies>
 

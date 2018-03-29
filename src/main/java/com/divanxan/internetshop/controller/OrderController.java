@@ -2,6 +2,7 @@ package com.divanxan.internetshop.controller;
 
 import com.divanxan.internetshop.dto.Address;
 import com.divanxan.internetshop.dto.OrderDetail;
+import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.model.CheckoutModel;
 import com.divanxan.internetshop.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -18,6 +20,7 @@ import java.util.Map;
 public class OrderController {
 
     private final OrderService orderService;
+
 
     @Autowired
     public OrderController(OrderService orderService) {
@@ -87,6 +90,9 @@ public class OrderController {
         CheckoutModel checkoutModel = orderService.getCheckoutModel();
         OrderDetail orderDetail = checkoutModel.getOrderDetail();
         mv.addObject("orderDetail", orderDetail);
+
+        orderService.ListCompare();
+
         return mv;
     }
 }

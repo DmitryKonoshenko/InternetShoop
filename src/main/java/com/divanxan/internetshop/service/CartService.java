@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,13 +25,16 @@ import java.util.List;
 @Service("cartService")
 public class CartService {
 
-    @Autowired
-    private CartLineDao cartLineDao;
-    @Autowired
-    private  HttpSession session;
-    @Autowired
-    private  ProductDao productDao;
+    private final CartLineDao cartLineDao;
+    private final HttpSession session;
+    private final ProductDao productDao;
 
+    @Autowired
+    public CartService(CartLineDao cartLineDao, HttpSession session, ProductDao productDao) {
+        this.cartLineDao = cartLineDao;
+        this.session = session;
+        this.productDao = productDao;
+    }
 
 
     /**
@@ -42,10 +46,12 @@ public class CartService {
     private Cart getCart() {
         Cart cart;
         try {
-            cart = ((UserModel) session.getAttribute("userModel")).getCart();
+            UserModel userModel = ((UserModel) session.getAttribute("userModel"));
+            cart = userModel.getCart();
         } catch (Exception e) {
             UserModel userModel = (UserModel) session.getAttribute("userModel");
             cart = new Cart();
+            cart.setGrandTotal(new BigDecimal(0));
             userModel.setCart(cart);
             session.setAttribute("userModel", userModel);
         }
@@ -110,7 +116,7 @@ public class CartService {
         } else {
             Product product = cartLine.getProduct();
 
-            double oldTotal = cartLine.getTotal();
+            BigDecimal oldTotal = cartLine.getTotal();
 
             // если покупатель хочет взять больше товара, чем у нас есть в наличии
             if (product.getQuantity() <= count) {
@@ -118,7 +124,7 @@ public class CartService {
             }
             cartLine.setProductCount(count);
             cartLine.setBuyingPrice(product.getUnitPrice());
-            cartLine.setTotal(product.getUnitPrice() * count);
+            cartLine.setTotal(product.getUnitPrice().multiply(new BigDecimal(count)));
             // если пользователь зарегестирован
             if (cart.getUser() != null) {
                 //обновляем сроку в корзине
@@ -126,7 +132,7 @@ public class CartService {
             }
 
             // обновляем общую стоимость покупки
-            cart.setGrandTotal(cart.getGrandTotal() - oldTotal + cartLine.getTotal());
+            cart.setGrandTotal(cart.getGrandTotal().subtract(oldTotal).add(cartLine.getTotal()));
             // обновляем корзину в бд если пользователь зарегестирован
             if (cart.getUser() != null) {
                 cartLineDao.updateCart(cart);
@@ -153,7 +159,7 @@ public class CartService {
                 return "result=error";
             } else {
                 // удалим стоимость данной позиции
-                cart.setGrandTotal(cart.getGrandTotal() - cartLine.getTotal());
+                cart.setGrandTotal(cart.getGrandTotal().subtract(cartLine.getTotal()));
                 cart.setCartLines(cart.getCartLines() - 1);
                 cartLineDao.updateCart(cart);
                 // удалим позицию
@@ -173,7 +179,7 @@ public class CartService {
             if (cartLine == null) {
                 return "result=error";
             } else {
-                cart.setGrandTotal(cart.getGrandTotal() - cartLine.getTotal());
+                cart.setGrandTotal(cart.getGrandTotal().subtract(cartLine.getTotal()));
                 cart.setCartLines(cart.getCartLines() - 1);
                 int i = 0;
                 for (; i <list.size() ; i++) {
@@ -251,7 +257,7 @@ public class CartService {
                 }
             }
             cart.setCartLines(cart.getCartLines() + 1);
-            cart.setGrandTotal(cart.getGrandTotal() + cartLine.getTotal());
+            cart.setGrandTotal(cart.getGrandTotal().add(cartLine.getTotal()));
             //если пользователь - зарегестрирован внесем изменения в БД
             if (cart.getUser() != null) {
                 cartLineDao.updateCart(cart);
@@ -264,10 +270,10 @@ public class CartService {
 
     public String validateCartLine() {
         Cart cart = this.getCart();
-        String email = ((UserModel) session.getAttribute("userModel")).getEmail();
+
         //TODO
         List<CartLine> cartLines = this.getCartLines();
-        double grandTotal = 0.0;
+        BigDecimal grandTotal = new BigDecimal(0.0);
         int lineCount = 0;
         String response = "result=success";
         boolean changed;
@@ -293,14 +299,14 @@ public class CartService {
                 // set the buying price to the new price
                 cartLine.setBuyingPrice(product.getUnitPrice());
                 // calculate and set the new total
-                cartLine.setTotal(cartLine.getProductCount() * product.getUnitPrice());
+                cartLine.setTotal(product.getUnitPrice().multiply(new BigDecimal(cartLine.getProductCount())));
                 changed = true;
             }
 
             // check if that much quantity of product is available or not
             if (cartLine.getProductCount() > product.getQuantity()) {
                 cartLine.setProductCount(product.getQuantity());
-                cartLine.setTotal(cartLine.getProductCount() * product.getUnitPrice());
+                cartLine.setTotal(product.getUnitPrice().multiply(new BigDecimal(cartLine.getProductCount())));
                 changed = true;
 
             }
@@ -313,11 +319,11 @@ public class CartService {
                 response = "result=modified";
             }
 
-            grandTotal += cartLine.getTotal();
+            grandTotal = grandTotal.add(cartLine.getTotal());
             lineCount++;
         }
 
-        cart.setCartLines(lineCount++);
+        cart.setCartLines(lineCount);
         cart.setGrandTotal(grandTotal);
         cartLineDao.updateCart(cart);
 
@@ -351,7 +357,7 @@ public class CartService {
                     cartLine.setId(0);
                     cartLine.setCartId(cart1.getId());
                     cart1.setCartLines(cart1.getCartLines()+1);
-                    cart1.setGrandTotal(cart1.getGrandTotal()+ cartLine.getTotal());
+                    cart1.setGrandTotal(cart1.getGrandTotal().add(cartLine.getTotal()));
                     cartLineDao.add(cartLine);
                     isChanged = true;
                 }
@@ -363,7 +369,7 @@ public class CartService {
                 cartLine.setId(0);
                 cartLine.setCartId(cart1.getId());
                 cart1.setCartLines(cart1.getCartLines()+1);
-                cart1.setGrandTotal(cart1.getGrandTotal()+ cartLine.getTotal());
+                cart1.setGrandTotal(cart1.getGrandTotal().add(cartLine.getTotal()));
                 cartLineDao.add(cartLine);
             }
             isChanged = true;
@@ -380,8 +386,8 @@ public class CartService {
                 cartLine.setProductCount(cartLine.getProduct().getQuantity());
                 int countAfter  = cartLine.getProductCount();
                 int rezult = countBefore - countAfter;
-                cartLine.setTotal(cartLine.getProduct().getUnitPrice()*cartLine.getProductCount());
-                cart.setGrandTotal(cart.getGrandTotal()-rezult*cartLine.getProduct().getUnitPrice());
+                cartLine.setTotal(cartLine.getProduct().getUnitPrice().multiply(new BigDecimal(cartLine.getProductCount())));
+                cart.setGrandTotal(cart.getGrandTotal().subtract(cartLine.getProduct().getUnitPrice().multiply(new BigDecimal(rezult))));
                 cartLineDao.update(cartLine);
                 return "false";
             }

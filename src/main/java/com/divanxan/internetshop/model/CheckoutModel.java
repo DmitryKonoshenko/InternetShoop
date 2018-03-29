@@ -3,6 +3,7 @@ package com.divanxan.internetshop.model;
 import com.divanxan.internetshop.dto.*;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 public class CheckoutModel implements Serializable {
@@ -17,7 +18,7 @@ public class CheckoutModel implements Serializable {
 	private Cart cart;
 	private List<CartLine> cartLines;
 	private OrderDetail orderDetail;
-	private double checkoutTotal;
+	private BigDecimal checkoutTotal;
 
 
 	public OrderDetail getOrderDetail() {
@@ -36,11 +37,11 @@ public class CheckoutModel implements Serializable {
 		this.cart = cart;
 	}
 
-	public double getCheckoutTotal() {
+	public BigDecimal getCheckoutTotal() {
 		return checkoutTotal;
 	}
 
-	public void setCheckoutTotal(double checkoutTotal) {
+	public void setCheckoutTotal(BigDecimal checkoutTotal) {
 		this.checkoutTotal = checkoutTotal;
 	}
 

@@ -152,13 +152,15 @@ public class ProductDaoImpl implements ProductDao {
     public List<Product> getTopProducts() {
         Query query = sessionFactory.getCurrentSession()
                 .getNamedQuery("getTopProducts")
+                .setParameter("active",true)
                 .setMaxResults(10);
         return query.getResultList();
 
-//        String selectQuery = "FROM Product ORDER BY purchases desc ";
+//        String selectQuery = "FROM Product WHERE active=:active ORDER BY purchases desc";
 //
 //        List<Product> list = sessionFactory.getCurrentSession()
 //                .createQuery(selectQuery, Product.class)
+//                .setParameter("active",true)
 //                .setMaxResults(10)
 //                .getResultList();
 //        return list;

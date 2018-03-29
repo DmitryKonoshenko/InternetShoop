@@ -63,11 +63,15 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User getByEmail(String email) {
         if (email.equals("anonymousUser")) return null;
+        try {
         Query query = sessionFactory.getCurrentSession()
                 .getNamedQuery("userGetByEmail")
                 .setParameter("email", email);
 
         return (User) query.getSingleResult();
+        } catch (Exception e) {
+            return null;
+        }
 
 
 //        String selectQuery = "FROM User WHERE email =:email";
@@ -263,6 +267,7 @@ public class UserDaoImpl implements UserDao {
     public List<Product> getTopProducts() {
         Query query = sessionFactory.getCurrentSession()
                 .getNamedQuery("getTopProducts")
+                .setParameter("active",true)
                 .setMaxResults(10);
         return query.getResultList();
 

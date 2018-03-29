@@ -2,10 +2,12 @@ package com.divanxan.internetshop.dto;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 //сделаем корзину сессионной и инжектним ее в RegisterHandler
 
-@Entity(name = "cart")
+@Entity
+@Table(name = "cart")
 public class Cart implements Serializable {
 
     private static final long serialVersionUID = 666666666L;
@@ -29,7 +31,7 @@ public class Cart implements Serializable {
     //-----
 
     @Column(name = "grand_total")
-    private double grandTotal;
+    private BigDecimal grandTotal;
 
     @Column(name = "cart_lines")
     private int cartLines;
@@ -42,11 +44,11 @@ public class Cart implements Serializable {
         this.id = id;
     }
 
-    public double getGrandTotal() {
+    public BigDecimal getGrandTotal() {
         return grandTotal;
     }
 
-    public void setGrandTotal(double grandTotal) {
+    public void setGrandTotal(BigDecimal grandTotal) {
         this.grandTotal = grandTotal;
     }
 
@@ -62,8 +64,8 @@ public class Cart implements Serializable {
     public String toString() {
         return "Cart{" +
                 "id=" + id +
-                ", userId=" + user.toString() +
-                ", grandTotal='" + grandTotal + '\'' +
+                ", user=" + ((user==null)?"null":user) +
+                ", grandTotal=" + grandTotal +
                 ", cartLines=" + cartLines +
                 '}';
     }

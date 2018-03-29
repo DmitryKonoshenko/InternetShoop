@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
   <artifact type="war" name="InternetShop:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="internetshopping.war">
+    <output-path>$PROJECT_DIR$/docker-dir</output-path>
+    <root id="archive" name="InternetShop_war.war">
       <element id="artifact" artifact-name="InternetShop:war exploded" />
     </root>
   </artifact>

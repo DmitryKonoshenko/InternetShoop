@@ -2,6 +2,7 @@ package com.divanxan.internetshop.dto;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -35,7 +36,7 @@ public class OrderDetail implements Serializable {
     @JoinColumn(name = "user_id")
     private User user;
     @Column(name = "order_total")
-    private double orderTotal;
+    private BigDecimal orderTotal;
     @ManyToOne
     private Address shipping;
     @ManyToOne
@@ -127,11 +128,11 @@ public class OrderDetail implements Serializable {
         this.id = id;
     }
 
-    public double getOrderTotal() {
+    public BigDecimal getOrderTotal() {
         return orderTotal;
     }
 
-    public void setOrderTotal(double orderTotal) {
+    public void setOrderTotal(BigDecimal orderTotal) {
         this.orderTotal = orderTotal;
     }
 

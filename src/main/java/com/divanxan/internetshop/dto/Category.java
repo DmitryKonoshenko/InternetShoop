@@ -18,6 +18,7 @@ import java.io.Serializable;
                 query = "FROM Category WHERE active = :active"
         )})
 @Entity
+@Table(name = "category")
 public class Category implements Serializable {
 
     @Id

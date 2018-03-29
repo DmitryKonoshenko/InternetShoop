@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -269,11 +270,11 @@ public class ManagementController {
 
         List<Product> pList = managerService.getTopProducts();
 
-        Map<Double, User> userList = managerService.getTopUsers();
+        Map<BigDecimal, User> userList = managerService.getTopUsers();
 
-        double cashByMonth = managerService.getCashByMonth();
+        BigDecimal cashByMonth = managerService.getCashByMonth();
 
-        double cashByWeek = managerService.getCashByWeek();
+        BigDecimal cashByWeek = managerService.getCashByWeek();
 
         mv.addObject("cashByMonth", cashByMonth);
         mv.addObject("cashByWeek", cashByWeek);

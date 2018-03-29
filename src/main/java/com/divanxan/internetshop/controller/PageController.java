@@ -5,6 +5,9 @@ import com.divanxan.internetshop.dao.ProductDao;
 import com.divanxan.internetshop.dto.Category;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.exception.ProductNotFoundException;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +22,8 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 
 
 /**
@@ -62,6 +67,7 @@ public class PageController {
 
 
         mv.addObject("userClickHome", true);
+
         return mv;
     }
 

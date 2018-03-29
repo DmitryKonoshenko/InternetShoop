@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.servlet.http.HttpSession;
+import java.math.BigDecimal;
 
 
 //данный контроллер будет участвовать в каждом запросе. Существует для отображения информации о юзере. использует UserModel
@@ -37,16 +38,16 @@ public class GlobalController {
     @ModelAttribute("userModel")
     public UserModel getUserModel() {
         UserModel userModel = ((UserModel) session.getAttribute("userModel"));
-        boolean isUserModelExist =(userModel == null);
+        boolean isUserModelExist = (userModel == null);
 
-        if (userModel == null || userModel.getEmail()==null) {
+        if (userModel == null || userModel.getEmail() == null) {
             //добавим покупателя
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
             User user = userDao.getByEmail(authentication.getName());
             Cart sessionCart = null;
-                  if(userModel!=null) sessionCart = userModel.getCart();
-            if(user!=null){
+            if (userModel != null) sessionCart = userModel.getCart();
+            if (user != null) {
                 //создаем модель покупателя для отображения покупателя на странице
 
                 userModel = new UserModel();
@@ -58,14 +59,14 @@ public class GlobalController {
 
                 // тут мерджим сессионную корзину с той что в БД
                 Cart userCart = user.getCart();
-                if(sessionCart.getCartLines()>0){
-                   cartService.mergeCart(userCart);
+                if (sessionCart.getCartLines() > 0) {
+                    cartService.mergeCart(userCart);
                 }
 
 
                 userModel.setCart(userCart);
-          // TODO если что - посмотри тут. с корзиной надо разобраться
-                if(userModel.getRole().equals("USER")){
+                // TODO если что - посмотри тут. с корзиной надо разобраться
+                if (userModel.getRole().equals("USER")) {
                     //добавляем корзину только в случае если юзер - покупатель
                     userModel.setCart(user.getCart());
                 }
@@ -73,12 +74,14 @@ public class GlobalController {
                 //добавляем модель покупателя в сессию
                 session.setAttribute("userModel", userModel);
                 return userModel;
-            }
-            else if(isUserModelExist){
+            } else if (isUserModelExist) {
                 // если юзер аноним, то создаем корзину
                 userModel = new UserModel();
                 Cart cart = new Cart();
+                cart.setGrandTotal(new BigDecimal(0));
                 userModel.setCart(cart);
+                System.out.println(cart);
+                System.out.println(userModel);
                 //добавляем модель покупателя в сессию
                 session.setAttribute("userModel", userModel);
                 return userModel;

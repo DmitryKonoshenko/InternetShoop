@@ -8,6 +8,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @NamedQueries({
@@ -25,11 +26,12 @@ import java.util.UUID;
         ),
         @NamedQuery(
                 name = "getTopProducts",
-                query = "FROM Product ORDER BY purchases desc"
+                query = "FROM Product WHERE active=:active ORDER BY purchases desc"
         )
 })
 @Component
 @Entity
+@Table(name = "product")
 public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -47,13 +49,12 @@ public class Product implements Serializable {
     private String brand;
 
     @Column(name = "description")
-    @JsonIgnore
     @NotBlank(message = "Введите значение для описания товара!")
     private String description;
 
     @Column(name = "unit_price")
     @Min(value = 1, message = "Выбирите хотя бы 1 значение!")
-    private double unitPrice;
+    private BigDecimal unitPrice;
 
     @Column(name = "quantity")
     private int quantity;
@@ -80,6 +81,7 @@ public class Product implements Serializable {
 
 
     @Transient
+    @JsonIgnore
     private MultipartFile file;
 
     public MultipartFile getFile() {
@@ -137,11 +139,11 @@ public class Product implements Serializable {
         this.description = description;
     }
 
-    public double getUnitPrice() {
+    public BigDecimal getUnitPrice() {
         return unitPrice;
     }
 
-    public void setUnitPrice(double unitPrice) {
+    public void setUnitPrice(BigDecimal unitPrice) {
         this.unitPrice = unitPrice;
     }
 

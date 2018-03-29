@@ -5,8 +5,8 @@
 
         <div class="col-lg-3">
             <h1 class="my-4">Электроник</h1>
-            <%--<%@include file="./shared/sidebar.jsp"%>--%>
-            <jsp:include page="./shared/sidebar.jsp"/>
+            <%@include file="./shared/sidebar.jsp"%>
+            <%--<jsp:include page="./shared/sidebar.jsp"/>--%>
         </div>
 
         <!-- Display actual products-->

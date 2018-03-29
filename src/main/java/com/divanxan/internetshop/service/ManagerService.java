@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
+import java.math.BigDecimal;
 import java.util.*;
 
 @Service("managerService")
@@ -69,30 +70,30 @@ public class ManagerService {
         return userDao.getTopProducts();
     }
 
-    public Map<Double, User> getTopUsers() {
+    public Map<BigDecimal, User> getTopUsers() {
 
         List<OrderDetail> orders = userDao.listThisMonthOrders();
-        Map<Integer, Double> map = new HashMap<Integer, Double>();
+        Map<Integer, BigDecimal> map = new HashMap<Integer, BigDecimal>();
         for (OrderDetail order : orders) {
             int id = order.getUser().getId();
             if (!map.containsKey(id)) {
                 map.put(id, order.getOrderTotal());
             } else {
-                map.put(id, map.get(id) + order.getOrderTotal());
+                map.put(id, map.get(id).add(order.getOrderTotal()));
             }
         }
 
-        Map<Double, User> userListSort = new TreeMap<>(Collections.reverseOrder());
+        Map<BigDecimal, User> userListSort = new TreeMap<>(Collections.reverseOrder());
 
-        for (Map.Entry<Integer, Double> entry : map.entrySet()) {
+        for (Map.Entry<Integer, BigDecimal> entry : map.entrySet()) {
             Integer key = entry.getKey();
-            Double value = entry.getValue();
+            BigDecimal value = entry.getValue();
             userListSort.put(value, userDao.getById(key));
         }
 
-        Map<Double, User> userList = new TreeMap<>(Collections.reverseOrder());
+        Map<BigDecimal, User> userList = new TreeMap<>(Collections.reverseOrder());
         int i =0;
-        for(Map.Entry<Double, User> entry : userListSort.entrySet()) {
+        for(Map.Entry<BigDecimal, User> entry : userListSort.entrySet()) {
             userList.put(entry.getKey(), entry.getValue());
             ++i;
             if(i==10) break;
@@ -101,20 +102,20 @@ public class ManagerService {
         return userList;
     }
 
-    public double getCashByWeek() {
+    public BigDecimal getCashByWeek() {
         List<OrderDetail> orders = userDao.listThisWeekOrders();
-        double cash = 0;
+        BigDecimal cash = new BigDecimal(0);
         for (OrderDetail order : orders) {
-            cash += order.getOrderTotal();
+            cash = cash.add(order.getOrderTotal());
         }
         return cash;
     }
 
-    public double getCashByMonth() {
+    public BigDecimal getCashByMonth() {
         List<OrderDetail> orders = userDao.listThisMonthOrders();
-        double cash = 0;
+        BigDecimal cash = new BigDecimal(0);
         for (OrderDetail order : orders) {
-            cash += order.getOrderTotal();
+            cash = cash.add(order.getOrderTotal());
         }
         return cash;
     }

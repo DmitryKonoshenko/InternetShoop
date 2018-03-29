@@ -1,6 +1,7 @@
 package com.divanxan.internetshop.dto;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -42,12 +43,12 @@ public class OrderItem implements Serializable {
 	}
 
 	@Column (name = "buying_price")
-	private double buyingPrice;
+	private BigDecimal buyingPrice;
 	
 	@Column (name = "product_count")
 	private int productCount;
 	
-	private double total;
+	private BigDecimal total;
 
 	
 	public int getId() {
@@ -67,11 +68,11 @@ public class OrderItem implements Serializable {
 	}
 
 
-	public double getBuyingPrice() {
+	public BigDecimal getBuyingPrice() {
 		return buyingPrice;
 	}
 
-	public void setBuyingPrice(double buyingPrice) {
+	public void setBuyingPrice(BigDecimal buyingPrice) {
 		this.buyingPrice = buyingPrice;
 	}
 
@@ -83,11 +84,11 @@ public class OrderItem implements Serializable {
 		this.productCount = productCount;
 	}
 
-	public double getTotal() {
+	public BigDecimal getTotal() {
 		return total;
 	}
 
-	public void setTotal(double total) {
+	public void setTotal(BigDecimal total) {
 		this.total = total;
 	}
 		
