@@ -204,7 +204,12 @@ public class OrderService {
             cartLineDao.delete(cartLine);
         }
 
-        orderDetail.setOrderTotal(orderTotal);
+       if(checkoutModel.getCart().getPromoCode()!=null){
+            orderDetail.setDiscount(checkoutModel.getCart().getPromoCode().getDiscount());
+        }
+        else  orderDetail.setDiscount(0);
+        BigDecimal total = orderTotal.subtract(orderTotal.multiply(new BigDecimal(orderDetail.getDiscount()).divide(new BigDecimal(100))).setScale(2,BigDecimal.ROUND_HALF_EVEN));
+        orderDetail.setOrderTotal(total);
         orderDetail.setOrderCount(orderCount);
         orderDetail.setOrderDate(new Date());
 

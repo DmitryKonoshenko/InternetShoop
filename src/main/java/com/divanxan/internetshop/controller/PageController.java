@@ -5,9 +5,7 @@ import com.divanxan.internetshop.dao.ProductDao;
 import com.divanxan.internetshop.dto.Category;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.exception.ProductNotFoundException;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
+import com.divanxan.internetshop.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +20,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.concurrent.TimeoutException;
 
 
 /**
@@ -42,10 +38,13 @@ public class PageController {
 
     private final ProductDao productDao;
 
+    private final UserService userService;
+
     @Autowired
-    public PageController(CategoryDao categoryDao, ProductDao productDao) {
+    public PageController(CategoryDao categoryDao, ProductDao productDao, UserService userService) {
         this.categoryDao = categoryDao;
         this.productDao = productDao;
+        this.userService = userService;
     }
 
     /**
@@ -196,13 +195,18 @@ public class PageController {
                               @RequestParam(name = "logout", required = false) String logout) {
         ModelAndView mv = new ModelAndView("login");
 
+        int count = userService.getLoginCount();
         if (error != null) {
-            mv.addObject("message", "Неправильный логин и пароль");
+            if (count < 3) mv.addObject("message", "Неправильный логин и пароль");
+            else mv.addObject("message", "Слишком много попыток ввода");
+            count++;
+            userService.setLoginCount(count);
         }
         if (logout != null) {
             mv.addObject("logout", "Пользователь успешно вышел из магазина!");
         }
-
+        if(count>=3) mv.addObject("message", "Слишком много попыток ввода");
+        mv.addObject("count",count);
         mv.addObject("title", "login");
         return mv;
     }

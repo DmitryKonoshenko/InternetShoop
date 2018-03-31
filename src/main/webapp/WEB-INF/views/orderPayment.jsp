@@ -1,3 +1,5 @@
+<%--@elvariable id="altogether" type="java.math.BigDecimal"--%>
+<%--@elvariable id="checkoutModel" type="com.divanxan.internetshop.model.CheckoutModel"--%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html; UTF-8"
          pageEncoding="UTF-8" %>
@@ -35,10 +37,19 @@
                             </div>
                             <hr/>
                             <div class="text-right">
-                                <h3>Итого - &#8381; ${cartLine.total}/-</h3>
+                                <h5>Итого - &#8381; ${cartLine.total}/-</h5>
                             </div>
                         </div>
                     </c:forEach>
+                    <c:if test="${userModel.cart.promoCode != null}">
+                        <%--@elvariable id="userModel" type="com.divanxan.internetshop.model.UserModel"--%>
+                        <tr class="visible-xs">
+                            <td class="text-left"><strong>Скидка: &#8381; ${userModel.cart.promoCode.discount}%</strong>
+                            </td>
+                            <td class="text-left"><strong><h3>Всего: &#8381; ${altogether}</h3></strong>
+                            </td>
+                        </tr>
+                    </c:if>
                 </div>
             </div>
         </div>
@@ -97,8 +108,8 @@
                             </div>
                         </div>
                         <ul class="nav nav-pills nav-stacked">
-                            <li class="active"><a href="#"><span
-                                    class="badge pull-right"> &#8381; ${checkoutModel.checkoutTotal}/-</span>Общая цена</a>
+                            <h3 class="active"><span
+                                    class="badge pull-right"><h3>&#8381; ${altogether}/-</span>Общая цена</h3>
                             </li>
                         </ul>
 

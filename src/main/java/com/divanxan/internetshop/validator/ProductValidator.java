@@ -19,7 +19,10 @@ public class ProductValidator implements Validator {
 
 
     /**
-     * This method is required to validate the image selection when uploading to the site in edit mode.
+     * This method is required to validate the image selection when uploading to the site in edit mode
+     *
+     * @param target
+     * @param errors
      */
     @Override
     public void validate(Object target, Errors errors) {

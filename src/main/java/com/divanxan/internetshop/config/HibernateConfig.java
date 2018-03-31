@@ -19,6 +19,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import javax.sql.DataSource;
 import java.util.Properties;
 
+/**
+ * Hibernate configuration class
+ *
+ * @version 1.0
+ * @autor Dmitry Konoshenko
+ * @since version 1.0
+ */
 @Configuration
 @PropertySource("classpath:db.properties")
 @ComponentScan(basePackages = {"com.divanxan.internetshop"})
@@ -29,6 +36,12 @@ public class HibernateConfig {
     private Environment env;
 
     // имя бина используется в spring-security.xml
+
+    /**
+     * Configuration DataSource method
+     *
+     * @return DataSource with properties data source connection
+     */
     @Bean("dataSource")
     public DataSource getDataSource() {
         BasicDataSource dataSource = new BasicDataSource();
@@ -42,7 +55,12 @@ public class HibernateConfig {
         return dataSource;
     }
 
-
+    /**
+     * SessionFactory creation method
+     *
+     * @param  dataSource
+     * @return SessionFactory
+     */
     @Bean
     public SessionFactory getSessionFactory(DataSource dataSource) {
 
@@ -56,6 +74,11 @@ public class HibernateConfig {
         return sessionFactory;
     }
 
+    /**
+     * Method return Hibernate properties
+     *
+     * @return Properties properties
+     */
     //Все настройки хибернета будут возвращены в этом методе
     private Properties getHibernateProperties() {
 
@@ -70,7 +93,12 @@ public class HibernateConfig {
         return properties;
     }
 
-    //TransactionManager bean
+    /**
+     * TransactionManager bean
+     *
+     * @param sessionFactory
+     * @return HibernateTransactionManager
+     */
     @Bean
     public HibernateTransactionManager getTransactionManager(SessionFactory sessionFactory) {
         HibernateTransactionManager transactionManager = new HibernateTransactionManager(sessionFactory);

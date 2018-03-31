@@ -4,6 +4,7 @@ import com.divanxan.internetshop.dto.Address;
 import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.model.CheckoutModel;
+import com.divanxan.internetshop.service.CartService;
 import com.divanxan.internetshop.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,10 +22,12 @@ public class OrderController {
 
     private final OrderService orderService;
 
+    private final CartService cartService;
 
     @Autowired
-    public OrderController(OrderService orderService) {
+    public OrderController(OrderService orderService, CartService cartService) {
         this.orderService = orderService;
+        this.cartService = cartService;
     }
 
     @RequestMapping("/show")
@@ -73,7 +76,7 @@ public class OrderController {
                 mv.addObject("message", "Введите данные карты!");
             }
         }
-
+        mv.addObject("altogether", cartService.getAltogether());
         return mv;
     }
 

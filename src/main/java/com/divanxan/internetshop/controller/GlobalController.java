@@ -7,6 +7,8 @@ import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.model.UserModel;
 import com.divanxan.internetshop.service.CartService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -19,6 +21,13 @@ import java.math.BigDecimal;
 
 //данный контроллер будет участвовать в каждом запросе. Существует для отображения информации о юзере. использует UserModel
 
+/**
+ * Global controller for displaying user's personal data and information about the shopping cart
+ *
+ * @version 1.0
+ * @autor Dmitry Konoshenko
+ * @since version 1.0
+ */
 @ControllerAdvice
 public class GlobalController {
 
@@ -28,6 +37,15 @@ public class GlobalController {
 
     private final HttpSession session;
 
+    private static final Logger logger = LoggerFactory.getLogger(GlobalController.class);
+
+    /**
+     * Constructor initializing the service class CartService,  Dao class for take user information UserDao and class HttpSession
+     *
+     * @param userDao
+     * @param session
+     * @param cartService
+     */
     @Autowired
     public GlobalController(UserDao userDao, HttpSession session, CartService cartService) {
         this.userDao = userDao;
@@ -35,6 +53,11 @@ public class GlobalController {
         this.cartService = cartService;
     }
 
+    /**
+     * Method for getting user information
+     *
+     * @return UserModel - model class with all user information
+     */
     @ModelAttribute("userModel")
     public UserModel getUserModel() {
         UserModel userModel = ((UserModel) session.getAttribute("userModel"));
@@ -73,6 +96,7 @@ public class GlobalController {
 
                 //добавляем модель покупателя в сессию
                 session.setAttribute("userModel", userModel);
+                logger.info("UserModel create for registered user: "+ userModel.toString());
                 return userModel;
             } else if (isUserModelExist) {
                 // если юзер аноним, то создаем корзину
@@ -84,10 +108,11 @@ public class GlobalController {
                 System.out.println(userModel);
                 //добавляем модель покупателя в сессию
                 session.setAttribute("userModel", userModel);
+                logger.info("UserModel create for anonymous: "+ userModel.toString());
                 return userModel;
             }
         }
-
+        logger.info("UserModel take from session: "+ userModel.toString());
         return (UserModel) session.getAttribute("userModel");
     }
 

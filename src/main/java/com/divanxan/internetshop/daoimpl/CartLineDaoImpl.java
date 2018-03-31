@@ -4,6 +4,7 @@ import com.divanxan.internetshop.dao.CartLineDao;
 import com.divanxan.internetshop.dto.Cart;
 import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.OrderDetail;
+import com.divanxan.internetshop.dto.PromoCode;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -133,5 +134,12 @@ public class CartLineDaoImpl implements CartLineDao {
     @Override
     public void updateOrderDetail(OrderDetail orderDetail) {
             sessionFactory.getCurrentSession().update(orderDetail);
+    }
+
+    @Override
+    public List<PromoCode> listPromocodes() {
+        Query query = sessionFactory.getCurrentSession()
+                .getNamedQuery("getPromocode");
+        return query.getResultList();
     }
 }

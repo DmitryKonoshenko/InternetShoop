@@ -92,7 +92,7 @@ public class Product implements Serializable {
         this.file = file;
     }
 
-    //default cinstructor
+    //default constructor
     public Product() {
         this.code = "PRD" + UUID.randomUUID().toString().substring(26).toUpperCase();
     }

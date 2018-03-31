@@ -59,8 +59,17 @@ VALUES ('PRDRTY123FEN', '554.13', 'Valera',
         'Компактный фен Valera Swiss Bebe 554.13 создан специально для деликатного ухода за детскими волосами и телом.'
   , 1270, 0, TRUE, 3, 4);
 
-INSERT INTO cart (user_id, grand_total, cart_lines)
-VALUES (5, 0, 0);
+INSERT INTO cart (user_id, grand_total, cart_lines, discount_id)
+VALUES (5, 0, 0, 3);
 
 INSERT INTO address (user_id, address_line_one, address_line_two, city, state, country, postal_code, is_billing, is_shipping)
 VALUES (5, 'ул. Петра-водкна', 'д45, кв 33', 'Пушкин', 'Ленинградская-область', 'Россия', 188300, true, false);
+
+INSERT INTO promocode (code, discount)
+VALUES ('SMAL', 5);
+
+INSERT INTO promocode (code, discount)
+VALUES ('AVEREGE', 10);
+
+INSERT INTO promocode (code, discount)
+VALUES ('BIG', 15);

@@ -189,4 +189,14 @@ public class UserService {
 
         return "redirect:/user/show?operation=user";
     }
+
+    public int getLoginCount() {
+        UserModel userModel = ((UserModel) session.getAttribute("userModel"));
+        return userModel.getLoginCount();
+    }
+
+    public void setLoginCount(int count){
+        UserModel userModel = ((UserModel) session.getAttribute("userModel"));
+        userModel.setLoginCount(count);
+    }
 }

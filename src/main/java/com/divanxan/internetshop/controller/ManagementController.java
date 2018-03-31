@@ -22,6 +22,13 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Controller for administrator management
+ *
+ * @version 1.0
+ * @autor Dmitry Konoshenko
+ * @since version 1.0
+ */
 @Controller
 @RequestMapping("/manage")
 public class ManagementController {
@@ -30,11 +37,22 @@ public class ManagementController {
 
     private final ManagerService managerService;
 
+    /**
+     * Constructor initializing the service class
+     *
+     * @param managerService
+     */
     @Autowired
     public ManagementController(ManagerService managerService) {
         this.managerService = managerService;
     }
 
+    /**
+     * Controller for showing all products
+     *
+     * @param operation String with parameter of last operation
+     * @return ModelAndView
+     */
     @RequestMapping(value = "/product", method = RequestMethod.GET)
     public ModelAndView showManageProducts(@RequestParam(name = "operation", required = false) String operation) {
 
@@ -67,7 +85,12 @@ public class ManagementController {
         return mv;
     }
 
-
+    /**
+     * Controller for management product
+     *
+     * @param id of product
+     * @return ModelAndView
+     */
     @RequestMapping(value = "/{id}/product", method = RequestMethod.GET)
     public ModelAndView showEditProducts(@PathVariable int id) {
 
@@ -82,7 +105,15 @@ public class ManagementController {
         return mv;
     }
 
-
+    /**
+     * Constructor for showing management result
+     *
+     * @param mProduct - product validation
+     * @param result validation
+     * @param model
+     * @param request
+     * @return String with redirect information
+     */
     @RequestMapping(value = "/product", method = RequestMethod.POST)
     public String handleProductsSubmission(@Valid @ModelAttribute("product") Product mProduct, BindingResult result
             , Model model, HttpServletRequest request) {
@@ -94,7 +125,7 @@ public class ManagementController {
                 new ProductValidator().validate(mProduct, result);
             }
         }
-        new ProductValidator().validate(mProduct, result);
+//        new ProductValidator().validate(mProduct, result);
 
         // проверка на ошибки
         if (result.hasErrors()) {
@@ -124,7 +155,11 @@ public class ManagementController {
         return "redirect:/manage/product?operation=product";
     }
 
-
+    /**
+     * Controller for setting product in active or disabled mode
+     *
+     * @param id product
+     */
     @RequestMapping(value = "/product/{id}/activation", method = RequestMethod.POST)
     @ResponseBody
     public void handleProductActivation(@PathVariable int id) {
@@ -136,10 +171,19 @@ public class ManagementController {
         product.setActive(!product.isActive());
 
         managerService.updateProduct(product);
+        logger.info("Product id: "+ id+". In active mod: "+isActive);
 
       //  if(isActive == true) ? "Товар успешно деактивирован" : "Товар успешно активирован";
     }
 
+    /**
+     * Controller for adding category
+     *
+     * @param category
+     * @param result
+     * @param model
+     * @return String with redirect information
+     */
     @RequestMapping(value = "/category", method = RequestMethod.POST)
     public String handleCategorySubmission(@Valid @ModelAttribute Category category, BindingResult result
             , Model model) {
@@ -170,23 +214,40 @@ public class ManagementController {
         return "redirect:/manage/product/?operation=category";
     }
 
+    /**
+     * Controller for getting all category
+     *
+     * @return List<Category> - array with all category in shop
+     */
     @ModelAttribute("categories")
     public List<Category> getCategories() {
-
+        logger.info("Getting all category");
         return managerService.getListCategory();
 
     }
 
+    /**
+     * Controller for adding new category
+     *
+     * @return Category - new category
+     */
     @ModelAttribute("category")
     public Category getCategory() {
         //берем новую категорию из manageProducts.jsp -> <sf:form modelAttribute="category" action="${contextRoot}/manage/category" method="POST"
         //                             class="form-horizontal">
         // и отправляем кго в handleCategorySubmission
+        logger.info("Creating new category");
         return new Category();
 
 
     }
 
+    /**
+     * Controller for showing orders
+     *
+     * @param operation
+     * @return ModelAndView
+     */
     @RequestMapping("/orders")
     public ModelAndView showOrderDetail(@RequestParam(name = "operation", required = false) String operation) {
 
@@ -202,11 +263,16 @@ public class ManagementController {
                 mv.addObject("message", "Заказ изменен");
             }
         }
-
+        logger.info(mv.toString());
         return mv;
     }
 
-
+    /**
+     * Controller for show order detail
+     *
+     * @param id orderId
+     * @return ModelAndView
+     */
     @RequestMapping("/{id}/orderChange")
     public ModelAndView showEditOrder(@PathVariable int id) {
 
@@ -228,10 +294,16 @@ public class ManagementController {
             mv.addObject("orderDetail", orderDetail);
         }
 
-
+        logger.info(mv.toString());
         return mv;
     }
 
+    /**
+     * Controller for management order
+     *
+     * @param map with order detail information
+     * @return String with redirect information
+     */
     @RequestMapping(value = "/orders", method = RequestMethod.POST)
     public String showOrderDetail(@RequestParam Map<String, String> map) {
 
@@ -259,10 +331,15 @@ public class ManagementController {
         }
 
         managerService.updateOrderDetail(orderDetail);
-
+        logger.info("Order detail changed: "+orderDetail.toString());
         return "redirect:/manage/orders?operation=orderDetail";
     }
 
+    /**
+     * Controller for showing statistic
+     *
+     * @return ModelAndView
+     */
     @RequestMapping("/statistic")
     public ModelAndView showStatistic() {
         ModelAndView mv = new ModelAndView("page");
@@ -280,7 +357,7 @@ public class ManagementController {
         mv.addObject("cashByWeek", cashByWeek);
         mv.addObject("listProducts", pList);
         mv.addObject("listUsers", userList);
-
+        logger.info(mv.toString());
         return mv;
 
     }

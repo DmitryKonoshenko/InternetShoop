@@ -3,6 +3,7 @@ package com.divanxan.internetshop.dao;
 import com.divanxan.internetshop.dto.Cart;
 import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.OrderDetail;
+import com.divanxan.internetshop.dto.PromoCode;
 
 import java.util.List;
 
@@ -21,4 +22,6 @@ public interface CartLineDao {
 
     void addOrderDetail(OrderDetail orderDetail);
     void updateOrderDetail(OrderDetail orderDetail);
+
+    List<PromoCode> listPromocodes();
 }

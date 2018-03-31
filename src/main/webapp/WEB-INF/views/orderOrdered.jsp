@@ -93,6 +93,14 @@
                                 </table>
                             </div>
                         </div>
+                        <c:if test="${orderDetail.discount>0}" >
+                            <div class="panel-heading">
+                                <h6 class="panel-title"><strong>Скидка: ${orderDetail.discount}%</strong></h6>
+                            </div>
+                        </c:if>
+                        <div class="panel-heading">
+                            <h6 class="panel-title"><strong>Итого:&#8381; ${orderDetail.orderTotal}</strong></h6>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,8 @@
 package com.divanxan.internetshop.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -15,58 +18,41 @@ public class Cart implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
+    @Getter
+    @Setter
     private int id;
 
     //-----
     @OneToOne
+    @Getter
+    @Setter
     private User user;
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
     //-----
 
     @Column(name = "grand_total")
+    @Getter
+    @Setter
     private BigDecimal grandTotal;
 
     @Column(name = "cart_lines")
+    @Getter
+    @Setter
     private int cartLines;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public BigDecimal getGrandTotal() {
-        return grandTotal;
-    }
-
-    public void setGrandTotal(BigDecimal grandTotal) {
-        this.grandTotal = grandTotal;
-    }
-
-    public int getCartLines() {
-        return cartLines;
-    }
-
-    public void setCartLines(int cartLines) {
-        this.cartLines = cartLines;
-    }
+    @Getter
+    @Setter
+    @ManyToOne
+    @JoinColumn(name = "discount_id")
+    private PromoCode promoCode;
 
     @Override
     public String toString() {
         return "Cart{" +
                 "id=" + id +
-                ", user=" + ((user==null)?"null":user) +
+                ", user=" + user +
                 ", grandTotal=" + grandTotal +
                 ", cartLines=" + cartLines +
+                ", promoCode=" + promoCode +
                 '}';
     }
 }

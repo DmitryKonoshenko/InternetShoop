@@ -21,6 +21,8 @@ public class UserModel implements Serializable {
     private String email;
     private String role;
     private Cart cart;
+    private int loginCount;
+
 
     public int getId() {
         return id;
@@ -60,6 +62,14 @@ public class UserModel implements Serializable {
 
     public void setCart(Cart cart) {
         this.cart = cart;
+    }
+
+    public int getLoginCount() {
+        return loginCount;
+    }
+
+    public void setLoginCount(int loginCount) {
+        this.loginCount = loginCount;
     }
 
     @Override

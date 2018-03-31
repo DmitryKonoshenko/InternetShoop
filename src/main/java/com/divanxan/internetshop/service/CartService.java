@@ -5,6 +5,7 @@ import com.divanxan.internetshop.dao.ProductDao;
 import com.divanxan.internetshop.dto.Cart;
 import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.Product;
+import com.divanxan.internetshop.dto.PromoCode;
 import com.divanxan.internetshop.model.UserModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,7 +44,7 @@ public class CartService {
      * @return Cart
      */
     // возвращает корзину зарегестрированого покупателя
-    private Cart getCart() {
+    public Cart getCart() {
         Cart cart;
         try {
             UserModel userModel = ((UserModel) session.getAttribute("userModel"));
@@ -89,6 +90,12 @@ public class CartService {
         return cartLines;
     }
 
+    private BigDecimal getDiscount(Cart cart, BigDecimal total){
+        BigDecimal discount = null;
+        if(cart.getPromoCode()!=null) discount = total.multiply((new BigDecimal(cart.getPromoCode().getDiscount())).divide(new BigDecimal(100))).setScale(2, BigDecimal.ROUND_HALF_EVEN);
+        else discount = new BigDecimal(0);
+        return  discount;
+    }
 
     /**
      * Данный метод служит обновления колличества продукта одного вида в корзине.
@@ -132,7 +139,8 @@ public class CartService {
             }
 
             // обновляем общую стоимость покупки
-            cart.setGrandTotal(cart.getGrandTotal().subtract(oldTotal).add(cartLine.getTotal()));
+            BigDecimal total = cart.getGrandTotal().subtract(oldTotal).add(cartLine.getTotal());
+            cart.setGrandTotal(total);
             // обновляем корзину в бд если пользователь зарегестирован
             if (cart.getUser() != null) {
                 cartLineDao.updateCart(cart);
@@ -393,5 +401,36 @@ public class CartService {
             }
         }
         return "true";
+    }
+
+    private List<PromoCode> getPromocode() {
+        List<PromoCode> promoCodes = cartLineDao.listPromocodes();
+        return promoCodes;
+    }
+
+    public BigDecimal getAltogether() {
+        Cart cart = this.getCart();
+        BigDecimal total = cart.getGrandTotal();
+        BigDecimal discount = this.getDiscount(cart, total);
+        return total.subtract(discount);
+    }
+
+    public boolean setPromocode(String promocode) {
+        Cart cart = this.getCart();
+        List<PromoCode> promoCodes = this.getPromocode();
+        for (PromoCode promoCode : promoCodes){
+            if(promoCode.getCode().equals(promocode)){
+                cart.setPromoCode(promoCode);
+                cartLineDao.updateCart(cart);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void deletePromocode() {
+        Cart cart = this.getCart();
+        cart.setPromoCode(null);
+        cartLineDao.updateCart(cart);
     }
 }

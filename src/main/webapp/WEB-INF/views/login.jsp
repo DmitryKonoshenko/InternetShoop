@@ -74,11 +74,11 @@
         <c:if test="${not empty message}">
             <div class="row">
                 <div class="alert alert-danger">
-                    ${message}
+                        ${message}
                 </div>
             </div>
         </c:if>
-            <%-- Если вы вышли с аккаунта - будет выведено --%>
+        <%-- Если вы вышли с аккаунта - будет выведено --%>
         <c:if test="${not empty logout}">
             <div class="row">
                 <div class="alert alert-success">
@@ -102,25 +102,36 @@
                         <div class="form-group">
                             <label class="form-title1122" for="username">Email: </label>
                             <div class="col-md-8">
-                                <input type="text" name="username" id="username" class="form-control"/>
+                                <input type="text" name="username" id="username" class="form-control" required
+                                       autofocus/>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="form-title1122" for="password">Password: </label>
                             <div class="col-md-8">
-                                <input type="password" name="password" id="password" class="form-control"/>
+                                <input type="password" name="password" id="password" class="form-control" required
+                                       autofocus/>
                             </div>
                         </div>
 
-
-                        <div class="form-group">
-                            <div class="form-title1122">
-                                <input type="submit" value="Login" class="submit-button1122">
-                                <input type="hidden"  name="${_csrf.parameterName}"   value="${_csrf.token}"/>
+                        <c:if test="${count<3}">
+                            <div class="form-group">
+                                <div class="form-title1122">
+                                    <input type="submit" value="Login" class="submit-button1122">
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                                </div>
                             </div>
-                        </div>
-
+                        </c:if>
+                        <c:if test="${count>=3}">
+                            <div class="form-group">
+                                <div class="form-title1122">
+                                    <a href="javascript:void(0)" class="btn btn-danger disabled">
+                                        Login
+                                    </a>
+                                </div>
+                            </div>
+                        </c:if>
                     </form>
                 </div>
                 <div class="panel-footer">
