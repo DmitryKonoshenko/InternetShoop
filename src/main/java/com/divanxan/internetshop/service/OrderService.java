@@ -4,13 +4,17 @@ import com.divanxan.internetshop.dao.CartLineDao;
 import com.divanxan.internetshop.dao.ProductDao;
 import com.divanxan.internetshop.dao.UserDao;
 import com.divanxan.internetshop.dto.*;
+import com.divanxan.internetshop.exception.UserAccessException;
 import com.divanxan.internetshop.model.CheckoutModel;
 import com.divanxan.internetshop.model.UserModel;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.NoHandlerFoundException;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -23,7 +27,7 @@ import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 /**
- * Данный класс является сервисным для контроллера OrderController.
+ * This class is a service class for the OrderController
  *
  * @version 1.0
  * @autor Dmitry Konoshenko
@@ -31,6 +35,8 @@ import java.util.concurrent.TimeoutException;
  */
 @Service("orderService")
 public class OrderService {
+
+    private static final Logger logger = LoggerFactory.getLogger(OrderService.class);
 
     private final UserDao userDao;
 
@@ -51,6 +57,11 @@ public class OrderService {
         this.changeInTop = changeInTop;
     }
 
+    /**
+     * Getting user from session
+     *
+     * @return User - getting user
+     */
     public User getUser() {
         String email = ((UserModel) session.getAttribute("userModel")).getEmail();
         return userDao.getByEmail(email);
@@ -60,7 +71,12 @@ public class OrderService {
         return cartLineDao.listAvailable(cartId);
     }
 
-    public void prepareShowOrder() throws Exception {
+    /**
+     * Method for prepare data for showing orders
+     *
+     * @throws UserAccessException
+     */
+    public void prepareShowOrder() throws UserAccessException {
         CheckoutModel checkoutModel = null;
 
         List<Address> addresses = null;
@@ -76,7 +92,7 @@ public class OrderService {
             List<CartLine> cartLines = this.getListAvailableCartLines(user.getCart().getId());
 
             if (cartLines.size() == 0) {
-                throw new Exception("There are no products available for checkout now!");
+                throw new UserAccessException();
             }
 
             for (CartLine cartLine : cartLines) {
@@ -95,11 +111,17 @@ public class OrderService {
 
             addresses.add(addresses.size(), userDao.getBillingAddress(checkoutModel.getUser().getId()));
         }
-
+        logger.info("order prepared for show");
         session.setAttribute("checkoutModel", checkoutModel);
         session.setAttribute("addresses", addresses);
+
     }
 
+    /**
+     * Setting address in CheckoutModel
+     *
+     * @param addressId - id of address
+     */
     public void selectAddress(int addressId) {
         CheckoutModel checkoutModel = (CheckoutModel) session.getAttribute("checkoutModel");
 
@@ -112,8 +134,14 @@ public class OrderService {
 //        }
 
         session.setAttribute("checkoutModel", checkoutModel);
+        logger.info("address selected: "+address.toString());
     }
 
+    /**
+     * Adding address in DB
+     *
+     * @param shipping - adding Address
+     */
     public void addAddress(@Valid Address shipping) {
         CheckoutModel checkoutModel = (CheckoutModel) session.getAttribute("checkoutModel");
 
@@ -126,13 +154,24 @@ public class OrderService {
             shipping.setShipping(true);
             userDao.addAddress(shipping);
         }
-
+        logger.info("address added: "+shipping.toString());
     }
 
+    /**
+     * Getting CheckoutModel
+     *
+     * @return CheckoutModel
+     */
     public CheckoutModel getCheckoutModel() {
         return (CheckoutModel) session.getAttribute("checkoutModel");
     }
 
+    /**
+     * Method for saving order
+     *
+     * @param map - Map<String, String> with order information
+     * @return
+     */
     public String saveOrder(Map<String, String> map) {
 
         String isPayByCArt = map.get("isPayByCArt");
@@ -144,6 +183,7 @@ public class OrderService {
         //сделаем гард кондишн для оплаты
         if (isPayByCArt.equals("cart") && (cardNumber.equals("") || expityMonth.equals("")
                 || expityYear.equals("") || cvCode.equals(""))) {
+            logger.error("order not save");
             return "redirect:/order/payment?operation=noCart";
         }
 
@@ -224,6 +264,7 @@ public class OrderService {
         Cart cart = checkoutModel.getCart();
         cart.setGrandTotal(cart.getGrandTotal().subtract(orderTotal));
         cart.setCartLines(cart.getCartLines() - orderCount);
+        cart.setPromoCode(null);
         cartLineDao.updateCart(cart);
 
         // обновим модель покуупателя, чобы не отображать невернуб информацию в корзине
@@ -232,9 +273,13 @@ public class OrderService {
             userModel.setCart(cart);
         }
         session.setAttribute("checkoutModel", checkoutModel);
+        logger.info("order save");
         return "redirect:/order/ordered";
     }
 
+    /**
+     * Method for compare old and new list of 10 top products
+     */
     public void ListCompare() {
         List<Product> products1 = productDao.getTopProducts();
         List<Product> products2 = changeInTop.getProductList();
@@ -263,7 +308,7 @@ public class OrderService {
                 String message = "Shop!";
                 channel.basicPublish("", "hello", null, message.getBytes("UTF-8"));
                 System.out.println(" [x] Sent '" + message + "'");
-
+                logger.info(" [x] Sent '" + message + "'");
                 channel.close();
                 connection.close();
             } catch (IOException e) {

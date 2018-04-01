@@ -8,7 +8,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+/**
+ * This service need for saving list of 10 top products in application
+ *
+ * @version 1.0
+ * @autor Dmitry Konoshenko
+ * @since version 1.0
+ */
 @Service("changeInTop")
 @Scope(scopeName = "singleton")
 public class ChangeInTop {
@@ -20,7 +26,7 @@ public class ChangeInTop {
     @Autowired
     public ChangeInTop(ProductDao productDao) {
         this.productDao = productDao;
-        this.productList =productDao.getTopProducts();
+        this.productList = productDao.getTopProducts();
     }
 
     public List<Product> getProductList() {

@@ -126,7 +126,7 @@
                         <c:choose>
                             <c:when test="${userModel.cart.promoCode == null}">
                                 <td>
-                                    <form id="promocodeForm" modelAttribute="cart" action="${contextRoot}/cart/show"
+                                    <form id="promocodeForm1" modelAttribute="cart" action="${contextRoot}/cart/show"
                                           method="POST"
                                           cssClass="form-horizontal">
                                         <div class="form-group">
@@ -151,7 +151,7 @@
                             </c:when>
                             <c:otherwise><%--@elvariable id="cart" type="com.divanxan.internetshop.dto.Cart"--%>
                                 <td>
-                                    <form id="promocodeForm" modelAttribute="cart" action="${contextRoot}/cart/show"
+                                    <form id="promocodeForm2" modelAttribute="cart" action="${contextRoot}/cart/show"
                                           method="POST"
                                           cssClass="form-horizontal">
                                         <div class="form-group">

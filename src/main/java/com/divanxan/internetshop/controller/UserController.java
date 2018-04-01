@@ -6,6 +6,8 @@ import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.exception.UserAccessException;
 import com.divanxan.internetshop.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +22,7 @@ import java.util.Map;
 
 
 /**
- * Данный коласс является контроллером. Служит для изменения персональных данных пользователя.
+ * Controller for user information
  *
  * @version 1.0
  * @autor Dmitry Konoshenko
@@ -30,6 +32,8 @@ import java.util.Map;
 @RequestMapping("/user")
 public class UserController {
 
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     private final UserService userService;
 
     @Autowired
@@ -37,6 +41,13 @@ public class UserController {
         this.userService = userService;
     }
 
+    /**
+     * Show user information
+     *
+     * @param operation - index of modal message
+     * @return ModelAndView
+     * @throws UserAccessException
+     */
     @RequestMapping("/show")
     public ModelAndView showUser(@RequestParam(name = "operation", required = false) String operation) throws UserAccessException {
 
@@ -75,9 +86,16 @@ public class UserController {
                 mv.addObject("message", "Адрес НЕ ИЗМЕНЕН. Введите нужные поля!");
             }
         }
+        logger.info(mv.toString());
         return mv;
     }
 
+    /**
+     * Page changed user information
+     *
+     * @return ModelAndView
+     * @throws UserAccessException
+     */
     @RequestMapping(value = "/userName", method = RequestMethod.GET)
     public ModelAndView changeUser() throws UserAccessException {
 
@@ -93,10 +111,17 @@ public class UserController {
             throw new UserAccessException();
         }
         mv.addObject("user", user);
-
+        logger.info(mv.toString());
         return mv;
     }
 
+    /**
+     * Validate changed user information
+     *
+     * @param map - with user information
+     * @param model - Model
+     * @return String with redirect information
+     */
     @RequestMapping(value = "/show", method = RequestMethod.POST)
     public String submit(@RequestParam Map<String, String> map, Model model) {
 
@@ -105,6 +130,12 @@ public class UserController {
     }
 
 
+    /**
+     * Page changed user password
+     *
+     * @return ModelAndView
+     * @throws UserAccessException
+     */
     @RequestMapping(value = "/userPassword", method = RequestMethod.GET)
     public ModelAndView changePassword() throws UserAccessException {
 
@@ -117,10 +148,17 @@ public class UserController {
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "User Password");
         mv.addObject("userClickShowUserPassword", true);
-
+        logger.info(mv.toString());
         return mv;
     }
 
+    /**
+     * Page changed user address information
+     *
+     * @param userAddressId - id address of user
+     * @return ModelAndView
+     * @throws UserAccessException
+     */
     @RequestMapping(value = "/{userAddressId}/userAddress", method = RequestMethod.GET)
     public ModelAndView changeAddress(@PathVariable int userAddressId) throws UserAccessException {
 
@@ -135,7 +173,7 @@ public class UserController {
         mv.addObject("userClickShowUserAddress", true);
 
         userService.setAddressId(userAddressId);
-
+        logger.info(mv.toString());
         return mv;
     }
 

@@ -9,7 +9,13 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
+/**
+ * Simple POJO class of OrderDetail
+ *
+ * @autor Dmitry Konoshenko
+ * @version 1.0
+ * @since version1.0
+ */
 @NamedQueries({
         @NamedQuery(
                 name = "listOrders",

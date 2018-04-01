@@ -9,6 +9,13 @@ import java.math.BigDecimal;
 
 //сделаем корзину сессионной и инжектним ее в RegisterHandler
 
+/**
+ * Simple POJO class of Cart
+ *
+ * @autor Dmitry Konoshenko
+ * @version 1.0
+ * @since version1.0
+ */
 @Entity
 @Table(name = "cart")
 public class Cart implements Serializable {

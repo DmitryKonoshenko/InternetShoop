@@ -17,7 +17,7 @@ import java.util.Map;
 
 
 /**
- * Данный класс является сервисным для контроллера UserController.
+ * This class is a service class for the UserController
  *
  * @version 1.0
  * @autor Dmitry Konoshenko
@@ -37,7 +37,7 @@ public class UserService {
     }
 
     /**
-     * Данный метод служит для получения пользователя из базы данных.
+     * This method is used to get the user from the database
      *
      * @return String
      */
@@ -48,47 +48,88 @@ public class UserService {
     }
 
     /**
-     * Данный метод служит для получения алресов пользователя из базы данных.
+     * This method serves to obtain user alces from the database
      *
-     * @return List<Address>
+     * @param userId - id of User
+     * @return List<Address> - list addresses of User
      */
     public List<Address> getAddresses(int userId) {
         return userDao.listAddressess(userId);
     }
 
     /**
-     * Данный метод служит для получения заказов пользователя из базы данных.
+     * This method serves to retrieve user orders from the database
      *
+     * @param userId - id of User
      * @return List<OrderDetail>
      */
     public List<OrderDetail> getOrders(int userId) {
         return userDao.listOrders(userId);
     }
 
+    /**
+     * Getting billing address of user
+     *
+     * @param userId - id of User
+     * @return Address - billing address of Useer
+     */
     public Address getBillingAddress(int userId) {
         return userDao.getBillingAddress(userId);
     }
 
+    /**
+     * Getting address id from session
+     *
+     * @return int - address id
+     */
     private int getAddressId() {
         return (int) session.getAttribute("addressId");
     }
 
+    /**
+     * Getting address by id
+     *
+     * @param addressId - id of address
+     * @return Address - getting by id
+     */
     private Address getAddres(int addressId) {
         return userDao.getAddress(addressId);
     }
 
+    /**
+     * Updating user
+     *
+     * @param user - updating User
+     */
     public void update(User user) {
         userDao.update(user);
     }
 
+    /**
+     * Getting email from session
+     *
+     * @return String - email
+     */
     public String getEmail() {
         return ((UserModel) session.getAttribute("userModel")).getEmail();
     }
 
+    /**
+     * Setting address id
+     *
+     * @param userAddressId - setting address id
+     */
     public void setAddressId(int userAddressId) {
         session.setAttribute("addressId", userAddressId);
     }
 
+    /**
+     * Validation user information for changed information
+     *
+     * @param map - Map<String, String> with data
+     * @param model - model from view
+     * @return String with redirect information
+     */
     public String ValidateUserInformation(Map<String, String> map, Model model) {
         String firstName = map.get("firstName");
         String lastName = map.get("lastName");
@@ -115,7 +156,7 @@ public class UserService {
 //        List<Address> addresses = userService.getAddresses(user.getId());
 
 
-        Address address =null;
+        Address address = null;
         if (addressLineOne != null) address = this.getAddres(addressId);
 
 //        for (Address adr: addresses) {
@@ -190,12 +231,22 @@ public class UserService {
         return "redirect:/user/show?operation=user";
     }
 
+    /**
+     * Getting login coont
+     *
+     * @return int - count of trying login
+     */
     public int getLoginCount() {
         UserModel userModel = ((UserModel) session.getAttribute("userModel"));
         return userModel.getLoginCount();
     }
 
-    public void setLoginCount(int count){
+    /**
+     * Saving login count
+     *
+     * @param count - login count
+     */
+    public void setLoginCount(int count) {
         UserModel userModel = ((UserModel) session.getAttribute("userModel"));
         userModel.setLoginCount(count);
     }

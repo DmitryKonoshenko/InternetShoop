@@ -4,6 +4,13 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+/**
+ * Simple POJO class of CartLine
+ *
+ * @autor Dmitry Konoshenko
+ * @version 1.0
+ * @since version1.0
+ */
 @NamedQueries({
         @NamedQuery(
                 name = "getByCartAndProduct",

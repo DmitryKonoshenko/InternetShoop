@@ -13,7 +13,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-
+/**
+ * Simple POJO class of OrderItem
+ *
+ * @autor Dmitry Konoshenko
+ * @version 1.0
+ * @since version1.0
+ */
 @Entity
 @Table(name = "order_item")
 public class OrderItem implements Serializable {

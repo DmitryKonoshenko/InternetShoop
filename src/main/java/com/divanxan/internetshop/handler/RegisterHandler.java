@@ -8,6 +8,8 @@ import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.model.RegisterModel;
 import com.divanxan.internetshop.model.UserModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.binding.message.MessageBuilder;
 import org.springframework.binding.message.MessageContext;
@@ -20,7 +22,7 @@ import java.util.List;
 
 
 /**
- * Данный класс служит для регистрации пользоватля в приложении.
+ * This class is used to register a user in the application.
  *
  * @version 1.0
  * @autor Dmitry Konoshenko
@@ -29,6 +31,8 @@ import java.util.List;
 @Component
 @Scope("session")
 public class RegisterHandler {
+
+    private static final Logger logger = LoggerFactory.getLogger(RegisterHandler.class);
 
     private final UserDao userDao;
 
@@ -47,28 +51,44 @@ public class RegisterHandler {
     }
 
     /**
-     * Данный метод возвращает регистрационную модель.
+     * This method returns the registration model.
      *
      * @return RegisterModel
      */
     public RegisterModel init() {
+        logger.info("make new registration model");
         return new RegisterModel();
     }
 
+
     /**
-     * Данный метод добавляет пользователя в регистрационную модель.
+     * This method adds the user to the registration model.
+     *
+     * @param registerModel - model for registration users
+     * @param user          - registration user
      */
     public void addUser(RegisterModel registerModel, User user) {
         registerModel.setUser(user);
+        logger.info("adding user in registration model, user: " + user.toString());
     }
 
     /**
-     * Данный метод возвращает модель нового пользователя.
+     * This method returns the model of the new user.
+     *
+     * @param registerModel - model for registration users
+     * @param billing       - billing Address
      */
     public void addBilling(RegisterModel registerModel, Address billing) {
         registerModel.setBilling(billing);
+        logger.info("adding billing address in registration model, address: " + billing.toString());
     }
 
+    /**
+     * This method saves user data in DB
+     *
+     * @param model - RegisterModel model for registration users
+     * @return String - key of success operation
+     */
     public String saveAll(RegisterModel model) {
         String transitionValue = "success";
 
@@ -106,11 +126,18 @@ public class RegisterHandler {
                 cartLineDao.add(line);
             }
         }
-
+        logger.info("Saving registration model in DB, value: " + transitionValue);
         return transitionValue;
     }
 
 
+    /**
+     * This method validate user registration data
+     *
+     * @param user  - validation User
+     * @param error - error of operation
+     * @return String - key of success operation
+     */
     public String validateUser(User user, MessageContext error) {
         String transitionalValue = "success";
 //проверка пароля на совпадение
@@ -135,7 +162,7 @@ public class RegisterHandler {
 
             transitionalValue = "failure";
         }
-
+        logger.info("Validating user data, value: " + transitionalValue);
         return transitionalValue;
     }
 

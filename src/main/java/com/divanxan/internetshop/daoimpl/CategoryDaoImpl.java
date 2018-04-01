@@ -5,6 +5,8 @@ import com.divanxan.internetshop.dto.Category;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,6 +17,8 @@ import java.util.List;
 @Repository("categoryDao")
 @Transactional
 public class CategoryDaoImpl implements CategoryDao {
+
+    private static final Logger logger = LoggerFactory.getLogger(CategoryDaoImpl.class);
 
     private final SessionFactory sessionFactory;
 
@@ -28,21 +32,24 @@ public class CategoryDaoImpl implements CategoryDao {
         try {
             //добавление категорию в таблицу БД
             sessionFactory.getCurrentSession().persist(category);
+            logger.info("category added: "+category.toString());
             return true;
         } catch (HibernateException e) {
             e.printStackTrace();
+            logger.error("error category added: "+category.toString());
             return false;
         }
     }
 
     @Override
     public boolean update(Category category) {
+        logger.info("category update: "+category.toString());
         return updateCode(category);
     }
 
     @Override
     public boolean delete(Category category) {
-
+        logger.info("category deactivate: "+category.toString());
         category.setActive(false);
 
         return updateCode(category);
@@ -51,7 +58,7 @@ public class CategoryDaoImpl implements CategoryDao {
     @Override
     public boolean setActive(Category category) {
         category.setActive(true);
-
+        logger.info("category activate: "+category.toString());
         return updateCode(category);
     }
 
@@ -60,10 +67,12 @@ public class CategoryDaoImpl implements CategoryDao {
         try{
             //добавление категорию в таблицу БД
             sessionFactory.getCurrentSession().delete(category);
+            logger.info("category deleted: "+category.toString());
             return true;
         }
         catch (Exception e){
             e.printStackTrace();
+            logger.error("error category deleted: "+category.toString());
             return false;
         }
     }
@@ -72,10 +81,12 @@ public class CategoryDaoImpl implements CategoryDao {
         try{
             //изменение категории в таблице БД
             sessionFactory.getCurrentSession().update(category);
+            logger.info("category update: "+category.toString());
             return true;
         }
         catch (Exception e){
             e.printStackTrace();
+            logger.error("error category update: "+category.toString());
             return false;
         }
     }
@@ -86,6 +97,7 @@ public class CategoryDaoImpl implements CategoryDao {
         Query query = sessionFactory.getCurrentSession()
                 .getNamedQuery("listCategory")
                 .setParameter("active",true);
+        logger.info("get categoru list");
         return query.getResultList();
 
 //        String selectActiveCategory = "FROM Category WHERE active = :active";
@@ -99,6 +111,7 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public Category get(int id) {
+        logger.info("get category, id: " +id);
         return sessionFactory.getCurrentSession().get(Category.class, id);
     }
 }

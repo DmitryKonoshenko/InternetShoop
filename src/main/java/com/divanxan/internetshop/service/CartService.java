@@ -7,6 +7,8 @@ import com.divanxan.internetshop.dto.CartLine;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.dto.PromoCode;
 import com.divanxan.internetshop.model.UserModel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +19,7 @@ import java.util.List;
 
 
 /**
- * Данный класс является сервисным и служит для получения корзины, добавления продукта в корзину, удаления продукта из корзины.
+ * This class is a service class and serves to receive a cart, add the product to the cart, remove the product from the cart
  *
  * @version 1.0
  * @autor Dmitry Konoshenko
@@ -25,6 +27,8 @@ import java.util.List;
  */
 @Service("cartService")
 public class CartService {
+
+    private static final Logger logger = LoggerFactory.getLogger(CartService.class);
 
     private final CartLineDao cartLineDao;
     private final HttpSession session;
@@ -39,9 +43,9 @@ public class CartService {
 
 
     /**
-     * Данный метод служит для получения или создания корзины пользователя.
+     * This method serves to retrieve or create a user's Cart
      *
-     * @return Cart
+     * @return Cart - getting or creating Cart
      */
     // возвращает корзину зарегестрированого покупателя
     public Cart getCart() {
@@ -56,6 +60,7 @@ public class CartService {
             userModel.setCart(cart);
             session.setAttribute("userModel", userModel);
         }
+        logger.info("getting cart:"+cart.toString());
         return cart;
     }
 
@@ -65,9 +70,9 @@ public class CartService {
     }
 
     /**
-     * Данный метод служит для получения списка продуктов, добавленных в корзину.
+     * This method serves to obtain a list of products added to the cart
      *
-     * @return List<CartLine>
+     * @return List<CartLine> - list of CartLines in Cart
      */
     //возвращает содержимое корзины
     public List<CartLine> getCartLines() {
@@ -86,7 +91,7 @@ public class CartService {
                 if (count > productCount) cartLine.setProductCount(productCount);
             }
         }
-
+        logger.info("getting CartLines of cart: "+cart.toString());
         return cartLines;
     }
 
@@ -98,11 +103,11 @@ public class CartService {
     }
 
     /**
-     * Данный метод служит обновления колличества продукта одного вида в корзине.
+     * This method serves to update the number of products of one type in the cart
      *
      * @param cartLineId
      * @param count
-     * @return String
+     * @return String - key of success
      */
     // обновим количество товара в корзине (используется в методе updateCart в CartController)
     public String updateCartLine(int cartLineId, int count) {
@@ -119,6 +124,7 @@ public class CartService {
         }
 
         if (cartLine == null) {
+            logger.error("updating cartLine failed. CartLine=null");
             return "result=error";
         } else {
             Product product = cartLine.getProduct();
@@ -145,16 +151,17 @@ public class CartService {
             if (cart.getUser() != null) {
                 cartLineDao.updateCart(cart);
             }
+            logger.info("cartLine update, cart: "+cart.toString());
             return "result=update";
         }
 
     }
 
      /**
-     * Данный метод служит для удаления продукта из корзины.
+     * This method is used to remove a product from the cart
      *
-     * @param cartLineId
-     * @return String
+     * @param cartLineId - id of CartLine
+     * @return String - key of success
      */
     // удалим товар из корзины (используется в методе deleteCart в CartController)
     public String deleteCartLine(int cartLineId) {
@@ -164,6 +171,7 @@ public class CartService {
             //если пользователь зарегестрирован
             CartLine cartLine = cartLineDao.get(cartLineId);
             if (cartLine == null) {
+                logger.error("deleting cartLine failed. CartLine=null");
                 return "result=error";
             } else {
                 // удалим стоимость данной позиции
@@ -172,7 +180,7 @@ public class CartService {
                 cartLineDao.updateCart(cart);
                 // удалим позицию
                 cartLineDao.delete(cartLine);
-
+                logger.info("cartLine delete, cart: "+cart.toString());
                 return "result=deleted";
             }
         } else {
@@ -185,6 +193,7 @@ public class CartService {
                 }
             }
             if (cartLine == null) {
+                logger.error("deleting cartLine failed. CartLine=null");
                 return "result=error";
             } else {
                 cart.setGrandTotal(cart.getGrandTotal().subtract(cartLine.getTotal()));
@@ -197,15 +206,16 @@ public class CartService {
                 }
                 list.remove(i);
                 session.setAttribute("AnonymousCartLines", list);
+                logger.info("cartLine delete, cart: "+cart.toString());
                 return "result=deleted";
             }
         }
     }
 
     /**
-     * Данный метод служит для добавления продукта в корзину.
+     * This method serves to add the product to the cart
      *
-     * @return String
+     * @return String - key of success
      */
     // добавим товар в корзину (используется в методе addCart в CartController)
     public String addCartLine(int productId) {
@@ -276,6 +286,11 @@ public class CartService {
         return response;
     }
 
+    /**
+     * this method validate CartLines in Cart before creating order
+     *
+     * @return String - key of success
+     */
     public String validateCartLine() {
         Cart cart = this.getCart();
 
@@ -334,14 +349,14 @@ public class CartService {
         cart.setCartLines(lineCount);
         cart.setGrandTotal(grandTotal);
         cartLineDao.updateCart(cart);
-
+        logger.info("validate CartLine, response: "+response);
         return response;
     }
 
     /**
-     * Данный метод обьединяет сессионную корзину с пользовательской в базе данных
+     * This method combines the session basket with the user's database in the DB
      *
-     * @param cart1
+     * @param cart1 - merging cart
      */
     public void mergeCart(Cart cart1) {
 
@@ -383,6 +398,7 @@ public class CartService {
             isChanged = true;
         }
         if(isChanged) cartLineDao.updateCart(cart1);
+        logger.info("carts merged");
     }
 
     public String checkProducts() {
@@ -397,9 +413,11 @@ public class CartService {
                 cartLine.setTotal(cartLine.getProduct().getUnitPrice().multiply(new BigDecimal(cartLine.getProductCount())));
                 cart.setGrandTotal(cart.getGrandTotal().subtract(cartLine.getProduct().getUnitPrice().multiply(new BigDecimal(rezult))));
                 cartLineDao.update(cartLine);
+                logger.info("check faled");
                 return "false";
             }
         }
+        logger.info("checked");
         return "true";
     }
 
@@ -408,13 +426,25 @@ public class CartService {
         return promoCodes;
     }
 
+    /**
+     * Getting price of order with discount
+     *
+     * @return BigDecimal - price with discount
+     */
     public BigDecimal getAltogether() {
         Cart cart = this.getCart();
         BigDecimal total = cart.getGrandTotal();
         BigDecimal discount = this.getDiscount(cart, total);
+        logger.info("getting total price of order with discount");
         return total.subtract(discount);
     }
 
+    /**
+     * This method setting promocode in Cart
+     *
+     * @param promocode - String promocode
+     * @return boolean (success of operation)
+     */
     public boolean setPromocode(String promocode) {
         Cart cart = this.getCart();
         List<PromoCode> promoCodes = this.getPromocode();
@@ -422,15 +452,21 @@ public class CartService {
             if(promoCode.getCode().equals(promocode)){
                 cart.setPromoCode(promoCode);
                 cartLineDao.updateCart(cart);
+                logger.info("promocode added");
                 return true;
             }
         }
+        logger.info("promocode NOT added");
         return false;
     }
 
+    /**
+     * This method deleting promocode from cart
+     */
     public void deletePromocode() {
         Cart cart = this.getCart();
         cart.setPromoCode(null);
         cartLineDao.updateCart(cart);
+        logger.info("promocode deleted");
     }
 }

@@ -5,7 +5,7 @@ import com.divanxan.internetshop.dto.Cart;
 import java.io.Serializable;
 
 /**
- * Данный класс является моделью пользователя, служащий для отображения информации в навигационном окне.
+ * This class is a user model that serves to display information in the navigation window
  *
  * @version 1.0
  * @autor Dmitry Konoshenko

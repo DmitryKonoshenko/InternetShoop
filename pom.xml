@@ -109,12 +109,6 @@
             <version>${jstl.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>javax.mail-api</artifactId>
-            <version>1.6.0</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
         <dependency>
             <groupId>commons-logging</groupId>
@@ -212,7 +206,7 @@
             <version>3.1.0</version>
         </dependency>
 
-          <!-- https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-test -->
+        <!-- https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-test -->
         <dependency>
             <groupId>org.springframework.batch</groupId>
             <artifactId>spring-batch-test</artifactId>
@@ -231,6 +225,12 @@
             <artifactId>lombok</artifactId>
             <version>1.16.20</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.5.0-b01</version>
         </dependency>
 
     </dependencies>

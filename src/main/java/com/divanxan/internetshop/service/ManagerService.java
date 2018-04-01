@@ -8,6 +8,8 @@ import com.divanxan.internetshop.dto.Category;
 import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.dto.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +17,17 @@ import javax.validation.Valid;
 import java.math.BigDecimal;
 import java.util.*;
 
+/**
+ * This is service for management purposes
+ *
+ * @version 1.0
+ * @autor Dmitry Konoshenko
+ * @since version1.0
+ */
 @Service("managerService")
 public class ManagerService {
+
+    private static final Logger logger = LoggerFactory.getLogger(ManagerService.class);
 
     private final CategoryDao categoryDao;
 
@@ -92,13 +103,13 @@ public class ManagerService {
         }
 
         Map<BigDecimal, User> userList = new TreeMap<>(Collections.reverseOrder());
-        int i =0;
-        for(Map.Entry<BigDecimal, User> entry : userListSort.entrySet()) {
+        int i = 0;
+        for (Map.Entry<BigDecimal, User> entry : userListSort.entrySet()) {
             userList.put(entry.getKey(), entry.getValue());
             ++i;
-            if(i==10) break;
+            if (i == 10) break;
         }
-
+        logger.info("getting top 10 users");
         return userList;
     }
 
@@ -108,6 +119,7 @@ public class ManagerService {
         for (OrderDetail order : orders) {
             cash = cash.add(order.getOrderTotal());
         }
+        logger.info("getting cash by week: " +cash);
         return cash;
     }
 
@@ -117,6 +129,7 @@ public class ManagerService {
         for (OrderDetail order : orders) {
             cash = cash.add(order.getOrderTotal());
         }
+        logger.info("getting cash by month: " +cash);
         return cash;
     }
 }

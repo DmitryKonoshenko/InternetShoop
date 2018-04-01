@@ -11,6 +11,13 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+/**
+ * Simple POJO class of Product
+ *
+ * @autor Dmitry Konoshenko
+ * @version 1.0
+ * @since version1.0
+ */
 @NamedQueries({
         @NamedQuery(
                 name = "listActiveProduct",

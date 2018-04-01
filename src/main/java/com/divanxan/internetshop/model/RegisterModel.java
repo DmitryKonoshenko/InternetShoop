@@ -6,7 +6,7 @@ import com.divanxan.internetshop.dto.User;
 import java.io.Serializable;
 
 /**
- * Данный класс моделью для регистрации нового пользователя.
+ * This class is a model for registering a new user
  *
  * @version 1.0
  * @autor Dmitry Konoshenko

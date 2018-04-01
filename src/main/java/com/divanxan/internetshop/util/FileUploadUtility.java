@@ -10,7 +10,7 @@ import java.io.IOException;
 
 
 /**
- * Данный класс служит для загрузки изображений при администрировании приложения.
+ * This class is used to load images while administering the application
  *
  * @version 1.0
  * @autor Dmitry Konoshenko
@@ -23,10 +23,13 @@ public class FileUploadUtility {
 
     private static final Logger logger = LoggerFactory.getLogger(FileUploadUtility.class);
 
-
-/**
- * Данный метод служит для загрузки изображений при администрировании приложения.
- */
+    /**
+     * This method is used to load images when administering the application
+     *
+     * @param request - HttpServletRequest
+     * @param file -  MultipartFile for image
+     * @param code - code for image information
+     */
     public static void uploadFile(HttpServletRequest request, MultipartFile file, String code) {
 
         REAL_PATH = request.getSession().getServletContext().getRealPath("/assets/images/");
@@ -52,4 +55,5 @@ public class FileUploadUtility {
             e.printStackTrace();
         }
     }
+
 }

@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /**
- * Controller for {@link com.divanxan.internetshop.dto.Category}'s pages.
+ * Controller for shop pages.
  *
  * @version 1.0
  * @autor Dmitry Konoshenko
@@ -48,9 +48,9 @@ public class PageController {
     }
 
     /**
-     * Функция возврата на домашнюю страницу
+     * ФReturn to home page function
      *
-     * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Home
+     * @return ModelAndView
      */
     @RequestMapping(value = {"/", "home"})
     public ModelAndView index() {
@@ -71,20 +71,21 @@ public class PageController {
     }
 
     /**
-     * Функция перехода на страницу "О нас"
+     * Go to the "About Us" page
      *
-     * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку About
+     * @return ModelAndView
      */
     @RequestMapping(value = {"/about"})
     public ModelAndView about() {
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "О нас");
         mv.addObject("userClickAbout", true);
+        logger.info(mv.toString());
         return mv;
     }
 
     /**
-     * Функция перехода на страницу "Контакты"
+     * Go to the Contacts page
      *
      * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Contact
      */
@@ -93,13 +94,14 @@ public class PageController {
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "Наши контакты");
         mv.addObject("userClickContact", true);
+        logger.info(mv.toString());
         return mv;
     }
 
     /**
-     * Функция для загрузки всех товаров
+     * Function for downloading all products
      *
-     * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Contact
+     * @return ModelAndView
      */
     @RequestMapping(value = {"/show/all/products"})
     public ModelAndView showAllProducts() {
@@ -110,13 +112,14 @@ public class PageController {
         mv.addObject("categories", categoryDao.list());
 
         mv.addObject("userClickAllProducts", true);
+        logger.info(mv.toString());
         return mv;
     }
 
     /**
-     * Функция для загрузки всех товаров в категории
+     * Function for downloading all products in categories
      *
-     * @return Возвращает ModelAndView обьект с полями title и информацией о нажатии на вкладку Contact
+     * @return ModelAndView
      */
     @RequestMapping(value = {"/show/category/{id}/products"})
     public ModelAndView showCategoryProducts(@PathVariable("id") int id) {
@@ -132,6 +135,7 @@ public class PageController {
         mv.addObject("category", category);
 
         mv.addObject("userClickCategoryProducts", true);
+        logger.info(mv.toString());
         return mv;
     }
 
@@ -157,6 +161,13 @@ public class PageController {
 //        return mv;
 //    }
 
+    /**
+     * Show one product page
+     *
+     * @param id of product
+     * @return  ModelAndView
+     * @throws ProductNotFoundException
+     */
     // просмотр одного товара
     @RequestMapping(value = "/show/{id}/product")
     public ModelAndView showSingleProduct(@PathVariable int id) throws ProductNotFoundException {
@@ -170,13 +181,14 @@ public class PageController {
         //update the view count
         product.setViews(product.getViews() + 1);
         productDao.update(product);
+        logger.info("product update: " +product.toString());
         //done
 
         mv.addObject("title", product.getName());
         mv.addObject("product", product);
 
         mv.addObject("userClickShowProduct", true);
-
+        logger.info(mv.toString());
         return mv;
     }
 
@@ -189,6 +201,13 @@ public class PageController {
 //    }
 
 
+    /**
+     * Login page
+     *
+     * @param error - information about error
+     * @param logout - information about logout
+     * @return ModelAndView
+     */
     //Login
     @RequestMapping(value = {"/login"})
     public ModelAndView login(@RequestParam(name = "error", required = false) String error,
@@ -208,10 +227,15 @@ public class PageController {
         if(count>=3) mv.addObject("message", "Слишком много попыток ввода");
         mv.addObject("count",count);
         mv.addObject("title", "login");
+        logger.info(mv.toString());
         return mv;
     }
 
-
+    /**
+     * Access error page
+     *
+     * @return ModelAndView
+     */
     // страница ошибки доступа, как в spring-security.xml
     @RequestMapping(value = {"/access-denied"})
     public ModelAndView accessDenied() {
@@ -220,10 +244,17 @@ public class PageController {
         mv.addObject("errorTitle", "Вы не можете тут находится!");
         mv.addObject("errorDescription"
                 , "У вас нет прав администратора, чтобы видеть содержимое данной страницы!");
+        logger.info(mv.toString());
         return mv;
     }
 
-
+    /**
+     * Controller for logout
+     *
+     * @param request - HttpServletRequest
+     * @param response - HttpServletRequest
+     * @return String with redirect information
+     */
     //для logout
     @RequestMapping(value = "/perform-logout")
     public String logout(HttpServletRequest request, HttpServletResponse response) {
@@ -235,6 +266,7 @@ public class PageController {
         if (authentication != null) {
             new SecurityContextLogoutHandler().logout(request, response, authentication);
         }
+        logger.info("User logout");
         return "redirect:/login?logout";
     }
 

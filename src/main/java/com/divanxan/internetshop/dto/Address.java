@@ -4,6 +4,13 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
+/**
+ * Simple POJO class of addresses
+ *
+ * @autor Dmitry Konoshenko
+ * @version 1.0
+ * @since version1.0
+ */
 @NamedQueries({
         @NamedQuery(
                 name = "getBillingAddress",
@@ -152,6 +159,7 @@ public class Address implements Serializable {
     public int getUserId() {
         return userId;
     }
+
     public void setUserId(int userId) {
         this.userId = userId;
     }
