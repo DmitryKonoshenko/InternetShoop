@@ -16,7 +16,7 @@
         </div>
     </c:if>
     <div class="row">
-        <div class="form-container1122">
+        <div class="form-container">
             <div class="panel panel-primary">
                 <a href="${contextRoot}/manage/statistic" class="submit-button1122">Просмотр статистики</a>
             </div>
@@ -41,8 +41,8 @@
                                 <c:if test="${not orderDetail.isPay()}">Наличными</c:if>
                             </h4>
                             <h4>Доставка заказа:
-                                <c:if test="${orderDetail.getDelivery()}">Курьером</c:if>
-                                <c:if test="${not orderDetail.getDelivery()}">Самовывоз</c:if>
+                                <c:if test="${orderDetail.delivery}">Курьером</c:if>
+                                <c:if test="${not orderDetail.delivery}">Самовывоз</c:if>
                             </h4>
                             <h4>Общая стоимость заказа:${orderDetail.orderTotal}</h4>
 
@@ -51,8 +51,8 @@
                                 <c:if test="${not orderDetail.isDelivery}">Нет</c:if>
                             </h4>
                             <h4>Отгружен ли:
-                                    <c:if test="${orderDetail.isShippedOrder}">Да</c:if>
-                                    <c:if test="${not orderDetail.isShippedOrder}">Нет</c:if>
+                                    <c:if test="${orderDetail.isShippedOrder()}">Да</c:if>
+                                    <c:if test="${not orderDetail.isShippedOrder()}">Нет</c:if>
                             </h4>
 
                             <div class="panel-heading">

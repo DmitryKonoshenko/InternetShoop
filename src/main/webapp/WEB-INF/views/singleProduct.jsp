@@ -48,7 +48,7 @@
                     </c:otherwise>
                 </c:choose>
 
-<security:authorize access="hasAuthority('USER')">
+<security:authorize access="hasAuthority('USER') or isAnonymous()">
             <c:choose>
                 <c:when test="${product.quantity<1}">
                     <a href="javascript:void(0)" class="btn btn-success disabled">

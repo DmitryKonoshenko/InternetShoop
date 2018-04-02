@@ -199,6 +199,7 @@ public class OrderService {
         orderDetail.setShipping(checkoutModel.getShipping());
 
 
+
         String delivery = map.get("delivery");
         if (isPayByCArt.equals("cart")) {
             orderDetail.setPay(true);

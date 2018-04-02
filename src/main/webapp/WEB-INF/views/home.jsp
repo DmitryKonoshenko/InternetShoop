@@ -55,9 +55,6 @@
                             <h5>&#8381;15190.0</h5>
                             <p class="card-text">LG 32LJ519U - это отличный HD-телевизор для всей семьи, который успешно совместит в себе все функции, присущие полноценному развлекательному медиацентру!</p>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </div>
                     </div>
                 </div>
 
@@ -71,9 +68,6 @@
                             <h5>&#8381;10070.0</h5>
                             <p class="card-text">Благодаря технологии PowerCyclone новый пылесос Philips помогает делать уборку безо всяких усилий!</p>
                         </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </div>
                     </div>
                 </div>
 
@@ -86,9 +80,6 @@
                             </h4>
                             <h5>&#8381;1700.0</h5>
                             <p class="card-text">Отличный и надежный фен!</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                         </div>
                     </div>
                 </div>
