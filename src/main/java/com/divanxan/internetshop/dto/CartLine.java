@@ -1,5 +1,8 @@
 package com.divanxan.internetshop.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -32,81 +35,44 @@ public class CartLine implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
+    @Setter
     private int id;
 
+    @Getter
+    @Setter
     @OneToOne
     private Product product;
 
+    @Getter
+    @Setter
     @Column(name = "cart_id")
     private int cartId;
 
+    @Getter
+    @Setter
     @Column(name = "product_count")
     private int productCount;
 
+    @Getter
+    @Setter
     @Column(name = "total")
     private BigDecimal total;
 
+    @Getter
+    @Setter
     @Column(name = "buying_price")
     private BigDecimal buyingPrice;
 
+    @Getter
+    @Setter
     @Column(name = "is_available")
     private boolean available =true;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public int getCartId() {
-        return cartId;
-    }
-
-    public void setCartId(int cartId) {
-        this.cartId = cartId;
-    }
-
-    public int getProductCount() {
-        return productCount;
-    }
-
-    public void setProductCount(int productCount) {
-        this.productCount = productCount;
-    }
-
-    public BigDecimal getTotal() {
-        return total;
-    }
-
-    public void setTotal(BigDecimal total) {
-        this.total = total;
-    }
-
-    public BigDecimal getBuyingPrice() {
-        return buyingPrice;
-    }
-
-    public void setBuyingPrice(BigDecimal buyingPrice) {
-        this.buyingPrice = buyingPrice;
-    }
-
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public void setAvailable(boolean available) {
-        this.available = available;
-    }
+    @Getter
+    @Setter
+    @Column(name = "is_promocode")
+    private boolean usePromocode =true;
 
 
     @Override

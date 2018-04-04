@@ -1,6 +1,10 @@
 package com.divanxan.internetshop.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -34,6 +38,10 @@ import java.util.UUID;
         @NamedQuery(
                 name = "getTopProducts",
                 query = "FROM Product WHERE active=:active ORDER BY purchases desc"
+        ),
+        @NamedQuery(
+                name = "product",
+                query = "FROM Product WHERE id=:id"
         )
 })
 @Component
@@ -42,7 +50,12 @@ import java.util.UUID;
 public class Product implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Getter
+    @Setter
     private int id;
+
+    @Getter
+    @Setter
     @Column(name = "code")
     private String code;
 
@@ -51,75 +64,95 @@ public class Product implements Serializable {
     @NotBlank(message ="Добавьте название товара!")
     private String name;
 
+    @Getter
+    @Setter
     @Column(name = "brand")
     @NotBlank(message ="Добавьте название бренда!")
     private String brand;
 
+    @Getter
+    @Setter
     @Column(name = "description")
     @NotBlank(message = "Введите значение для описания товара!")
     private String description;
 
+    @Getter
+    @Setter
     @Column(name = "unit_price")
-    @Min(value = 1, message = "Выбирите хотя бы 1 значение!")
+    @Min(value = 1, message = "Выберите хотя бы 1 значение!")
     private BigDecimal unitPrice;
 
+    @Getter
+    @Setter
     @Column(name = "quantity")
     private int quantity;
 
+    @Getter
+    @Setter
     @Column(name = "is_active")
     private boolean active;
 
+    @Getter
+    @Setter
     @Column(name = "category_id")
     @JsonIgnore
     private int categoryId;
 
+    @Getter
+    @Setter
     @Column(name = "supplier_id")
     @JsonIgnore
     private int supplierId;
 
+    @Getter
+    @Setter
     @Column(name = "purchases")
     private int purchases;
 
+    @Getter
+    @Setter
     @Column(name = "views")
     private int views;
+
+    @Getter
+    @Setter
+    @NotFound(action=NotFoundAction.IGNORE)
+    @ManyToOne(optional = true)
+    @JsonIgnore
+    @JoinColumn(name = "product_id", insertable = false, updatable = false)
+    private Product productDis;
+
+    @Getter
+    @Setter
+    @Column(name = "discount")
+    private int discount;
+
+    @Column(name = "product_id", nullable = false)
+    @JsonIgnore
+    private int productDisId;
 
 //    @Column(name = "vishes")
 //    private int vishes;
 
 
     @Transient
+    @Getter
+    @Setter
     @JsonIgnore
     private MultipartFile file;
 
-    public MultipartFile getFile() {
-        return file;
-    }
-
-    public void setFile(MultipartFile file) {
-        this.file = file;
-    }
 
     //default constructor
     public Product() {
         this.code = "PRD" + UUID.randomUUID().toString().substring(26).toUpperCase();
     }
 
-
-    //setters and getters
-    public int getId() {
-        return id;
+    public int getProductDisId() {
+        return productDisId;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
+    public void setProductDisId(int productDisId) {
+        this.productDisId = productDisId;
     }
 
     public String getName() {
@@ -129,79 +162,6 @@ public class Product implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public BigDecimal getUnitPrice() {
-        return unitPrice;
-    }
-
-    public void setUnitPrice(BigDecimal unitPrice) {
-        this.unitPrice = unitPrice;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    public int getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public int getSupplierId() {
-        return supplierId;
-    }
-
-    public void setSupplierId(int supplierId) {
-        this.supplierId = supplierId;
-    }
-
-    public int getPurchases() {
-        return purchases;
-    }
-
-    public void setPurchases(int purchases) {
-        this.purchases = purchases;
-    }
-
-    public int getViews() {
-        return views;
-    }
-
-    public void setViews(int views) {
-        this.views = views;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
 
     @Override
     public String toString() {
@@ -218,6 +178,9 @@ public class Product implements Serializable {
                 ", supplierId=" + supplierId +
                 ", purchases=" + purchases +
                 ", views=" + views +
+                ", productDis=" + productDis +
+                ", discount=" + discount +
+                ", productDisId=" + productDisId +
                 '}';
     }
 }

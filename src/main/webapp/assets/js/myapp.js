@@ -69,7 +69,7 @@ $(function () {
                     data: 'code',
                     bSortable: false,
                     mRender: function (data, type, row) {
-                        return '<a href="'+window.contextRoot + '/show/' + row.id + '/product"><img src="' + window.contextRoot + '/resources/images/' + data + '.jpg" class="dataTableImg"/></a>';
+                        return '<a href="' + window.contextRoot + '/show/' + row.id + '/product"><img src="' + window.contextRoot + '/resources/images/' + data + '.jpg" class="dataTableImg"/></a>';
 
                     }
                 },
@@ -116,7 +116,7 @@ $(function () {
                             }
                             else {
                                 str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="oi oi-cart"/></a>';
-                                str += '<button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary"><span class="oi oi-heart"/></button>';
+                                // str += '<button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary"><span class="oi oi-heart"/></button>';
                             }
                         }
                         else {
@@ -224,6 +224,17 @@ $(function () {
                     mRender: function (data, type, row) {
                         return /*'&#8381; ' + */ data
                     }
+                },
+                {
+                    data: 'productDis',
+                    mRender: function (data, type, row) {
+                        if(data!=null) return data.id;
+                        else return null;
+                    },
+                    bSortable: false
+                },
+                {
+                    data: 'discount'
                 },
                 {
                     data: 'active',
@@ -383,15 +394,15 @@ $(function () {
     $('button[name="refreshCart"]').click(function () {
         //получим id строки корзины
         var cartLineId = $(this).attr('value');
-        var countElement = $('#count_'+cartLineId);
+        var countElement = $('#count_' + cartLineId);
         var originalCount = countElement.attr('value');
         var currentCount = countElement.val();
 
         // работает только когда занчение поменялось
-        if(currentCount !== originalCount){
-          /*  console.log("current count: " + currentCount);
-           console.log("current count: " + originalCount); */
-            if(currentCount < 1 || currentCount > 5) {
+        if (currentCount !== originalCount) {
+            /*  console.log("current count: " + currentCount);
+             console.log("current count: " + originalCount); */
+            if (currentCount < 1 || currentCount > 5) {
 
                 countElement.val(originalCount);
                 bootbox.alert({
@@ -412,21 +423,20 @@ $(function () {
     });
 
 
-
     //------------------
 
 });
 
 // обработка нажатия кнопки обновить поставить лайкос отсутствующему товару------------------
-$('button[name="likeProduct"]').click(function () {
-    var productId = $(this).attr('value');
-    document.getElementById('b1').disabled = true;
-
-});
-function buttonClickt(row) {
-
-    document.getElementById('b1').disabled = true;
-}
+// $('button[name="likeProduct"]').click(function () {
+//     var productId = $(this).attr('value');
+//     document.getElementById('b1').disabled = true;
+//
+// });
+// function buttonClickt(row) {
+//
+//     document.getElementById('b1').disabled = true;
+// }
 
 
 //code for footer
@@ -437,7 +447,7 @@ $(document).ready(function () {
     var contentHeight = $('.content').height();
     var footerTop = $('.footer').position().top + footerHeight;
 
-    if (footerTop < docHeight + 40) {
+    if (footerTop < docHeight) {
         $('.content').css('min-height', (docHeight - contentHeight + 600) + 'px');
     }
 });

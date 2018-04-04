@@ -117,13 +117,27 @@ public class CartController {
     /**
      * Controller for adding cartLine
      *
-     * @param productId
+     * @param productId - id of adding product
      * @return String with redirect information
      */
     // добавляем позицию в корзине
     @RequestMapping("/add/{productId}/product")
     public String addCartLine(@PathVariable int productId) {
         String response = cartService.addCartLine(productId);
+        logger.info("Cart line added");
+        return "redirect:/cart/show?"+response;
+    }
+
+    /**
+     * Controller for adding cartLines
+     *
+     * @param productId - id of adding product
+     * @return String with redirect information
+     */
+    // добавляем позицию в корзине
+    @RequestMapping("/add/{productId}/products")
+    public String addCartLines(@PathVariable int productId) {
+        String response = cartService.addCartLines(productId);
         logger.info("Cart line added");
         return "redirect:/cart/show?"+response;
     }

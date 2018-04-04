@@ -60,7 +60,7 @@ public class CartService {
             userModel.setCart(cart);
             session.setAttribute("userModel", userModel);
         }
-        logger.info("getting cart:"+cart.toString());
+        logger.info("getting cart:" + cart.toString());
         return cart;
     }
 
@@ -91,15 +91,28 @@ public class CartService {
                 if (count > productCount) cartLine.setProductCount(productCount);
             }
         }
-        logger.info("getting CartLines of cart: "+cart.toString());
+        logger.info("getting CartLines of cart: " + cart.toString());
         return cartLines;
     }
 
-    private BigDecimal getDiscount(Cart cart, BigDecimal total){
+    private BigDecimal getDiscount(Cart cart) {
+        List<CartLine> list = this.getCartLines();
+        BigDecimal total = new BigDecimal(0);
         BigDecimal discount = null;
-        if(cart.getPromoCode()!=null) discount = total.multiply((new BigDecimal(cart.getPromoCode().getDiscount())).divide(new BigDecimal(100))).setScale(2, BigDecimal.ROUND_HALF_EVEN);
+        if (cart.getPromoCode() != null) {
+
+            for(CartLine line: list){
+                boolean bo = line.isUsePromocode();
+                if(line.isUsePromocode()) total= total.add(line.getTotal());
+            }
+
+            discount = total.multiply((
+                    new BigDecimal(cart.getPromoCode().getDiscount())
+            ).divide(new BigDecimal(100)))
+                    .setScale(2, BigDecimal.ROUND_HALF_EVEN);
+        }
         else discount = new BigDecimal(0);
-        return  discount;
+        return discount;
     }
 
     /**
@@ -112,7 +125,7 @@ public class CartService {
     // обновим количество товара в корзине (используется в методе updateCart в CartController)
     public String updateCartLine(int cartLineId, int count) {
         Cart cart = this.getCart();
-        CartLine cartLine;
+        CartLine cartLine = null;
         // если пользователь зарегестирован
         if (cart.getUser() != null) {
             // получим строку корзины
@@ -120,7 +133,13 @@ public class CartService {
         }
         // если пользователь аноним
         else {
-            cartLine = this.getCartLines().get(cartLineId);
+            List<CartLine> list = this.getCartLines();
+            for (CartLine line : list) {
+                if (line.getId() == cartLineId) {
+                    cartLine = line;
+                    break;
+                }
+            }
         }
 
         if (cartLine == null) {
@@ -136,8 +155,8 @@ public class CartService {
                 count = product.getQuantity();
             }
             cartLine.setProductCount(count);
-            cartLine.setBuyingPrice(product.getUnitPrice());
-            cartLine.setTotal(product.getUnitPrice().multiply(new BigDecimal(count)));
+//            cartLine.setBuyingPrice(product.getUnitPrice());
+            cartLine.setTotal(cartLine.getBuyingPrice().multiply(new BigDecimal(count)));
             // если пользователь зарегестирован
             if (cart.getUser() != null) {
                 //обновляем сроку в корзине
@@ -151,13 +170,13 @@ public class CartService {
             if (cart.getUser() != null) {
                 cartLineDao.updateCart(cart);
             }
-            logger.info("cartLine update, cart: "+cart.toString());
+            logger.info("cartLine update, cart: " + cart.toString());
             return "result=update";
         }
 
     }
 
-     /**
+    /**
      * This method is used to remove a product from the cart
      *
      * @param cartLineId - id of CartLine
@@ -175,20 +194,34 @@ public class CartService {
                 return "result=error";
             } else {
                 // удалим стоимость данной позиции
-                cart.setGrandTotal(cart.getGrandTotal().subtract(cartLine.getTotal()));
+              cart.setGrandTotal(new BigDecimal(0));
                 cart.setCartLines(cart.getCartLines() - 1);
                 cartLineDao.updateCart(cart);
+
+                if(cartLine.getProduct().getProductDis()!=null){
+                    Product product = cartLine.getProduct().getProductDis();
+                    List<CartLine> list = this.getCartLines();
+                    for(CartLine line : list){
+                        if(line.getProduct().getId() == product.getId()){
+                            line.setBuyingPrice(product.getUnitPrice());
+                            line.setTotal(line.getBuyingPrice().multiply(new BigDecimal(line.getProductCount())));
+                            cartLineDao.update(line);
+                        }
+                        if(line.getId()!=cartLineId) cart.setGrandTotal(cart.getGrandTotal().add(line.getTotal()));
+                    }
+                }
+
                 // удалим позицию
                 cartLineDao.delete(cartLine);
-                logger.info("cartLine delete, cart: "+cart.toString());
+                logger.info("cartLine delete, cart: " + cart.toString());
                 return "result=deleted";
             }
         } else {
             List<CartLine> list = this.getCartLines();
             CartLine cartLine = null;
-            for (CartLine line: list) {
-                if(line.getId() == cartLineId){
-                    cartLine=line;
+            for (CartLine line : list) {
+                if (line.getId() == cartLineId) {
+                    cartLine = line;
                     break;
                 }
             }
@@ -196,17 +229,29 @@ public class CartService {
                 logger.error("deleting cartLine failed. CartLine=null");
                 return "result=error";
             } else {
-                cart.setGrandTotal(cart.getGrandTotal().subtract(cartLine.getTotal()));
+                cart.setGrandTotal(new BigDecimal(0));
                 cart.setCartLines(cart.getCartLines() - 1);
+
                 int i = 0;
-                for (; i <list.size() ; i++) {
-                    if(list.get(i).getId()==cartLineId){
+                for (; i < list.size(); i++) {
+                    if (list.get(i).getId() == cartLineId) {
                         break;
                     }
                 }
+                if(list.get(i).getProduct().getProductDis()!=null){
+                    Product product =  list.get(i).getProduct().getProductDis();
+                    for(CartLine line : list){
+                        if(line.getProduct().getId() == product.getId()){
+                            line.setBuyingPrice(product.getUnitPrice());
+                            line.setTotal(line.getBuyingPrice().multiply(new BigDecimal(line.getProductCount())));
+                        }
+                        if(line.getId()!=cartLineId) cart.setGrandTotal(cart.getGrandTotal().add(line.getTotal()));
+                    }
+                }
+
                 list.remove(i);
                 session.setAttribute("AnonymousCartLines", list);
-                logger.info("cartLine delete, cart: "+cart.toString());
+                logger.info("cartLine delete, cart: " + cart.toString());
                 return "result=deleted";
             }
         }
@@ -231,10 +276,10 @@ public class CartService {
         }
         if (cartLine == null) {
             List<CartLine> list = this.getCartLines();
-            if(list!=null && list.size()>0){
-                for (CartLine line: list) {
-                    if(line.getProduct().getId() == productId) {
-                        cartLine=line;
+            if (list != null && list.size() > 0) {
+                for (CartLine line : list) {
+                    if (line.getProduct().getId() == productId) {
+                        cartLine = line;
                         break;
                     }
                 }
@@ -249,23 +294,52 @@ public class CartService {
             cartLine.setCartId(cart.getId());
 
             cartLine.setProduct(product);
-            cartLine.setBuyingPrice(product.getUnitPrice());
-            cartLine.setProductCount(1);
+            List<CartLine> cartLines = this.getCartLines();
 
-            cartLine.setTotal(product.getUnitPrice());
+            //validating Cart lins on discount
+            boolean validationSuccess = false;
+            if (cartLines != null && cartLines.size() > 0) {
+                for (CartLine crtLine : cartLines) {
+                    Product valProduct = crtLine.getProduct();
+                    if (valProduct.getProductDis() != null && valProduct.getProductDis().getId() ==product.getId()) {
+                        cartLine.setUsePromocode(false);
+                        Product productD = valProduct.getProductDis();
+                        BigDecimal price = productD.getUnitPrice().multiply(new BigDecimal(valProduct.getDiscount()).divide(new BigDecimal(100)));
+                        price =  productD.getUnitPrice().subtract(price).setScale(2, BigDecimal.ROUND_HALF_EVEN);
+                        cartLine.setBuyingPrice(price);
+                        validationSuccess = true;
+                    }
+                    if(product.getProductDis()!=null && valProduct.getId()==product.getProductDis().getId()){
+                        cart.setGrandTotal(cart.getGrandTotal().subtract(crtLine.getTotal()));
+                        crtLine.setUsePromocode(false);
+                        BigDecimal price = valProduct.getUnitPrice().multiply(new BigDecimal(product.getDiscount()).divide(new BigDecimal(100)));
+                        price =  valProduct.getUnitPrice().subtract(price).setScale(2, BigDecimal.ROUND_HALF_EVEN);
+                        crtLine.setBuyingPrice(price);
+                        crtLine.setTotal(price.multiply(new BigDecimal(crtLine.getProductCount())));
+                        cart.setGrandTotal(cart.getGrandTotal().add(crtLine.getTotal()));
+                        if (cart.getUser() != null) {
+                            cartLineDao.update(crtLine);
+                        }
+                    }
+                }
+            }
+            //end validating
+           if(!validationSuccess) cartLine.setBuyingPrice(product.getUnitPrice());
+            cartLine.setProductCount(1);
+            BigDecimal mm =cartLine.getBuyingPrice();
+            cartLine.setTotal(cartLine.getBuyingPrice());
             cartLine.setAvailable(true);
             //если пользователь - зарегестрирован
             if (cart.getUser() != null) {
                 cartLineDao.add(cartLine);
             } else {
                 //если пользователь - Аноним
-                List<CartLine> cartLines = this.getCartLines();
                 if (cartLines != null) {
                     //TODO может все рухнет из-за этого
                     CartLine last = null;
-                    if(cartLines.size()>0){
+                    if (cartLines.size() > 0) {
                         last = cartLines.get(cartLines.size() - 1);
-                    cartLine.setId(last.getId() + 1);
+                        cartLine.setId(last.getId() + 1);
                     }
                     cartLines.add(cartLine);
                 } else {
@@ -349,7 +423,7 @@ public class CartService {
         cart.setCartLines(lineCount);
         cart.setGrandTotal(grandTotal);
         cartLineDao.updateCart(cart);
-        logger.info("validate CartLine, response: "+response);
+        logger.info("validate CartLine, response: " + response);
         return response;
     }
 
@@ -360,13 +434,13 @@ public class CartService {
      */
     public void mergeCart(Cart cart1) {
 
-        List<CartLine> cartLines1 =this.getCartLinesList();
+        List<CartLine> cartLines1 = this.getCartLinesList();
 
-        List<CartLine> cartLines2 =cartLineDao.listAvailable(cart1.getId());
+        List<CartLine> cartLines2 = cartLineDao.listAvailable(cart1.getId());
 
         boolean isChanged = false;
 
-        if(cartLines2.size()>0) {
+        if (cartLines2.size() > 0) {
             boolean isOneProduct = false;
             for (int i = 0; i < cartLines1.size(); i++) {
                 for (int j = 0; j < cartLines2.size(); j++) {
@@ -379,36 +453,35 @@ public class CartService {
                     CartLine cartLine = cartLines1.get(i);
                     cartLine.setId(0);
                     cartLine.setCartId(cart1.getId());
-                    cart1.setCartLines(cart1.getCartLines()+1);
+                    cart1.setCartLines(cart1.getCartLines() + 1);
                     cart1.setGrandTotal(cart1.getGrandTotal().add(cartLine.getTotal()));
                     cartLineDao.add(cartLine);
                     isChanged = true;
                 }
                 isOneProduct = false;
             }
-        }
-        else if(cartLines1.size()>0){
-            for (CartLine cartLine:cartLines1) {
+        } else if (cartLines1.size() > 0) {
+            for (CartLine cartLine : cartLines1) {
                 cartLine.setId(0);
                 cartLine.setCartId(cart1.getId());
-                cart1.setCartLines(cart1.getCartLines()+1);
+                cart1.setCartLines(cart1.getCartLines() + 1);
                 cart1.setGrandTotal(cart1.getGrandTotal().add(cartLine.getTotal()));
                 cartLineDao.add(cartLine);
             }
             isChanged = true;
         }
-        if(isChanged) cartLineDao.updateCart(cart1);
+        if (isChanged) cartLineDao.updateCart(cart1);
         logger.info("carts merged");
     }
 
     public String checkProducts() {
         Cart cart = this.getCart();
         List<CartLine> cartLines = cartLineDao.listAvailable(cart.getId());
-        for (CartLine cartLine: cartLines) {
-            if(cartLine.getProductCount()==0 || cartLine.getProductCount()>cartLine.getProduct().getQuantity()) {
-                int countBefore  = cartLine.getProductCount();
+        for (CartLine cartLine : cartLines) {
+            if (cartLine.getProductCount() == 0 || cartLine.getProductCount() > cartLine.getProduct().getQuantity()) {
+                int countBefore = cartLine.getProductCount();
                 cartLine.setProductCount(cartLine.getProduct().getQuantity());
-                int countAfter  = cartLine.getProductCount();
+                int countAfter = cartLine.getProductCount();
                 int rezult = countBefore - countAfter;
                 cartLine.setTotal(cartLine.getProduct().getUnitPrice().multiply(new BigDecimal(cartLine.getProductCount())));
                 cart.setGrandTotal(cart.getGrandTotal().subtract(cartLine.getProduct().getUnitPrice().multiply(new BigDecimal(rezult))));
@@ -433,8 +506,8 @@ public class CartService {
      */
     public BigDecimal getAltogether() {
         Cart cart = this.getCart();
+        BigDecimal discount = this.getDiscount(cart);
         BigDecimal total = cart.getGrandTotal();
-        BigDecimal discount = this.getDiscount(cart, total);
         logger.info("getting total price of order with discount");
         return total.subtract(discount);
     }
@@ -448,8 +521,8 @@ public class CartService {
     public boolean setPromocode(String promocode) {
         Cart cart = this.getCart();
         List<PromoCode> promoCodes = this.getPromocode();
-        for (PromoCode promoCode : promoCodes){
-            if(promoCode.getCode().equals(promocode)){
+        for (PromoCode promoCode : promoCodes) {
+            if (promoCode.getCode().equals(promocode)) {
                 cart.setPromoCode(promoCode);
                 cartLineDao.updateCart(cart);
                 logger.info("promocode added");
@@ -468,5 +541,15 @@ public class CartService {
         cart.setPromoCode(null);
         cartLineDao.updateCart(cart);
         logger.info("promocode deleted");
+    }
+
+    public String addCartLines(int productId) {
+        String response = null;
+
+        Product product = productDao.get(productId);
+        this.addCartLine(productId);
+        response = this.addCartLine(product.getProductDisId());
+
+        return response;
     }
 }

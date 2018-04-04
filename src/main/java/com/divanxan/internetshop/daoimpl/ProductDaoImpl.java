@@ -29,6 +29,10 @@ public class ProductDaoImpl implements ProductDao {
     public Product get(int productId) {
         try {
             logger.info("getting product, id:"+ productId);
+            Query query = sessionFactory.getCurrentSession()
+                    .getNamedQuery("product")
+                    .setParameter("id",productId);
+            Product product = (Product) query.getSingleResult();
             return sessionFactory.getCurrentSession().get(Product.class, productId);
 
         } catch (Exception e) {
@@ -139,6 +143,7 @@ public class ProductDaoImpl implements ProductDao {
                 .setParameter("active",true)
                 .setParameter("categoryId",categoryId);
         logger.info("getting product by category");
+        List<Product> list = query.getResultList();
         return query.getResultList();
 //        String selectActiveProducts = "FROM Product WHERE active = :active AND categoryId = :categoryId";
 //        return sessionFactory.getCurrentSession()

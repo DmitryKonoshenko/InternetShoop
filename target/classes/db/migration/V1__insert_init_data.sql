@@ -20,10 +20,10 @@ INSERT INTO user_detail (first_name, last_name, role, enabled, password, email, 
 VALUES ('Иван', 'Коновалов', 'USER', TRUE, '$2a$10$Pzq3NKLbwmVsXVmJ7QjAhesAsu9tGbE5P37R6dnvsH7XbiyispGJS', 'ivan@gmail.com', '+79065513399');
 
 
-INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, product_id, discount)
 VALUES ('PRDABC123TVS', '19LES76T2', 'Erisson',
         'Телевизор Erisson 19LES76T2 черного цвета идеально подойдет для вашей кухни или небольшого помещения.'
-  , 7310, 5, TRUE, 1, 2);
+  , 7310, 5, TRUE, 1, 2, 6, 7);
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
 VALUES ('PRDQWE123TVS', '32LJ519U', 'LG',
         'LG 32LJ519U - это отличный HD-телевизор для всей семьи, который успешно совместит в себе все функции, присущие полноценному развлекательному медиацентру.'

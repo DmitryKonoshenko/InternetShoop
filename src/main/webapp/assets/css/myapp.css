@@ -57,6 +57,13 @@ custom stule
 
 }
 
+.dataSingleImgSmall{
+
+    width: 200px;
+    height:200px;
+
+}
+
 .help-block{
     color: #ff0000
 }

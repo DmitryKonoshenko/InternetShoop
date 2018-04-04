@@ -20,6 +20,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.math.BigDecimal;
 
 
 /**
@@ -181,9 +182,13 @@ public class PageController {
         //update the view count
         product.setViews(product.getViews() + 1);
         productDao.update(product);
-        logger.info("product update: " +product.toString());
         //done
-
+        if(product.getProductDis()!=null){
+            Product productD = product.getProductDis();
+            BigDecimal price = productD.getUnitPrice().multiply(new BigDecimal(product.getDiscount()).divide(new BigDecimal(100)));
+            price =  productD.getUnitPrice().subtract(price).setScale(2, BigDecimal.ROUND_HALF_EVEN);
+            mv.addObject("newPrice", price);
+        }
         mv.addObject("title", product.getName());
         mv.addObject("product", product);
 

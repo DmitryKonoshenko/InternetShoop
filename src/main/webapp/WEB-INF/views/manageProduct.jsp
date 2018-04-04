@@ -25,6 +25,7 @@
                 </div>
                 <div class="panel-body">
                     <!-- Form Elements -->
+                    <%--@elvariable id="product" type="com.divanxan.internetshop.dto.Product"--%>
                     <sf:form class="form-horizontal" modelAttribute="product"
                              action="${contextRoot}/manage/product"
                              method="POST"
@@ -48,6 +49,7 @@
                             </div>
                         </div>
 
+
                         <div class="form-group">
                             <label class="form-title1122" for="description">Введите описание товара</label>
                             <div class="col-md-8">
@@ -55,6 +57,17 @@
                                              placeholder="Не то, чтобы обязательно писать... Можно скопировать"
                                              class="form-field1122"/>
                                 <sf:errors path="description" cssClass="help-block" element="em"/>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="form-title1122" for="quantity">Введите количество</label>
+                            <div class="col-md-8">
+                                <sf:input type="number" path="quantity" id="quantity"
+                                          placeholder="Доступное количество товара"
+                                          class="form-field1122"/>
                             </div>
                         </div>
 
@@ -68,13 +81,23 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-title1122" for="quantity">Введите количество</label>
+                            <label class="form-title1122" for="quantity">Введите id сопутсвующего товара</label>
                             <div class="col-md-8">
-                                <sf:input type="number" path="quantity" id="quantity"
-                                          placeholder="Доступное количество товара"
+                                <sf:input type="" path="productDisId" id="productDisId"
                                           class="form-field1122"/>
+                                <sf:errors path="productDisId" cssClass="help-block" element="em"/>
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label class="form-title1122" for="quantity">Введите скидку сопутсвующего товара</label>
+                            <div class="col-md-8">
+                                <sf:input type="" path="discount" id="discount"
+                                          class="form-field1122"/>
+                                <sf:errors path="productDisId" cssClass="help-block" element="em"/>
+                            </div>
+                        </div>
+
                         <!-- File for image upload-->
                         <div class="form-group">
                             <label class="form-title1122" for="file">Загрузите изображение товара</label>
@@ -130,9 +153,9 @@
     <div class="row">
 
 
-        <div class="form-container1122">
+        <div class="form-container">
             <div class="form-title1122g">
-                <h3>Товары</h3>
+                <h3>Товары:</h3>
             </div>
                 <div class="container-fluid">
                     <div class="table-responsive">
@@ -144,7 +167,9 @@
                                 <th>Название</th>
                                 <th>Производитель</th>
                                 <th>Количество</th>
-                                <th><h10>&#8381;/</h10>Цена</th>
+                                <th>&#8381; Цена</th>
+                                <th>Товар</th>
+                                <th>Скидка</th>
                                 <th>Активность</th>
                                 <th>Редактировать</th>
                             </tr>
@@ -158,6 +183,8 @@
                                 <th>Производитель</th>
                                 <th>Количество</th>
                                 <th>&#8381; Цена</th>
+                                <th>Товар</th>
+                                <th>Скидка</th>
                                 <th>Активность</th>
                                 <th>Редактировать</th>
                             </tr>

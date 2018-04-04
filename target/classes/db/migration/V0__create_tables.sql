@@ -37,6 +37,8 @@ CREATE TABLE `ishop`.`product` (
   `supplier_id` INT(11)          DEFAULT NULL,
   `purchases`   INT(11)          DEFAULT '0',
   `views`       INT(11)          DEFAULT '0',
+  `product_id`  INT(11)          DEFAULT '0',
+  `discount`    INT(11)          DEFAULT '0',
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_product_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`),
   CONSTRAINT `fk_product_suplier_id` FOREIGN KEY (`supplier_id`) REFERENCES `user_detail` (`id`)
@@ -85,6 +87,7 @@ CREATE TABLE `ishop`.cart_line (
   `product_count` INT(11)          DEFAULT NULL,
   `buying_price`  DECIMAL(10, 2)   DEFAULT '0.00',
   `is_available`  TINYINT(1)       DEFAULT NULL,
+  `is_promocode`  TINYINT(1)       DEFAULT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT fk_cartline_cart_id FOREIGN KEY (`cart_id`) REFERENCES cart (`id`)
     ON DELETE CASCADE

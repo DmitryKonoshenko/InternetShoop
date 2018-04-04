@@ -5,6 +5,7 @@ import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.Product;
 import com.divanxan.internetshop.dto.User;
 import com.divanxan.internetshop.service.ManagerService;
+import com.divanxan.internetshop.service.OrderService;
 import com.divanxan.internetshop.util.FileUploadUtility;
 import com.divanxan.internetshop.validator.ProductValidator;
 import org.slf4j.Logger;
@@ -37,14 +38,17 @@ public class ManagementController {
 
     private final ManagerService managerService;
 
+    private final OrderService orderService;
+
     /**
      * Constructor initializing the service class
      *
      * @param managerService
      */
     @Autowired
-    public ManagementController(ManagerService managerService) {
+    public ManagementController(ManagerService managerService, OrderService orderService) {
         this.managerService = managerService;
+        this.orderService = orderService;
     }
 
     /**
@@ -143,6 +147,7 @@ public class ManagementController {
         if (mProduct.getId() == 0) {
             // создание нового товара
             managerService.addProduct(mProduct);
+            orderService.ListCompare();
         } else {
             // модификация товара
             managerService.updateProduct(mProduct);

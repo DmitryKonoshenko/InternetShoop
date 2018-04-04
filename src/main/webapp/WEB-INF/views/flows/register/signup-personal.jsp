@@ -17,7 +17,6 @@
                 </div>
 
                 <div class="panel-body">
-
                     <sf:form
                             method="POST"
                             modelAttribute="user"
@@ -38,7 +37,7 @@
                         <div class="col-md-8">
                             <sf:input type="text" path="lastName" class="form-control"
                                       placeholder="Пупкин"/>
-                                <sf:errors path="lastName" cssClass="help-block" element="em"/>
+                            <sf:errors path="lastName" cssClass="help-block" element="em"/>
                         </div>
                     </div>
 
@@ -47,7 +46,7 @@
                         <div class="col-md-8">
                             <sf:input type="text" path="email" class="form-control"
                                       placeholder="abc@zyx.com"/>
-                                <sf:errors path="email" cssClass="help-block" element="em"/>
+                            <sf:errors path="email" cssClass="help-block" element="em"/>
                         </div>
                     </div>
 
@@ -56,7 +55,7 @@
                         <div class="col-md-8">
                             <sf:input type="text" path="contactNumber" class="form-control"
                                       placeholder="XXXXXXXXXX" maxlength="12"/>
-                                <sf:errors path="contactNumber" cssClass="help-block" element="em"/>
+                            <sf:errors path="contactNumber" cssClass="help-block" element="em"/>
                         </div>
                     </div>
 
@@ -65,31 +64,31 @@
                         <div class="col-md-8">
                             <sf:input type="password" path="password" class="form-control"
                                       placeholder="Пароль"/>
-                                <sf:errors path="password" cssClass="help-block" element="em"/>
+                            <sf:errors path="password" cssClass="help-block" element="em"/>
                         </div>
                     </div>
-
-                        <div class="form-group">
-                            <label class="form-title1122">Ведите пароль еще раз</label>
-                            <div class="col-md-8">
-                                <sf:input type="password" path="confirmPassword" class="form-control"
-                                          placeholder="Повторите пароль"/>
-                                <sf:errors path="confirmPassword" cssClass="help-block" element="em"/>
-                            </div>
-                        </div>
-
 
                     <div class="form-group">
-                        <label class="form-title1122">Выберете цель регистрации</label>
+                        <label class="form-title1122">Ведите пароль еще раз</label>
                         <div class="col-md-8">
-                            <label class="radio-inline">
-                                <sf:radiobutton path="role" value="USER" checked="checked"/>Покупатель
-                            </label>
-                            <%--<label class="radio-inline">--%>
-                                <%--<sf:radiobutton path="role" value="SUPPLIER"/>Поставщик--%>
-                            <%--</label>--%>
+                            <sf:input type="password" path="confirmPassword" class="form-control"
+                                      placeholder="Повторите пароль"/>
+                            <sf:errors path="confirmPassword" cssClass="help-block" element="em"/>
                         </div>
                     </div>
+
+
+                        <%--<div class="form-group">--%>
+                        <%--<label class="form-title1122">Выберете цель регистрации</label>--%>
+                        <%--<div class="col-md-8">--%>
+                        <%--<label class="radio-inline">--%>
+                        <%--<sf:radiobutton path="role" value="USER" checked="checked"/>Покупатель--%>
+                        <%--</label>--%>
+                        <%--&lt;%&ndash;<label class="radio-inline">&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;<sf:radiobutton path="role" value="SUPPLIER"/>Поставщик&ndash;%&gt;--%>
+                        <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
+                        <%--</div>--%>
+                        <%--</div>--%>
 
                     <div class="form-group">
                         <div class="col-md-offset-4 col-md-8">
