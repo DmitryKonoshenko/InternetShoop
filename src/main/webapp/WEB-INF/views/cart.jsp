@@ -5,18 +5,13 @@
 <div class="container">
     <c:if test="${not empty message}">
         <div class="col-xs-12">
-
             <div class="alert alert-info">
-
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-
                     ${message}
-
             </div>
         </div>
     </c:if>
     <c:choose>
-
         <%--@elvariable id="cartLines" type="java.util.List"--%>
         <c:when test="${not empty cartLines}">
             <%--@elvariable id="userModel" type="com.divanxan.internetshop.model.UserModel"--%>
@@ -31,7 +26,6 @@
                 </tr>
                 </thead>
                 <tbody>
-
                 <c:forEach items="${cartLines}" var="cartLine">
                     <c:if test="${cartLine.productCount == 0}">
                         <c:set var="availableCount" value="${0}"/>
@@ -71,7 +65,6 @@
                         </td>
                     </tr>
                 </c:forEach>
-
                 </tbody>
                 <tfoot>
                 <tr class="visible-xs">
@@ -107,8 +100,6 @@
                                 </td>
                             </c:otherwise>
                         </c:choose>
-
-
                     </security:authorize>
                     <security:authorize access="isAnonymous()">
                         <td><a href="${contextRoot}/login" class="btn btn-success btn-block">Войти<span
@@ -133,7 +124,6 @@
                                             <label class="title">Введите промомкод</label>
                                             <input type="text" name="promocode" class="form-control"
                                                    placeholder="Промокод"/>
-
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-offset-4 col-md-8">
@@ -174,14 +164,12 @@
                 </tfoot>
             </table>
         </c:when>
-
         <c:otherwise>
             <div class="jumbotron">
                 <div class="text-center">
                     <h1>Ваша корзина пуста</h1>
                 </div>
             </div>
-
         </c:otherwise>
     </c:choose>
 </div>

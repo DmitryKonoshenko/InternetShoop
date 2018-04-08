@@ -19,7 +19,6 @@ import java.io.StringWriter;
  */
 @ControllerAdvice
 public class GlobalDefaultExceptionHandler {
-
     private static final Logger logger = LoggerFactory.getLogger(GlobalDefaultExceptionHandler.class);
 
     /**
@@ -29,9 +28,7 @@ public class GlobalDefaultExceptionHandler {
      */
     @ExceptionHandler(NoHandlerFoundException.class)
     public ModelAndView handlerNoHandlerFoundException() {
-
         ModelAndView mv = new ModelAndView("error");
-
         mv.addObject("errorTitle", "Ошибка доступа");
         mv.addObject("errorDescription", "Эта страница не доступна");
         mv.addObject("title", "404 Error Page");
@@ -46,12 +43,25 @@ public class GlobalDefaultExceptionHandler {
      */
     @ExceptionHandler(ProductNotFoundException.class)
     public ModelAndView handlerProductNotFoundException() {
-
         ModelAndView mv = new ModelAndView("error");
-
         mv.addObject("errorTitle", "Данный товар недоступен!");
         mv.addObject("errorDescription", "Товар что вы ищите недоступен!");
         mv.addObject("title", "Product Unavailable!");
+        logger.error(mv.toString());
+        return mv;
+    }
+
+    /**
+     * Controller for exception with not exist order detail
+     *
+     * @return ModelAndView
+     */
+    @ExceptionHandler(OrderNotFoundException.class)
+    public ModelAndView handlerOrderNotFoundException() {
+        ModelAndView mv = new ModelAndView("error");
+        mv.addObject("errorTitle", "Данный заказ недоступен!");
+        mv.addObject("errorDescription", "Заказ что вы ищите недоступен!");
+        mv.addObject("title", "Order Detail Unavailable!");
         logger.error(mv.toString());
         return mv;
     }
@@ -64,18 +74,13 @@ public class GlobalDefaultExceptionHandler {
      */
     @ExceptionHandler(Exception.class)
     public ModelAndView handlerException(Exception e) {
-
         ModelAndView mv = new ModelAndView("error");
-
         mv.addObject("errorTitle", "Что-то пошло не так. Свяжитесь с администратором!");
-
         //for debag
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
-
         e.printStackTrace(pw);
         // end debug
-
         mv.addObject("errorDescription", sw.toString());
         mv.addObject("title", "Ошибка");
         logger.error(mv.toString());
@@ -89,9 +94,7 @@ public class GlobalDefaultExceptionHandler {
      */
     @ExceptionHandler(UserAccessException.class)
     public ModelAndView handlerUserAccessException() {
-
         ModelAndView mv = new ModelAndView("error");
-
         mv.addObject("errorTitle", "Данная страница не доступна!");
         mv.addObject("errorDescription", "Данная страница не доступна!");
         mv.addObject("title", "Access denied");

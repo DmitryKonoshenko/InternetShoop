@@ -20,9 +20,7 @@ import java.util.concurrent.TimeUnit;
 @Repository("userDao")
 @Transactional
 public class UserDaoImpl implements UserDao {
-
     private static final Logger logger = LoggerFactory.getLogger(UserDaoImpl.class);
-
     private final SessionFactory sessionFactory;
 
     @Autowired
@@ -81,18 +79,6 @@ public class UserDaoImpl implements UserDao {
             logger.error("error getting user by email:"+ email);
             return null;
         }
-
-
-//        String selectQuery = "FROM User WHERE email =:email";
-//        try {
-//            return sessionFactory.getCurrentSession()
-//                    .createQuery(selectQuery, User.class)
-//                    .setParameter("email", email)
-//                    .getSingleResult();
-//        } catch (Exception e) {
-//            // e.printStackTrace();
-//            return null;
-//        }
     }
 
     @Override
@@ -103,12 +89,6 @@ public class UserDaoImpl implements UserDao {
                 .setParameter("id", id);
         logger.info("getting user by id:"+ id);
         return (User) query.getSingleResult();
-
-//        String selectQuery = "FROM User WHERE id =:id";
-//        return sessionFactory.getCurrentSession()
-//                .createQuery(selectQuery, User.class)
-//                .setParameter("id", id)
-//                .getSingleResult();
     }
 
     @Override
@@ -158,18 +138,6 @@ public class UserDaoImpl implements UserDao {
         Address address = (Address) query.getSingleResult();
         logger.info("getting billing address by user id:"+ userId);
         return address;
-
-//        String selectQuery = "FROM Address WHERE userId =:userId AND billing =:billing";
-//        try {
-//            return sessionFactory.getCurrentSession()
-//                    .createQuery(selectQuery, Address.class)
-//                    .setParameter("userId", userId)
-//                    .setParameter("billing", true)
-//                    .getSingleResult();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return null;
-//        }
     }
 
     @Override
@@ -181,18 +149,6 @@ public class UserDaoImpl implements UserDao {
 
         logger.info("getting list shipping addresses user by id:"+ userId);
         return query.getResultList();
-
-//        String selectQuery = "FROM Address WHERE userId =:userId AND shipping =:shipping";
-//        try {
-//            return sessionFactory.getCurrentSession()
-//                    .createQuery(selectQuery, Address.class)
-//                    .setParameter("userId", userId)
-//                    .setParameter("shipping", true)
-//                    .getResultList();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return null;
-//        }
     }
 
     @Override
@@ -203,17 +159,6 @@ public class UserDaoImpl implements UserDao {
                 .setParameter("userId", userId);
         logger.info("getting list addresses user by id:"+ userId);
         return query.getResultList();
-
-//        String selectQuery = "FROM Address WHERE userId =:userId";
-//        try {
-//            return sessionFactory.getCurrentSession()
-//                    .createQuery(selectQuery, Address.class)
-//                    .setParameter("userId", userId)
-//                    .getResultList();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return null;
-//        }
     }
 
     @Override
@@ -223,17 +168,6 @@ public class UserDaoImpl implements UserDao {
                 .setParameter("userId", userId);
         logger.info("getting list OrderDetail user by id:"+ userId);
         return query.getResultList();
-
-//        String selectQuery = "FROM OrderDetail WHERE user.id =:userId";
-//        try {
-//            return sessionFactory.getCurrentSession()
-//                    .createQuery(selectQuery, OrderDetail.class)
-//                    .setParameter("userId", userId)
-//                    .getResultList();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return null;
-//        }
     }
 
     @Override
@@ -242,21 +176,10 @@ public class UserDaoImpl implements UserDao {
                 .getNamedQuery("listAllOrders");
         logger.info("getting list all OrderDetail");
         return query.getResultList();
-
-//        String selectQuery = "FROM OrderDetail";
-//        try {
-//            return sessionFactory.getCurrentSession()
-//                    .createQuery(selectQuery, OrderDetail.class)
-//                    .getResultList();
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//            return null;
-//        }
     }
 
     @Override
     public List<OrderDetail> listThisMonthOrders() {
-
         Calendar date1 = Calendar.getInstance();   // this takes current date
         date1.set(Calendar.DAY_OF_MONTH, 1);
         date1.set(Calendar.HOUR_OF_DAY, 0);
@@ -264,20 +187,12 @@ public class UserDaoImpl implements UserDao {
         date1.set(Calendar.SECOND, 0);
         Calendar date2 = (Calendar) date1.clone();
         date2.add(Calendar.MONTH, 1);
-
         Query query = sessionFactory.getCurrentSession()
                 .getNamedQuery("listDateOrders")
                 .setParameter("date1", date1.getTime())
                 .setParameter("date2", date2.getTime());
         logger.info("getting list month OrderDetail");
         return query.getResultList();
-
-//        String selectQuery = "FROM OrderDetail WHERE orderDate BETWEEN :date1 AND :date2";
-//            return sessionFactory.getCurrentSession()
-//                    .createQuery(selectQuery, OrderDetail.class)
-//                    .setParameter("date1", date1.getTime())
-//                    .setParameter("date2", date2.getTime())
-//                    .getResultList();
 
     }
 
@@ -289,19 +204,10 @@ public class UserDaoImpl implements UserDao {
                 .setMaxResults(10);
         logger.info("getting list top products");
         return query.getResultList();
-
-//        String selectQuery = "FROM Product ORDER BY purchases desc ";
-//
-//        List<Product> list = sessionFactory.getCurrentSession()
-//                .createQuery(selectQuery, Product.class)
-//                .setMaxResults(10)
-//                .getResultList();
-//        return list;
     }
 
     @Override
     public List<OrderDetail> listThisWeekOrders() {
-
         Calendar date1 = Calendar.getInstance();   // this takes current date
         date1.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
         date1.set(Calendar.HOUR_OF_DAY, 0);
@@ -315,17 +221,42 @@ public class UserDaoImpl implements UserDao {
                 .getNamedQuery("listDateOrders")
                 .setParameter("date1", date1.getTime())
                 .setParameter("date2", date2.getTime());
-
-
        logger.info("getting list weak OrderDetail");
         return query.getResultList();
+    }
 
-//        String selectQuery = "FROM OrderDetail WHERE orderDate BETWEEN :date1 AND :date2";
-//        return sessionFactory.getCurrentSession()
-//                .createQuery(selectQuery, OrderDetail.class)
-//                .setParameter("date1", date1.getTime())
-//                .setParameter("date2", date2.getTime())
-//                .getResultList();
+    @Override
+    public OrderDetail getOrderDetail(int id) {
+        try {
+            logger.info("getting OrderDetail");
+        Query query = sessionFactory.getCurrentSession()
+                .getNamedQuery("getOrders")
+                .setParameter("id", id);
+            logger.info("success getting OrderDetail");
+            return (OrderDetail) query.getSingleResult();
+        }
+        catch (Exception e){
+            logger.error("exeption getting orderDetail id:"+ id);
+            return null;
+        }
+    }
+
+    @Override
+    public List<OrderDetail> listThisDateOrders(Map<String, String> map) {
+        String[] date1 = map.get("calendar1").split("-");
+        String[] date2 = map.get("calendar2").split("-");
+        int month = Integer.parseInt(date1[1])-1;
+        Calendar cal1 = new GregorianCalendar(Integer.parseInt(date1[0]),month,Integer.parseInt(date1[2]));
+        logger.info(cal1.getTime().toString());
+        month = Integer.parseInt(date2[1])-1;
+        Calendar cal2 = new GregorianCalendar(Integer.parseInt(date2[0]),month,Integer.parseInt(date2[2]));
+        logger.info(cal2.getTime().toString());
+        Query query = sessionFactory.getCurrentSession()
+                .getNamedQuery("listDateOrders")
+                .setParameter("date1", cal1.getTime())
+                .setParameter("date2", cal2.getTime());
+        logger.info("getting list dates OrderDetail");
+        return query.getResultList();
     }
 
 }

@@ -24,7 +24,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "user_detail")
 public class User implements Serializable{
-
     private static final long serialVersionUID = 777777777L;
 
     @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -48,7 +47,7 @@ public class User implements Serializable{
     private String contactNumber;
 
     @Column(name = "role")
-    private String role;
+    private String role="USER";
 
     @Column(name = "password")
     @NotBlank(message = "Введите пароль")
@@ -57,7 +56,6 @@ public class User implements Serializable{
     @Column(name = "enabled")
     private boolean enabled = true;
 
-// поле для проверки пароля
     @Transient
     private String confirmPassword;
 
@@ -69,7 +67,6 @@ public class User implements Serializable{
         this.confirmPassword = confirmPassword;
     }
 
-    //------------------
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private Cart cart;
 
@@ -80,8 +77,6 @@ public class User implements Serializable{
     public void setCart(Cart cart) {
         this.cart = cart;
     }
-
-    //------------------
 
     public int getId() {
         return id;

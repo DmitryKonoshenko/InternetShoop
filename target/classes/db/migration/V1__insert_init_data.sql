@@ -23,15 +23,31 @@ VALUES ('Иван', 'Коновалов', 'USER', TRUE, '$2a$10$Pzq3NKLbwmVsXVmJ
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, product_id, discount)
 VALUES ('PRDABC123TVS', '19LES76T2', 'Erisson',
         'Телевизор Erisson 19LES76T2 черного цвета идеально подойдет для вашей кухни или небольшого помещения.'
-  , 7310, 5, TRUE, 1, 2, 6, 7);
+  , 7310, 5, TRUE, 1, 2, 14, 7);
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
 VALUES ('PRDQWE123TVS', '32LJ519U', 'LG',
-        'LG 32LJ519U - это отличный HD-телевизор для всей семьи, который успешно совместит в себе все функции, присущие полноценному развлекательному медиацентру.'
+        'LG 32LJ519U - это отличный HD-телевизор для всей семьи.'
   , 15190, 5, TRUE, 1, 2);
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
 VALUES ('PRDRTY123TVS', 'STV-LC22T890FL', 'Supra',
-        'Телевизор Supra STV-LC22T890FL успешно совмещает в себе все функции, присущие полноценному развлекательному медиацентру.'
+        'Телевизор Supra STV-LC22T890FL успешно совмещает в себе все функции, присущие телевизору.'
   , 8990, 5, TRUE, 1, 2);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY124TVS', 'UE22H5610AK', 'Samsung',
+        'Компания Samsung представляет новую линейку жидкокристаллических телевизоров со светодиодной подсветкой.'
+  , 16990, 5, TRUE, 1, 2);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY125TVS', 'LT28E310EX', 'Samsung',
+        'Телевизор Samsung LT28E310EX - уникальное устройство, которое сочетает в себе плюсы, а е минусы.'
+  , 13990, 5, TRUE, 1, 2);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY126TVS', 'T24RTE1080', 'Thomson',
+        'Отличный телевизор. Для всей семьи.'
+  , 8990, 5, TRUE, 1, 2);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY127TVS', 'P32L22T2C', 'Polar',
+        'Отличный телевизор. Комфорт в каждом кадре.'
+  , 11990, 5, TRUE, 1, 2);
 
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
 VALUES ('PRDABC123PIL', 'FC 8760', 'Philips',
@@ -45,6 +61,18 @@ INSERT INTO product (code, name, brand, description, unit_price, quantity, is_ac
 VALUES ('PRDRTY123PIL', 'FC 6141', 'Philips',
         'Великолепные результаты уборки благодаря мощному пылесосу Philips MiniVac для сухой и влажной уборки.'
   , 3010, 5, TRUE, 2, 3);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY124PIL', 'STARWIND', 'CV-120',
+        'Компактный и мощный автомобильный пылесос для сухой уборки салона автомобиля.'
+  , 790, 5, TRUE, 2, 3);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY154PIL', 'Gorenje', 'SVC216FR',
+        'Легкий и компактный беспроводной пылесос Gorenje SVC216FR с возможностью работы в режиме ручного пылесоса.'
+  , 9180, 5, TRUE, 2, 3);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY125PIL', '2713', 'SVC216FR',
+        'Интеллектуальный робот-пылесос Ariete 2713 - идеальное решение для поддержания чистоты в доме без особых усилий.'
+  , 12930, 5, TRUE, 2, 3);
 
 INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
 VALUES ('PRDABC123FEN', 'D3010', 'Remington',
@@ -58,6 +86,18 @@ INSERT INTO product (code, name, brand, description, unit_price, quantity, is_ac
 VALUES ('PRDRTY123FEN', '554.13', 'Valera',
         'Компактный фен Valera Swiss Bebe 554.13 создан специально для деликатного ухода за детскими волосами и телом.'
   , 1270, 0, TRUE, 3, 4);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY124FEN', 'D3015', 'Remington',
+        'Мощный фен Remington Power Volume D3015 с автоматической функцией ионизации.'
+  , 2990, 5, TRUE, 3, 4);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY125FEN', 'AS1220', 'Remington',
+'Фен-щетка Remington AS1220 с комплектом сменных насадок отлично подойдет для создания укладок любой сложности.'
+, 3770, 5, TRUE, 3, 4);
+INSERT INTO product (code, name, brand, description, unit_price, quantity, is_active, category_id, supplier_id)
+VALUES ('PRDRTY126FEN', 'AS1220', 'Remington',
+'Мощный фен Remington D3080R идеально подойдет для создания укладок различной сложности.'
+  , 2350, 5, TRUE, 3, 4);
 
 INSERT INTO cart (user_id, grand_total, cart_lines, discount_id)
 VALUES (5, 0, 0, 3);

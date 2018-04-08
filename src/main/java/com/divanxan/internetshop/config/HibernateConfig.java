@@ -34,9 +34,6 @@ public class HibernateConfig {
 
     @Autowired
     private Environment env;
-
-    // имя бина используется в spring-security.xml
-
     /**
      * Configuration DataSource method
      *
@@ -45,13 +42,10 @@ public class HibernateConfig {
     @Bean("dataSource")
     public DataSource getDataSource() {
         BasicDataSource dataSource = new BasicDataSource();
-
-        //Вносим информацию о соединении с БД
         dataSource.setDriverClassName(env.getProperty("mysql.driver"));
         dataSource.setUrl(env.getProperty("mysql.jdbcUrl"));
         dataSource.setUsername(env.getProperty("mysql.username"));
         dataSource.setPassword(env.getProperty("mysql.password"));
-
         return dataSource;
     }
 
@@ -63,14 +57,10 @@ public class HibernateConfig {
      */
     @Bean
     public SessionFactory getSessionFactory(DataSource dataSource) {
-
         LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
-
         builder.addProperties(getHibernateProperties());
         builder.scanPackages("com.divanxan.internetshop");
-
         SessionFactory sessionFactory =  builder.buildSessionFactory();
-
         return sessionFactory;
     }
 
@@ -79,17 +69,12 @@ public class HibernateConfig {
      *
      * @return Properties properties
      */
-    //Все настройки хибернета будут возвращены в этом методе
     private Properties getHibernateProperties() {
-
         Properties properties = new Properties();
-
         properties.put("hibernate.dialect", env.getProperty("mysql.dialect"));
         properties.put("hibernate.show_sql", env.getProperty("hiber.show.sql"));
         properties.put("hibernate.format_sql", env.getProperty("hiber.format.sql"));
-
 //        properties.put("hibernate.hbm2ddl.auto", env.getProperty("hiber.hbm2ddl"));
-
         return properties;
     }
 

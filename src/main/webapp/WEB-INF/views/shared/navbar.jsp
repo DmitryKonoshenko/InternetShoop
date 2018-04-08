@@ -14,14 +14,8 @@
                 <li id="nav-item active">
                     <a class="nav-link" href="${contextRoot}/home">На главную</a>
                 </li>
-                <li id="about">
-                    <a class="nav-link" href="${contextRoot}/about">О магазине</a>
-                </li>
                 <li id="listProduct">
                     <a class="nav-link" href="${contextRoot}/show/all/products">Продукты</a>
-                </li>
-                <li id="contact">
-                    <a class="nav-link" href="${contextRoot}/contact">Контакты</a>
                 </li>
                 <security:authorize access="hasAuthority('ADMIN')">
                     <li id="manageProduct">
@@ -75,7 +69,6 @@
                         </a>
                     </li>
                 </security:authorize>
-
             </ul>
         </div>
     </div>

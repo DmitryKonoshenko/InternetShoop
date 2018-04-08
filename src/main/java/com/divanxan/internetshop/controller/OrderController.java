@@ -31,13 +31,9 @@ import java.util.Map;
 @Controller
 @RequestMapping("/order")
 public class OrderController {
-
     private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
-
     private final OrderService orderService;
-
     private final CartService cartService;
-
     private final MailService mailService;
 
     @Autowired
@@ -55,16 +51,10 @@ public class OrderController {
      */
     @RequestMapping("/show")
     public ModelAndView showOrder() throws UserAccessException {
-
-
         ModelAndView mv = new ModelAndView("order");
-
         orderService.prepareShowOrder();
-
         Address shipping = new Address();
-
         mv.addObject("shipping", shipping);
-
         logger.info(mv.toString());
         return mv;
     }
@@ -77,11 +67,9 @@ public class OrderController {
      */
     @RequestMapping("/{addressId}/select")
     public String selectAddress(@PathVariable int addressId) {
-
         orderService.selectAddress(addressId);
         logger.info("Address with id: " +addressId+" selected like shipping");
         return "redirect:/order/payment";
-
     }
 
     /**
@@ -93,7 +81,6 @@ public class OrderController {
      */
     @RequestMapping(value = "/show", method = RequestMethod.POST)
     public String addAddress(@Valid @ModelAttribute("shipping") Address shipping, BindingResult result) {
-
         if (result.hasErrors()) {
             return "order";
         }
@@ -112,7 +99,6 @@ public class OrderController {
      */
     @RequestMapping(value = "/payment", method = RequestMethod.GET)
     public ModelAndView showPayment(@RequestParam(name = "operation", required = false) String operation) throws UserAccessException {
-
         ModelAndView mv = new ModelAndView("orderPayment");
         mv.addObject("title", "Оплата");
         if (operation != null) {
@@ -136,7 +122,6 @@ public class OrderController {
      */
     @RequestMapping(value = "/payment", method = RequestMethod.POST)
     public String saveOrder(@RequestParam Map<String, String> map) {
-
         return orderService.saveOrder(map);
     }
 

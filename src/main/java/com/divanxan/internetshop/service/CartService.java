@@ -27,9 +27,7 @@ import java.util.List;
  */
 @Service("cartService")
 public class CartService {
-
     private static final Logger logger = LoggerFactory.getLogger(CartService.class);
-
     private final CartLineDao cartLineDao;
     private final HttpSession session;
     private final ProductDao productDao;
@@ -41,13 +39,11 @@ public class CartService {
         this.productDao = productDao;
     }
 
-
     /**
      * This method serves to retrieve or create a user's Cart
      *
      * @return Cart - getting or creating Cart
      */
-    // возвращает корзину зарегестрированого покупателя
     public Cart getCart() {
         Cart cart;
         try {
@@ -74,7 +70,6 @@ public class CartService {
      *
      * @return List<CartLine> - list of CartLines in Cart
      */
-    //возвращает содержимое корзины
     public List<CartLine> getCartLines() {
         Cart cart = this.getCart();
         List<CartLine> cartLines = null;
@@ -83,7 +78,6 @@ public class CartService {
         } else {
             cartLines = this.getCartLinesList();
         }
-
         if (cartLines != null) {
             for (CartLine cartLine : cartLines) {
                 int count = cartLine.getProductCount();
@@ -100,12 +94,10 @@ public class CartService {
         BigDecimal total = new BigDecimal(0);
         BigDecimal discount = null;
         if (cart.getPromoCode() != null) {
-
             for(CartLine line: list){
                 boolean bo = line.isUsePromocode();
                 if(line.isUsePromocode()) total= total.add(line.getTotal());
             }
-
             discount = total.multiply((
                     new BigDecimal(cart.getPromoCode().getDiscount())
             ).divide(new BigDecimal(100)))
@@ -122,16 +114,12 @@ public class CartService {
      * @param count
      * @return String - key of success
      */
-    // обновим количество товара в корзине (используется в методе updateCart в CartController)
     public String updateCartLine(int cartLineId, int count) {
         Cart cart = this.getCart();
         CartLine cartLine = null;
-        // если пользователь зарегестирован
         if (cart.getUser() != null) {
-            // получим строку корзины
             cartLine = cartLineDao.get(cartLineId);
         }
-        // если пользователь аноним
         else {
             List<CartLine> list = this.getCartLines();
             for (CartLine line : list) {
@@ -141,7 +129,6 @@ public class CartService {
                 }
             }
         }
-
         if (cartLine == null) {
             logger.error("updating cartLine failed. CartLine=null");
             return "result=error";
@@ -149,31 +136,22 @@ public class CartService {
             Product product = cartLine.getProduct();
 
             BigDecimal oldTotal = cartLine.getTotal();
-
-            // если покупатель хочет взять больше товара, чем у нас есть в наличии
             if (product.getQuantity() <= count) {
                 count = product.getQuantity();
             }
             cartLine.setProductCount(count);
-//            cartLine.setBuyingPrice(product.getUnitPrice());
             cartLine.setTotal(cartLine.getBuyingPrice().multiply(new BigDecimal(count)));
-            // если пользователь зарегестирован
             if (cart.getUser() != null) {
-                //обновляем сроку в корзине
                 cartLineDao.update(cartLine);
             }
-
-            // обновляем общую стоимость покупки
             BigDecimal total = cart.getGrandTotal().subtract(oldTotal).add(cartLine.getTotal());
             cart.setGrandTotal(total);
-            // обновляем корзину в бд если пользователь зарегестирован
             if (cart.getUser() != null) {
                 cartLineDao.updateCart(cart);
             }
             logger.info("cartLine update, cart: " + cart.toString());
             return "result=update";
         }
-
     }
 
     /**
@@ -182,22 +160,17 @@ public class CartService {
      * @param cartLineId - id of CartLine
      * @return String - key of success
      */
-    // удалим товар из корзины (используется в методе deleteCart в CartController)
     public String deleteCartLine(int cartLineId) {
-        // получим строку корзины
         Cart cart = this.getCart();
         if (cart.getUser() != null) {
-            //если пользователь зарегестрирован
             CartLine cartLine = cartLineDao.get(cartLineId);
             if (cartLine == null) {
                 logger.error("deleting cartLine failed. CartLine=null");
                 return "result=error";
             } else {
-                // удалим стоимость данной позиции
               cart.setGrandTotal(new BigDecimal(0));
                 cart.setCartLines(cart.getCartLines() - 1);
                 cartLineDao.updateCart(cart);
-
                 if(cartLine.getProduct().getProductDis()!=null){
                     Product product = cartLine.getProduct().getProductDis();
                     List<CartLine> list = this.getCartLines();
@@ -210,8 +183,6 @@ public class CartService {
                         if(line.getId()!=cartLineId) cart.setGrandTotal(cart.getGrandTotal().add(line.getTotal()));
                     }
                 }
-
-                // удалим позицию
                 cartLineDao.delete(cartLine);
                 logger.info("cartLine delete, cart: " + cart.toString());
                 return "result=deleted";
@@ -231,7 +202,6 @@ public class CartService {
             } else {
                 cart.setGrandTotal(new BigDecimal(0));
                 cart.setCartLines(cart.getCartLines() - 1);
-
                 int i = 0;
                 for (; i < list.size(); i++) {
                     if (list.get(i).getId() == cartLineId) {
@@ -248,7 +218,6 @@ public class CartService {
                         if(line.getId()!=cartLineId) cart.setGrandTotal(cart.getGrandTotal().add(line.getTotal()));
                     }
                 }
-
                 list.remove(i);
                 session.setAttribute("AnonymousCartLines", list);
                 logger.info("cartLine delete, cart: " + cart.toString());
@@ -262,13 +231,10 @@ public class CartService {
      *
      * @return String - key of success
      */
-    // добавим товар в корзину (используется в методе addCart в CartController)
     public String addCartLine(int productId) {
         String response = null;
-
         Cart cart = this.getCart();
         CartLine cartLine = null;
-
         try {
             cartLine = cartLineDao.getByCartAndProduct(cart.getId(), productId);
         } catch (Exception e) {
@@ -286,17 +252,11 @@ public class CartService {
             }
         }
         if (cartLine == null) {
-            //добавим новую позицию
             cartLine = new CartLine();
-            //найдем нужный товар
             Product product = productDao.get(productId);
-
             cartLine.setCartId(cart.getId());
-
             cartLine.setProduct(product);
             List<CartLine> cartLines = this.getCartLines();
-
-            //validating Cart lins on discount
             boolean validationSuccess = false;
             if (cartLines != null && cartLines.size() > 0) {
                 for (CartLine crtLine : cartLines) {
@@ -329,11 +289,9 @@ public class CartService {
             BigDecimal mm =cartLine.getBuyingPrice();
             cartLine.setTotal(cartLine.getBuyingPrice());
             cartLine.setAvailable(true);
-            //если пользователь - зарегестрирован
             if (cart.getUser() != null) {
                 cartLineDao.add(cartLine);
             } else {
-                //если пользователь - Аноним
                 if (cartLines != null) {
                     //TODO может все рухнет из-за этого
                     CartLine last = null;
@@ -350,13 +308,11 @@ public class CartService {
             }
             cart.setCartLines(cart.getCartLines() + 1);
             cart.setGrandTotal(cart.getGrandTotal().add(cartLine.getTotal()));
-            //если пользователь - зарегестрирован внесем изменения в БД
             if (cart.getUser() != null) {
                 cartLineDao.updateCart(cart);
             }
             response = "result=added";
         }
-
         return response;
     }
 
@@ -367,8 +323,6 @@ public class CartService {
      */
     public String validateCartLine() {
         Cart cart = this.getCart();
-
-        //TODO
         List<CartLine> cartLines = this.getCartLines();
         BigDecimal grandTotal = new BigDecimal(0.0);
         int lineCount = 0;
@@ -390,7 +344,6 @@ public class CartService {
                 cartLine.setAvailable(true);
                 changed = true;
             }
-
             // check if the buying price of product has been changed
             if (!cartLine.getBuyingPrice().equals(product.getUnitPrice())) {
                 // set the buying price to the new price
@@ -399,15 +352,12 @@ public class CartService {
                 cartLine.setTotal(product.getUnitPrice().multiply(new BigDecimal(cartLine.getProductCount())));
                 changed = true;
             }
-
             // check if that much quantity of product is available or not
             if (cartLine.getProductCount() > product.getQuantity()) {
                 cartLine.setProductCount(product.getQuantity());
                 cartLine.setTotal(product.getUnitPrice().multiply(new BigDecimal(cartLine.getProductCount())));
                 changed = true;
-
             }
-
             // changes has happened
             if (changed) {
                 //update the cartLine
@@ -415,11 +365,9 @@ public class CartService {
                 // set the result as modified
                 response = "result=modified";
             }
-
             grandTotal = grandTotal.add(cartLine.getTotal());
             lineCount++;
         }
-
         cart.setCartLines(lineCount);
         cart.setGrandTotal(grandTotal);
         cartLineDao.updateCart(cart);
@@ -433,13 +381,9 @@ public class CartService {
      * @param cart1 - merging cart
      */
     public void mergeCart(Cart cart1) {
-
         List<CartLine> cartLines1 = this.getCartLinesList();
-
         List<CartLine> cartLines2 = cartLineDao.listAvailable(cart1.getId());
-
         boolean isChanged = false;
-
         if (cartLines2.size() > 0) {
             boolean isOneProduct = false;
             for (int i = 0; i < cartLines1.size(); i++) {
@@ -545,11 +489,9 @@ public class CartService {
 
     public String addCartLines(int productId) {
         String response = null;
-
         Product product = productDao.get(productId);
         this.addCartLine(productId);
         response = this.addCartLine(product.getProductDisId());
-
         return response;
     }
 }

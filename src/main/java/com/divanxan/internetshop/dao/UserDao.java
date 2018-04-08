@@ -3,6 +3,7 @@ package com.divanxan.internetshop.dao;
 import com.divanxan.internetshop.dto.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Dao interface for management User
@@ -138,4 +139,19 @@ public interface UserDao {
      */
     List<OrderDetail> listThisWeekOrders();
 
+     /**
+     * Getting order detail by id
+     *
+     * @param id - id of order detail
+     * @return OrderDetail - OrderDetail
+     */
+    OrderDetail getOrderDetail(int id);
+
+    /**
+     * Getting orders list by dates
+     *
+     * @param map - Map<String,String> with date information
+     * @return
+     */
+    List<OrderDetail> listThisDateOrders(Map<String,String> map);
 }

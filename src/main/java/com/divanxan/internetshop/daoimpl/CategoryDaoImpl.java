@@ -17,9 +17,7 @@ import java.util.List;
 @Repository("categoryDao")
 @Transactional
 public class CategoryDaoImpl implements CategoryDao {
-
     private static final Logger logger = LoggerFactory.getLogger(CategoryDaoImpl.class);
-
     private final SessionFactory sessionFactory;
 
     @Autowired
@@ -29,8 +27,9 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public boolean add(Category category) {
+        if(category.getName().length()>50) category.setName(category.getName().substring(0,49));
+        if(category.getDescription().length()>255) category.setDescription(category.getDescription().substring(0,254));
         try {
-            //добавление категорию в таблицу БД
             sessionFactory.getCurrentSession().persist(category);
             logger.info("category added: "+category.toString());
             return true;
@@ -43,6 +42,8 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public boolean update(Category category) {
+        if(category.getName().length()>50) category.setName(category.getName().substring(0,49));
+        if(category.getDescription().length()>255) category.setDescription(category.getDescription().substring(0,249));
         logger.info("category update: "+category.toString());
         return updateCode(category);
     }
@@ -51,7 +52,6 @@ public class CategoryDaoImpl implements CategoryDao {
     public boolean delete(Category category) {
         logger.info("category deactivate: "+category.toString());
         category.setActive(false);
-
         return updateCode(category);
     }
 
@@ -65,7 +65,6 @@ public class CategoryDaoImpl implements CategoryDao {
     @Override
     public boolean deleteForTest(Category category) {
         try{
-            //добавление категорию в таблицу БД
             sessionFactory.getCurrentSession().delete(category);
             logger.info("category deleted: "+category.toString());
             return true;
@@ -79,7 +78,6 @@ public class CategoryDaoImpl implements CategoryDao {
 
     private boolean updateCode(Category category) {
         try{
-            //изменение категории в таблице БД
             sessionFactory.getCurrentSession().update(category);
             logger.info("category update: "+category.toString());
             return true;
@@ -93,20 +91,11 @@ public class CategoryDaoImpl implements CategoryDao {
 
     @Override
     public List<Category> list() {
-
         Query query = sessionFactory.getCurrentSession()
                 .getNamedQuery("listCategory")
                 .setParameter("active",true);
         logger.info("get categoru list");
         return query.getResultList();
-
-//        String selectActiveCategory = "FROM Category WHERE active = :active";
-//
-//        Query query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
-//
-//        query.setParameter("active", true);
-//
-//        return query.getResultList();
     }
 
     @Override

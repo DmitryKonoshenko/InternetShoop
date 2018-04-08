@@ -28,13 +28,15 @@ import java.util.List;
         @NamedQuery(
                 name = "listDateOrders",
                 query = "FROM OrderDetail WHERE orderDate BETWEEN :date1 AND :date2"
-        )
+        ),
+        @NamedQuery(
+        name = "getOrders",
+        query = "FROM OrderDetail WHERE id=:id"
+)
 })
 @Entity
 @Table(name = "order_detail")
 public class OrderDetail implements Serializable {
-
-
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -108,5 +110,24 @@ public class OrderDetail implements Serializable {
 
     public void setIsDelivery(boolean delivery) {
         isDelivery = delivery;
+    }
+
+    @Override
+    public String toString() {
+        return "OrderDetail{" +
+                "id=" + id +
+                ", user=" + user +
+                ", orderTotal=" + orderTotal +
+                ", shipping=" + shipping +
+                ", billing=" + billing +
+                ", orderItems=" + orderItems +
+                ", orderCount=" + orderCount +
+                ", orderDate=" + orderDate +
+                ", isPay=" + isPay +
+                ", delivery=" + delivery +
+                ", isDelivery=" + isDelivery +
+                ", isShippedOrder=" + isShippedOrder +
+                ", discount=" + discount +
+                '}';
     }
 }

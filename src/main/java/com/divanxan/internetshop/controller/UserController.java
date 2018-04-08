@@ -4,6 +4,7 @@ package com.divanxan.internetshop.controller;
 import com.divanxan.internetshop.dto.Address;
 import com.divanxan.internetshop.dto.OrderDetail;
 import com.divanxan.internetshop.dto.User;
+import com.divanxan.internetshop.exception.OrderNotFoundException;
 import com.divanxan.internetshop.exception.UserAccessException;
 import com.divanxan.internetshop.service.UserService;
 import org.slf4j.Logger;
@@ -31,9 +32,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-
     private final UserService userService;
 
     @Autowired
@@ -50,20 +49,13 @@ public class UserController {
      */
     @RequestMapping("/show")
     public ModelAndView showUser(@RequestParam(name = "operation", required = false) String operation) throws UserAccessException {
-
         ModelAndView mv = new ModelAndView("page");
-
         mv.addObject("title", "User Data");
         mv.addObject("userClickShowUser", true);
-
         User user = userService.getUser();
-
         List<Address> addresses = userService.getAddresses(user.getId());
-
         List<OrderDetail> orderDetails = userService.getOrders(user.getId());
-
         mv.addObject("userData", user);
-
         mv.addObject("addresses", addresses);
         mv.addObject("orderDetails", orderDetails);
         try {
@@ -98,11 +90,9 @@ public class UserController {
      */
     @RequestMapping(value = "/userName", method = RequestMethod.GET)
     public ModelAndView changeUser() throws UserAccessException {
-
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "User Data");
         mv.addObject("userClickShowUserName", true);
-
         User user = new User();
         try {
         user.setId(userService.getUser().getId());
@@ -124,9 +114,7 @@ public class UserController {
      */
     @RequestMapping(value = "/show", method = RequestMethod.POST)
     public String submit(@RequestParam Map<String, String> map, Model model) {
-
         return userService.ValidateUserInformation(map,model);
-
     }
 
 
@@ -138,13 +126,10 @@ public class UserController {
      */
     @RequestMapping(value = "/userPassword", method = RequestMethod.GET)
     public ModelAndView changePassword() throws UserAccessException {
-
         String email = userService.getEmail();
-
         if(email==null){
             throw new UserAccessException();
         }
-
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "User Password");
         mv.addObject("userClickShowUserPassword", true);
@@ -161,18 +146,38 @@ public class UserController {
      */
     @RequestMapping(value = "/{userAddressId}/userAddress", method = RequestMethod.GET)
     public ModelAndView changeAddress(@PathVariable int userAddressId) throws UserAccessException {
-
         String email = userService.getEmail();
-
         if(email==null){
             throw new UserAccessException();
         }
-
         ModelAndView mv = new ModelAndView("page");
         mv.addObject("title", "User Address");
         mv.addObject("userClickShowUserAddress", true);
-
         userService.setAddressId(userAddressId);
+        logger.info(mv.toString());
+        return mv;
+    }
+
+    /**
+     * Page with order detail
+     *
+     * @param userOrderId - id of OrderDetail
+     * @return ModelAndView
+     * @throws UserAccessException
+     * @throws OrderNotFoundException
+     */
+    @RequestMapping(value = "/{userOrderId}/orderDetail", method = RequestMethod.GET)
+    public ModelAndView showOrder(@PathVariable int userOrderId) throws UserAccessException, OrderNotFoundException {
+        OrderDetail orderDetail = userService.getOrderDetail(userOrderId);
+        if (orderDetail == null) throw new OrderNotFoundException();
+        String email = userService.getEmail();
+        if(email==null || !orderDetail.getUser().getEmail().equals(email)){
+            throw new UserAccessException();
+        }
+        ModelAndView mv = new ModelAndView("page");
+        mv.addObject("title", "Order Detail");
+        mv.addObject("userClickShowOneOrderDetail", true);
+        mv.addObject("orderDetail", orderDetail);
         logger.info(mv.toString());
         return mv;
     }

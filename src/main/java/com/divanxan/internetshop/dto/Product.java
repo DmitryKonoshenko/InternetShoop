@@ -118,7 +118,6 @@ public class Product implements Serializable {
     @Setter
     @NotFound(action=NotFoundAction.IGNORE)
     @ManyToOne(optional = true)
-    @JsonIgnore
     @JoinColumn(name = "product_id", insertable = false, updatable = false)
     private Product productDis;
 
@@ -131,16 +130,11 @@ public class Product implements Serializable {
     @JsonIgnore
     private int productDisId;
 
-//    @Column(name = "vishes")
-//    private int vishes;
-
-
     @Transient
     @Getter
     @Setter
     @JsonIgnore
     private MultipartFile file;
-
 
     //default constructor
     public Product() {

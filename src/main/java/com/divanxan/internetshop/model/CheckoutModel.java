@@ -14,17 +14,13 @@ import java.util.List;
  * @since version 1.0
  */
 public class CheckoutModel implements Serializable {
-
-
     private static final long serialVersionUID = 1L;
-
     private User user;
     private Address shipping;
     private Cart cart;
     private List<CartLine> cartLines;
     private OrderDetail orderDetail;
     private BigDecimal checkoutTotal;
-
 
     public OrderDetail getOrderDetail() {
         return orderDetail;
@@ -57,7 +53,6 @@ public class CheckoutModel implements Serializable {
     public void setCartLines(List<CartLine> cartLines) {
         this.cartLines = cartLines;
     }
-
 
     public User getUser() {
         return user;

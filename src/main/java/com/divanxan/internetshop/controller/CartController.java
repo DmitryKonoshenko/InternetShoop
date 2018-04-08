@@ -28,7 +28,6 @@ import java.util.Map;
 public class CartController {
 
     private final CartService cartService;
-
     private static final Logger logger = LoggerFactory.getLogger(CartController.class);
 
     /**
@@ -50,33 +49,26 @@ public class CartController {
     @RequestMapping("/show")
     public ModelAndView showCart(@RequestParam(name = "result", required = false) String result) {
         ModelAndView mv = new ModelAndView("page");
-
         if(result!=null){
-
             switch (result){
                 case "false":
                     mv.addObject("message","Данное количество товара не доступно");
                     break;
             }
-
         }
-
         mv.addObject("title", "Корзина");
         mv.addObject("userClickShowCart", true);
         mv.addObject("cartLines", cartService.getCartLines());
         mv.addObject("altogether", cartService.getAltogether());
         mv.addObject("cart", cartService.getCart());
-
         logger.info(mv.toString());
         return mv;
-
     }
 
     @RequestMapping(value = "/show", method = RequestMethod.POST)
     public String submit(@RequestParam Map<String, String> map, Model model) {
         String promocode = map.get("promocode");
-        boolean addingPromocode = true;
-        if(promocode!=null) addingPromocode = cartService.setPromocode(promocode);
+        if(promocode!=null)cartService.setPromocode(promocode);
         else cartService.deletePromocode();
         return "redirect:/cart/show";
     }
@@ -91,11 +83,9 @@ public class CartController {
 // обновляем содержимое корзины в графе количество
     @RequestMapping("/{cartLineId}/update")
     public String updateCart(@PathVariable int cartLineId, @RequestParam int count) {
-
         String response = cartService.updateCartLine(cartLineId, count);
         logger.info("Cart line id: "+cartLineId+" update");
         return "redirect:/cart/show?"+response;
-
     }
 
     /**
@@ -104,14 +94,11 @@ public class CartController {
      * @param cartLineId
      * @return String with redirect information
      */
-    // удаляем стоку в корзине
     @RequestMapping("/{cartLineId}/delete")
     public String deleteCart(@PathVariable int cartLineId) {
-
         String response = cartService.deleteCartLine(cartLineId);
         logger.info("Cart line id: "+cartLineId+" deleted");
         return "redirect:/cart/show?"+response;
-
     }
 
     /**
@@ -120,7 +107,6 @@ public class CartController {
      * @param productId - id of adding product
      * @return String with redirect information
      */
-    // добавляем позицию в корзине
     @RequestMapping("/add/{productId}/product")
     public String addCartLine(@PathVariable int productId) {
         String response = cartService.addCartLine(productId);
@@ -134,7 +120,6 @@ public class CartController {
      * @param productId - id of adding product
      * @return String with redirect information
      */
-    // добавляем позицию в корзине
     @RequestMapping("/add/{productId}/products")
     public String addCartLines(@PathVariable int productId) {
         String response = cartService.addCartLines(productId);

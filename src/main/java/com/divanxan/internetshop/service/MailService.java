@@ -22,9 +22,7 @@ import java.util.Properties;
  */
 @Service("mailService")
 public class MailService {
-
     private static final Logger logger = LoggerFactory.getLogger(MailService.class);
-
     private String username;
     private String password;
 
@@ -34,7 +32,6 @@ public class MailService {
      * @param orderDetail - OrderDetail of customer
      */
     public void send(OrderDetail orderDetail) {
-
         Properties props = new Properties();
         username = "divanxan@gmail.com";
         password = "sbn32meat";
@@ -42,20 +39,17 @@ public class MailService {
         props.put("mail.smtp.starttls.enable", "true");
         props.put("mail.smtp.host", "smtp.gmail.com");
         props.put("mail.smtp.port", "587");
-
+        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
         //mail of customer
 //        String toEmail = orderDetail.getUser().getEmail();
         //because i don't know what mail can be exist
         String toEmail = "divanxan@gmail.com";
-
         String subject = "Квитанция о покупке в магазине Элекроник";
         StringBuilder text = new StringBuilder();
-
         text.append("Вы Совершили покупку в магазине Электроник:\n");
         text.append("Номер заказа: ").append(orderDetail.getId()).append("\n");
         text.append("Дата: ").append(orderDetail.getOrderDate()).append("\n\n");
         List<OrderItem> orderItemList = orderDetail.getOrderItems();
-
         for (OrderItem item : orderItemList) {
             Product product = item.getProduct();
             text.append("Название: ").append(product.getName())
@@ -80,33 +74,24 @@ public class MailService {
             text.append(orderDetail.getShipping().getState()).append(" - ")
                     .append(orderDetail.getShipping().getCountry()).append("\n");
         } else text.append(" самовывоз.\n");
-
         Session session = Session.getInstance(props, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
             }
         });
-
         try {
             Message message = new MimeMessage(session);
-            //от кого
             message.setFrom(new InternetAddress(username));
-            //кому
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
-            //Заголовок письма
             message.setSubject(subject);
-            //Содержимое
             message.setText(text.toString());
             logger.info("Email send");
             logger.info(text.toString());
-            //Отправляем сообщение
             Transport.send(message);
-
         } catch (MessagingException e) {
             logger.error("Message not send");
             logger.error(text.toString());
             throw new RuntimeException(e);
         }
     }
-
 }

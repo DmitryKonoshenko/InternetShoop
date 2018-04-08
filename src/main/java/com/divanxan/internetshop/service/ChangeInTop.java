@@ -18,9 +18,7 @@ import java.util.List;
 @Service("changeInTop")
 @Scope(scopeName = "singleton")
 public class ChangeInTop {
-
     private final ProductDao productDao;
-
     private List<Product> productList;
 
     @Autowired

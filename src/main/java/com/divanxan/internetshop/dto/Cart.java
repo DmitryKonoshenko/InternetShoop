@@ -29,12 +29,10 @@ public class Cart implements Serializable {
     @Setter
     private int id;
 
-    //-----
     @OneToOne
     @Getter
     @Setter
     private User user;
-    //-----
 
     @Column(name = "grand_total")
     @Getter

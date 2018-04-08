@@ -3,22 +3,15 @@
 <%@taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
 <div class="container">
     <div class="row">
-
         <c:if test="${not empty message}">
             <div class="col-xs-12">
-
                     <div class="alert alert-danger">
-
                         <button type="button" class="close" data-dismiss="alert">&times;</button>
-
                             ${message}
-
                     </div>
             </div>
         </c:if>
-
         <div class="form-container1122">
-
             <div class="panel panel-primary">
                 <div class="form-title1122">
                     <h4>Редактирование товаров</h4>
@@ -31,7 +24,6 @@
                              method="POST"
                              enctype="multipart/form-data"
                     >
-
                     <div class="form-group">
                         <label class="form-title1122" for="name">Введите название товара</label>
                         <div class="col-md-8">
@@ -39,17 +31,14 @@
                                       class="form-field1122"/>
                             <sf:errors path="name" cssClass="help-block" element="em"/>
                         </div>
-
                         <div class="form-group">
                             <label class="form-title1122" for="brand">Введите название бренда</label>
                             <div class="col-md-8">
-                                <sf:input type="text" path="brand" id="brand" placeholder="Название бренада"
+                                <sf:input type="text" path="brand" id="brand" placeholder="Название бренда"
                                           class="form-field1122"/>
                                 <sf:errors path="brand" cssClass="help-block" element="em"/>
                             </div>
                         </div>
-
-
                         <div class="form-group">
                             <label class="form-title1122" for="description">Введите описание товара</label>
                             <div class="col-md-8">
@@ -59,27 +48,22 @@
                                 <sf:errors path="description" cssClass="help-block" element="em"/>
                             </div>
                         </div>
-
-
-
                         <div class="form-group">
                             <label class="form-title1122" for="quantity">Введите количество</label>
                             <div class="col-md-8">
-                                <sf:input type="number" path="quantity" id="quantity"
+                                <sf:input type="number" min="0" max="50000" path="quantity" id="quantity"
                                           placeholder="Доступное количество товара"
                                           class="form-field1122"/>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label class="form-title1122" for="unitPrice">Введите цену товара</label>
                             <div class="col-md-8">
-                                <sf:input type="number" path="unitPrice" id="unitPrice"
+                                <sf:input type="number" min="1" max="999999" path="unitPrice" id="unitPrice"
                                           placeholder="Цена в рублях" class="form-field1122"/>
                                 <sf:errors path="unitPrice" cssClass="help-block" element="em"/>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label class="form-title1122" for="quantity">Введите id сопутсвующего товара</label>
                             <div class="col-md-8">
@@ -88,16 +72,14 @@
                                 <sf:errors path="productDisId" cssClass="help-block" element="em"/>
                             </div>
                         </div>
-
                         <div class="form-group">
-                            <label class="form-title1122" for="quantity">Введите скидку сопутсвующего товара</label>
+                            <label class="form-title1122" for="discount">Введите скидку сопутсвующего товара</label>
                             <div class="col-md-8">
-                                <sf:input type="" path="discount" id="discount"
+                                <sf:input type="number" min="0" max="15" path="discount" id="discount"
                                           class="form-field1122"/>
                                 <sf:errors path="productDisId" cssClass="help-block" element="em"/>
                             </div>
                         </div>
-
                         <!-- File for image upload-->
                         <div class="form-group">
                             <label class="form-title1122" for="file">Загрузите изображение товара</label>
@@ -106,7 +88,6 @@
                                 <sf:errors path="file" cssClass="help-block" element="em"/>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label class="form-title1122" for="categoryId">Выбирете категорию: </label>
                             <div class="col-md-8">
@@ -125,8 +106,6 @@
                                 </c:if>
                             </div>
                         </div>
-
-
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-8">
                                 <input type="submit" name="submit" id="submit" value="Сохранить"
@@ -138,21 +117,15 @@
                                 <sf:hidden path="active"/>
                                 <sf:hidden path="purchases"/>
                                 <sf:hidden path="views"/>
-
                             </div>
                         </div>
-
                         </sf:form>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
     <div class="row">
-
-
         <div class="form-container">
             <div class="form-title1122g">
                 <h3>Товары:</h3>
@@ -168,13 +141,12 @@
                                 <th>Производитель</th>
                                 <th>Количество</th>
                                 <th>&#8381; Цена</th>
-                                <th>Товар</th>
-                                <th>Скидка</th>
+                                <th>ID товара</th>
+                                <th>Скидка %</th>
                                 <th>Активность</th>
                                 <th>Редактировать</th>
                             </tr>
                             </thead>
-                            <%-- см myapp.js  adminProductsTable--%>
                             <tfoot>
                             <tr>
                                 <th>Id</th>
@@ -183,8 +155,8 @@
                                 <th>Производитель</th>
                                 <th>Количество</th>
                                 <th>&#8381; Цена</th>
-                                <th>Товар</th>
-                                <th>Скидка</th>
+                                <th>ID товара</th>
+                                <th>Скидка %</th>
                                 <th>Активность</th>
                                 <th>Редактировать</th>
                             </tr>
@@ -194,10 +166,8 @@
                 </div>
         </div>
     </div>
-
     <!-- Modal form -->
     <div class="modal fade" id="myCategoryModal" role="dialog" tabindex="-1">
-
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <!-- Modal Header -->
@@ -212,8 +182,6 @@
                     <%--@elvariable id="category" type="com.divanxan.internetshop.dto.Category"--%>
                     <sf:form id="categoryForm" modelAttribute="category" action="${contextRoot}/manage/category" method="POST"
                              cssClass="form-horizontal">
-
-
                         <div class="form-group">
                             <label for="category_name" class="control-label col-md-4">Название категории</label>
                             <div class="col-md-8">
@@ -221,7 +189,6 @@
                                 <sf:errors path="name" cssClass="help-block" element="em"/>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <label for="category_description" class="control-label col-md-4">Описание категории</label>
                             <div class="col-md-8">
@@ -230,98 +197,14 @@
                                 <sf:errors path="description" cssClass="help-block" element="em"/>
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-8">
                                 <input type="submit" value="Добавить катеорию" class="submit-button1122"/>
                             </div>
                         </div>
-
                     </sf:form>
                 </div>
             </div>
         </div>
-
     </div>
-
 </div>
-
-<%--<form class="form-container1122">--%>
-<%--<div class="form-title1122"><h2>Редактировать товары</h2></div>--%>
-
-<%--&lt;%&ndash;@elvariable id="product" type="com.divanxan.internetshop.dto.Product"&ndash;%&gt;--%>
-<%--<sf:form class="form-horizontal" modelAttribute="product"--%>
-<%--action="${contextRoot}/manage/product"--%>
-<%--method="POST"--%>
-<%-->--%>
-
-<%--<div class="form-group">--%>
-<%--<label class="form-title1122" for="name">Введите имя товара</label>--%>
-<%--<div class="col-md-8">--%>
-<%--<sf:input type="text" path="name" id="name" placeholder="Название товара" class="form-field1122"/>--%>
-<%--<br/>--%>
-<%--</div>--%>
-<%--</div>--%>
-
-<%--<div class="form-group">--%>
-<%--<label class="form-title1122" for="brand">Введите название производителя</label>--%>
-<%--<div class="col-md-8">--%>
-<%--<sf:input type="text" path="brand" id="brand" placeholder="Название бренда" class="form-field1122"/>--%>
-<%--<br/>--%>
-<%--</div>--%>
-<%--</div>--%>
-
-<%--<div class="form-group">--%>
-<%--<label class="form-title1122" for="description">Введите описание товара</label>--%>
-<%--<div class="col-md-8">--%>
-<%--<sf:textarea path="description" id="description" rows="4" placeholder="Описание товара"--%>
-<%--class="form-field1122"/>--%>
-<%--<br/>--%>
-<%--</div>--%>
-<%--</div>--%>
-
-<%--<div class="form-group">--%>
-<%--<div class="form-title1122" for="unitPrice">Введите цену товара</div>--%>
-<%--<div class="col-md-8">--%>
-<%--<sf:input type="number" path="unitPrice" id="unitPrice" placeholder="Цена" class="form-field1122"/>--%>
-<%--<br/>--%>
-<%--</div>--%>
-<%--</div>--%>
-
-<%--<div class="form-group">--%>
-<%--<div class="form-title1122" for="quantity">Введите количество товара</div>--%>
-<%--<div class="col-md-8">--%>
-<%--<sf:input type="number" path="quantity" id="quantity" placeholder="Количество"--%>
-<%--class="form-field1122"/>--%>
-<%--<br/>--%>
-<%--</div>--%>
-<%--</div>--%>
-
-<%--<div class="form-group">--%>
-<%--<div class="form-title1122" for="categoryId">Выберите категорию</div>--%>
-<%--<div class="col-md-8">--%>
-<%--<sf:select class="form-field1122" id="categoryId" path="categoryId"--%>
-<%--items="${categories}"--%>
-<%--itemLabel="name"--%>
-<%--itemValue="id"--%>
-<%--/>--%>
-<%--<sf:hidden path="id"/>--%>
-<%--<sf:hidden path="code"/>--%>
-<%--<sf:hidden path="supplierId"/>--%>
-<%--<sf:hidden path="active"/>--%>
-<%--<sf:hidden path="purchases"/>--%>
-<%--<sf:hidden path="views"/>--%>
-<%--</div>--%>
-<%--</div>--%>
-
-<%--<div class="form-group">--%>
-<%--<div class="submit-container1122">--%>
-
-<%--<input type="submit" name="submit" value="Save" class="btn btn-primary"/>--%>
-
-<%--</div>--%>
-<%--</div>--%>
-
-<%--</sf:form>--%>
-<%--</form>--%>
-<%--</div>--%>

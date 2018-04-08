@@ -4,10 +4,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="../views/shared/flows-header.jsp" %>
-
-
     <!-- Page Content -->
-
     <div class="content">
         <div class="container">
             <div class="alert alert-success">
@@ -17,10 +14,7 @@
                 <h2>Номер</h2>
                 <h3 class="pull-right">Закза # ${orderDetail.id}</h3>
             </div>
-
-
                     <hr>
-
                     <div class="row">
                         <address>
                             <strong>Олачен:</strong><br>
@@ -30,9 +24,7 @@
                             ${orderDetail.billing.city} - ${orderDetail.billing.postalCode}<br>
                             ${orderDetail.billing.state} - ${orderDetail.billing.country}
                         </address>
-
                     <hr>
-
                         <address>
                             <strong>Доставить:</strong><br>
                             ${orderDetail.user.firstName} ${orderDetail.user.lastName}<br>
@@ -42,8 +34,6 @@
                             ${orderDetail.shipping.state} - ${orderDetail.shipping.country}
                         </address>
                     </div>
-
-
             <div class="row">
                         <address>
                             <strong>Метод оплаты:</strong><br>
@@ -58,10 +48,6 @@
                             ${orderDetail.orderDate}<br><br>
                         </address>
             </div>
-
-
-
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-default">
@@ -108,5 +94,4 @@
                 <a href="${contextRoot}/show/all/products" class="btn btn-lg btn-warning">Продолжить покупки</a>
             </div>
         </div>
-
 <%@include file="../views/flows/shared/flows-footer.jsp" %>

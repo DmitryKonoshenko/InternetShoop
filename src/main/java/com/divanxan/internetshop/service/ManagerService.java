@@ -26,15 +26,10 @@ import java.util.*;
  */
 @Service("managerService")
 public class ManagerService {
-
     private static final Logger logger = LoggerFactory.getLogger(ManagerService.class);
-
     private final CategoryDao categoryDao;
-
     private final ProductDao productDao;
-
     private final UserDao userDao;
-
     private final CartLineDao cartLineDao;
 
     @Autowired
@@ -73,6 +68,14 @@ public class ManagerService {
         return userDao.listAllOrders();
     }
 
+    public List<OrderDetail> getListAllOrdersByWeek() {
+        return userDao.listThisWeekOrders();
+    }
+
+    public List<OrderDetail> getListAllOrdersByMonth() {
+        return userDao.listThisMonthOrders();
+    }
+
     public void updateOrderDetail(OrderDetail orderDetail) {
         cartLineDao.updateOrderDetail(orderDetail);
     }
@@ -82,7 +85,6 @@ public class ManagerService {
     }
 
     public Map<BigDecimal, User> getTopUsers() {
-
         List<OrderDetail> orders = userDao.listThisMonthOrders();
         Map<Integer, BigDecimal> map = new HashMap<Integer, BigDecimal>();
         for (OrderDetail order : orders) {
@@ -93,15 +95,12 @@ public class ManagerService {
                 map.put(id, map.get(id).add(order.getOrderTotal()));
             }
         }
-
         Map<BigDecimal, User> userListSort = new TreeMap<>(Collections.reverseOrder());
-
         for (Map.Entry<Integer, BigDecimal> entry : map.entrySet()) {
             Integer key = entry.getKey();
             BigDecimal value = entry.getValue();
             userListSort.put(value, userDao.getById(key));
         }
-
         Map<BigDecimal, User> userList = new TreeMap<>(Collections.reverseOrder());
         int i = 0;
         for (Map.Entry<BigDecimal, User> entry : userListSort.entrySet()) {
@@ -131,5 +130,9 @@ public class ManagerService {
         }
         logger.info("getting cash by month: " +cash);
         return cash;
+    }
+
+    public List<OrderDetail> getListAllOrdersByDate(Map<String,String> map) {
+       return userDao.listThisDateOrders(map);
     }
 }

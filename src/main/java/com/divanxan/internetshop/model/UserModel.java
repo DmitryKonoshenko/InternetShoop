@@ -14,15 +14,12 @@ import java.io.Serializable;
 //для отображение информации о пользователе на навигационном экране
 public class UserModel implements Serializable {
     private static final long serialVersionUID = 444444444L;
-
     private  int id;
-
     private String fullName;
     private String email;
     private String role;
     private Cart cart;
     private int loginCount;
-
 
     public int getId() {
         return id;

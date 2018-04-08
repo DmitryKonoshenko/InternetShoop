@@ -2,17 +2,12 @@
          pageEncoding="UTF-8"%>
 <spring:url var="images" value="/resources/images"/>
 <div class="container">
-
     <div class="row">
-
         <div class="col-lg-3">
             <h1 class="my-4">Электроник</h1>
            <%@include file="./shared/sidebar.jsp"%>
         </div>
-        <!-- /.col-lg-3 -->
-
         <div class="col-lg-9">
-
             <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -42,9 +37,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-
             <div class="row">
-
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <a href="${contextRoot}/show/2/product"><img class="card-img-top" src="${images}/PRDQWE123TVS.jpg" alt=""></a>
@@ -57,7 +50,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <a href="${contextRoot}/show/4/product"><img class="card-img-top" src="${images}/PRDABC123PIL.jpg" alt=""></a>
@@ -70,7 +62,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <a href="${contextRoot}/show/7/product"><img class="card-img-top" src="${images}/PRDABC123FEN.jpg" alt=""></a>
@@ -83,14 +74,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-            <!-- /.row -->
-
         </div>
-        <!-- /.col-lg-9 -->
-
     </div>
-    <!-- /.row -->
-
 </div>

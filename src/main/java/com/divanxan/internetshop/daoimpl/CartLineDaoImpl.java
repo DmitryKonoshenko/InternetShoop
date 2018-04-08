@@ -18,17 +18,13 @@ import java.util.List;
 @Repository("cartLineDao")
 @Transactional
 public class CartLineDaoImpl implements CartLineDao {
-
     private static final Logger logger = LoggerFactory.getLogger(CartLineDaoImpl.class);
-
     private final SessionFactory sessionFactory;
-
 
     @Autowired
     public CartLineDaoImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
-
 
     @Override
     public CartLine get(int id) {
@@ -82,12 +78,6 @@ public class CartLineDaoImpl implements CartLineDao {
                 .setParameter("cartId", cartId);
         logger.info("getting CartLine list of Cart id: " + cartId);
         return query.getResultList();
-        //String query = "FROM CartLine WHERE cartId =:cartId";
-//        String query = "FROM cart_line where cartId=:cartId";
-//        return sessionFactory.getCurrentSession()
-//                .createQuery(query, CartLine.class)
-//                .setParameter("cartId",cartId)
-//                .getResultList();
     }
 
     @Override
@@ -98,12 +88,6 @@ public class CartLineDaoImpl implements CartLineDao {
                 .setParameter("available", true);
         logger.info("getting available  CartLine list of Cart id: " + cartId);
         return query.getResultList();
-//        String query = "FROM cart_line Where cartId =:cartId AND available =:available";
-//        return sessionFactory.getCurrentSession()
-//                .createQuery(query, CartLine.class)
-//                .setParameter("cartId",cartId)
-//                .setParameter("available",true)
-//                .getResultList();
     }
 
     @Override
@@ -112,18 +96,6 @@ public class CartLineDaoImpl implements CartLineDao {
         CartLine cartLine = (CartLine) query.getSingleResult();
         logger.info("getting CartLine by cart id: " + cartId + "and product id: " + productId);
         return cartLine;
-//        String query = "FROM cart_line Where cartId =:cartId AND product.id =: productId";
-//        try {
-//            return sessionFactory.getCurrentSession()
-//                    .createQuery(query, CartLine.class)
-//                    .setParameter("cartId", cartId)
-//                    .setParameter("productId", productId)
-//                    .getSingleResult();
-//        }
-//        catch (Exception e){
-//            //e.printStackTrace();
-//            return null;
-//        }
     }
 
     @Override

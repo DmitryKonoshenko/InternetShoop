@@ -116,11 +116,9 @@ $(function () {
                             }
                             else {
                                 str += '<a href="javascript:void(0)" class="btn btn-success disabled"><span class="oi oi-cart"/></a>';
-                                // str += '<button type="button" onclick="buttonClickt()" id="b1" class="btn btn-primary"><span class="oi oi-heart"/></button>';
                             }
                         }
                         else {
-                            // если пользователь админ - то он увидит кнопку настройки продукта
                             if (userRole == 'ADMIN') {
                                 str += '<a href="' + window.contextRoot + '/manage/' + data + '/product" class="btn btn-warning"><span class="oi oi-wrench"></span></a>';
                             }
@@ -136,7 +134,6 @@ $(function () {
         });
     }
 
-//убрать сообщение после 3-х секунд
     var $alert = $('.alert');
 
     if ($alert.lang) {
@@ -440,17 +437,17 @@ $(function () {
 
 
 //code for footer
-$(document).ready(function () {
-
-    var docHeight = $(window).height();
-    var footerHeight = $('.footer').height();
-    var contentHeight = $('.content').height();
-    var footerTop = $('.footer').position().top + footerHeight;
-
-    if (footerTop < docHeight) {
-        $('.content').css('min-height', (docHeight - contentHeight + 600) + 'px');
-    }
-});
+// $(document).ready(function () {
+//
+//     var docHeight = $(window).height();
+//     var footerHeight = $('.footer').height();
+//     var contentHeight = $('.content').height();
+//     var footerTop = $('.footer').position().top + footerHeight;
+//
+//     if (footerTop < docHeight) {
+//         $('.content').css('min-height', (docHeight - contentHeight + 600) + 'px');
+//     }
+// });
 
 
 

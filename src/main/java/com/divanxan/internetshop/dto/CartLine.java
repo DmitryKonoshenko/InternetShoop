@@ -30,7 +30,6 @@ import java.math.BigDecimal;
 })
 @Entity(name = "cart_line")
 public class CartLine implements Serializable {
-
     private static final long serialVersionUID = 444444444L;
 
     @Id

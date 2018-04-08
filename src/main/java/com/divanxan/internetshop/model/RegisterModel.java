@@ -13,7 +13,6 @@ import java.io.Serializable;
  * @since version 1.0
  */
 public class RegisterModel implements Serializable {
-
     private static final long serialVersionUID = 555555555L;
 
     private User user;

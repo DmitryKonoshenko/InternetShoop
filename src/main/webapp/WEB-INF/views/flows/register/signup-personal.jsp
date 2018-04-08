@@ -78,17 +78,17 @@
                     </div>
 
 
-                        <%--<div class="form-group">--%>
+                    <%--<div class="form-group">--%>
                         <%--<label class="form-title1122">Выберете цель регистрации</label>--%>
                         <%--<div class="col-md-8">--%>
-                        <%--<label class="radio-inline">--%>
-                        <%--<sf:radiobutton path="role" value="USER" checked="checked"/>Покупатель--%>
-                        <%--</label>--%>
-                        <%--&lt;%&ndash;<label class="radio-inline">&ndash;%&gt;--%>
-                        <%--&lt;%&ndash;<sf:radiobutton path="role" value="SUPPLIER"/>Поставщик&ndash;%&gt;--%>
-                        <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
+                            <%--<label class="radio-inline">--%>
+                                <%--<sf:radiobutton path="role" value="USER" checked="checked"/>Покупатель--%>
+                            <%--</label>--%>
+                                <%--&lt;%&ndash;<label class="radio-inline">&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;<sf:radiobutton path="role" value="SUPPLIER"/>Поставщик&ndash;%&gt;--%>
+                                <%--&lt;%&ndash;</label>&ndash;%&gt;--%>
                         <%--</div>--%>
-                        <%--</div>--%>
+                    <%--</div>--%>
 
                     <div class="form-group">
                         <div class="col-md-offset-4 col-md-8">

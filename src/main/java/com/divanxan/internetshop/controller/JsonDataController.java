@@ -23,9 +23,7 @@ import java.util.List;
 @Controller
 @RequestMapping("/json/data")
 public class JsonDataController {
-
     private final ProductDao productDao;
-
     private static final Logger logger = LoggerFactory.getLogger(JsonDataController.class);
 
     /**

@@ -25,9 +25,7 @@ import java.util.Map;
  */
 @Service("userService")
 public class UserService {
-
     private final UserDao userDao;
-
     private final HttpSession session;
 
     @Autowired
@@ -42,7 +40,6 @@ public class UserService {
      * @return String
      */
     public User getUser() {
-
         String email = ((UserModel) session.getAttribute("userModel")).getEmail();
         return userDao.getByEmail(email);
     }
@@ -135,57 +132,36 @@ public class UserService {
         String lastName = map.get("lastName");
         String email = map.get("email");
         String contactNumber = map.get("contactNumber");
-
         String password1 = map.get("password1");
         String password2 = map.get("password2");
         String password3 = map.get("password3");
-
         String addressLineOne = map.get("addressLineOne");
         String addressLineTwo = map.get("addressLineTwo");
         String city = map.get("city");
         String state = map.get("region");
         String country = map.get("country");
         String postalCode = map.get("postalCode");
-
-
         User user = this.getUser();
-
         int addressId = -1;
         if (addressLineOne != null) this.getAddressId();
-
-//        List<Address> addresses = userService.getAddresses(user.getId());
-
-
         Address address = null;
         if (addressLineOne != null) address = this.getAddres(addressId);
-
-//        for (Address adr: addresses) {
-//            if(adr.getId()==addressId) address = adr;
-//        }
-
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-
-
-        // boolean whatIf = BCrypt.checkpw(password3, user.getPassword());
-
         if (addressLineOne != null) {
             if (addressLineOne.equals("") && addressLineTwo.equals("") && city.equals("")
                     && state.equals("") && country.equals("") && postalCode.equals("")) {
                 model.addAttribute("userClickShowUserName", true);
                 model.addAttribute("title", "User Data");
                 model.addAttribute("message", "Ошибка валидации для изменения данных!");
-
                 return "redirect:/user/show?operation=noAddress";
             }
 
         }
         if (firstName != null) {
             if (firstName.equals("") && lastName.equals("") && email.equals("") && contactNumber.equals("")) {
-
                 model.addAttribute("userClickShowUserName", true);
                 model.addAttribute("title", "User Data");
                 model.addAttribute("message", "Ошибка валидации для изменения данных!");
-
                 return "redirect:/user/show?operation=noUser";
             }
         }
@@ -195,44 +171,35 @@ public class UserService {
                 model.addAttribute("userClickShowUserName", true);
                 model.addAttribute("title", "User Data");
                 model.addAttribute("message", "Ошибка валидации для изменения данных!");
-
                 return "redirect:/user/show?operation=noPassword";
             }
         }
-
-
         if (firstName != null && !firstName.equals("")) user.setFirstName(firstName);
         if (lastName != null && !lastName.equals("")) user.setLastName(lastName);
         if (email != null && !email.equals("")) user.setEmail(email);
         if (contactNumber != null && !contactNumber.equals("")) user.setContactNumber(contactNumber);
-
         if (password1 != null && !password1.equals("")) user.setPassword(passwordEncoder.encode(password1));
-
         if (addressLineOne != null && !addressLineOne.equals("")) address.setAddressLineOne(addressLineOne);
         if (addressLineTwo != null && !addressLineTwo.equals("")) address.setAddressLineTwo(addressLineTwo);
         if (city != null && !city.equals("")) address.setCity(city);
         if (state != null && !state.equals("")) address.setState(state);
         if (country != null && !country.equals("")) address.setCountry(country);
         if (postalCode != null && !postalCode.equals("")) address.setPostalCode(postalCode);
-
         if (firstName != null || password1 != null) {
             userDao.update(user);
             UserModel userModel = ((UserModel) session.getAttribute("userModel"));
             userModel.setEmail(user.getEmail());
             userModel.setFullName(user.getFirstName() + " " + user.getLastName());
-
             session.setAttribute("userModel", userModel);
         }
-
         if (addressLineOne != null) {
             userDao.updateAddress(address);
         }
-
         return "redirect:/user/show?operation=user";
     }
 
     /**
-     * Getting login coont
+     * Getting login count
      *
      * @return int - count of trying login
      */
@@ -249,5 +216,15 @@ public class UserService {
     public void setLoginCount(int count) {
         UserModel userModel = ((UserModel) session.getAttribute("userModel"));
         userModel.setLoginCount(count);
+    }
+
+    /**
+     * Getting OrderDetail by id
+     *
+     * @param userOrderId - order detail id
+     * @return int - count of trying login
+     */
+    public OrderDetail getOrderDetail(int userOrderId) {
+        return userDao.getOrderDetail(userOrderId);
     }
 }

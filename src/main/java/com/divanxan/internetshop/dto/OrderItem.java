@@ -23,10 +23,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "order_item")
 public class OrderItem implements Serializable {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
 	@Id
@@ -56,7 +52,6 @@ public class OrderItem implements Serializable {
 	
 	private BigDecimal total;
 
-	
 	public int getId() {
 		return id;
 	}

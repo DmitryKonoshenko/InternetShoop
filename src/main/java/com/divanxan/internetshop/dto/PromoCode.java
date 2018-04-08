@@ -22,8 +22,6 @@ import java.io.Serializable;
 @Entity
 @Table(name = "promocode")
 public class PromoCode implements Serializable {
-
-
     private static final long serialVersionUID = 333333333L;
 
     @Id
